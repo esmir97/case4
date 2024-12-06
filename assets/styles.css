@@ -1,0 +1,10 @@
+:root {
+    --page-width: 393px;
+}
+
+body {
+    background-color: black;
+    color: white;
+
+    width: var(--page-width);    
+}

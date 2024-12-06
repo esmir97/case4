@@ -1,0 +1,312 @@
+{
+    "Rock":
+    {
+
+        "60s":  
+        [
+            {
+            "question": "Which band released the song 'Hey Jude' in 1968?",
+            "options": ["The Beatles", "The Rolling Stones", "The Who", "The Beach Boys"],
+            "correct": "The Beatles"
+            },
+            {
+            "question": "What is the name of the Jimi Hendrix Experience's debut album?",
+            "options": ["Electric Ladyland", "Are You Experienced", "Axis: Bold as Love", "Band of Gypsys"],
+            "correct": "Are You Experienced"
+            },
+            {
+            "question": "Which Bob Dylan song became a 60's anthem with the lyrics 'The answer is blowin' in the wind'?",
+            "options": ["Like a Rolling Stone", "Blowin' in the Wind", "Mr. Tambourine Man", "Subterranean Homesick Blues"],
+            "correct": "Blowin' in the Wind"
+            },
+            {
+            "question": "What year was The Rolling Stones' hit '(I Can't Get No) Satisfaction' released?",
+            "options": ["1964", "1965", "1966", "1967"],
+            "correct": "1965"
+            },
+            {
+            "question": "Which album by The Beach Boys is considered a masterpiece of 60's rock?",
+            "options": ["Surfin' USA", "Pet Sounds", "Smile", "Endless Summer"],
+            "correct": "Pet Sounds"
+            },
+            {
+            "question": "Which rock festival, held in 1969, became a symbol of the counterculture movement?",
+            "options": ["Monterey Pop Festival", "Woodstock", "Altamont Free Concert", "Isle of Wight Festival"],
+            "correct": "Woodstock"
+            },
+            {
+            "question": "Who was the lead guitarist of The Yardbirds before forming Led Zeppelin?",
+            "options": ["Eric Clapton", "Jimmy Page", "Jeff Beck", "Keith Richards"],
+            "correct": "Jimmy Page"
+            },
+            {
+            "question": "What was the name of the first hit single by The Doors?",
+            "options": ["Light My Fire", "Break On Through", "Hello, I Love You", "People Are Strange"],
+            "correct": "Light My Fire"
+            },
+            {
+            "question": "Who wrote the song 'All Along the Watchtower', famously covered by Jimi Hendrix?",
+            "options": ["Bob Dylan", "Neil Young", "Paul Simon", "John Lennon"],
+            "correct": "Bob Dylan"
+            },
+            {
+            "question": "Which band released the album 'Tommy', often regarded as the first rock opera?",
+            "options": ["The Who", "The Kinks", "The Doors", "Pink Floyd"],
+            "correct": "The Who"
+            },
+            {
+            "question": "Which song by The Byrds popularized folk rock?",
+            "options": ["Mr. Tambourine Man", "Turn! Turn! Turn!", "Eight Miles High", "So You Want to Be a Rock 'n' Roll Star"],
+            "correct": "Mr. Tambourine Man"
+            },
+            {
+            "question": "Which British band was known as 'The Fab Four'?",
+            "options": ["The Beatles", "The Rolling Stones", "The Who", "The Animals"],
+            "correct": "The Beatles"
+            },
+            {
+            "question": "Who sang 'Piece of My Heart' in 1968?",
+            "options": ["Janis Joplin", "Grace Slick", "Dusty Springfield", "Patti Smith"],
+            "correct": "Janis Joplin"
+            },
+            {
+            "question": "What was Cream's debut album called?",
+            "options": ["Fresh Cream", "Disraeli Gears", "Wheels of Fire", "Goodbye"],
+            "correct": "Fresh Cream"
+            },
+            {
+            "question": "Which song by Simon & Garfunkel was featured in 'The Graduate'?",
+            "options": ["Bridge Over Troubled Water", "The Sound of Silence", "Mrs. Robinson", "Scarborough Fair"],
+            "correct": "Mrs. Robinson"
+            },
+            {
+            "question": "Who was the lead singer of The Doors?",
+            "options": ["Jim Morrison", "Ray Manzarek", "Robby Krieger", "John Densmore"],
+            "correct": "Jim Morrison"
+            },
+            {
+            "question": "Which Rolling Stones album features 'Paint It Black'?",
+            "options": ["Aftermath", "Beggars Banquet", "Let It Bleed", "Between the Buttons"],
+            "correct": "Aftermath"
+            },
+            {
+            "question": "What year did The Beatles release 'Sgt. Pepper's Lonely Hearts Club Band'?",
+            "options": ["1965", "1966", "1967", "1968"],
+            "correct": "1967"
+            },
+            {
+            "question": "Which song by The Kinks is a classic 60's rock anthem?",
+            "options": ["You Really Got Me", "Waterloo Sunset", "All Day and All of the Night", "Lola"],
+            "correct": "You Really Got Me"
+            },
+            {
+            "question": "Who sang the 1965 hit 'Like a Rolling Stone'?",
+            "options": ["Bob Dylan", "The Byrds", "The Band", "Johnny Cash"],
+            "correct": "Bob Dylan"
+            },
+            {
+            "question": "Which iconic guitarist was part of the band Cream?",
+            "options": ["Eric Clapton", "Jimi Hendrix", "Jimmy Page", "Jeff Beck"],
+            "correct": "Eric Clapton"
+            },
+            {
+            "question": "Which Jefferson Airplane song became a symbol of psychedelic rock?",
+            "options": ["White Rabbit", "Somebody to Love", "Volunteers", "Embryonic Journey"],
+            "correct": "White Rabbit"
+            },
+            {
+            "question": "What was the name of the band that Eric Clapton, Ginger Baker, and Steve Winwood formed in 1969?",
+            "options": ["Cream", "Traffic", "Blind Faith", "Derek and the Dominos"],
+            "correct": "Blind Faith"
+            },
+            {
+            "question": "Which song by Buffalo Springfield is a protest anthem of the 60's?",
+            "options": ["For What It's Worth", "Bluebird", "Mr. Soul", "Rock and Roll Woman"],
+            "correct": "For What It's Worth"
+            },
+            {
+            "question": "What was the name of The Beatles' animated movie from 1968?",
+            "options": ["A Hard Day's Night", "Help!", "Yellow Submarine", "Magical Mystery Tour"],
+            "correct": "Yellow Submarine"
+            },
+            {
+            "question": "What year was 'Purple Haze' by Jimi Hendrix released?",
+            "options": ["1966", "1967", "1968", "1969"],
+            "correct": "1967"
+            },
+            {
+            "question": "Who sang 'Good Vibrations' in 1966?",
+            "options": ["The Beach Boys", "The Beatles", "The Byrds", "The Monkees"],
+            "correct": "The Beach Boys"
+            },
+            {
+            "question": "Which 60's band was known for their rivalry with The Beatles?",
+            "options": ["The Rolling Stones", "The Kinks", "The Who", "The Yardbirds"],
+            "correct": "The Rolling Stones"
+            },
+            {
+            "question": "What was the original name of Pink Floyd?",
+            "options": ["The Pink Floyd Sound", "Sigma 6", "The Tea Set", "All of the above"],
+            "correct": "All of the above"
+            },
+            {
+            "question": "Which 60's song is famous for the lyric 'Turn on, tune in, drop out'?",
+            "options": ["White Rabbit", "Somebody to Love", "Eight Miles High", "Tomorrow Never Knows"],
+            "correct": "White Rabbit"
+            }
+        ],
+        
+        "70s": [
+            {
+              "question": "Which band released the album 'Led Zeppelin IV' in 1971?",
+              "options": ["Led Zeppelin", "Pink Floyd", "Deep Purple", "The Rolling Stones"],
+              "correct": "Led Zeppelin"
+            },
+            {
+              "question": "Who sang the iconic song 'Bohemian Rhapsody'?",
+              "options": ["Queen", "The Eagles", "The Who", "Fleetwood Mac"],
+              "correct": "Queen"
+            },
+            {
+              "question": "Which Pink Floyd album features the track 'Comfortably Numb'?",
+              "options": ["The Wall", "Dark Side of the Moon", "Wish You Were Here", "Animals"],
+              "correct": "The Wall"
+            },
+            {
+              "question": "What is the name of The Rolling Stones' 1972 double album?",
+              "options": ["Exile on Main St.", "Sticky Fingers", "Some Girls", "Let It Bleed"],
+              "correct": "Exile on Main St."
+            },
+            {
+              "question": "Which 70's band was known for the song 'Hotel California'?",
+              "options": ["The Eagles", "Fleetwood Mac", "Boston", "Queen"],
+              "correct": "The Eagles"
+            },
+            {
+              "question": "Which David Bowie persona was prominent during the early 70s?",
+              "options": ["Ziggy Stardust", "The Thin White Duke", "Major Tom", "Aladdin Sane"],
+              "correct": "Ziggy Stardust"
+            },
+            {
+              "question": "Which Fleetwood Mac album became a best-seller in the 70's?",
+              "options": ["Rumours", "Tusk", "Fleetwood Mac", "Mirage"],
+              "correct": "Rumours"
+            },
+            {
+              "question": "Who sang 'Smoke on the Water'?",
+              "options": ["Deep Purple", "Black Sabbath", "Led Zeppelin", "Creedence Clearwater Revival"],
+              "correct": "Deep Purple"
+            },
+            {
+              "question": "Which album by Pink Floyd was released in 1973 and became one of the best-selling albums of all time?",
+              "options": ["Dark Side of the Moon", "Wish You Were Here", "Animals", "The Wall"],
+              "correct": "Dark Side of the Moon"
+            },
+            {
+              "question": "Who sang 'American Pie' in 1971?",
+              "options": ["Don McLean", "Bob Dylan", "Paul Simon", "James Taylor"],
+              "correct": "Don McLean"
+            },
+            {
+              "question": "Which Lynyrd Skynyrd song features the famous guitar solo often called a 'rock anthem'?",
+              "options": ["Free Bird", "Sweet Home Alabama", "Simple Man", "Tuesday's Gone"],
+              "correct": "Free Bird"
+            },
+            {
+              "question": "Which band released the song 'Dream On' in 1973?",
+              "options": ["Aerosmith", "The Who", "Queen", "The Eagles"],
+              "correct": "Aerosmith"
+            },
+            {
+              "question": "What year did Bruce Springsteen release his breakthrough album 'Born to Run'?",
+              "options": ["1973", "1974", "1975", "1976"],
+              "correct": "1975"
+            },
+            {
+              "question": "Which song by The Who features the lyric 'Teenage wasteland'?",
+              "options": ["Baba O'Riley", "Pinball Wizard", "Won't Get Fooled Again", "Behind Blue Eyes"],
+              "correct": "Baba O'Riley"
+            },
+            {
+              "question": "Which band released the rock opera 'Bat Out of Hell'?",
+              "options": ["Meat Loaf", "The Who", "Queen", "Genesis"],
+              "correct": "Meat Loaf"
+            },
+            {
+              "question": "Which band performed 'Paranoid' in 1970?",
+              "options": ["Black Sabbath", "Deep Purple", "Led Zeppelin", "Uriah Heep"],
+              "correct": "Black Sabbath"
+            },
+            {
+              "question": "Which Steely Dan album was released in 1977 and features 'Peg'?",
+              "options": ["Aja", "Pretzel Logic", "Katy Lied", "Can't Buy a Thrill"],
+              "correct": "Aja"
+            },
+            {
+              "question": "What was the name of AC/DC's 1979 album featuring 'Highway to Hell'?",
+              "options": ["Highway to Hell", "Back in Black", "Dirty Deeds Done Dirt Cheap", "Powerage"],
+              "correct": "Highway to Hell"
+            },
+            {
+              "question": "Which song by The Clash became one of their biggest hits in the late 70s?",
+              "options": ["London Calling", "Rock the Casbah", "Train in Vain", "Should I Stay or Should I Go"],
+              "correct": "London Calling"
+            },
+            {
+              "question": "Which guitarist is famous for his performance in Derek and the Dominos' 'Layla'?",
+              "options": ["Eric Clapton", "Duane Allman", "Jimmy Page", "Keith Richards"],
+              "correct": "Eric Clapton"
+            },
+            {
+              "question": "Which song by Led Zeppelin is often called the greatest rock song of all time?",
+              "options": ["Stairway to Heaven", "Whole Lotta Love", "Kashmir", "Black Dog"],
+              "correct": "Stairway to Heaven"
+            },
+            {
+              "question": "Which Blondie album features 'Heart of Glass'?",
+              "options": ["Parallel Lines", "Plastic Letters", "Eat to the Beat", "Autoamerican"],
+              "correct": "Parallel Lines"
+            },
+            {
+              "question": "What year was 'Go Your Own Way' by Fleetwood Mac released?",
+              "options": ["1975", "1976", "1977", "1978"],
+              "correct": "1977"
+            },
+            {
+              "question": "What was the Eagles' first hit single?",
+              "options": ["Take It Easy", "Hotel California", "Desperado", "Life in the Fast Lane"],
+              "correct": "Take It Easy"
+            },
+            {
+              "question": "What was Queen's first album called?",
+              "options": ["Queen", "Sheer Heart Attack", "A Night at the Opera", "News of the World"],
+              "correct": "Queen"
+            },
+            {
+              "question": "Which 1970's supergroup included members of Crosby, Stills, Nash, and Young?",
+              "options": ["Crosby, Stills, Nash & Young", "The Eagles", "Fleetwood Mac", "The Byrds"],
+              "correct": "Crosby, Stills, Nash & Young"
+            },
+            {
+              "question": "Which Kiss song is considered their biggest hit from the 70s?",
+              "options": ["Rock and Roll All Nite", "Detroit Rock City", "Beth", "Love Gun"],
+              "correct": "Beth"
+            },
+            {
+              "question": "Which album by The Who was released in 1971 and features 'Baba O'Riley'?",
+              "options": ["Who's Next", "Tommy", "Quadrophenia", "Live at Leeds"],
+              "correct": "Who's Next"
+            },
+            {
+              "question": "What band released the hit 'More Than a Feeling' in 1976?",
+              "options": ["Boston", "Journey", "Kansas", "Foreigner"],
+              "correct": "Boston"
+            },
+            {
+              "question": "Which artist is associated with the creation of 'The Rise and Fall of Ziggy Stardust'?",
+              "options": ["David Bowie", "Elton John", "Rod Stewart", "Lou Reed"],
+              "correct": "David Bowie"
+            }
+          ]
+    }
+}
