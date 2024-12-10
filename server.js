@@ -38,8 +38,12 @@ async function addGameToState (code) {
     }
 
     //Create for-loop to fill questions-array in newGame, also put database.json in assets to have constant access
+    //Go to questions["genre"]["60s"]
+
     
     let questions = Deno.readTextFile(database.json);
+
+    let filteredQuestions = questions["Rock"]["60s"]
 
     _state[entity].push();
 }
@@ -99,18 +103,27 @@ async function handleHTTPRequest (request) { //S채ger till vad som ska h채nda n�
         if (request.method == 'POST') {
             console.log("we're deeper");
 
-            const POSTstring = await request.json();
-            console.log(POSTstring);
+            const POSTdata = await request.json();
+            console.log(POSTdata);
 
-            if (POSTstring == "code") {                                     //POST-rqst med str채ngen "code" skapas ett nytt game och koden returneras
+            if (POSTdata.genre != undefined) {                                     //POST-rqst med str채ngen "code" skapas ett nytt game och koden returneras
                                                                             
                 let newCode = generateGameCode();
                 
+                
+                let questions = getQuestionsForGame(POSTdata.genre, POSTdata.century);
 
-                return new Response(JSON.stringify(newCode), options);      
+                let response = {
+                    code: newCode,
+                    genre: POSTdata.genre,
+                    century: POSTdata.century,
+                    questions: questions
+                };
+                console.log(testData);
+                return new Response(JSON.stringify(response), options);      
             } else {
                 console.log("good job with the codes bozo");
-                return new Response(JSON.stringify({ newCode }), options);
+                return new Response(JSON.stringify({ error: "wrong keys in rqst" }), options);
             }
         }
 
@@ -122,6 +135,39 @@ async function handleHTTPRequest (request) { //S채ger till vad som ska h채nda n�
     }
 
     return serveFile(request, './index.html');
+}
+
+function getQuestionsForGame(genre, century) { //Randomises an array with 20 questions depending on genre/century
+    let questions = testData;
+    let questionsToChooseFrom = [];
+    let chosenQuestions = [];
+
+    
+    if (century != "mixed") {
+        console.log(testData[genre])
+        let questionCentury = testData[genre][century];
+
+        for (let question of questionCentury) {
+            questionsToChooseFrom.push(question);
+        }
+
+    } else {
+
+        let questionGenre = testData[genre];
+
+        for (let century in questionGenre) {
+            for (let question of century) {
+                questionsToChooseFrom.push(question);
+            }
+        }
+    }
+    
+
+    for (let i = 0; i < 20; i++) {
+        chosenQuestions.push(questionsToChooseFrom[Math.floor( Math.random() * questionsToChooseFrom.length )]);
+    }
+    
+    return chosenQuestions;
 }
 
 let lobbies = 
@@ -144,13 +190,14 @@ let lobbies =
 let connections = {};
 let connectionID = 1;
 
+
+
 function handleWebSocket (request) { //S채ger vad som ska h채nda p책 serversidan med v책r connection n채r vi anv채nder WebSockets
     const { socket, response } = Deno.upgradeWebSocket(request);
 
     let myID = connectionID;
     
     connectionID++;
-
     socket.addEventListener("open", (event) => {
         console.log(`Connection ${myID} connected.`);
         socket.send(myID);

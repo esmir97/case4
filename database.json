@@ -2,7 +2,7 @@
     "Rock":
     {
 
-        "60s":  
+        "60":  
         [
             {
             "question": "Which band released the song 'Hey Jude' in 1968?",
@@ -156,7 +156,7 @@
             }
         ],
         
-        "70s": [
+        "70": [
             {
               "question": "Which band released the album 'Led Zeppelin IV' in 1971?",
               "options": ["Led Zeppelin", "Pink Floyd", "Deep Purple", "The Rolling Stones"],
