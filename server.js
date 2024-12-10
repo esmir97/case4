@@ -2,18 +2,7 @@ import { serveDir, serveFile } from "jsr:@std/http/file-server";
 
 let _state = {
     games: [
-        {
-            "code": 0,
-            "genre": "poop",
-            "century": "lol",
-            "questions": [
-                {
-                    "question": "What was the original name of Pink Floyd?",
-                    "options": ["The Pink Floyd Sound", "Sigma 6", "The Tea Set", "All of the above"],
-                    "correct": "All of the above"
-                }
-            ]
-        }
+        
     ]
 }
 
@@ -43,7 +32,7 @@ async function addGameToState (code) {
     
     let questions = Deno.readTextFile(database.json);
 
-    let filteredQuestions = questions["Rock"]["60s"]
+
 
     _state[entity].push();
 }
@@ -101,25 +90,35 @@ async function handleHTTPRequest (request) { //Säger till vad som ska hända n�
         }
 
         if (request.method == 'POST') {
-            console.log("we're deeper");
 
             const POSTdata = await request.json();
-            console.log(POSTdata);
 
             if (POSTdata.genre != undefined) {                                     //POST-rqst med strängen "code" skapas ett nytt game och koden returneras
                                                                             
                 let newCode = generateGameCode();
                 
-                
                 let questions = getQuestionsForGame(POSTdata.genre, POSTdata.century);
+
+                let players = [
+                    {
+                        name: POSTdata.name,
+                        id: connectionID,
+                        role: "admin",
+                        points: 0
+                    }
+                ]
 
                 let response = {
                     code: newCode,
                     genre: POSTdata.genre,
                     century: POSTdata.century,
-                    questions: questions
+                    questions: questions,
+                    players: players
                 };
-                console.log(testData);
+
+                _state.games.push(response);
+                console.log(_state.games);
+                
                 return new Response(JSON.stringify(response), options);      
             } else {
                 console.log("good job with the codes bozo");
@@ -138,14 +137,17 @@ async function handleHTTPRequest (request) { //Säger till vad som ska hända n�
 }
 
 function getQuestionsForGame(genre, century) { //Randomises an array with 20 questions depending on genre/century
-    let questions = testData;
+    let questions = JSON.parse(testData);
     let questionsToChooseFrom = [];
     let chosenQuestions = [];
-
+    century = century.toString();
     
     if (century != "mixed") {
-        console.log(testData[genre])
-        let questionCentury = testData[genre][century];
+        console.log("genre:")
+
+        let questionsGenre = questions[genre];
+        console.log(questionsGenre);
+        let questionCentury = questionsGenre[century];
 
         for (let question of questionCentury) {
             questionsToChooseFrom.push(question);
@@ -167,6 +169,7 @@ function getQuestionsForGame(genre, century) { //Randomises an array with 20 que
         chosenQuestions.push(questionsToChooseFrom[Math.floor( Math.random() * questionsToChooseFrom.length )]);
     }
     
+    console.log("it worked!!");
     return chosenQuestions;
 }
 

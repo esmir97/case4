@@ -48,7 +48,7 @@ function renderGenres (parentElement) {
 async function createNewGame (event) {
 
     if (event.key == "Enter") {
-        let genre = event.currentTarget.id.replace("name", "");
+        let genre = event.currentTarget.className;
         let century = document.getElementById("century").value;
         
         if (century == null) {
@@ -56,6 +56,7 @@ async function createNewGame (event) {
         }
 
         let gameParams = {
+            name: document.getElementById("name").value,
             genre: genre,
             century: century
         };
@@ -67,6 +68,9 @@ async function createNewGame (event) {
         let response = await rqst.json();
 
         console.log(response);
+
+        const wrapper = document.getElementById("wrapper");
+        renderLobby(wrapper);
     }
 }
 
@@ -93,7 +97,7 @@ async function newGameCard(event) {
 
                             <button id="mixedQuestions">Mixed Questions</button>
                             <h3>Name</h2>
-                            <input id="name${event.currentTarget.id}" placeholder="eg. 'Theo'">
+                            <input id="name" class="${event.currentTarget.id}" placeholder="eg. 'Theo'">
                         </div>`;
 
     overlay.addEventListener("click", (event) => {
@@ -106,7 +110,7 @@ async function newGameCard(event) {
         event.stopPropagation();
     });
 
-    document.getElementById("name" + event.currentTarget.id).addEventListener("keydown", createNewGame);
+    document.getElementById("name").addEventListener("keydown", createNewGame);
 }
 
 async function joinGame(event) {
