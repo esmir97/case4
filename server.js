@@ -74,26 +74,14 @@ async function handleHTTPRequest (request) { //Säger till vad som ska hända n�
         }
 
         if (request.method == 'GET') {
-            //Alla "Join game" ska ske via GET, kolla strängen som skickas med, om denna finns i servern, connecta, annars ge user-error
-
-            const gameCode = await request.json();
-
-            let filteredGame = _state.games.filter( (game) => {
-                return game.code == gameCode;
-            } );
-
-            if (filteredGame) {
-                return new Response("hejsan!!!!!", options);
-            }
-
-            return new Response(JSON.stringify(dataToSave), options);
+            //  Use-case: TBD
         }
 
         if (request.method == 'POST') {
 
             const POSTdata = await request.json();
 
-            if (POSTdata.genre != undefined) {                                     //POST-rqst med strängen "code" skapas ett nytt game och koden returneras
+            if (POSTdata.genre != undefined) { //POST used to create and join game
                                                                             
                 let newCode = generateGameCode();
                 
@@ -119,7 +107,24 @@ async function handleHTTPRequest (request) { //Säger till vad som ska hända n�
                 _state.games.push(response);
                 console.log(_state.games);
                 
-                return new Response(JSON.stringify(response), options);      
+                return new Response(JSON.stringify(response), options); 
+
+            } else if (POSTdata.code != undefined) {
+
+                const gameCode = await request.json();
+
+                let filteredGame = _state.games.filter( (game) => {
+                    game.players.push()
+                    return game.code == gameCode;
+                } );
+    
+                if (filteredGame) {
+
+                    return new Response(JSON.stringify(filteredGame), options);
+                }
+    
+                return new Response(JSON.stringify(dataToSave), options);
+
             } else {
                 console.log("good job with the codes bozo");
                 return new Response(JSON.stringify({ error: "wrong keys in rqst" }), options);
