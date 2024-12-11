@@ -3,6 +3,8 @@
     --BG-color1: #00187A;
     --BG-color2: #1E3698;
     --BG-color3: #3C54B6;
+
+    font-family:'Courier New', Courier, monospace;
 }
 
 body {
@@ -61,32 +63,15 @@ main {
     margin: 0;
 }
 
-#card {
-    background-color: red;
-    height: 20rem;
-    width: 80%;
-    margin: auto;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-#joinCard {
-    background-color: white;
-    height: 75vh;
-    width: 75vw;
-}
 
 .overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100rem;
+    height: 100vh;
     background-color:rgba(255, 255, 255, 0.5);
-
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,8 +81,29 @@ main {
     display: none;
 }
 
+#card {
+    background-color: rgb(254, 161, 176);
+    height: 20rem;
+    width: 80%;
+    margin: auto;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    border-radius: 1rem;
+}
+
+#joinCard {
+    background-color: white;
+    height: 75vh;
+    width: 75vw;
+}
+
 #wrapper {
     width: 100%;
+    min-height: 100vh;
     background: linear-gradient(var(--BG-color1), var(--BG-color3));
 
     display: flex;

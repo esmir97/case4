@@ -4,17 +4,6 @@ const display = document.querySelector('#wrapper');
 
 socket.addEventListener("open", (event) => {
     console.log("Connected.");
-    let myID = 1;
-
-    console.log("My ID is: " + event.data)
-    /*console.log(localStorage.getItem("playerID"));
-    if (!localStorage.getItem("playerID")) {
-        console.log("New ID added!");
-        localStorage.setItem("playerID", myID);
-    }
-    console.log(localStorage.getItem("playerID"));
-
-    myID++;*/
 });
 
 socket.addEventListener("message", (event) => {

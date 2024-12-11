@@ -1,28 +1,24 @@
+import { renderLobby } from "./renderLobby.js";
+
 export function renderStart (parentElement) {
     let header = document.createElement("header");
     parentElement.appendChild(header);
-
-    /*const buttonNew = document.createElement("button");
-    buttonNew.textContent = "New Game";
-    buttonNew.id = "buttonNew";
-    header.appendChild(buttonNew);
-    buttonNew.addEventListener("click", newGameCard);*/
 
     let main = document.createElement("main");
     parentElement.appendChild(main);
     renderGenres(main);
 
-    const input = document.createElement("input");
-    input.id = "joinInput";
-    header.appendChild(input);
+    const joinCode = document.createElement("input");
+    joinCode.id = "joinCode";
+    joinCode.placeholder = "Enter Pin";
+    header.appendChild(joinCode);
+    joinCode.addEventListener("keydown", joinGame);
 
-    const buttonPin = document.createElement("button");
-    buttonPin.textContent = "Enter Pin";
-    buttonPin.id = "buttonPin";
-    header.appendChild(buttonPin);
-    //buttonPin.addEventListener("click" ); renderJoinCard
-
-    
+    const buttonQR = document.createElement("button");
+    buttonQR.textContent = "QR";
+    buttonQR.id = "buttonQR";
+    header.appendChild(buttonQR);
+    //buttonPin.addEventListener("click" ); QR-code function
 }
 
 function renderGenres (parentElement) {
@@ -69,7 +65,14 @@ async function createNewGame (event) {
 
         console.log(response);
 
+        let player = JSON.stringify(response.players[response.players.length - 1]);
+
+        //------------------SETTING VALUES IN LOCALSTORAGE FOR EASY ACCESS LATER------------------
+        localStorage.setItem("gameCode", response.code);
+        localStorage.setItem("player", player);
+
         const wrapper = document.getElementById("wrapper");
+        document.querySelector(".overlay").remove();
         renderLobby(wrapper);
     }
 }
@@ -114,15 +117,28 @@ async function newGameCard(event) {
 }
 
 async function joinGame(event) {
-    let code = document.getElementById("joinInput").value;
 
-    if (code.length === 6) {
-        await fetch(`/api/test?${code}`);
+    if (event.key === "Enter") {
+        let code = document.getElementById("joinCode").value;
+    
+        if (code.length === 6) {
+    
+            let options = { method: "POST", headers: { "Content-Type": "application/json"}, body: JSON.stringify({"code": code}) };
+    
+            let response = await( await fetch(`/api/test`, options) ).json();
+            let player = JSON.stringify(response.players[response.players.length - 1]);
+            console.log(response);
 
-    } else {
-        let error = document.createElement("p");
-        error.style.color = red;
-        error.textContent = "Invalid code. Code must be 6 characters long."
-        document.querySelector("body").appendChild(error);
+            //------------------SETTING VALUES IN LOCALSTORAGE FOR EASY ACCESS LATER------------------
+            localStorage.setItem("gameCode", response.code);
+            localStorage.setItem("player", player);
+
+            renderLobby(document.getElementById("wrapper"));
+        } else {
+            let error = document.createElement("p");
+            error.style.color = "red";
+            error.textContent = "Invalid code. Code must be 6 characters long."
+            document.querySelector("body").appendChild(error);
+        }
     }
 }
