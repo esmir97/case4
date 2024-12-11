@@ -307,6 +307,34 @@
               "options": ["David Bowie", "Elton John", "Rod Stewart", "Lou Reed"],
               "correct": "David Bowie"
             }
+          ],
+
+          "80s": [
+            {
+              "question": "Which band released the album 'Led Zeppelin IV' in 1971?",
+              "options": ["Led Zeppelin", "Pink Floyd", "Deep Purple", "The Rolling Stones"],
+              "correct": "Led Zeppelin"
+            },
+            {
+              "question": "Who sang the iconic song 'Bohemian Rhapsody'?",
+              "options": ["Queen", "The Eagles", "The Who", "Fleetwood Mac"],
+              "correct": "Queen"
+            },
+            {
+              "question": "Which Pink Floyd album features the track 'Comfortably Numb'?",
+              "options": ["The Wall", "Dark Side of the Moon", "Wish You Were Here", "Animals"],
+              "correct": "The Wall"
+            },
+            {
+              "question": "What is the name of The Rolling Stones' 1972 double album?",
+              "options": ["Exile on Main St.", "Sticky Fingers", "Some Girls", "Let It Bleed"],
+              "correct": "Exile on Main St."
+            },
+            {
+              "question": "Which 70's band was known for the song 'Hotel California'?",
+              "options": ["The Eagles", "Fleetwood Mac", "Boston", "Queen"],
+              "correct": "The Eagles"
+            }
           ]
     }
 }
