@@ -1,12 +1,17 @@
 
 @font-face {
-    font-family: "heading04";
+    font-family: "Montserrat-Medium";
     src: url(./fonts/Montserrat/static/Montserrat-Medium.ttf);
   }
 
 @font-face {
-    font-family: "heading04B";
+    font-family: "Montserrat-Bold";
     src: url(./fonts/Montserrat/static/Montserrat-Bold.ttf);
+  }
+
+@font-face {
+    font-family: "PassionOne";
+    src: url(./fonts/Passion_One/PassionOne-Regular.ttf);
   }
 
 :root {
@@ -33,14 +38,52 @@
     --success: #12CE66;
     --pending: #FFCC3C;
     --error: #FF4949;
-
-    /*  Typography    */
-    font-family:'Courier New', Courier, monospace;
-
-
     /*  Spacing    */
-    
 }
+
+/*  Typography    */
+
+h1 {
+    font-family: "PassionOne";
+    font-size: 40px;
+}
+
+h2 {
+    font-family: "PassionOne";
+    font-size: 32px;
+}
+
+h3 {
+    font-family: "PassionOne";
+    font-size: 24px;
+}
+
+h4 {
+    font-family: "Montserrat-Medium";
+    font-size: 16px;
+}
+
+.h4-bold {
+    font-family: "Montserrat-Bold";
+    font-size: 16px;
+}
+
+p {
+    font-family: "Montserrat-Medium";
+    font-size: 14px;
+}
+
+.p-bold {
+    font-family: "Montserrat-Bold";
+    font-size: 14px;
+}
+
+.details {
+    font-family: "Montserrat-Medium";
+    font-size: 12px;
+}
+
+/*      */
 
 body {
     margin: 0;
