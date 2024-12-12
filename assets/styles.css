@@ -1,3 +1,14 @@
+
+@font-face {
+    font-family: "heading04";
+    src: url(./fonts/Montserrat/static/Montserrat-Medium.ttf);
+  }
+
+@font-face {
+    font-family: "heading04B";
+    src: url(./fonts/Montserrat/static/Montserrat-Bold.ttf);
+  }
+
 :root {
     --page-width: 393px;
 
@@ -18,7 +29,7 @@
     --secondary100: #E4B1EC;
     --secondary200: #FFCFFF;
     --secondary300: #FFEDFF;
-    
+
     --success: #12CE66;
     --pending: #FFCC3C;
     --error: #FF4949;
