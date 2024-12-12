@@ -9,13 +9,12 @@ let _state = {
 let connections = {};
 let connectionID = 1;
 
-let dataToSave = [];
-
 const testData = await Deno.readTextFile("./database.json");
 
+let allQuestions = [];
 
 if (testData != "") {
-    dataToSave = JSON.parse(testData);
+    allQuestions = JSON.parse(testData);
 }
 
 //Använd inte, behövs inte längre
@@ -68,8 +67,20 @@ async function handleHTTPRequest (request) { //Säger till vad som ska hända n�
             headers: { "Content-Type": "application/json"}
         }
 
-        if (request.method == 'GET') {
-            //  Use-case: TBD
+        if (request.method == 'GET') { //GET entire game obj with gameCode
+            const GETdata = await request;
+
+            let game = _state.games.find( (game) => {
+                return game.gameCode == GETdata.gameCode;
+            });
+
+            if (game) {
+                return new Response(JSON.stringify(game), options);
+
+            } else {
+                return new Response(JSON.stringify(""))
+            }
+
         }
 
         if (request.method == 'POST') {

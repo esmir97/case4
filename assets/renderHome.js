@@ -120,6 +120,8 @@ async function joinGame(event) {
 
     if (event.key === "Enter") {
         let code = document.getElementById("joinCode").value;
+
+        if (code.length !== 6) renderError("wrapper", "Code needs to be 6 characters long");
         
         let options = { method: "POST", headers: { "Content-Type": "application/json"}, body: JSON.stringify({"code": code}) };
 
@@ -140,11 +142,7 @@ async function joinGame(event) {
             renderLobby(document.getElementById("wrapper"));
         }
 
-        if (code.length !== 6) {
-            renderError("wrapper", "Code needs to be 6 characters long");
-        } else {
-            renderError("wrapper", "No game with that code exists");
-        }
+        
     }
     return;
 }
@@ -155,11 +153,10 @@ function renderError(parentElementID, msg) {
     const errorBox = document.getElementById("errorBox");
 
     if (!errorBox) {
-        const wrapper = document.getElementById("wrapper");
         const errorBox = document.createElement("div");
         errorBox.id = "errorBox";
         errorBox.innerHTML = `<p style="color: red;">${msg}</p>`;
-        wrapper.prepend(errorBox);
+        parent.prepend(errorBox);
 
     } else {
         errorBox.innerHTML = `<p style="color: red;">${msg}</p>`;
