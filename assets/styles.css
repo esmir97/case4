@@ -104,7 +104,6 @@ body, html, #wrapper {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
     color: white;
     height: 100%;
   }
@@ -116,36 +115,13 @@ body, html, #wrapper {
     padding: 20px 23px 20px 23px;
   }
 
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color:rgba(255, 255, 255, 0.5);
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .hide {
     display: none;
 }
 
-#card {
-    background-color: rgb(254, 161, 176);
-    height: 20rem;
-    width: 80%;
-    margin: auto;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 
-    border-radius: 1rem;
-}
 
 #joinCard {
     background-color: white;

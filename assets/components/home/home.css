@@ -130,3 +130,30 @@ img {
     color: black;
     padding: 16px 12px;
 }
+
+/* Start Game Popup */
+
+.overlay {
+    position: fixed;
+    inset: 0 0 0 0;
+    width: 100vw;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.popup {
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 40px 40px 0px 0px;
+    border: 1px solid #FFF;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 237, 255, 0.10) 100%);
+    backdrop-filter: blur(17.5px);
+
+    padding: 48px 32px 44px 32px;
+}

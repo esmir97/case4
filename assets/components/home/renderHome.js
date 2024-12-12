@@ -129,33 +129,38 @@ async function createNewGame (event) {
 async function newGameCard(event) {
     event.stopPropagation();
     console.log(event.currentTarget.id);
-    const body = document.querySelector("body");
+    let wrapper = document.getElementById("wrapper");
 
-    const overlay = document.createElement("div");
-    overlay.classList.add('overlay');
+    let startGamePopup = document.createElement("div");
+    startGamePopup.classList.add("overlay");
+   
+    startGamePopup.innerHTML = 
+        `<div id="card" class="popup">
+            <h3>80´s Rock</h3>
+            <p class="amountOfQuestions">20 Questions</p>
+            <h4>Choose year</h4>
+            <select id="century">
+                <option value="70">1970s</option>
+                <option value="80">1980s</option>
+                <option value="90">1990s</option>
+                <option value="00">2000s</option>
+                <option value="10">2010s</option>
+                <option value="20">2020s</option>
+            </select>
+            <p>or</p>
+            <p class="mixedQuestionsButton">Mixed Questions</p>
+            <div class="line"></div>
+            <h4>Name</h4>
+            <input type="text" placeholder="eg. theo">
+            <div class="line"></div>
+            <p>Start Quiz</p>
+        </div>`;
 
-    overlay.innerHTML = 
-                        `<div id="card">
-                            <h2>Choose Year</h2>
-                            <select id="century">
-                                <option value="70">1970s</option>
-                                <option value="80">1980s</option>
-                                <option value="90">1990s</option>
-                                <option value="00">2000s</option>
-                                <option value="10">2010s</option>
-                                <option value="20">2020s</option>
-                            </select>
-
-                            <button id="mixedQuestions">Mixed Questions</button>
-                            <h3>Name</h2>
-                            <input id="name" class="${event.currentTarget.id}" placeholder="eg. 'Theo'">
-                        </div>`;
-
-    overlay.addEventListener("click", (event) => {
-        overlay.remove();
+    startGamePopup.addEventListener("click", (event) => {
+        startGamePopup.remove();
     })
 
-    body.appendChild(overlay);
+    wrapper.appendChild(startGamePopup);
 
     document.getElementById("card").addEventListener("click", (event) => {
         event.stopPropagation();
