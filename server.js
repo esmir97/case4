@@ -115,18 +115,18 @@ console.log(POSTdata.code);
                     points: 0
                 }  
 
-                let filteredGame = null;
-                filteredGame = _state.games.find( (game) => {
+                
+                let filteredGame = _state.games.find( (game) => {
                     if (game.code == code) {
-                        game.players.push(newPlayer);
                         return true;
                     }
                 } );
     console.log(filteredGame);
-                if (filteredGame !== null) {            
+                if (filteredGame) {       
+                    filteredGame.players.push(newPlayer);     
                     return new Response(JSON.stringify(filteredGame), options);
                 } else {
-                    return new Response("post error cuuh", options);
+                    return new Response(JSON.stringify("game doesn't exist"), options);
                 }
     
             } else {

@@ -120,12 +120,16 @@ async function joinGame(event) {
 
     if (event.key === "Enter") {
         let code = document.getElementById("joinCode").value;
-    
-        if (code.length === 6) {
-    
-            let options = { method: "POST", headers: { "Content-Type": "application/json"}, body: JSON.stringify({"code": code}) };
-    
-            let response = await( await fetch(`/api/test`, options) ).json();
+        
+        let options = { method: "POST", headers: { "Content-Type": "application/json"}, body: JSON.stringify({"code": code}) };
+
+        let response = await( await fetch(`/api/test`, options) ).json();
+        console.log(response);
+        if (response == "game doesn't exist") {
+            
+            renderError("wrapper", "No game with that code exists");
+
+        } else {
             let player = JSON.stringify(response.players[response.players.length - 1]);
             console.log(response);
 
@@ -134,11 +138,30 @@ async function joinGame(event) {
             localStorage.setItem("player", player);
 
             renderLobby(document.getElementById("wrapper"));
-        } else {
-            let error = document.createElement("p");
-            error.style.color = "red";
-            error.textContent = "Invalid code. Code must be 6 characters long."
-            document.querySelector("body").appendChild(error);
         }
+
+        if (code.length !== 6) {
+            renderError("wrapper", "Code needs to be 6 characters long");
+        } else {
+            renderError("wrapper", "No game with that code exists");
+        }
+    }
+    return;
+}
+
+function renderError(parentElementID, msg) {
+
+    const parent = document.getElementById(parentElementID);
+    const errorBox = document.getElementById("errorBox");
+
+    if (!errorBox) {
+        const wrapper = document.getElementById("wrapper");
+        const errorBox = document.createElement("div");
+        errorBox.id = "errorBox";
+        errorBox.innerHTML = `<p style="color: red;">${msg}</p>`;
+        wrapper.prepend(errorBox);
+
+    } else {
+        errorBox.innerHTML = `<p style="color: red;">${msg}</p>`;
     }
 }
