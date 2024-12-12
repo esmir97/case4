@@ -2,22 +2,12 @@ import { serveDir, serveFile } from "jsr:@std/http/file-server";
 
 let _state = {
     games: [
-        {
-            "code": 0,
-            "genre": "poop",
-            "century": "lol",
-            "questions": [
-                {
-                    "question": "What was the original name of Pink Floyd?",
-                    "options": ["The Pink Floyd Sound", "Sigma 6", "The Tea Set", "All of the above"],
-                    "correct": "All of the above"
-                }
-            ]
-        }
+        
     ]
 }
 
-
+let connections = {};
+let connectionID = 1;
 
 let dataToSave = [];
 
@@ -36,8 +26,6 @@ async function addGameToState (code) {
         century: "Y",
         questions: []
     }
-
-    //Create for-loop to fill questions-array in newGame, also put database.json in assets to have constant access
     
     let questions = Deno.readTextFile(database.json);
 
@@ -81,37 +69,86 @@ async function handleHTTPRequest (request) { //S채ger till vad som ska h채nda n�
         }
 
         if (request.method == 'GET') {
-            //Alla "Join game" ska ske via GET, kolla str채ngen som skickas med, om denna finns i servern, connecta, annars ge user-error
-
-            const gameCode = await request.json();
-
-            let filteredGame = _state.games.filter( (game) => {
-                return game.code == gameCode;
-            } );
-
-            if (filteredGame) {
-                return new Response("hejsan!!!!!", options);
-            }
-
-            return new Response(JSON.stringify(dataToSave), options);
+            //  Use-case: TBD
         }
 
         if (request.method == 'POST') {
-            console.log("we're deeper");
+            console.log("76");
+            const POSTdata = await request.json();
 
-            const POSTstring = await request.json();
-            console.log(POSTstring);
-
-            if (POSTstring == "code") {                                     //POST-rqst med str채ngen "code" skapas ett nytt game och koden returneras
-                                                                            
+            if (POSTdata.genre) { //Create Game
+                            console.log("80");                                                  
                 let newCode = generateGameCode();
                 
+                let questions = getQuestionsForGame(POSTdata.genre, POSTdata.century);
 
-                return new Response(JSON.stringify(newCode), options);      
+                let players = [
+                    {
+                        name: POSTdata.name,
+                        id: connectionID,
+                        role: "admin",
+                        points: 0
+                    }
+                ]
+
+                let response = {
+                    code: newCode,
+                    genre: POSTdata.genre,
+                    century: POSTdata.century,
+                    questions: questions,
+                    players: players
+                };
+
+                _state.games.push(response);
+                console.log(_state.games);
+                
+                return new Response(JSON.stringify(response), options); 
+
+            } else if (POSTdata.code) { // Join Game
+                console.log("108")
+                let code = POSTdata.code;
+console.log(POSTdata.code);
+                let newPlayer = {
+                    name: "",
+                    id: connectionID,
+                    role: "player",
+                    points: 0
+                }  
+
+                let filteredGame = null;
+                filteredGame = _state.games.find( (game) => {
+                    if (game.code == code) {
+                        game.players.push(newPlayer);
+                        return true;
+                    }
+                } );
+    console.log(filteredGame);
+                if (filteredGame !== null) {            
+                    return new Response(JSON.stringify(filteredGame), options);
+                } else {
+                    return new Response("post error cuuh", options);
+                }
+    
             } else {
                 console.log("good job with the codes bozo");
-                return new Response(JSON.stringify({ newCode }), options);
+                return new Response(JSON.stringify({ error: "wrong keys in rqst" }), options);
             }
+        }
+
+        if (request.method == 'PATCH') {
+            const PATCHdata = await request.json();
+
+            let game = _state.games.find( (game) => {
+                return game.code == PATCHdata.code;
+            });
+    console.log(game);
+            let playerToPatch = game.players.find( (player) => {
+                return PATCHdata.player.id == player.id;
+            });
+
+            playerToPatch.name = PATCHdata.name;
+
+            return new Response(JSON.stringify(playerToPatch), options);
         }
 
         if (request.method == 'DELETE') {
@@ -124,25 +161,45 @@ async function handleHTTPRequest (request) { //S채ger till vad som ska h채nda n�
     return serveFile(request, './index.html');
 }
 
-let lobbies = 
-[/*
-    {
-        "gameCode": XXXX,
-        "connectedPlayers": [
-            {
-                "playerID": 139,
-                "moderator": true
-            },
-            {
-                "playerID": 29,
-                "moderator": false
-            }
-        ]
-    }*/
-];
+function getQuestionsForGame(genre, century) { //Randomises an array with 20 questions depending on genre/century
+    let questions = JSON.parse(testData);
+    let questionsToChooseFrom = [];
+    let chosenQuestions = [];
+    century = century.toString();
+    
+    if (century != "mixed") {
+        console.log("genre:")
 
-let connections = {};
-let connectionID = 1;
+        let questionsGenre = questions[genre];
+        console.log(questionsGenre);
+        let questionCentury = questionsGenre[century];
+
+        for (let question of questionCentury) {
+            questionsToChooseFrom.push(question);
+        }
+
+    } else {
+
+        let questionGenre = testData[genre];
+
+        for (let century in questionGenre) {
+            for (let question of century) {
+                questionsToChooseFrom.push(question);
+            }
+        }
+    }
+    
+
+    for (let i = 0; i < 20; i++) {
+        chosenQuestions.push(questionsToChooseFrom[Math.floor( Math.random() * questionsToChooseFrom.length )]);
+    }
+    
+    console.log("it worked!!");
+    return chosenQuestions;
+}
+
+
+
 
 function handleWebSocket (request) { //S채ger vad som ska h채nda p책 serversidan med v책r connection n채r vi anv채nder WebSockets
     const { socket, response } = Deno.upgradeWebSocket(request);
@@ -150,7 +207,6 @@ function handleWebSocket (request) { //S채ger vad som ska h채nda p책 serversidan
     let myID = connectionID;
     
     connectionID++;
-
     socket.addEventListener("open", (event) => {
         console.log(`Connection ${myID} connected.`);
         socket.send(myID);

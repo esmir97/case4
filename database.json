@@ -1,8 +1,8 @@
 {
-    "Rock":
+    "rock":
     {
 
-        "60s":  
+        "60":  
         [
             {
             "question": "Which band released the song 'Hey Jude' in 1968?",
@@ -156,7 +156,7 @@
             }
         ],
         
-        "70s": [
+        "70": [
             {
               "question": "Which band released the album 'Led Zeppelin IV' in 1971?",
               "options": ["Led Zeppelin", "Pink Floyd", "Deep Purple", "The Rolling Stones"],
@@ -309,31 +309,460 @@
             }
           ],
 
-          "80s": [
+          "80": [
             {
-              "question": "Which band released the album 'Led Zeppelin IV' in 1971?",
-              "options": ["Led Zeppelin", "Pink Floyd", "Deep Purple", "The Rolling Stones"],
-              "correct": "Led Zeppelin"
+              "question": "Which band released the album 'Back in Black' in 1980?",
+              "options": ["AC/DC", "Def Leppard", "Guns N' Roses", "Van Halen"],
+              "correct": "AC/DC"
             },
             {
-              "question": "Who sang the iconic song 'Bohemian Rhapsody'?",
-              "options": ["Queen", "The Eagles", "The Who", "Fleetwood Mac"],
-              "correct": "Queen"
+              "question": "Who sang the iconic song 'Livin' on a Prayer'?",
+              "options": ["Bon Jovi", "Journey", "Whitesnake", "REO Speedwagon"],
+              "correct": "Bon Jovi"
             },
             {
-              "question": "Which Pink Floyd album features the track 'Comfortably Numb'?",
-              "options": ["The Wall", "Dark Side of the Moon", "Wish You Were Here", "Animals"],
-              "correct": "The Wall"
+              "question": "Which Guns N' Roses album features the track 'Sweet Child o' Mine'?",
+              "options": ["Appetite for Destruction", "Use Your Illusion I", "Use Your Illusion II", "G N' R Lies"],
+              "correct": "Appetite for Destruction"
             },
             {
-              "question": "What is the name of The Rolling Stones' 1972 double album?",
-              "options": ["Exile on Main St.", "Sticky Fingers", "Some Girls", "Let It Bleed"],
-              "correct": "Exile on Main St."
+              "question": "What is the name of Van Halen's 1984 album featuring 'Jump'?",
+              "options": ["1984", "Fair Warning", "Diver Down", "5150"],
+              "correct": "1984"
             },
             {
-              "question": "Which 70's band was known for the song 'Hotel California'?",
-              "options": ["The Eagles", "Fleetwood Mac", "Boston", "Queen"],
-              "correct": "The Eagles"
+              "question": "Which 80s band was known for the song 'Here I Go Again'?",
+              "options": ["Whitesnake", "Foreigner", "Scorpions", "Europe"],
+              "correct": "Whitesnake"
+            },
+            {
+              "question": "Which David Bowie persona was prominent during the early 80s?",
+              "options": ["Thin White Duke", "Ziggy Stardust", "Major Tom", "Scary Monster"],
+              "correct": "Thin White Duke"
+            },
+            {
+              "question": "Which album by Def Leppard became a best-seller in the 80s?",
+              "options": ["Hysteria", "Pyromania", "Adrenalize", "On Through the Night"],
+              "correct": "Hysteria"
+            },
+            {
+              "question": "Who sang 'Every Breath You Take'?",
+              "options": ["The Police", "Duran Duran", "Tears for Fears", "U2"],
+              "correct": "The Police"
+            },
+            {
+              "question": "Which album by Metallica was released in 1986 and features 'Master of Puppets'?",
+              "options": ["Master of Puppets", "Ride the Lightning", "Kill 'Em All", "And Justice for All"],
+              "correct": "Master of Puppets"
+            },
+            {
+              "question": "Who sang 'Take on Me' in 1985?",
+              "options": ["a-ha", "Tears for Fears", "Duran Duran", "Wham!"],
+              "correct": "a-ha"
+            },
+            {
+              "question": "Which Bon Jovi song features the iconic line 'Shot through the heart, and you're to blame'?",
+              "options": ["You Give Love a Bad Name", "Wanted Dead or Alive", "Runaway", "Bad Medicine"],
+              "correct": "You Give Love a Bad Name"
+            },
+            {
+              "question": "Which band released the song 'The Final Countdown' in 1986?",
+              "options": ["Europe", "Whitesnake", "Def Leppard", "Bon Jovi"],
+              "correct": "Europe"
+            },
+            {
+              "question": "What year did U2 release their breakthrough album 'The Joshua Tree'?",
+              "options": ["1985", "1986", "1987", "1988"],
+              "correct": "1987"
+            },
+            {
+              "question": "Which song by Queen features the lyric 'Under pressure, that burns a building down'?",
+              "options": ["Under Pressure", "Another One Bites the Dust", "Radio Ga Ga", "I Want to Break Free"],
+              "correct": "Under Pressure"
+            },
+            {
+              "question": "Which band released the rock opera 'Operation: Mindcrime'?",
+              "options": ["Queensrÿche", "Iron Maiden", "Judas Priest", "Dio"],
+              "correct": "Queensrÿche"
+            },
+            {
+              "question": "Which band performed 'Pour Some Sugar on Me' in 1987?",
+              "options": ["Def Leppard", "Bon Jovi", "Whitesnake", "Van Halen"],
+              "correct": "Def Leppard"
+            },
+            {
+              "question": "Which Dire Straits album was released in 1985 and features 'Money for Nothing'?",
+              "options": ["Brothers in Arms", "Making Movies", "Love Over Gold", "Dire Straits"],
+              "correct": "Brothers in Arms"
+            },
+            {
+              "question": "What was the name of Motley Crue's 1987 album featuring 'Girls, Girls, Girls'?",
+              "options": ["Girls, Girls, Girls", "Dr. Feelgood", "Shout at the Devil", "Theatre of Pain"],
+              "correct": "Girls, Girls, Girls"
+            },
+            {
+              "question": "Which song by Journey became one of their biggest hits in the 80s?",
+              "options": ["Don't Stop Believin'", "Separate Ways", "Open Arms", "Faithfully"],
+              "correct": "Don't Stop Believin'"
+            },
+            {
+              "question": "Which guitarist is famous for his performance in Ozzy Osbourne's 'Crazy Train'?",
+              "options": ["Randy Rhoads", "Eddie Van Halen", "Kirk Hammett", "Slash"],
+              "correct": "Randy Rhoads"
+            },
+            {
+              "question": "Which song by Bon Jovi is often called the anthem of the 80s?",
+              "options": ["Livin' on a Prayer", "You Give Love a Bad Name", "Wanted Dead or Alive", "Runaway"],
+              "correct": "Livin' on a Prayer"
+            },
+            {
+              "question": "Which Van Halen album features 'Panama'?",
+              "options": ["1984", "Van Halen II", "Diver Down", "5150"],
+              "correct": "1984"
+            },
+            {
+              "question": "What year was 'Sweet Child o' Mine' by Guns N' Roses released?",
+              "options": ["1986", "1987", "1988", "1989"],
+              "correct": "1987"
+            },
+            {
+              "question": "What was Aerosmith's comeback hit in the 80s?",
+              "options": ["Dude (Looks Like a Lady)", "Sweet Emotion", "Walk This Way", "Dream On"],
+              "correct": "Dude (Looks Like a Lady)"
+            },
+            {
+              "question": "What was Queen's last studio album with Freddie Mercury?",
+              "options": ["The Miracle", "Innuendo", "A Kind of Magic", "The Works"],
+              "correct": "Innuendo"
+            },
+            {
+              "question": "Which 80's supergroup included members of Toto and Mr. Mister?",
+              "options": ["Asia", "Journey", "Supertramp", "Foreigner"],
+              "correct": "Asia"
+            },
+            {
+              "question": "Which Kiss song is considered their biggest hit from the 80s?",
+              "options": ["I Was Made for Lovin' You", "Heaven's on Fire", "Crazy Crazy Nights", "Lick It Up"],
+              "correct": "I Was Made for Lovin' You"
+            },
+            {
+              "question": "Which album by Bruce Springsteen features 'Dancing in the Dark'?",
+              "options": ["Born in the U.S.A.", "The River", "Nebraska", "Tunnel of Love"],
+              "correct": "Born in the U.S.A."
+            },
+            {
+              "question": "What band released the hit 'Eye of the Tiger' in 1982?",
+              "options": ["Survivor", "Journey", "Foreigner", "REO Speedwagon"],
+              "correct": "Survivor"
+            },
+            {
+              "question": "Which artist is associated with the creation of 'Let's Dance'?",
+              "options": ["David Bowie", "Bryan Adams", "Elton John", "Phil Collins"],
+              "correct": "David Bowie"
+            }
+          ],
+          "90": [
+            {
+              "question": "Which band released the album 'Nevermind' in 1991?",
+              "options": ["Nirvana", "Pearl Jam", "Soundgarden", "Alice in Chains"],
+              "correct": "Nirvana"
+            },
+            {
+              "question": "Who sang the iconic song 'Wonderwall'?",
+              "options": ["Oasis", "Blur", "Radiohead", "The Verve"],
+              "correct": "Oasis"
+            },
+            {
+              "question": "Which Red Hot Chili Peppers album features the track 'Under the Bridge'?",
+              "options": ["Blood Sugar Sex Magik", "Californication", "By the Way", "One Hot Minute"],
+              "correct": "Blood Sugar Sex Magik"
+            },
+            {
+              "question": "What is the name of Pearl Jam's debut album released in 1991?",
+              "options": ["Ten", "Vs.", "Vitalogy", "Yield"],
+              "correct": "Ten"
+            },
+            {
+              "question": "Which 90's band was known for the song 'Black Hole Sun'?",
+              "options": ["Soundgarden", "Nirvana", "Stone Temple Pilots", "Alice in Chains"],
+              "correct": "Soundgarden"
+            },
+            {
+              "question": "Which Smashing Pumpkins album features the hit song '1979'?",
+              "options": ["Mellon Collie and the Infinite Sadness", "Siamese Dream", "Adore", "Gish"],
+              "correct": "Mellon Collie and the Infinite Sadness"
+            },
+            {
+              "question": "Who sang 'Losing My Religion'?",
+              "options": ["R.E.M.", "Radiohead", "Counting Crows", "Gin Blossoms"],
+              "correct": "R.E.M."
+            },
+            {
+              "question": "Which Radiohead album includes the track 'Creep'?",
+              "options": ["Pablo Honey", "The Bends", "OK Computer", "Kid A"],
+              "correct": "Pablo Honey"
+            },
+            {
+              "question": "Which album by Metallica was released in 1991 and often referred to as 'The Black Album'?",
+              "options": ["Metallica", "Ride the Lightning", "Master of Puppets", "...And Justice for All"],
+              "correct": "Metallica"
+            },
+            {
+              "question": "Who sang 'One Headlight' in the 90s?",
+              "options": ["The Wallflowers", "Third Eye Blind", "Matchbox Twenty", "Hootie & the Blowfish"],
+              "correct": "The Wallflowers"
+            },
+            {
+              "question": "Which Foo Fighters song was their breakout hit in the mid-90s?",
+              "options": ["Everlong", "Big Me", "Learn to Fly", "My Hero"],
+              "correct": "Big Me"
+            },
+            {
+              "question": "Which Green Day album features the track 'Basket Case'?",
+              "options": ["Dookie", "Insomniac", "Warning", "Nimrod"],
+              "correct": "Dookie"
+            },
+            {
+              "question": "What year did Alanis Morissette release her breakthrough album 'Jagged Little Pill'?",
+              "options": ["1994", "1995", "1996", "1997"],
+              "correct": "1995"
+            },
+            {
+              "question": "Which song by Blur features the iconic chant 'Woo-hoo!'?",
+              "options": ["Song 2", "Parklife", "Girls & Boys", "Tender"],
+              "correct": "Song 2"
+            },
+            {
+              "question": "Which band released the album 'Superunknown' in 1994?",
+              "options": ["Soundgarden", "Pearl Jam", "Nirvana", "Stone Temple Pilots"],
+              "correct": "Soundgarden"
+            },
+            {
+              "question": "Which Oasis album features the track 'Don't Look Back in Anger'?",
+              "options": ["(What's the Story) Morning Glory?", "Definitely Maybe", "Be Here Now", "Standing on the Shoulder of Giants"],
+              "correct": "(What's the Story) Morning Glory?"
+            },
+            {
+              "question": "Which 90's band was known for the hit 'Semi-Charmed Life'?",
+              "options": ["Third Eye Blind", "Everclear", "Matchbox Twenty", "The Goo Goo Dolls"],
+              "correct": "Third Eye Blind"
+            },
+            {
+              "question": "What was the name of the Rage Against the Machine song with the lyric 'Killing in the name of'?",
+              "options": ["Killing in the Name", "Bullet in the Head", "Bombtrack", "Freedom"],
+              "correct": "Killing in the Name"
+            },
+            {
+              "question": "Which No Doubt album includes the hit 'Don't Speak'?",
+              "options": ["Tragic Kingdom", "Return of Saturn", "Rock Steady", "No Doubt"],
+              "correct": "Tragic Kingdom"
+            },
+            {
+              "question": "Which alternative band is known for the song 'Bittersweet Symphony'?",
+              "options": ["The Verve", "Oasis", "Blur", "Radiohead"],
+              "correct": "The Verve"
+            },
+            {
+              "question": "Which Nirvana song features the lyric 'Here we are now, entertain us'?",
+              "options": ["Smells Like Teen Spirit", "Lithium", "Come as You Are", "Heart-Shaped Box"],
+              "correct": "Smells Like Teen Spirit"
+            },
+            {
+              "question": "Which album by U2 was released in 1991 and includes the song 'One'?",
+              "options": ["Achtung Baby", "The Joshua Tree", "Zooropa", "Pop"],
+              "correct": "Achtung Baby"
+            },
+            {
+              "question": "Which Stone Temple Pilots album features the track 'Plush'?",
+              "options": ["Core", "Purple", "Tiny Music", "No. 4"],
+              "correct": "Core"
+            },
+            {
+              "question": "Which song by The Cranberries was a protest against violence in Northern Ireland?",
+              "options": ["Zombie", "Linger", "Dreams", "Ode to My Family"],
+              "correct": "Zombie"
+            },
+            {
+              "question": "What was the Goo Goo Dolls' biggest hit of the 90s?",
+              "options": ["Iris", "Slide", "Name", "Black Balloon"],
+              "correct": "Iris"
+            },
+            {
+              "question": "Which band released the album 'Siamese Dream' in 1993?",
+              "options": ["The Smashing Pumpkins", "Nirvana", "Radiohead", "Soundgarden"],
+              "correct": "The Smashing Pumpkins"
+            },
+            {
+              "question": "Which song by Beck features the lyric 'I'm a loser, baby, so why don't you kill me'?",
+              "options": ["Loser", "Where It's At", "Devils Haircut", "E-Pro"],
+              "correct": "Loser"
+            },
+            {
+              "question": "What is the name of Weezer's debut album often referred to by its color?",
+              "options": ["The Blue Album", "The Green Album", "Pinkerton", "Maladroit"],
+              "correct": "The Blue Album"
+            },
+            {
+              "question": "Which band released the song 'Runaway Train'?",
+              "options": ["Soul Asylum", "R.E.M.", "Counting Crows", "The Wallflowers"],
+              "correct": "Soul Asylum"
+            },
+            {
+              "question": "What was the first single off Radiohead's 1997 album 'OK Computer'?",
+              "options": ["Paranoid Android", "Karma Police", "No Surprises", "Lucky"],
+              "correct": "Paranoid Android"
+            }
+          ],
+          "00": [
+            {
+              "question": "Which band released the album 'Hybrid Theory' in 2000?",
+              "options": ["Linkin Park", "Evanescence", "Breaking Benjamin", "Three Days Grace"],
+              "correct": "Linkin Park"
+            },
+            {
+              "question": "Who sang 'Seven Nation Army'?",
+              "options": ["The White Stripes", "The Black Keys", "Kings of Leon", "Franz Ferdinand"],
+              "correct": "The White Stripes"
+            },
+            {
+              "question": "Which Green Day album features the hit 'American Idiot'?",
+              "options": ["American Idiot", "21st Century Breakdown", "Dookie", "Warning"],
+              "correct": "American Idiot"
+            },
+            {
+              "question": "Which band released the track 'Mr. Brightside' in 2003?",
+              "options": ["The Killers", "Coldplay", "Arctic Monkeys", "The Strokes"],
+              "correct": "The Killers"
+            },
+            {
+              "question": "Which song by My Chemical Romance features the lyric 'When I was a young boy, my father took me into the city'?",
+              "options": ["Welcome to the Black Parade", "Helena", "Teenagers", "I'm Not Okay (I Promise)"],
+              "correct": "Welcome to the Black Parade"
+            },
+            {
+              "question": "What is the name of the debut album by Arctic Monkeys?",
+              "options": ["Whatever People Say I Am, That's What I'm Not", "Favourite Worst Nightmare", "AM", "Humbug"],
+              "correct": "Whatever People Say I Am, That's What I'm Not"
+            },
+            {
+              "question": "Which Foo Fighters song was released as a single from their 2005 album 'In Your Honor'?",
+              "options": ["Best of You", "Everlong", "Times Like These", "Learn to Fly"],
+              "correct": "Best of You"
+            },
+            {
+              "question": "Which band released 'I Bet You Look Good on the Dancefloor'?",
+              "options": ["Arctic Monkeys", "Franz Ferdinand", "The Libertines", "Kaiser Chiefs"],
+              "correct": "Arctic Monkeys"
+            },
+            {
+              "question": "Which album by Coldplay includes the hit 'Fix You'?",
+              "options": ["X&Y", "Parachutes", "A Rush of Blood to the Head", "Viva la Vida or Death and All His Friends"],
+              "correct": "X&Y"
+            },
+            {
+              "question": "Which band is known for the 2006 hit 'Chasing Cars'?",
+              "options": ["Snow Patrol", "Keane", "The Fray", "OneRepublic"],
+              "correct": "Snow Patrol"
+            },
+            {
+              "question": "Which Kings of Leon song became a massive hit in 2008?",
+              "options": ["Sex on Fire", "Use Somebody", "Closer", "Notion"],
+              "correct": "Sex on Fire"
+            },
+            {
+              "question": "Which Evanescence song includes the lyrics 'Wake me up inside'?",
+              "options": ["Bring Me to Life", "My Immortal", "Going Under", "Call Me When You're Sober"],
+              "correct": "Bring Me to Life"
+            },
+            {
+              "question": "Which Paramore album features the track 'Misery Business'?",
+              "options": ["Riot!", "Brand New Eyes", "All We Know Is Falling", "Paramore"],
+              "correct": "Riot!"
+            },
+            {
+              "question": "Which band released 'Boulevard of Broken Dreams'?",
+              "options": ["Green Day", "Blink-182", "Sum 41", "Simple Plan"],
+              "correct": "Green Day"
+            },
+            {
+              "question": "What is the name of Muse's 2003 album that includes the hit 'Time Is Running Out'?",
+              "options": ["Absolution", "Black Holes and Revelations", "Origin of Symmetry", "Showbiz"],
+              "correct": "Absolution"
+            },
+            {
+              "question": "Which song by The Strokes opens with the lyric 'Some people think they're always right'?",
+              "options": ["Reptilia", "Last Nite", "Juicebox", "12:51"],
+              "correct": "Reptilia"
+            },
+            {
+              "question": "Which song by Fall Out Boy features the lyric 'We're going down, down in an earlier round'?",
+              "options": ["Sugar, We're Goin Down", "Dance, Dance", "Thnks fr th Mmrs", "This Ain't a Scene, It's an Arms Race"],
+              "correct": "Sugar, We're Goin Down"
+            },
+            {
+              "question": "Which album by The Killers includes the track 'Somebody Told Me'?",
+              "options": ["Hot Fuss", "Sam's Town", "Day & Age", "Battle Born"],
+              "correct": "Hot Fuss"
+            },
+            {
+              "question": "Which Blink-182 song begins with the lyric 'All the small things, true care, truth brings'?",
+              "options": ["All the Small Things", "I Miss You", "What's My Age Again?", "The Rock Show"],
+              "correct": "All the Small Things"
+            },
+            {
+              "question": "Which band released the album 'By the Way' in 2002?",
+              "options": ["Red Hot Chili Peppers", "Foo Fighters", "Incubus", "Audioslave"],
+              "correct": "Red Hot Chili Peppers"
+            },
+            {
+              "question": "Which Audioslave song features the lyric 'I'm the highway'?",
+              "options": ["I Am the Highway", "Like a Stone", "Cochise", "Be Yourself"],
+              "correct": "I Am the Highway"
+            },
+            {
+              "question": "What was the name of Nickelback's 2001 hit single?",
+              "options": ["How You Remind Me", "Photograph", "Rockstar", "Someday"],
+              "correct": "How You Remind Me"
+            },
+            {
+              "question": "Which The Fray song became widely known due to its use in 'Grey's Anatomy'?",
+              "options": ["How to Save a Life", "Over My Head (Cable Car)", "You Found Me", "Never Say Never"],
+              "correct": "How to Save a Life"
+            },
+            {
+              "question": "Which Linkin Park album includes the track 'Numb'?",
+              "options": ["Meteora", "Hybrid Theory", "Minutes to Midnight", "A Thousand Suns"],
+              "correct": "Meteora"
+            },
+            {
+              "question": "What year was The Black Keys' album 'Brothers' released?",
+              "options": ["2010", "2008", "2006", "2004"],
+              "correct": "2010"
+            },
+            {
+              "question": "Which Franz Ferdinand song features the lyric 'I say, don't you know?'",
+              "options": ["Take Me Out", "Do You Want To", "No You Girls", "The Dark of the Matinee"],
+              "correct": "Take Me Out"
+            },
+            {
+              "question": "Which Incubus album features the hit 'Drive'?",
+              "options": ["Make Yourself", "Morning View", "A Crow Left of the Murder...", "Light Grenades"],
+              "correct": "Make Yourself"
+            },
+            {
+              "question": "Which band released the song 'The Scientist'?",
+              "options": ["Coldplay", "Snow Patrol", "Keane", "The Fray"],
+              "correct": "Coldplay"
+            },
+            {
+              "question": "Which song by Kings of Leon includes the lyric 'You know that I could use somebody'?",
+              "options": ["Use Somebody", "Sex on Fire", "Closer", "Notion"],
+              "correct": "Use Somebody"
+            },
+            {
+              "question": "Which band released 'I Write Sins Not Tragedies'?",
+              "options": ["Panic! at the Disco", "Fall Out Boy", "My Chemical Romance", "Paramore"],
+              "correct": "Panic! at the Disco"
             }
           ]
     }

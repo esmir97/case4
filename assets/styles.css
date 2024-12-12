@@ -1,10 +1,147 @@
+
+@font-face {
+    font-family: "heading04";
+    src: url(./fonts/Montserrat/static/Montserrat-Medium.ttf);
+  }
+
+@font-face {
+    font-family: "heading04B";
+    src: url(./fonts/Montserrat/static/Montserrat-Bold.ttf);
+  }
+
 :root {
     --page-width: 393px;
+
+    /*  Colors    */
+    --neutral100: #FFFFFF;
+    --neutral200: #EBEBEB;
+    --neutral300: #CDCDCD;
+    --neutral400: #A5A5A5;
+    --neutral500: #7D7D7D;
+    --neutral600: #555555;
+    --neutral700: #2D2D2D;
+    --neutral800: #000000;
+
+    --primary100: #00187A;
+    --primary200: #1E3698;
+    --primary300: #3C54B6;
+
+    --secondary100: #E4B1EC;
+    --secondary200: #FFCFFF;
+    --secondary300: #FFEDFF;
+
+    --success: #12CE66;
+    --pending: #FFCC3C;
+    --error: #FF4949;
+
+    /*  Typography    */
+    font-family:'Courier New', Courier, monospace;
+
+
+    /*  Spacing    */
+    
 }
 
 body {
-    background-color: black;
-    color: white;
-
+    margin: 0;
+    height: 100%;
     width: var(--page-width);    
+}
+
+header {
+    border-bottom: 1px solid grey;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 12rem);
+    gap: 1rem;
+}
+
+.genre {
+    background-color: white;
+
+    height: 100%;
+    width: 100%;
+    gap: 1rem;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+
+    border-radius: 0% 0% 5% 5%;
+}
+
+.genre:hover {
+    cursor: pointer;
+}
+
+.genreImg {
+    height: 10rem;
+}
+
+.genre > div > img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: fill;
+    object-position: center;
+}
+
+.genreText h3 {
+    margin: 0;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color:rgba(255, 255, 255, 0.5);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
+
+#card {
+    background-color: rgb(254, 161, 176);
+    height: 20rem;
+    width: 80%;
+    margin: auto;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    border-radius: 1rem;
+}
+
+#joinCard {
+    background-color: white;
+    height: 75vh;
+    width: 75vw;
+}
+
+#wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(var(--BG-color1), var(--BG-color3));
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
