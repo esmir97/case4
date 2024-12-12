@@ -24,9 +24,12 @@ export function renderStart (parentElement) {
     text.textContent = "or";
     joinOptions.appendChild(text);
 
-    const buttonQR = document.createElement("button");
+    const buttonQR = document.createElement("div");
     buttonQR.id = "buttonQR";
     buttonQR.classList.add("qrButton");
+    buttonQR.innerHTML = `
+        <img src="/static/media/icons/QrCode.svg" class="qr">
+    `;
     joinOptions.appendChild(buttonQR);
     //buttonPin.addEventListener("click" ); QR-code function
 
@@ -41,7 +44,7 @@ export function renderStart (parentElement) {
     popularTitleSection.classList.add("popularTitleSection");
     popularTitleSection.innerHTML = `
         <h3 class="popularTitel">Popular Right Now</h3>
-        <img src="/static/media/icons/next.png" class="arrow">
+        <img src="/static/media/icons/next2.svg" class="arrow">
     `;
     parentElement.appendChild(popularTitleSection);
     
