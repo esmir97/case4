@@ -1,10 +1,34 @@
 :root {
     --page-width: 393px;
-    --BG-color1: #00187A;
-    --BG-color2: #1E3698;
-    --BG-color3: #3C54B6;
 
+    /*  Colors    */
+    --neutral100: #FFFFFF;
+    --neutral200: #EBEBEB;
+    --neutral300: #CDCDCD;
+    --neutral400: #A5A5A5;
+    --neutral500: #7D7D7D;
+    --neutral600: #555555;
+    --neutral700: #2D2D2D;
+    --neutral800: #000000;
+
+    --primary100: #00187A;
+    --primary200: #1E3698;
+    --primary300: #3C54B6;
+
+    --secondary100: #E4B1EC;
+    --secondary200: #FFCFFF;
+    --secondary300: #FFEDFF;
+    
+    --success: #12CE66;
+    --pending: #FFCC3C;
+    --error: #FF4949;
+
+    /*  Typography    */
     font-family:'Courier New', Courier, monospace;
+
+
+    /*  Spacing    */
+    
 }
 
 body {
