@@ -129,14 +129,14 @@ async function createNewGame (event) {
 async function newGameCard(event) {
     event.stopPropagation();
     console.log(event.currentTarget.id);
-    let wrapper = document.getElementById("wrapper");
+    let body = document.querySelector("body");
 
     let startGamePopup = document.createElement("div");
     startGamePopup.classList.add("overlay");
    
     startGamePopup.innerHTML = 
         `<div id="card" class="popup">
-            <h3>80´s Rock</h3>
+            <h3>80s Rock</h3>
             <p class="amountOfQuestions">20 Questions</p>
             <h4>Choose year</h4>
             <select id="century">
@@ -151,7 +151,7 @@ async function newGameCard(event) {
             <p class="mixedQuestionsButton">Mixed Questions</p>
             <div class="line"></div>
             <h4>Name</h4>
-            <input type="text" placeholder="eg. theo">
+            <input id="name" type="text" placeholder="eg. theo">
             <div class="line"></div>
             <p>Start Quiz</p>
         </div>`;
@@ -160,7 +160,7 @@ async function newGameCard(event) {
         startGamePopup.remove();
     })
 
-    wrapper.appendChild(startGamePopup);
+    body.appendChild(startGamePopup);
 
     document.getElementById("card").addEventListener("click", (event) => {
         event.stopPropagation();
