@@ -1,28 +1,52 @@
 import { renderLobby } from "./../lobby/renderLobby.js";
 
 export function renderStart (parentElement) {
-    let header = document.createElement("header");
-    parentElement.appendChild(header);
+    let title = document.createElement("h2");
+    title.textContent = "Join Quiz";
+    title.classList.add("title");
+    parentElement.appendChild(title);
 
-    let main = document.createElement("main");
-    parentElement.appendChild(main);
-    renderGenres(main);
-
+    let joinOptions = document.createElement("div");
+    joinOptions.classList.add("joinOptions");
+    parentElement.appendChild(joinOptions);
+    
     const joinCode = document.createElement("input");
     joinCode.id = "joinCode";
+    joinCode.classList.add("codeOption");
     joinCode.placeholder = "Enter Pin";
-    header.appendChild(joinCode);
+    joinOptions.appendChild(joinCode);
     joinCode.addEventListener("keydown", joinGame);
+    
+    const text = document.createElement("p");
+    text.classList.add("details");
+    text.textContent = "or";
+    joinOptions.appendChild(text);
 
     const buttonQR = document.createElement("button");
-    buttonQR.textContent = "QR";
     buttonQR.id = "buttonQR";
-    header.appendChild(buttonQR);
+    buttonQR.classList.add("qrButton");
+    joinOptions.appendChild(buttonQR);
     //buttonPin.addEventListener("click" ); QR-code function
+
+    let popularTitel = document.createElement("h3");
+    popularTitel.textContent = "Popular Right Now";
+    popularTitel.classList.add("popularTitel");
+    parentElement.appendChild(popularTitel);
+    
+    let allGenresTitel = document.createElement("h3");
+    allGenresTitel.textContent = "All Genres";
+    allGenresTitel.classList.add("allGenresTitel");
+    parentElement.appendChild(allGenresTitel);
+
+    let allGenresContainer = document.createElement("div");
+    allGenresContainer.classList.add("allGenresContainer");
+    parentElement.appendChild(allGenresContainer);
+    renderGenres(allGenresContainer);
+
 }
 
 function renderGenres (parentElement) {
-    const allGenres = ["pop", "rock", "christmas", "r&b", "hiphop", "jazz", "pop", "country", "folk"];
+    const allGenres = ["Pop", "Rock", "Christmas", "R&B", "Hiphop", "Jazz", "Country", "Folk"];
 
     for (let genre of allGenres) {
         const div = document.createElement("div");
@@ -33,7 +57,7 @@ function renderGenres (parentElement) {
                             <img src="/static/media/images/${genre}.jpg">
                         </div>
                         <div class="genreText">
-                            <h3>${genre}</h3>
+                            <p class="p-bold">${genre}</p>
                         </div>
         `;
         div.addEventListener("click", newGameCard);
