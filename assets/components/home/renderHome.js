@@ -1,4 +1,4 @@
-import { renderLobby } from "./renderLobby.js";
+import { renderLobby } from "./../lobby/renderLobby.js";
 
 export function renderStart (parentElement) {
     let header = document.createElement("header");
