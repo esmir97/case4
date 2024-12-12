@@ -30,7 +30,7 @@ function renderGenres (parentElement) {
         div.classList.add("genre");
         div.innerHTML = `
                         <div class="genreImg">
-                            <img src="/static/images/${genre}.jpg">
+                            <img src="/static/media/images/${genre}.jpg">
                         </div>
                         <div class="genreText">
                             <h3>${genre}</h3>
