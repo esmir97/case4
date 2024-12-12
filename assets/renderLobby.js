@@ -52,7 +52,8 @@ async function enterName(event) {
 
         let options = { method: "PATCH", headers: { "Content-Type": "application/json"}, body: JSON.stringify(requestBody) };
 
-        let response = await fetch('/api/test', options);
+        let response = await ( await fetch('/api/test', options) ).json();
+
 
         console.log(response);
         //Skicka gamecode och nytt playername och playerobj

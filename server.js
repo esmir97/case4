@@ -76,7 +76,7 @@ async function handleHTTPRequest (request) { //Säger till vad som ska hända n�
             console.log("76");
             const POSTdata = await request.json();
 
-            if (POSTdata.genre != undefined) { //POST used to create and join game
+            if (POSTdata.genre) { //Create Game
                             console.log("80");                                                  
                 let newCode = generateGameCode();
                 
@@ -104,11 +104,10 @@ async function handleHTTPRequest (request) { //Säger till vad som ska hända n�
                 
                 return new Response(JSON.stringify(response), options); 
 
-            } else if (POSTdata.code) {
+            } else if (POSTdata.code) { // Join Game
                 console.log("108")
                 let code = POSTdata.code;
 console.log(POSTdata.code);
-                let filteredGame = null;
                 let newPlayer = {
                     name: "",
                     id: connectionID,
@@ -116,6 +115,7 @@ console.log(POSTdata.code);
                     points: 0
                 }  
 
+                let filteredGame = null;
                 filteredGame = _state.games.find( (game) => {
                     if (game.code == code) {
                         game.players.push(newPlayer);
@@ -124,12 +124,11 @@ console.log(POSTdata.code);
                 } );
     console.log(filteredGame);
                 if (filteredGame !== null) {            
-
                     return new Response(JSON.stringify(filteredGame), options);
+                } else {
+                    return new Response("post error cuuh", options);
                 }
     
-                return new Response(JSON.stringify("post error"), options);
-
             } else {
                 console.log("good job with the codes bozo");
                 return new Response(JSON.stringify({ error: "wrong keys in rqst" }), options);
@@ -140,9 +139,9 @@ console.log(POSTdata.code);
             const PATCHdata = await request.json();
 
             let game = _state.games.find( (game) => {
-                return game.id == PATCHdata.code;
+                return game.code == PATCHdata.code;
             });
-console.log(game);
+    console.log(game);
             let playerToPatch = game.players.find( (player) => {
                 return PATCHdata.player.id == player.id;
             });
