@@ -1,13 +1,93 @@
 
+/* Top Section */
 
-.allGenresContainer {
-    display: grid;
-    grid-template-columns: 165px 165px;
-    grid-auto-rows: 188px;
-    gap: 20px 16px;
+.title {
+    margin-top: 40px;
 }
 
+.codeOption {
+    padding: 13px 12px;
+    border-radius: 1000px;
+    width: 100%;
+}
+
+.qrButton {
+    min-width: 74px;
+    height: 46px;
+    border-radius: 1000px;
+    background-color: var(--neutral100);
+}
+
+.joinOptions {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    gap: 16px;
+}
+
+.divider {
+    padding: 1px;
+    width: 100%;
+    background-color: white;
+    margin: 24px 0;
+    border-radius: 1000px;
+}
+
+
+/* Middle Section */
+.popularTitleSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popularTitleSection .arrow {
+    width: 24px;
+    height: 24px;
+    background-color: white;
+}
+
+.popularSection {
+    display: flex;
+    gap: 16px;
+    min-height: 188px;
+    overflow: scroll;
+ }
+
+
+
+/* Bottom Section */
+.allGenresContainer {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 20px 16px;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+
+/* Mixed */
+.popularTitel,
+.allGenresTitel,
+.title {
+    color: var(--secondary200);
+    margin-bottom: 16px;
+}
+
+.allGenresTitel {
+    margin-top: 24px;
+}
+
+
+
+/* Quiz Card */
 .genre {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 164px;
+    
+    height: 188px;
     border-radius: 4%;
     background-color: white;
 }
@@ -35,31 +115,3 @@ img {
     color: black;
     padding: 16px 12px;
 }
-
-.popularTitel,
-.allGenresTitel,
-.title {
-    color: var(--secondary200);
-}
-
-.codeOption {
-    padding: 13px 12px;
-    border-radius: 1000px;
-    width: 224px;
-}
-
-.qrButton {
-    width: 74px;
-    height: 46px;
-    border-radius: 1000px;
-    background-color: var(--neutral100);
-}
-
-.joinOptions {
-    display: flex;
-    justify-content: baseline;
-    align-items: center;
-
-    gap: 16px;
-}
-

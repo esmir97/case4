@@ -43,28 +43,30 @@
 
 /*  Typography    */
 
+h1, h2, h3, h4, .h4-bold, p, .p-bold, .details {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
 h1 {
     font-family: "PassionOne";
     font-size: 40px;
-    line-height: 0;
 }
 
 h2 {
     font-family: "PassionOne";
     font-size: 32px;
-    line-height: 0;
 }
 
 h3 {
     font-family: "PassionOne";
     font-size: 24px;
-    line-height: 0;
 }
 
 h4 {
     font-family: "Montserrat-Medium";
     font-size: 16px;
-    line-height: 0;
 }
 
 .h4-bold {
@@ -76,22 +78,23 @@ h4 {
 p {
     font-family: "Montserrat-Medium";
     font-size: 14px;
-    line-height: 0;
 }
 
 .p-bold {
     font-family: "Montserrat-Bold";
     font-size: 14px;
-    line-height: 0;
 }
 
 .details {
     font-family: "Montserrat-Medium";
     font-size: 12px;
-    line-height: 0;
 }
 
 /*      */
+
+* {
+    box-sizing: border-box;
+}
 
 body, html, #wrapper {
     margin: 0;
@@ -107,7 +110,7 @@ body, html, #wrapper {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 20px;
+    padding: 20px 23px 20px 23px;
   }
 
 .overlay {

@@ -1,6 +1,8 @@
 import { renderLobby } from "./../lobby/renderLobby.js";
 
 export function renderStart (parentElement) {
+
+    // Övre delen
     let title = document.createElement("h2");
     title.textContent = "Join Quiz";
     title.classList.add("title");
@@ -28,11 +30,30 @@ export function renderStart (parentElement) {
     joinOptions.appendChild(buttonQR);
     //buttonPin.addEventListener("click" ); QR-code function
 
-    let popularTitel = document.createElement("h3");
-    popularTitel.textContent = "Popular Right Now";
-    popularTitel.classList.add("popularTitel");
-    parentElement.appendChild(popularTitel);
+    const divider = document.createElement("div");
+    divider.classList.add("divider");
+    parentElement.appendChild(divider);
+
+
+    // Mellersta delen
+    // Titel och Pil
+    let popularTitleSection = document.createElement("div");
+    popularTitleSection.classList.add("popularTitleSection");
+    popularTitleSection.innerHTML = `
+        <h3 class="popularTitel">Popular Right Now</h3>
+        <img src="/static/media/icons/next.png" class="arrow">
+    `;
+    parentElement.appendChild(popularTitleSection);
     
+    let popularSection = document.createElement("div");
+    popularSection.classList.add("popularSection");
+    parentElement.appendChild(popularSection);
+    renderGenres(popularSection);
+
+
+
+    // Nedre delen
+    // Titel
     let allGenresTitel = document.createElement("h3");
     allGenresTitel.textContent = "All Genres";
     allGenresTitel.classList.add("allGenresTitel");
@@ -40,9 +61,9 @@ export function renderStart (parentElement) {
 
     let allGenresContainer = document.createElement("div");
     allGenresContainer.classList.add("allGenresContainer");
-    parentElement.appendChild(allGenresContainer);
+    parentElement.appendChild(allGenresContainer);    
     renderGenres(allGenresContainer);
-
+    
 }
 
 function renderGenres (parentElement) {
