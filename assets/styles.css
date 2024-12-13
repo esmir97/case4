@@ -41,12 +41,46 @@
     /*  Spacing    */
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(180deg, #00187A 54.04%, rgba(60, 84, 182, 0.80) 83.5%);    
+}
+
+#wrapper {
+display: flex;
+flex-direction: column;
+gap: 20px;
+padding: 20px 23px 20px 23px;
+}
+
+.hide {
+    display: none;
+}
+
+#joinCard {
+    background-color: white;
+    height: 75vh;
+    width: 75vw;
+}
+
+
+
+
+
+
+
+
 /*  Typography    */
 
 h1, h2, h3, h4, .h4-bold, p, .p-bold, .details {
     margin: 0;
     padding: 0;
-    line-height: 0;
+    color: white;
 }
 
 h1 {
@@ -91,41 +125,4 @@ p {
 }
 
 /*      */
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    background: linear-gradient(180deg, #00187A 54.04%, rgba(60, 84, 182, 0.80) 83.5%);    
-}
-
-body, html, #wrapper {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: white;
-    height: 100%;
-  }
-  
-  #wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px 23px 20px 23px;
-  }
-
-
-
-.hide {
-    display: none;
-}
-
-
-
-#joinCard {
-    background-color: white;
-    height: 75vh;
-    width: 75vw;
-}
 

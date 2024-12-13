@@ -54,7 +54,6 @@ export function renderStart (parentElement) {
     renderGenres(popularSection);
 
 
-
     // Nedre delen
     // Titel
     let allGenresTitel = document.createElement("h3");
@@ -120,7 +119,7 @@ async function createNewGame (event) {
         localStorage.setItem("player", player);
 
         const wrapper = document.getElementById("wrapper");
-        document.querySelector(".overlay").remove();
+        document.querySelector(".popup").remove();
         renderLobby(wrapper);
     }
 }
@@ -129,44 +128,68 @@ async function createNewGame (event) {
 async function newGameCard(event) {
     event.stopPropagation();
     console.log(event.currentTarget.id);
-    let body = document.querySelector("body");
-
+    let wrapper = document.querySelector('#wrapper');
     let startGamePopup = document.createElement("div");
     startGamePopup.classList.add("overlay");
    
+    // <select id="century">
+    //     <option value="70">1970s</option>
+    //     <option value="80">1980s</option>
+    //     <option value="90">1990s</option>
+    //     <option value="00">2000s</option>
+    //     <option value="10">2010s</option>
+    //     <option value="20">2020s</option>
+    // </select>
     startGamePopup.innerHTML = 
         `<div id="card" class="popup">
-            <h3>80s Rock</h3>
+            <h3>80´s Rock</h3>
             <p class="amountOfQuestions">20 Questions</p>
-            <h4>Choose year</h4>
-            <select id="century">
-                <option value="70">1970s</option>
-                <option value="80">1980s</option>
-                <option value="90">1990s</option>
-                <option value="00">2000s</option>
-                <option value="10">2010s</option>
-                <option value="20">2020s</option>
-            </select>
-            <p>or</p>
-            <p class="mixedQuestionsButton">Mixed Questions</p>
+            <h4 class="h4-bold">Choose year</h4>
+            <div class="slider-container">
+                <input id="slider" type="range" min="1960" max="2020" step="10" value="1990">
+                <p id="selected-decade">1990s</p>
+            </div>
+            <p class="orText">or</p>
+            <div class="mixedQuestionsButton">
+                <p>Mixed Questions</p>
+            </div>
             <div class="line"></div>
-            <h4>Name</h4>
+            <h4 class="h4-bold">Name</h4>
             <input id="name" type="text" placeholder="eg. theo">
             <div class="line"></div>
-            <p>Start Quiz</p>
+            <div class="startButton">
+                <p>Start Quiz</p>
+            </div>
         </div>`;
 
     startGamePopup.addEventListener("click", (event) => {
         startGamePopup.remove();
     })
 
-    body.appendChild(startGamePopup);
+    wrapper.appendChild(startGamePopup);
 
     document.getElementById("card").addEventListener("click", (event) => {
         event.stopPropagation();
     });
 
     document.getElementById("name").addEventListener("keydown", createNewGame);
+
+    // Slider
+    const slider = document.getElementById('slider');
+    const output = document.getElementById('selected-decade');
+
+    // Formaterar årtalet
+    function formatDecade(value) {
+        const suffix = value.slice(-2) === '60' ? '60s' : value.slice(-2) + 's';
+        return `${value.slice(0, -2)}${suffix}`;
+    }
+    // Ändrar så att output är samma som årtalet
+    slider.addEventListener('input', () => {
+        const decade = slider.value;
+        output.textContent = formatDecade(decade);
+    });
+    // Default värde på output
+    output.textContent = formatDecade(slider.value);
 }
 
 async function joinGame(event) {
