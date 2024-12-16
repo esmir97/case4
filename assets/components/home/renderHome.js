@@ -1,6 +1,6 @@
 import { renderLobby } from "./../lobby/renderLobby.js";
 
-export function renderStart (parentElement) {
+export function renderStart (parentElement) {    
 
     // Övre delen
     let title = document.createElement("h2");
@@ -90,9 +90,14 @@ function renderGenres (parentElement) {
 
 async function createNewGame (event) {
 
-    if (event.key == "Enter") {
+    if (event.type == "click") {
         let genre = event.currentTarget.className;
-        let century = document.getElementById("century").value;
+        // let century = document.getElementById("century").value;
+        let century = document.getElementById("slider").value;
+
+
+        console.log(genre, century);
+        
         
         if (century == null) {
             century = "mixed";
@@ -128,6 +133,7 @@ async function createNewGame (event) {
 async function newGameCard(event) {
     event.stopPropagation();
     console.log(event.currentTarget.id);
+    
     let wrapper = document.querySelector('#wrapper');
     let startGamePopup = document.createElement("div");
     startGamePopup.classList.add("overlay");
@@ -142,7 +148,8 @@ async function newGameCard(event) {
     // </select>
     startGamePopup.innerHTML = 
         `<div id="card" class="popup">
-            <h3>80´s Rock</h3>
+            <div class="dragClose"></div>
+            <h3>${event.currentTarget.id}</h3>
             <p class="amountOfQuestions">20 Questions</p>
             <h4 class="h4-bold">Choose year</h4>
             <div class="slider-container">
@@ -171,8 +178,8 @@ async function newGameCard(event) {
     document.getElementById("card").addEventListener("click", (event) => {
         event.stopPropagation();
     });
-
-    document.getElementById("name").addEventListener("keydown", createNewGame);
+    
+    document.querySelector(".startButton").addEventListener("click", createNewGame);
 
     // Slider
     const slider = document.getElementById('slider');
@@ -187,6 +194,7 @@ async function newGameCard(event) {
     slider.addEventListener('input', () => {
         const decade = slider.value;
         output.textContent = formatDecade(decade);
+        let currentDecade = formatDecade(decade)
     });
     // Default värde på output
     output.textContent = formatDecade(slider.value);

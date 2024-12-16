@@ -68,7 +68,7 @@
     overflow: scroll;
  }
 
-
+ 
 
 /* Bottom Section */
 .allGenresContainer {
@@ -133,6 +133,7 @@ img {
 
 /* Start Game Popup */
 
+
 .overlay {
     position: fixed;
     inset: 0;
@@ -142,8 +143,17 @@ img {
     display: flex;
     justify-content: center;
     align-items: end;
-
+    
     background-color: rgba(0, 0, 0, 0.3);
+}
+
+.dragClose {
+    background-color: var(--neutral100);
+    margin: 0 auto 25px auto;
+    width: 45px;
+    height: 3px;
+    flex-shrink: 0;
+    border-radius: 1000px;
 }
 
 .popup {
@@ -155,7 +165,7 @@ img {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 237, 255, 0.10) 100%);
     backdrop-filter: blur(17.5px);
 
-    padding: 48px 32px 44px 32px;
+    padding: 20px 32px 44px 32px;
 }
 
 .popup input {
@@ -171,7 +181,7 @@ img {
 }
 
 .line {
-    padding: 1px;
+    height: 1px;
     background-color: var(--neutral100);
 
     margin: 32px 0;
