@@ -135,13 +135,13 @@ img {
 
 .overlay {
     position: fixed;
-    inset: 0 0 0 0;
+    inset: 0;
     width: 100vw;
     height: 100vh;
     
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
 
     background-color: rgba(0, 0, 0, 0.3);
 }
@@ -225,12 +225,7 @@ img {
     text-align: center;
 }
 
-
-
-
-
-
-
+/* Slider */
 .slider-container {
     text-align: center;
     color: var(--neutral100);
@@ -247,7 +242,3 @@ input[type="range"] {
     font-family: "Montserrat-Medium";
     font-size: 16px;
 }
-
-
-
-
