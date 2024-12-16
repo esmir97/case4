@@ -91,10 +91,10 @@ function renderGenres (parentElement) {
 async function createNewGame (event) {
 
     if (event.type == "click") {
-        let genre = event.currentTarget.className;
+        let genre = event.currentTarget.id;
         // let century = document.getElementById("century").value;
-        let century = document.getElementById("slider").value;
-
+        let centuryLOL = document.getElementById("slider").value;
+        let century = centuryLOL.slice(2);
 
         console.log(genre, century);
         
@@ -164,7 +164,7 @@ async function newGameCard(event) {
             <h4 class="h4-bold">Name</h4>
             <input id="name" type="text" placeholder="eg. theo">
             <div class="line"></div>
-            <div class="startButton">
+            <div class="startButton" id="${event.currentTarget.id}">
                 <p>Start Quiz</p>
             </div>
         </div>`;
@@ -186,18 +186,21 @@ async function newGameCard(event) {
     const output = document.getElementById('selected-decade');
 
     // Formaterar årtalet
-    function formatDecade(value) {
-        const suffix = value.slice(-2) === '60' ? '60s' : value.slice(-2) + 's';
-        return `${value.slice(0, -2)}${suffix}`;
-    }
+    
     // Ändrar så att output är samma som årtalet
     slider.addEventListener('input', () => {
         const decade = slider.value;
+        console.log(slider.value);
         output.textContent = formatDecade(decade);
         let currentDecade = formatDecade(decade)
     });
     // Default värde på output
     output.textContent = formatDecade(slider.value);
+}
+
+function formatDecade(value) {
+    const suffix = value.slice(-2) === '60' ? '60s' : value.slice(-2) + 's';
+    return `${value.slice(0, -2)}${suffix}`;
 }
 
 async function joinGame(event) {
