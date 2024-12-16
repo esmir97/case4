@@ -9,6 +9,8 @@ let _state = {
 let connections = {};
 let connectionID = 1;
 
+
+
 const testData = await Deno.readTextFile("./database.json");
 
 let allQuestions = [];
@@ -209,7 +211,19 @@ function getQuestionsForGame(genre, century) { //Randomises an array with 20 que
     return chosenQuestions;
 }
 
+function send(socket, event, data) {
+    socket.send(JSON.stringify({ event, data }));
+  }
 
+function broadcast(event, data, code) {
+    let game = _state.games.find( (game) => {
+        return code == game.code;
+    });
+
+    for (const player in game) {
+        send(player, event, data);
+    }
+  }
 
 
 function handleWebSocket (request) { //Säger vad som ska hända på serversidan med vår connection när vi använder WebSockets
@@ -223,6 +237,9 @@ function handleWebSocket (request) { //Säger vad som ska hända på serversidan
         socket.send(myID);
         connections[myID] = socket;
         console.log(connections);
+
+        console.log(connections[myID]);
+
     });
 
     socket.addEventListener("message", (event) => {

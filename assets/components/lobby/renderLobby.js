@@ -1,3 +1,5 @@
+import { socket } from "../../logic/client.js";
+
 export function renderLobby (parentElement) {
     parentElement.innerHTML = ``;
 
@@ -61,8 +63,7 @@ async function enterName(event) {
 
         let response = await ( await fetch('/api/test', options) ).json();
 
-
+        socket.send("updateUI");
         console.log(response);
-        //Skicka gamecode och nytt playername och playerobj
     }
 }
