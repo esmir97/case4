@@ -1,4 +1,6 @@
 
+
+
 /* Top Section */
 
 .title {
@@ -251,4 +253,10 @@ input[type="range"] {
 #selected-decade {
     font-family: "Montserrat-Medium";
     font-size: 16px;
+}
+
+/* Toggles  */
+
+.clickedButton {
+    background-color: var(--secondary200);
 }
