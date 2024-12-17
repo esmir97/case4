@@ -77,9 +77,8 @@ async function renderNameCard() {
     let gameJoined = await (await fetch(`/api/test?code=${gameCode}`)).json();
     console.log(gameJoined);
 
-    const body = document.querySelector("body");
-
-    const overlay = document.createElement("div");
+    let wrapper = document.querySelector('#wrapper');
+    let overlay = document.createElement("div");
     overlay.classList.add('overlay');
 
     overlay.innerHTML = `
@@ -92,7 +91,21 @@ async function renderNameCard() {
         </div>
     `;
 
-    body.appendChild(overlay);
+    overlay.addEventListener("click", () => {
+        overlay.remove();
+    });
+
+    const popup = overlay.querySelector('.middlePopup');
+    popup.addEventListener("click", (event) => {
+        event.stopPropagation(); // Stop the click from propagating to the overlay
+    });
+
+    const closeButton = overlay.querySelector('.closeButton');
+    closeButton.addEventListener("click", () => {
+        overlay.remove();
+    });
+
+    wrapper.appendChild(overlay);
 
     document.getElementById("name").addEventListener("keydown", enterName);
 }

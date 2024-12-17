@@ -129,7 +129,6 @@ async function createNewGame (event) {
     }
 }
 
-
 async function newGameCard(event) {
     event.stopPropagation();
     console.log(event.currentTarget.id);
@@ -199,7 +198,6 @@ async function newGameCard(event) {
         }
     });
 }
-
 
 function formatDecade(value) {
     const suffix = value.slice(-2) === '60' ? '60s' : value.slice(-2) + 's';
