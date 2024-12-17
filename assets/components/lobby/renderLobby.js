@@ -62,6 +62,13 @@ export async function renderLobby (parentElement) {
     waitingForPlayers.textContent = "Waiting for players to join...";
     parentElement.appendChild(waitingForPlayers);
 
+    let moderatorInfoIconContainer = document.createElement("div");
+    moderatorInfoIconContainer.classList.add("moderatorInfoIconContainer");
+    moderatorInfoIconContainer.innerHTML = `
+        <img src="/static/media/icons/info.svg" class="moderatorInfoIcon">
+    `;
+    parentElement.appendChild(moderatorInfoIconContainer);
+
 
     let player = JSON.parse(localStorage.getItem("player"));
 

@@ -32,5 +32,18 @@
     align-items: center;
 }
 
+.waitingForPlayers {
+    margin-bottom: 36px;
+}
 
+.moderatorInfoIconContainer {
+    display: flex;
+    justify-content: end;
+}
+
+.moderatorInfoIcon {
+    height: 24px;
+    width: 24px;
+    margin-bottom: 10px;
+}
 
