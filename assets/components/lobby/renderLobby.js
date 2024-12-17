@@ -49,17 +49,12 @@ export async function renderLobby (parentElement) {
     let quizDetails = document.createElement("h3");
     quizDetails.classList.add = "quizDetailsTitle";
 
-    quizDetails.textContent = gameJoined.century + "´s " + gameJoined.genre + "Quiz";
+    if (gameJoined.century == "00" || gameJoined.century == "10" || gameJoined.century == "20") {
+        quizDetails.textContent = "20" + gameJoined.century + "´s " + gameJoined.genre + " Quiz";
+    } else {
+        quizDetails.textContent = + gameJoined.century + "´s " + gameJoined.genre + " Quiz";
+    }
     parentElement.appendChild(quizDetails);
-
-
-
-
-
-
-
-
-
 
 
     let player = JSON.parse(localStorage.getItem("player"));
