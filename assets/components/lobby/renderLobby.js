@@ -2,6 +2,14 @@ import { socket } from "../../logic/client.js";
 
 export async function renderLobby (parentElement) {
 
+    let player = JSON.parse(localStorage.getItem("player"));
+
+    if (player.name == "") {
+        renderNameCard();
+    } 
+
+    console.log(JSON.parse(localStorage.getItem("player")));
+    
     parentElement.innerHTML = "";
 
 
@@ -69,22 +77,25 @@ export async function renderLobby (parentElement) {
     `;
     parentElement.appendChild(moderatorInfoIconContainer);
 
-    let startQuizButton = document.createElement("div");
-    startQuizButton.classList.add("startQuizButton");
-    startQuizButton.innerHTML = `
-        <p class="p-bold">Start Quiz</p>
-        <img src="/static/media/icons/next2.svg" class="startQuizArrow">
-    `;
-    parentElement.appendChild(startQuizButton);
 
+    console.log(player);
 
-    let player = JSON.parse(localStorage.getItem("player"));
-
-    if (player.name == "") {
-        renderNameCard();
-    } 
-
-    console.log(JSON.parse(localStorage.getItem("player")));
+    if (player.role === "admin") {
+        let startQuizButton = document.createElement("div");
+        startQuizButton.classList.add("startQuizButton");
+        startQuizButton.innerHTML = `
+            <p class="p-bold">Start Quiz</p>
+            <img src="/static/media/icons/next2.svg" class="startQuizArrow">
+        `;
+        parentElement.appendChild(startQuizButton);
+    } else {
+        let startQuizButton = document.createElement("div");
+        startQuizButton.classList.add("waitingForHostButton");
+        startQuizButton.innerHTML = `
+            <p class="p-bold">Waiting for host to start</p>
+        `;
+        parentElement.appendChild(startQuizButton);
+    };
 }
 
 async function renderNameCard() {

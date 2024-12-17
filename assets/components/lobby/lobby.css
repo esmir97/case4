@@ -70,3 +70,16 @@
     width: 24px;
     height: 24px;
 }
+
+.waitingForHostButton {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 46px;
+    align-items: center; 
+    justify-content: space-between; 
+
+    width: 100%;
+    border-radius: 1000px;
+    padding: 0 20px; 
+    background-color: var(--neutral300); 
+}
