@@ -1,0 +1,28 @@
+h1 {
+    color: var(--secondary200);
+    margin-top: 40px;
+}
+
+#podiumContainer {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.podiumDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.podiumDiv > p {
+    color: var(--neutral100);
+}
+
+.podiumDiv > :nth-child(1) {
+    font-size: 50px;
+}
+
+.second > :nth-child(1) {
+    font-size: 60px;
+}

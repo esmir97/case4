@@ -31,7 +31,7 @@ export function renderQuizHeader (parentElement, /* category */) {
 /*
 
 export function renderQuizCounter (parentElement) {
-    const counterCon = document.createElement("div");
+    let counterCon = document.createElement("div");
     counterCon.id = "counterCon";
     parentElement.appendChild(counterCon);
     
@@ -42,7 +42,7 @@ export function renderQuizCounter (parentElement) {
     `
 
     // För att testa
-    const questionData = {
+    let questionData = {
         question: "We don’t need no education, we don’t need no thought control...",
         options: [
             "No dark sarcasm in the classroom.",
@@ -55,10 +55,10 @@ export function renderQuizCounter (parentElement) {
 
     // Ska räkna ner till 1 och sen kommer frågan 
 
-    const countdownNumber = counterCon.querySelector("#countdownNumber");
+    let countdownNumber = counterCon.querySelector("#countdownNumber");
     let countdownValue = 3;
 
-    const countdownInterval = setInterval(() => {
+    let countdownInterval = setInterval(() => {
         countdownNumber.textContent = countdownValue;
         countdownValue--;
 
