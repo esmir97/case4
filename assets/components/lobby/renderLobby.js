@@ -7,19 +7,14 @@ export function renderLobby (parentElement) {
 
     if (player.name == "") {
         renderNameCard();
-    }
+    } 
 
     console.log(JSON.parse(localStorage.getItem("player")));
-
-    const joinName = document.createElement("input");
-    joinName.id = "joinName";
-    joinName.placeholder = "Name";
-    joinName.addEventListener("keydown", console.log("lol"));
 }
 
 async function renderNameCard() {
     let gameCode = localStorage.getItem("gameCode");
-    let gameJoined = await (await fetch(`/api/test?gameCode=${gameCode}`)).json();
+    let gameJoined = await (await fetch(`/api/test?code=${gameCode}`)).json();
     console.log(gameJoined);
 
     const body = document.querySelector("body");
@@ -63,7 +58,11 @@ async function enterName(event) {
 
         let response = await ( await fetch('/api/test', options) ).json();
 
-        socket.send("updateUI");
+        socket.send(JSON.stringify("updateUI"));
         console.log(response);
     }
+}
+
+export function updateLobby () {
+    console.log("Uuuh hej huhuh updating lobby!!! XDD");
 }

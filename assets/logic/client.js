@@ -1,8 +1,6 @@
-export const socket = new WebSocket("http://localhost:8000");
+import { updateLobby } from "../components/lobby/renderLobby.js";
 
-function send(socket, event, data) {
-    socket.send(JSON.stringify({ event, data }));
-  }
+export const socket = new WebSocket("http://localhost:8000");
 
 socket.addEventListener("open", (event) => {
     console.log("Connected.");
@@ -13,8 +11,9 @@ socket.addEventListener("open", (event) => {
 socket.addEventListener("message", (event) => {
     const message = JSON.parse(event.data);
     switch(message.event) {
-        case "updateUI":
+        case "updateLobby":
             console.log("Updating UI..");
+            updateLobby();
             break;
         
     }
