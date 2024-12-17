@@ -83,16 +83,14 @@ async function renderNameCard() {
     overlay.classList.add('overlay');
 
     overlay.innerHTML = `
-                        <div>
-                            <h2>Joining ${gameJoined.century}'s ${gameJoined.genre} Quiz</h2>
-                            <h3>Name</h2>
-                        </div>
-
-                        <div id="cardJoin">
-                            <p>Enter your display name here!</p>
-                            <p id="error"></p>
-                            <input id="name" placeholder="eg. 'Theo'">
-                        </div>`;
+        <div class="middlePopup">
+            <img src="/static/media/icons/close.svg" class="closeButton">
+            <h3 class="middlePopupTitle">Joining ${gameJoined.century}'s ${gameJoined.genre} Quiz</h3>
+            <p class="p-bold middlePopupName">Name</p>
+            <p id="error"></p>
+            <input id="name" placeholder="eg. Theo">
+        </div>
+    `;
 
     body.appendChild(overlay);
 
