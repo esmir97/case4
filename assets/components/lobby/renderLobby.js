@@ -2,6 +2,7 @@ import { socket } from "../../logic/client.js";
 
 export async function renderLobby (parentElement) {
 
+    parentElement.innerHTML = "";
 
 
 
