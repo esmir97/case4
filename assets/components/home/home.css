@@ -144,9 +144,10 @@ img {
     
     display: flex;
     justify-content: center;
-    align-items: end;
+    flex-direction: column;
     
-    background-color: rgba(0, 0, 0, 0.3);
+    
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .dragClose {

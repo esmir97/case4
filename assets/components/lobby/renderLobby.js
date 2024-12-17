@@ -53,15 +53,6 @@ export async function renderLobby (parentElement) {
     parentElement.appendChild(quizDetails);
 
 
-
-
-
-
-
-
-
-
-
     let player = JSON.parse(localStorage.getItem("player"));
 
     if (player.name == "") {

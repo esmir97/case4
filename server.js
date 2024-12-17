@@ -45,7 +45,7 @@ async function handleHTTPRequest (request) { //Säger till vad som ska hända n�
     }
 
     if (pathname == '/api/test') {
-        console.log("we're in!!!");
+        
         const options = {
             headers: { "Content-Type": "application/json"}
         }
@@ -57,9 +57,9 @@ async function handleHTTPRequest (request) { //Säger till vad som ska hända n�
             let game = _state.games.find( (game) => {
                 return game.code == code;
             });
-            console.log(GETdata.code);
+            
             if (game) {
-                console.log("RETURNING");
+                
                 return new Response(JSON.stringify(game), options);
 
             } else {
@@ -69,15 +69,14 @@ async function handleHTTPRequest (request) { //Säger till vad som ska hända n�
         }
 
         if (request.method == 'POST') {
-            console.log("76");
+            
             const POSTdata = await request.json();
             
             if (POSTdata.genre) { //Create Game
-                            console.log("80");                                                  
+                                                                           
                 let newCode = generateGameCode();
-                console.log("connectionID: " + connectionID)
+               
                 let questions = getQuestionsForGame(POSTdata.genre, POSTdata.century);
-                console.log(connections);
 
                 let players = [
                     {
@@ -111,8 +110,7 @@ async function handleHTTPRequest (request) { //Säger till vad som ska hända n�
                     connection: connections[myID],
                     role: "player",
                     points: 0
-                }  
-                console.log(newPlayer);
+                }
                 
                 let filteredGame = _state.games.find( (game) => {
                     if (game.code == code) {
@@ -191,12 +189,10 @@ function getQuestionsForGame(genre, century) { //Randomises an array with 20 que
         chosenQuestions.push(questionsToChooseFrom[Math.floor( Math.random() * questionsToChooseFrom.length )]);
     }
     
-    console.log("it worked!!");
     return chosenQuestions;
 }
 
 function send(socket, event, data) {
-    console.log(socket, event, data);
     socket.send(JSON.stringify({ event, data }));
   }
 
