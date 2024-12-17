@@ -13,18 +13,18 @@ export function renderQuizNav (parentElement) {
     let pointsCon = document.createElement("div");
     pointsCon.innerHTML = `
         <h4>🤓</h4>
-        <p id="points">235p</p>
+        <p id="points">0p</p>
     `
     quizNav.appendChild(pointsCon);
 }
 
-export function renderQuizHeader (parentElement) {
+export function renderQuizHeader (parentElement, /* category */) {
     let header = document.createElement("div");
     header.id = "quizHeader";
     parentElement.appendChild(header);
 
     let headerText = document.createElement("h1");
-    headerText.textContent = "Finish the lyrics!"; // sålänge 
+    headerText.textContent = "Finish the lyrics!"; // category 
     header.appendChild(headerText);
 }
 
@@ -97,8 +97,6 @@ export function renderQuizQuestion (parentElement) {
     `;
 
     const progressBar = quizContent.querySelector("#progressBar");
-    progressBar.style.transition = "width 20s linear";
-    progressBar.style.width = "100%";
     setTimeout(() => {
         progressBar.style.width = "0%";
     }, 0);
