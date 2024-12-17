@@ -9,27 +9,9 @@ let _state = {
 let connections = {};
 let connectionID = 1;
 
+
+
 const testData = await Deno.readTextFile("./database.json");
-
-let allQuestions = [];
-
-if (testData != "") {
-    allQuestions = JSON.parse(testData);
-}
-
-//Använd inte, behövs inte längre
-async function addGameToState (code) {
-    let newGame = {
-        code: code,
-        genre: "X",
-        century: "Y",
-        questions: []
-    }
-    
-    let questions = Deno.readTextFile(database.json);
-
-    _state[entity].push();
-}
 
 function generateGameCode (n = 6) {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -71,7 +53,7 @@ async function handleHTTPRequest (request) { //Säger till vad som ska hända n�
             const GETdata = await request;
 
             let game = _state.games.find( (game) => {
-                return game.gameCode == GETdata.gameCode;
+                return game.code == GETdata.code;
             });
 
             if (game) {
@@ -86,19 +68,21 @@ async function handleHTTPRequest (request) { //Säger till vad som ska hända n�
         if (request.method == 'POST') {
             console.log("76");
             const POSTdata = await request.json();
-            console.log(POSTdata);
+            
             if (POSTdata.genre) { //Create Game
                             console.log("80");                                                  
                 let newCode = generateGameCode();
-                
+                console.log("connectionID: " + connectionID)
                 let questions = getQuestionsForGame(POSTdata.genre, POSTdata.century);
-                
+                console.log(connections);
+
                 let players = [
                     {
                         name: POSTdata.name,
-                        id: connectionID,
+                        id: connectionID - 1,
+                        connection: connections[myID],
                         role: "admin",
-                        points: 0
+                        points: 0,
                     }
                 ]
 
@@ -111,30 +95,31 @@ async function handleHTTPRequest (request) { //Säger till vad som ska hända n�
                 };
 
                 _state.games.push(response);
-                console.log(_state.games);
+                
                 
                 return new Response(JSON.stringify(response), options); 
 
             } else if (POSTdata.code) { // Join Game
-                console.log("108")
                 let code = POSTdata.code;
-console.log(POSTdata.code);
+                
                 let newPlayer = {
                     name: "",
-                    id: connectionID,
+                    id: connectionID - 1,
+                    connection: connections[myID],
                     role: "player",
                     points: 0
                 }  
-
+                console.log(newPlayer);
                 
                 let filteredGame = _state.games.find( (game) => {
                     if (game.code == code) {
                         return true;
                     }
                 } );
-    console.log(filteredGame);
+
                 if (filteredGame) {       
-                    filteredGame.players.push(newPlayer);     
+                    filteredGame.players.push(newPlayer);
+                    broadcast("updateLobby", filteredGame.code);
                     return new Response(JSON.stringify(filteredGame), options);
                 } else {
                     return new Response(JSON.stringify("game doesn't exist"), options);
@@ -144,6 +129,7 @@ console.log(POSTdata.code);
                 console.log("good job with the codes bozo");
                 return new Response(JSON.stringify({ error: "wrong keys in rqst" }), options);
             }
+            
         }
 
         if (request.method == 'PATCH') {
@@ -152,13 +138,14 @@ console.log(POSTdata.code);
             let game = _state.games.find( (game) => {
                 return game.code == PATCHdata.code;
             });
-    console.log(game);
+
             let playerToPatch = game.players.find( (player) => {
                 return PATCHdata.player.id == player.id;
             });
 
             playerToPatch.name = PATCHdata.name;
 
+            broadcast("updateLobby", game.code);
             return new Response(JSON.stringify(playerToPatch), options);
         }
 
@@ -205,28 +192,73 @@ function getQuestionsForGame(genre, century) { //Randomises an array with 20 que
     return chosenQuestions;
 }
 
+function send(socket, event, data) {
+    console.log(socket, event, data);
+    socket.send(JSON.stringify({ event, data }));
+  }
+
+function broadcast(event, data) {
+    let game = _state.games.find( (game) => {
+        return data == game.code;
+    });
+
+    console.log("BROADCASTIIIING");
+    console.log(game);
+    for (const player of game.players) {
+        if (player.connection && player.connection.readyState === WebSocket.OPEN) {
+            send(player.connection, event, data);
+        } else {
+            console.log("Player connection not found for player ID: " + player.id);
+        }
+    }
+  }
 
 
+let myID = null;
 
 function handleWebSocket (request) { //Säger vad som ska hända på serversidan med vår connection när vi använder WebSockets
     const { socket, response } = Deno.upgradeWebSocket(request);
 
-    let myID = connectionID;
-    
+    myID = connectionID;
+    connections[myID] = socket;
     connectionID++;
+    
+    
     socket.addEventListener("open", (event) => {
         console.log(`Connection ${myID} connected.`);
         socket.send(myID);
-        connections[myID] = socket;
         console.log(connections);
+
+        console.log(connections[myID]);
+
     });
 
     socket.addEventListener("message", (event) => {
+        const message = JSON.parse(event.data);
+
+        switch(message.event) {
+            case "updateUI":
+                broadcast(event, message);
+                break;
+        }
         console.log(event.data);
+        
     });
     
     socket.addEventListener("close", (event) => {
         console.log(`Connection ${myID} disconnected.`);
+
+        _state.games.forEach( (game) => {
+            for (let i = 0; i > game.players.length; i++) {
+                console.log("myID: " + myID + " , player: " + game.players[i]);
+                if (game.players[i].id == myID) {
+                    game.players.splice(i, 1);
+                    console.log(game.players[i] + " was deleted");
+                    broadcast(event, game.code);
+                }
+            }
+        });
+        
         delete connections[myID];
     });
     

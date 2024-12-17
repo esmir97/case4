@@ -220,7 +220,7 @@ async function joinGame(event) {
 
         } else {
             let player = JSON.stringify(response.players[response.players.length - 1]);
-            console.log(response);
+            console.log(player);
 
             //------------------SETTING VALUES IN LOCALSTORAGE FOR EASY ACCESS LATER------------------
             localStorage.setItem("gameCode", response.code);
