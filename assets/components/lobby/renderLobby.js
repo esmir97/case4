@@ -1,9 +1,67 @@
 import { socket } from "../../logic/client.js";
 
-export function renderLobby (parentElement) {
-    parentElement.innerHTML = ``;
+export async function renderLobby (parentElement) {
 
-    let player = JSON.parse( localStorage.getItem("player") );
+
+
+
+    // Övre delen
+    let title = document.createElement("h2");
+    title.textContent = "Join Quiz";
+    title.classList.add("title");
+    parentElement.appendChild(title);
+
+    let joinOptions = document.createElement("div");
+    joinOptions.classList.add("joinOptions");
+    parentElement.appendChild(joinOptions);
+
+    const joinCode = document.createElement("div");
+    joinCode.classList.add("gameCodePreview");
+    let gameCode = localStorage.getItem("gameCode");
+    joinCode.innerHTML = `
+        <p class="gameCode">${gameCode}</p>
+    `;
+    joinOptions.appendChild(joinCode);
+
+    const text = document.createElement("p");
+    text.classList.add("details");
+    text.textContent = "or";
+    joinOptions.appendChild(text);
+
+    const buttonQR = document.createElement("div");
+    buttonQR.id = "buttonQR";
+    buttonQR.classList.add("qrButton");
+    buttonQR.innerHTML = `
+        <img src="/static/media/icons/QrCode.svg" class="qr">
+    `;
+    joinOptions.appendChild(buttonQR);
+    //buttonPin.addEventListener("click" ); QR-code function
+
+    const divider = document.createElement("div");
+    divider.classList.add("divider");
+    parentElement.appendChild(divider);
+
+    // Mellersta delen    
+    let gameJoined = await (await fetch(`/api/test?code=${gameCode}`)).json();
+    console.log(gameJoined);
+
+    let quizDetails = document.createElement("h3");
+    quizDetails.classList.add = "quizDetailsTitle";
+
+    quizDetails.textContent = gameJoined.century + "´s " + gameJoined.genre + "Quiz";
+    parentElement.appendChild(quizDetails);
+
+
+
+
+
+
+
+
+
+
+
+    let player = JSON.parse(localStorage.getItem("player"));
 
     if (player.name == "") {
         renderNameCard();
@@ -52,11 +110,11 @@ async function enterName(event) {
             return;
         }
 
-        let requestBody = {code: code, player: player, name: newName};
+        let requestBody = { code: code, player: player, name: newName };
 
-        let options = { method: "PATCH", headers: { "Content-Type": "application/json"}, body: JSON.stringify(requestBody) };
+        let options = { method: "PATCH", headers: { "Content-Type": "application/json" }, body: JSON.stringify(requestBody) };
 
-        let response = await ( await fetch('/api/test', options) ).json();
+        let response = await (await fetch('/api/test', options)).json();
 
         socket.send(JSON.stringify("updateUI"));
         console.log(response);

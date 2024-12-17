@@ -138,14 +138,6 @@ async function newGameCard(event) {
     let startGamePopup = document.createElement("div");
     startGamePopup.classList.add("overlay");
    
-    // <select id="century">
-    //     <option value="70">1970s</option>
-    //     <option value="80">1980s</option>
-    //     <option value="90">1990s</option>
-    //     <option value="00">2000s</option>
-    //     <option value="10">2010s</option>
-    //     <option value="20">2020s</option>
-    // </select>
     startGamePopup.innerHTML = 
         `<div id="card" class="popup">
             <div class="dragClose"></div>
@@ -171,32 +163,43 @@ async function newGameCard(event) {
 
     startGamePopup.addEventListener("click", (event) => {
         startGamePopup.remove();
-    })
+    });
 
     wrapper.appendChild(startGamePopup);
+    
+    let mixedQuestionsButton = document.querySelector(".mixedQuestionsButton");
+    let output = document.getElementById('selected-decade');
 
     document.getElementById("card").addEventListener("click", (event) => {
         event.stopPropagation();
     });
-    
+
     document.querySelector(".startButton").addEventListener("click", createNewGame);
 
     // Slider
     const slider = document.getElementById('slider');
-    const output = document.getElementById('selected-decade');
-
-    // Formaterar årtalet
     
     // Ändrar så att output är samma som årtalet
     slider.addEventListener('input', () => {
         const decade = slider.value;
         console.log(slider.value);
         output.textContent = formatDecade(decade);
-        let currentDecade = formatDecade(decade)
     });
+
     // Default värde på output
     output.textContent = formatDecade(slider.value);
+
+    mixedQuestionsButton.addEventListener("click", () => {
+        mixedQuestionsButton.classList.toggle("clickedButton");
+
+        if (mixedQuestionsButton.classList.contains("clickedButton")) {
+            output.style.display = "none";
+        } else {
+            output.style.display = "block";
+        }
+    });
 }
+
 
 function formatDecade(value) {
     const suffix = value.slice(-2) === '60' ? '60s' : value.slice(-2) + 's';
