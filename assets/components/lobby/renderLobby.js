@@ -69,6 +69,14 @@ export async function renderLobby (parentElement) {
     `;
     parentElement.appendChild(moderatorInfoIconContainer);
 
+    let startQuizButton = document.createElement("div");
+    startQuizButton.classList.add("startQuizButton");
+    startQuizButton.innerHTML = `
+        <p class="p-bold">Start Quiz</p>
+        <img src="/static/media/icons/next2.svg" class="startQuizArrow">
+    `;
+    parentElement.appendChild(startQuizButton);
+
 
     let player = JSON.parse(localStorage.getItem("player"));
 
