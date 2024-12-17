@@ -136,7 +136,7 @@ async function newGameCard(event) {
     
     let wrapper = document.querySelector('#wrapper');
     let startGamePopup = document.createElement("div");
-    startGamePopup.classList.add("overlay");
+    startGamePopup.classList.add("startOverlay");
    
     startGamePopup.innerHTML = 
         `<div id="card" class="popup">
