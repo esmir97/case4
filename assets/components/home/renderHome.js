@@ -1,28 +1,75 @@
 import { renderLobby } from "./../lobby/renderLobby.js";
 
-export function renderStart (parentElement) {
-    let header = document.createElement("header");
-    parentElement.appendChild(header);
+export function renderStart (parentElement) {    
 
-    let main = document.createElement("main");
-    parentElement.appendChild(main);
-    renderGenres(main);
+    // Övre delen
+    let title = document.createElement("h2");
+    title.textContent = "Join Quiz";
+    title.classList.add("title");
+    parentElement.appendChild(title);
 
+    let joinOptions = document.createElement("div");
+    joinOptions.classList.add("joinOptions");
+    parentElement.appendChild(joinOptions);
+    
     const joinCode = document.createElement("input");
     joinCode.id = "joinCode";
+    joinCode.classList.add("codeOption");
     joinCode.placeholder = "Enter Pin";
-    header.appendChild(joinCode);
+    joinOptions.appendChild(joinCode);
     joinCode.addEventListener("keydown", joinGame);
+    
+    const text = document.createElement("p");
+    text.classList.add("details");
+    text.textContent = "or";
+    joinOptions.appendChild(text);
 
-    const buttonQR = document.createElement("button");
-    buttonQR.textContent = "QR";
+    const buttonQR = document.createElement("div");
     buttonQR.id = "buttonQR";
-    header.appendChild(buttonQR);
+    buttonQR.classList.add("qrButton");
+    buttonQR.innerHTML = `
+        <img src="/static/media/icons/QrCode.svg" class="qr">
+    `;
+    joinOptions.appendChild(buttonQR);
     //buttonPin.addEventListener("click" ); QR-code function
+
+    const divider = document.createElement("div");
+    divider.classList.add("divider");
+    parentElement.appendChild(divider);
+
+
+    // Mellersta delen
+    // Titel och Pil
+    let popularTitleSection = document.createElement("div");
+    popularTitleSection.classList.add("popularTitleSection");
+    popularTitleSection.innerHTML = `
+        <h3 class="popularTitel">Popular Right Now</h3>
+        <img src="/static/media/icons/next2.svg" class="arrow">
+    `;
+    parentElement.appendChild(popularTitleSection);
+    
+    let popularSection = document.createElement("div");
+    popularSection.classList.add("popularSection");
+    parentElement.appendChild(popularSection);
+    renderGenres(popularSection);
+
+
+    // Nedre delen
+    // Titel
+    let allGenresTitel = document.createElement("h3");
+    allGenresTitel.textContent = "All Genres";
+    allGenresTitel.classList.add("allGenresTitel");
+    parentElement.appendChild(allGenresTitel);
+
+    let allGenresContainer = document.createElement("div");
+    allGenresContainer.classList.add("allGenresContainer");
+    parentElement.appendChild(allGenresContainer);    
+    renderGenres(allGenresContainer);
+    
 }
 
 function renderGenres (parentElement) {
-    const allGenres = ["pop", "rock", "christmas", "r&b", "hiphop", "jazz", "pop", "country", "folk"];
+    const allGenres = ["Pop", "Rock", "Christmas", "R&B", "Hiphop", "Jazz", "Country", "Folk"];
 
     for (let genre of allGenres) {
         const div = document.createElement("div");
@@ -33,7 +80,7 @@ function renderGenres (parentElement) {
                             <img src="/static/media/images/${genre}.jpg">
                         </div>
                         <div class="genreText">
-                            <h3>${genre}</h3>
+                            <p class="p-bold">${genre}</p>
                         </div>
         `;
         div.addEventListener("click", newGameCard);
@@ -43,9 +90,14 @@ function renderGenres (parentElement) {
 
 async function createNewGame (event) {
 
-    if (event.key == "Enter") {
-        let genre = event.currentTarget.className;
-        let century = document.getElementById("century").value;
+    if (event.type == "click") {
+        let genre = event.currentTarget.id;
+        // let century = document.getElementById("century").value;
+        let centuryLOL = document.getElementById("slider").value;
+        let century = centuryLOL.slice(2);
+
+        console.log(genre, century);
+        
         
         if (century == null) {
             century = "mixed";
@@ -72,7 +124,7 @@ async function createNewGame (event) {
         localStorage.setItem("player", player);
 
         const wrapper = document.getElementById("wrapper");
-        document.querySelector(".overlay").remove();
+        document.querySelector(".popup").remove();
         renderLobby(wrapper);
     }
 }
@@ -81,39 +133,74 @@ async function createNewGame (event) {
 async function newGameCard(event) {
     event.stopPropagation();
     console.log(event.currentTarget.id);
-    const body = document.querySelector("body");
+    
+    let wrapper = document.querySelector('#wrapper');
+    let startGamePopup = document.createElement("div");
+    startGamePopup.classList.add("overlay");
+   
+    // <select id="century">
+    //     <option value="70">1970s</option>
+    //     <option value="80">1980s</option>
+    //     <option value="90">1990s</option>
+    //     <option value="00">2000s</option>
+    //     <option value="10">2010s</option>
+    //     <option value="20">2020s</option>
+    // </select>
+    startGamePopup.innerHTML = 
+        `<div id="card" class="popup">
+            <div class="dragClose"></div>
+            <h3>${event.currentTarget.id}</h3>
+            <p class="amountOfQuestions">20 Questions</p>
+            <h4 class="h4-bold">Choose year</h4>
+            <div class="slider-container">
+                <input id="slider" type="range" min="1960" max="2020" step="10" value="1990">
+                <p id="selected-decade">1990s</p>
+            </div>
+            <p class="orText">or</p>
+            <div class="mixedQuestionsButton">
+                <p>Mixed Questions</p>
+            </div>
+            <div class="line"></div>
+            <h4 class="h4-bold">Name</h4>
+            <input id="name" type="text" placeholder="eg. theo">
+            <div class="line"></div>
+            <div class="startButton" id="${event.currentTarget.id}">
+                <p>Start Quiz</p>
+            </div>
+        </div>`;
 
-    const overlay = document.createElement("div");
-    overlay.classList.add('overlay');
-
-    overlay.innerHTML = 
-                        `<div id="card">
-                            <h2>Choose Year</h2>
-                            <select id="century">
-                                <option value="70">1970s</option>
-                                <option value="80">1980s</option>
-                                <option value="90">1990s</option>
-                                <option value="00">2000s</option>
-                                <option value="10">2010s</option>
-                                <option value="20">2020s</option>
-                            </select>
-
-                            <button id="mixedQuestions">Mixed Questions</button>
-                            <h3>Name</h2>
-                            <input id="name" class="${event.currentTarget.id}" placeholder="eg. 'Theo'">
-                        </div>`;
-
-    overlay.addEventListener("click", (event) => {
-        overlay.remove();
+    startGamePopup.addEventListener("click", (event) => {
+        startGamePopup.remove();
     })
 
-    body.appendChild(overlay);
+    wrapper.appendChild(startGamePopup);
 
     document.getElementById("card").addEventListener("click", (event) => {
         event.stopPropagation();
     });
+    
+    document.querySelector(".startButton").addEventListener("click", createNewGame);
 
-    document.getElementById("name").addEventListener("keydown", createNewGame);
+    // Slider
+    const slider = document.getElementById('slider');
+    const output = document.getElementById('selected-decade');
+
+    // Formaterar årtalet
+    
+    // Ändrar så att output är samma som årtalet
+    slider.addEventListener('input', () => {
+        const decade = slider.value;
+        console.log(slider.value);
+        output.textContent = formatDecade(decade);
+        let currentDecade = formatDecade(decade)
+    });
+    // Default värde på output
+    output.textContent = formatDecade(slider.value);
+}
+
+function formatDecade(value) {
+    const suffix = value.slice(-2) === '60' ? '60s' : value.slice(-2) + 's';
+    return `${value.slice(0, -2)}${suffix}`;
 }
 
 async function joinGame(event) {

@@ -1,0 +1,254 @@
+
+/* Top Section */
+
+.title {
+    margin-top: 40px;
+}
+
+.codeOption {
+    padding: 14px 12px;
+    border-radius: 1000px;
+    width: 100%;
+    border: none;
+    text-align: center;
+
+    font-family: "Montserrat-Medium";
+    font-size: 14px;
+}
+
+.qrButton {
+    min-width: 74px;
+    height: 46px;
+    border-radius: 1000px;
+    background-color: var(--neutral100);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qr {
+    width: 28px;
+    height: 28px;
+    z-index: 999;
+}
+
+.joinOptions {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    gap: 16px;
+}
+
+.divider {
+    padding: 1px;
+    width: 100%;
+    background-color: white;
+    margin: 24px 0;
+    border-radius: 1000px;
+}
+
+
+/* Middle Section */
+.popularTitleSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popularTitleSection .arrow {
+   width: 24px;
+   height: 24px;
+}
+
+.popularSection {
+    display: flex;
+    gap: 16px;
+    min-height: 188px;
+    overflow: scroll;
+ }
+
+ 
+
+/* Bottom Section */
+.allGenresContainer {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 20px 16px;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+
+/* Mixed */
+.popularTitel,
+.allGenresTitel,
+.title,
+.popularTitleSection .arrow  {
+    color: var(--secondary200);
+    margin-bottom: 16px;
+}
+
+.allGenresTitel {
+    margin-top: 24px;
+}
+
+
+
+/* Quiz Card */
+.genre {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 164px;
+    
+    height: 188px;
+    border-radius: 4%;
+    background-color: white;
+}
+
+.genreImg {
+    height: 139px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4% 4% 0 0;
+}
+
+.genreText {
+    height: 49px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    }
+
+.genreText p {
+    color: black;
+    padding: 16px 12px;
+}
+
+/* Start Game Popup */
+
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.dragClose {
+    background-color: var(--neutral100);
+    margin: 0 auto 25px auto;
+    width: 45px;
+    height: 3px;
+    flex-shrink: 0;
+    border-radius: 1000px;
+}
+
+.popup {
+    display: flex;
+    flex-direction: column;    
+
+    border-radius: 40px 40px 0px 0px;
+    border: 1px solid #FFF;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 237, 255, 0.10) 100%);
+    backdrop-filter: blur(17.5px);
+
+    padding: 20px 32px 44px 32px;
+}
+
+.popup input {
+    border-radius: 100px;
+    border: 1px solid var(--primary100);
+    background: var(--neutral100);
+    box-shadow: 0px 2px 8px 0px rgba(109, 109, 109, 0.25);
+
+    height: 46px;
+    text-align: center;
+
+    margin-top: 16px;
+}
+
+.line {
+    height: 1px;
+    background-color: var(--neutral100);
+
+    margin: 32px 0;
+}
+
+.startButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 46px;
+    width: 329px;
+
+    background-color: var(--primary100);
+    border-radius: 1000px;
+    box-shadow: 0px 2px 8px 0px rgba(109, 109, 109, 0.25);
+}
+
+.mixedQuestionsButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 46px;
+    width: 329px;
+
+    background-color: var(--neutral100);
+    border: 1px solid var(--primary100);
+    border-radius: 1000px;
+    box-shadow: 0px 2px 8px 0px rgba(109, 109, 109, 0.25);
+}
+
+.popup select {
+    margin-top: 16px;
+}
+
+.mixedQuestionsButton p {
+    color: var(--neutral700);
+}
+
+.popup h3 {
+    margin-bottom: 4px;
+}
+
+.amountOfQuestions {
+    margin-bottom: 32px;
+}
+
+.orText {
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Slider */
+.slider-container {
+    text-align: center;
+    color: var(--neutral100);
+    margin-top: 20px;
+}
+
+
+input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+}
+
+#selected-decade {
+    font-family: "Montserrat-Medium";
+    font-size: 16px;
+}

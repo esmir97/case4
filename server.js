@@ -88,13 +88,13 @@ async function handleHTTPRequest (request) { //Säger till vad som ska hända n�
         if (request.method == 'POST') {
             console.log("76");
             const POSTdata = await request.json();
-
+            console.log(POSTdata);
             if (POSTdata.genre) { //Create Game
                             console.log("80");                                                  
                 let newCode = generateGameCode();
                 
                 let questions = getQuestionsForGame(POSTdata.genre, POSTdata.century);
-
+                
                 let players = [
                     {
                         name: POSTdata.name,
@@ -181,16 +181,12 @@ function getQuestionsForGame(genre, century) { //Randomises an array with 20 que
     century = century.toString();
     
     if (century != "mixed") {
-        console.log("genre:")
+        genre = genre.toLowerCase();
 
-        let questionsGenre = questions[genre];
-        console.log(questionsGenre);
-        let questionCentury = questionsGenre[century];
-
-        for (let question of questionCentury) {
+        for (let question of questions[genre][century]) {
             questionsToChooseFrom.push(question);
         }
-
+        
     } else {
 
         let questionGenre = testData[genre];
