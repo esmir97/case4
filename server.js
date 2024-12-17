@@ -20,8 +20,9 @@ function generateGameCode (n = 6) {
         result += characters.charAt(Math.floor(Math.random() * characters.length));
     }
 
-    let codeDupeCheck = _state.games.find( (game) => {
-        return game.id == result;
+    let codeDupeCheck = [];
+    codeDupeCheck = _state.games.find( (game) => {
+        return game.code == result;
     })
 
     if (codeDupeCheck) {
@@ -51,16 +52,18 @@ async function handleHTTPRequest (request) { //S채ger till vad som ska h채nda n�
 
         if (request.method == 'GET') { //GET entire game obj with gameCode
             const GETdata = await request;
+            let code = GETdata.url.slice(GETdata.url.length - 6);
 
             let game = _state.games.find( (game) => {
-                return game.code == GETdata.code;
+                return game.code == code;
             });
-
+            console.log(GETdata.code);
             if (game) {
+                console.log("RETURNING");
                 return new Response(JSON.stringify(game), options);
 
             } else {
-                return new Response(JSON.stringify(""))
+                return new Response(JSON.stringify("Game doesn't exist"))
             }
 
         }
@@ -265,7 +268,7 @@ function handleWebSocket (request) { //S채ger vad som ska h채nda p책 serversidan
     return response;
 }
 
-function handleRequest (request) { //Anv채nder denna som mellanhand, 채r det HTTP eller WS? Transferar till r채tt funktion beroende p책 protokoll.
+function handleRequest (request) { 
     if (request.headers.get("upgrade") == "websocket") {
         return handleWebSocket(request);
     } else {
