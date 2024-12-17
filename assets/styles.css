@@ -52,10 +52,11 @@ body {
 }
 
 #wrapper {
-display: flex;
-flex-direction: column;
-gap: 20px;
-padding: 20px 23px 20px 23px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 23px 20px 23px;
 }
 
 .hide {
