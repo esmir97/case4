@@ -119,6 +119,7 @@ async function enterName(event) {
 
         socket.send(JSON.stringify("updateUI"));
         console.log(response);
+        document.querySelector(".overlay").remove();
     }
 }
 
