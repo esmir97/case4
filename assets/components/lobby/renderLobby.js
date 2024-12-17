@@ -9,7 +9,7 @@ export async function renderLobby (parentElement) {
     // Övre delen
     let title = document.createElement("h2");
     title.textContent = "Join Quiz";
-    title.classList.add("title");
+    title.classList.add("joinTitle");
     parentElement.appendChild(title);
 
     let joinOptions = document.createElement("div");
@@ -47,7 +47,7 @@ export async function renderLobby (parentElement) {
     console.log(gameJoined);
 
     let quizDetails = document.createElement("h3");
-    quizDetails.classList.add = "quizDetailsTitle";
+    quizDetails.classList.add("quizDetailsTitle");
 
     if (gameJoined.century == "00" || gameJoined.century == "10" || gameJoined.century == "20") {
         quizDetails.textContent = "20" + gameJoined.century + "´s " + gameJoined.genre + " Quiz";
@@ -55,6 +55,12 @@ export async function renderLobby (parentElement) {
         quizDetails.textContent = + gameJoined.century + "´s " + gameJoined.genre + " Quiz";
     }
     parentElement.appendChild(quizDetails);
+
+    let waitingForPlayers = document.createElement("p");
+    waitingForPlayers.classList.add("h4-bold");
+    waitingForPlayers.classList.add("waitingForPlayers");
+    waitingForPlayers.textContent = "Waiting for players to join...";
+    parentElement.appendChild(waitingForPlayers);
 
 
     let player = JSON.parse(localStorage.getItem("player"));
