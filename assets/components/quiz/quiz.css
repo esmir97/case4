@@ -1,3 +1,6 @@
+
+/* Nav */
+
 #quizNav {
     display: flex;
     width: 393px;
@@ -31,6 +34,8 @@
     cursor: pointer;
 }
 
+/* Header */
+
 #quizHeader {
     width: 393px;
     height: 164px;
@@ -47,6 +52,8 @@
     color: var(--neutral100);
 }
 
+/* Countdown */
+
 .gif {
     height: 190px;
     margin-top: 50px;
@@ -56,6 +63,8 @@
     color: white;
     text-align: center;
 }
+
+/* Question */
 
 #quizContent {
     display: flex;

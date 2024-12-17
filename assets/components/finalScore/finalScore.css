@@ -1,7 +1,12 @@
+
+/* Header */ 
+
 h1 {
     color: var(--secondary200);
     margin-top: 40px;
 }
+
+/* Podium */ 
 
 #podiumContainer {
     display: flex;
@@ -10,19 +15,92 @@ h1 {
 }
 
 .podiumDiv {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 7px;
 }
 
 .podiumDiv > p {
     color: var(--neutral100);
 }
 
-.podiumDiv > :nth-child(1) {
-    font-size: 50px;
+.podiumEmoji {
+    font-size: 60px;
 }
 
-.second > :nth-child(1) {
-    font-size: 60px;
+.second > .podiumEmoji {
+    font-size: 70px;
+}
+
+.first, .third {
+    margin-top: 40px;
+}
+
+.position {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+}
+
+.position > h4 {
+    color: var(--neutral800);
+}
+
+.position-1 {
+    background-color: rgba(255, 238, 0, 0.80);
+}
+.position-2 {
+    background-color: rgba(192, 192, 192, 0.80);
+}
+.position-3 {
+    background-color: rgba(205, 127, 50, 0.80);
+}
+
+/* Score Board */ 
+
+#scoreBoard {
+    height: 200px;
+}
+
+/* Text */ 
+
+#bottomText {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 72px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Button */
+
+#nextButton {
+    background-color: var(--primary100);
+    color: var(--neutral100);
+    display: flex;
+    width: 345px;
+    height: 46px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;    
+    border: none;
+    padding: 20px;
+    position: relative;
+    margin-bottom: 67px;
+}
+
+.nextIcon {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    align-items: center;
+    position: absolute;
+    right: 20px;
 }
