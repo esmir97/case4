@@ -4,6 +4,7 @@
 /* Title */
 .title {
     margin-top: 70px; /**/
+    color: var(--secondary200);
 }
 
 /* Options to join quiz */

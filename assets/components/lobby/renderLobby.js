@@ -1,4 +1,5 @@
 import { socket } from "../../logic/client.js";
+import { renderStart } from "../home/renderHome.js";
 
 export async function renderLobby(parentElement) {
 
@@ -118,6 +119,9 @@ async function renderNameCard() {
     `;
 
     overlay.addEventListener("click", () => {
+        let parentElement = document.querySelector("#wrapper");
+        parentElement.innerHTML = ``;
+        renderStart(parentElement);
         overlay.remove();
     });
 
@@ -128,6 +132,9 @@ async function renderNameCard() {
 
     const closeButton = overlay.querySelector('.closeButton');
     closeButton.addEventListener("click", () => {
+        let parentElement = document.querySelector("#wrapper");
+        parentElement.innerHTML = ``;
+        renderStart(parentElement);
         overlay.remove();
     });
 
