@@ -60,6 +60,7 @@ body {
     flex-direction: column;
     
     padding: 20px 23px 20px 23px;
+    min-height: 852px;
 }
 
 .hide {
@@ -131,6 +132,11 @@ p {
 
 
 /* Popups */
+
+/* Moderator Information Popup */
+.moderatorInformationTitle {
+    margin-bottom: 16px;
+}
 
 /* Join Game Popup */
 .overlay {

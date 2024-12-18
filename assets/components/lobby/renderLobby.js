@@ -76,6 +76,36 @@ export async function renderLobby(parentElement) {
     moderatorInfoIconContainer.innerHTML = `
         <img src="/static/media/icons/info.svg" class="moderatorInfoIcon">
     `;
+    moderatorInfoIconContainer.addEventListener("click", () => {
+        let wrapper = document.querySelector('#wrapper');
+        let overlay = document.createElement("div");
+        overlay.classList.add('overlay');
+    
+        overlay.innerHTML = `
+            <div class="middlePopup">
+                <img src="/static/media/icons/close.svg" class="closeButton">
+                <h3 class="moderatorInformationTitle">Moderator Information</h3>
+                <p class="p">As “Quiz moderator” you can kick players by clicking on them and pressing “yes”.</p>
+                <p id="error"></p>
+            </div>
+        `;
+    
+        overlay.addEventListener("click", () => {
+            overlay.remove();
+        });
+    
+        const popup = overlay.querySelector('.middlePopup');
+        popup.addEventListener("click", (event) => {
+            event.stopPropagation(); // Stop the click from propagating to the overlay
+        });
+    
+        const closeButton = overlay.querySelector('.closeButton');
+        closeButton.addEventListener("click", () => {
+            overlay.remove();
+        });
+    
+        wrapper.appendChild(overlay);
+    });
     parentElement.appendChild(moderatorInfoIconContainer);
 
 
