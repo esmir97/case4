@@ -1,15 +1,15 @@
 import { socket } from "../../logic/client.js";
 
-export async function renderLobby (parentElement) {
+export async function renderLobby(parentElement) {
 
     let player = JSON.parse(localStorage.getItem("player"));
 
     if (player.name == "") {
         renderNameCard();
-    } 
+    }
 
     console.log(JSON.parse(localStorage.getItem("player")));
-    
+
     parentElement.innerHTML = "";
 
 
@@ -161,6 +161,6 @@ async function enterName(event) {
     }
 }
 
-export function updateLobby () {
+export function updateLobby() {
     console.log("Uuuh hej huhuh updating lobby!!! XDD");
 }
