@@ -1,8 +1,10 @@
+import { startConfetti } from "../correctAnswer/renderCorrectAnswer.js";
 
 export function renderFinalScore (parentElement) {
     // Header
     let header = document.createElement("h1");
     header.textContent = "FINAL SCORE";
+    header.classList.add("scoreHeader");
     parentElement.appendChild(header);
 
     // Podium
@@ -42,19 +44,20 @@ export function renderFinalScore (parentElement) {
     parentElement.appendChild(podiumContainer);
 
     // Scoreboard
+
     let scoreBoard = document.createElement("div");
     scoreBoard.id = "scoreBoard";
     parentElement.appendChild(scoreBoard);
 
-    // Texten
-    // Ska ändras till rätt poäng 
-    let bottomText = document.createElement("div");
-    bottomText.id = "bottomText";
-    bottomText.innerHTML = `
+    // Final placement
+
+    let finalPlacement = document.createElement("div");
+    finalPlacement.id = "finalPlacement";
+    finalPlacement.innerHTML = `
         <p>Good Job!</p>
-        <p>You finished in 7th place!</p>
+        <p>You finished in ... place!</p>
     `;
-    parentElement.appendChild(bottomText);
+    parentElement.appendChild(finalPlacement);
 
     let nextButton = document.createElement("button");
     nextButton.id = "nextButton";
@@ -63,4 +66,6 @@ export function renderFinalScore (parentElement) {
         <img class="nextIcon" src="/static/media/icons/nextWhite.png"/>
     `;
     parentElement.appendChild(nextButton);
+
+    startConfetti()
 }

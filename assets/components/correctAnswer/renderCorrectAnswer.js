@@ -14,14 +14,11 @@ export function renderCorrectAnswer (parentElement){
     startConfetti();  //anropar confetti funktionen
 }
 
-/*
-player = [
-    {name: "Johan"},
-    {name: "Esmir"},
-    {name:"Theo"},
-    {name:"Johanna"},
+let players = [
+  { emoji: "🤓", name: "Dumbledork", score: 1850 },
+  { emoji: "🔥", name: "HotShot", score: 1700 },
+  { emoji: "🎵", name: "Melody", score: 1650 },
 ];
-   */
 
 //scoreboard
 async function renderScoreBoard (parentElement){
@@ -41,20 +38,19 @@ async function renderScoreBoard (parentElement){
    // ol.textContent = "Scoreboard"; //kan ha texten scoreboard här med men vet ej?
     parentElement.appendChild(ol);
     //För varje spelare skapas en li element med strukturen: player emoji & namn samt dess score
-   
 
 
-    /* VIKTIGT!!!! AVKOMMENTERA detta sen! måste koppla till vår ARRAY!!!
-    player.forEach(player => {
-        let listItem = document.createElement("li");
-        listItem.classList.add("listItem");
-        listItem.innerHTML = `
-        <span>${player.emoji} ${player.name}</span> 
-        <span>${player.score}</span>
-      `;
-    ol.appendChild(listItem);
-    });
- */
+    // VIKTIGT!!!! AVKOMMENTERA detta sen! måste koppla till vår ARRAY!!!
+      players.forEach(player => {
+          let listItem = document.createElement("li");
+          listItem.classList.add("listItem");
+          listItem.innerHTML = `
+            <span>${player.emoji} ${player.name}</span> 
+            <span>${player.score}</span>
+          `;
+
+        ol.appendChild(listItem);
+      });
 
 
     let currentPlacement = document.createElement("h4");
@@ -65,11 +61,8 @@ async function renderScoreBoard (parentElement){
 }
 //renderCorrectAnswer(wrapper);
 
-
-
-
 // CONFETTI
-function startConfetti() {
+export function startConfetti() {
     // Globals
     var random = Math.random,
       cos = Math.cos,

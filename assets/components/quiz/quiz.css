@@ -58,9 +58,16 @@
 
 /* Countdown */
 
+#counterCon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .gif {
-    height: 190px;
-    margin-top: 50px;
+    height: 200px;
+    width: auto;
+    margin: 70px 0 12px 0;
 }
 
 #counterCon > h2, h1 {
