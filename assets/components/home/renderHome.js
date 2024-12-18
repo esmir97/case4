@@ -44,7 +44,7 @@ export function renderStart (parentElement) {
     popularTitleSection.classList.add("popularTitleSection");
     popularTitleSection.innerHTML = `
         <h3 class="popularTitel">Popular Right Now</h3>
-        <img src="/static/media/icons/next2.svg" class="arrow">
+        <img src="/static/media/icons/nextPink.svg" class="arrow">
     `;
     parentElement.appendChild(popularTitleSection);
     
@@ -204,10 +204,6 @@ async function newGameCard(event) {
     });    
 }
 
-
-
-
-
 function formatDecade(value) {
     const suffix = value.slice(-2) === '60' ? '60s' : value.slice(-2) + 's';
     return `${value.slice(0, -2)}${suffix}`;
@@ -238,8 +234,6 @@ async function joinGame(event) {
 
             renderLobby(document.getElementById("wrapper"));
         }
-
-        
     }
     return;
 }
