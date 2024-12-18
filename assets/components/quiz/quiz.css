@@ -32,7 +32,7 @@
     width: 24px;
     height: 24px;
 
-    background: url('/static/media/icons/back.png') no-repeat center;
+    background: url('/static/media/icons/back.svg') no-repeat center;
     background-size: cover;
     border: none;
     cursor: pointer;
