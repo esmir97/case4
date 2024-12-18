@@ -151,7 +151,7 @@ async function newGameCard(event) {
             </div>
             <div class="line"></div>
             <h4 class="h4-bold">Name</h4>
-            <input id="name" type="text" placeholder="e.g., Theo" class="name-input">
+            <input id="name" type="text" placeholder="eg. Theo" class="name-input">
             <div class="line"></div>
             <div class="startButton" id="${event.currentTarget.id}">
                 <p>Start Quiz</p>
