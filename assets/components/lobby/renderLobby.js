@@ -2,7 +2,6 @@ import { socket } from "../../logic/client.js";
 import { renderStart } from "../home/renderHome.js";
 
 export async function renderLobby(parentElement) {
-
     let player = JSON.parse(localStorage.getItem("player"));
 
     if (player.name == "") {
@@ -21,14 +20,65 @@ export async function renderLobby(parentElement) {
     homeButtonContainer.innerHTML = `
         <img src="/static/media/icons/back.svg" class="homeButton">
     `;
+
+
+
     homeButtonContainer.addEventListener("click", () => {
-        parentElement.innerHTML = ``;
-        renderStart(parentElement);
+        let wrapper = document.querySelector('#wrapper');
+        let overlay = document.createElement("div");
+        overlay.classList.add('overlay');
+        
+        overlay.innerHTML = `
+        <div class="middlePopup">
+            <img src="/static/media/icons/close.svg" class="closeButton">
+            <h3 class="leaveTitle">Leave Quiz?</h3>
+            <div class="leaveOptionsContainer">
+                <div class="leaveQuizYes">
+                    <p>Yes</p>
+                </div>
+                <div class="leaveQuizNo">
+                    <p>No</p>
+                </div>
+            </div>
+        </div>
+        `;
+        wrapper.appendChild(overlay);
 
-        // Player Left Function Here
+        let yesButton = document.querySelector(".leaveQuizYes");
+        let noButton = document.querySelector(".leaveQuizNo");
+        
+        yesButton.addEventListener("click", () => {
+            wrapper.innerHTML = "";
+            renderStart(wrapper);
+
+         // Player Left Function Here
+        });  
+
+        noButton.addEventListener("click", () => {
+            overlay.remove();
+        });  
+
+        overlay.addEventListener("click", () => {
+            overlay.remove();
+        });        
+        
+        const popup = overlay.querySelector('.middlePopup');
+        popup.addEventListener("click", (event) => {
+            event.stopPropagation(); // Stop the click from propagating to the overlay
+        });
+
+        const closeButton = overlay.querySelector('.closeButton');
+        closeButton.addEventListener("click", () => {
+            overlay.remove();
+        });
     });
-
     parentElement.appendChild(homeButtonContainer);
+
+
+
+
+
+
 
     let title = document.createElement("h2");
     title.textContent = "Join Quiz";

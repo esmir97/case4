@@ -133,6 +133,52 @@ p {
 
 /* Popups */
 
+/* Leave Quiz Popup */
+.leaveOptionsContainer {
+    display: flex;
+    gap: 16px; /* 16px between Yes and No buttons */
+    justify-content: center; /* Center the buttons */
+}
+
+.leaveTitle {
+    margin-bottom: 32px;
+}
+
+.leaveQuizYes,
+.leaveQuizNo {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border2);
+}
+
+.leaveQuizYes {
+    background-color: var(--primary100); /* Yes button color */
+    color: #fff; /* Text color for Yes button */
+}
+
+.leaveQuizNo {
+    border: 2px solid var(--primary100); /* Border color for No button */
+    background-color: var(--neutral100); /* Fill color for No button */
+}
+
+.leaveQuizNo p {
+    color: var(--primary100); /* Text color for No button */
+}
+
+.leaveQuizYes:hover {
+    background-color: var(--primary200); /* Slightly darker shade for hover effect */
+}
+
+.leaveQuizNo:hover {
+    background-color: var(--neutral200); /* Slightly darker shade for hover effect */
+}
+
+
 /* Moderator Information Popup */
 .moderatorInformationTitle {
     margin-bottom: 16px;
