@@ -19,7 +19,7 @@ export async function renderLobby(parentElement) {
     let homeButtonContainer = document.createElement("div");
     homeButtonContainer.classList.add("homeButtonContainer");
     homeButtonContainer.innerHTML = `
-        <img src="/static/media/icons/back.svg" class="homeButton">
+        <img src="/static/media/icons/home.svg" class="homeButton">
     `;
     homeButtonContainer.addEventListener("click", () => {
         parentElement.innerHTML = ``;

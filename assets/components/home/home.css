@@ -28,11 +28,7 @@
     font-size: 14px;
 }
 
-.joinOptions p:first-of-type {
-    color: var(--neutral600);
-}
-
-.joinOptions p:nth-child(2) {
+.joinOptions p {
     color: var(--neutral300);
 }
 

@@ -44,7 +44,7 @@ export function renderStart (parentElement) {
     popularTitleSection.classList.add("popularTitleSection");
     popularTitleSection.innerHTML = `
         <h3 class="popularTitel">Popular Right Now</h3>
-        <img src="/static/media/icons/nextPink.svg" class="arrow">
+        <img src="/static/media/icons/next2.svg" class="arrow">
     `;
     parentElement.appendChild(popularTitleSection);
     
@@ -151,7 +151,7 @@ async function newGameCard(event) {
             </div>
             <div class="line"></div>
             <h4 class="h4-bold">Name</h4>
-            <input id="name" type="text" placeholder="eg. Theo" class="name-input">
+            <input id="name" type="text" placeholder="e.g., Theo" class="name-input">
             <div class="line"></div>
             <div class="startButton" id="${event.currentTarget.id}">
                 <p>Start Quiz</p>
