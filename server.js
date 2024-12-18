@@ -9,27 +9,9 @@ let _state = {
 let connections = {};
 let connectionID = 1;
 
+
+
 const testData = await Deno.readTextFile("./database.json");
-
-let allQuestions = [];
-
-if (testData != "") {
-    allQuestions = JSON.parse(testData);
-}
-
-//Anv채nd inte, beh철vs inte l채ngre
-async function addGameToState (code) {
-    let newGame = {
-        code: code,
-        genre: "X",
-        century: "Y",
-        questions: []
-    }
-    
-    let questions = Deno.readTextFile(database.json);
-
-    _state[entity].push();
-}
 
 function generateGameCode (n = 6) {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -38,8 +20,9 @@ function generateGameCode (n = 6) {
         result += characters.charAt(Math.floor(Math.random() * characters.length));
     }
 
-    let codeDupeCheck = _state.games.find( (game) => {
-        return game.id == result;
+    let codeDupeCheck = [];
+    codeDupeCheck = _state.games.find( (game) => {
+        return game.code == result;
     })
 
     if (codeDupeCheck) {
@@ -62,43 +45,46 @@ async function handleHTTPRequest (request) { //S채ger till vad som ska h채nda n�
     }
 
     if (pathname == '/api/test') {
-        console.log("we're in!!!");
+        
         const options = {
             headers: { "Content-Type": "application/json"}
         }
 
         if (request.method == 'GET') { //GET entire game obj with gameCode
             const GETdata = await request;
+            let code = GETdata.url.slice(GETdata.url.length - 6);
 
             let game = _state.games.find( (game) => {
-                return game.gameCode == GETdata.gameCode;
+                return game.code == code;
             });
-
+            
             if (game) {
+                
                 return new Response(JSON.stringify(game), options);
 
             } else {
-                return new Response(JSON.stringify(""))
+                return new Response(JSON.stringify("Game doesn't exist"))
             }
 
         }
 
         if (request.method == 'POST') {
-            console.log("76");
+            
             const POSTdata = await request.json();
-            console.log(POSTdata);
+            
             if (POSTdata.genre) { //Create Game
-                            console.log("80");                                                  
+                                                                           
                 let newCode = generateGameCode();
-                
+               
                 let questions = getQuestionsForGame(POSTdata.genre, POSTdata.century);
-                
+
                 let players = [
                     {
                         name: POSTdata.name,
-                        id: connectionID,
+                        id: connectionID - 1,
+                        connection: connections[myID],
                         role: "admin",
-                        points: 0
+                        points: 0,
                     }
                 ]
 
@@ -111,30 +97,30 @@ async function handleHTTPRequest (request) { //S채ger till vad som ska h채nda n�
                 };
 
                 _state.games.push(response);
-                console.log(_state.games);
+                
                 
                 return new Response(JSON.stringify(response), options); 
 
             } else if (POSTdata.code) { // Join Game
-                console.log("108")
                 let code = POSTdata.code;
-console.log(POSTdata.code);
+                
                 let newPlayer = {
                     name: "",
-                    id: connectionID,
+                    id: connectionID - 1,
+                    connection: connections[myID],
                     role: "player",
                     points: 0
-                }  
-
+                }
                 
                 let filteredGame = _state.games.find( (game) => {
                     if (game.code == code) {
                         return true;
                     }
                 } );
-    console.log(filteredGame);
+
                 if (filteredGame) {       
-                    filteredGame.players.push(newPlayer);     
+                    filteredGame.players.push(newPlayer);
+                    broadcast("updateLobby", filteredGame.code);
                     return new Response(JSON.stringify(filteredGame), options);
                 } else {
                     return new Response(JSON.stringify("game doesn't exist"), options);
@@ -144,6 +130,7 @@ console.log(POSTdata.code);
                 console.log("good job with the codes bozo");
                 return new Response(JSON.stringify({ error: "wrong keys in rqst" }), options);
             }
+            
         }
 
         if (request.method == 'PATCH') {
@@ -152,13 +139,14 @@ console.log(POSTdata.code);
             let game = _state.games.find( (game) => {
                 return game.code == PATCHdata.code;
             });
-    console.log(game);
+
             let playerToPatch = game.players.find( (player) => {
                 return PATCHdata.player.id == player.id;
             });
 
             playerToPatch.name = PATCHdata.name;
 
+            broadcast("updateLobby", game.code);
             return new Response(JSON.stringify(playerToPatch), options);
         }
 
@@ -201,39 +189,82 @@ function getQuestionsForGame(genre, century) { //Randomises an array with 20 que
         chosenQuestions.push(questionsToChooseFrom[Math.floor( Math.random() * questionsToChooseFrom.length )]);
     }
     
-    console.log("it worked!!");
     return chosenQuestions;
 }
 
+function send(socket, event, data) {
+    socket.send(JSON.stringify({ event, data }));
+  }
+
+function broadcast(event, data) {
+    let game = _state.games.find( (game) => {
+        return data == game.code;
+    });
+
+    console.log("BROADCASTIIIING");
+    console.log(game);
+    for (const player of game.players) {
+        if (player.connection && player.connection.readyState === WebSocket.OPEN) {
+            send(player.connection, event, data);
+        } else {
+            console.log("Player connection not found for player ID: " + player.id);
+        }
+    }
+  }
 
 
+let myID = null;
 
 function handleWebSocket (request) { //S채ger vad som ska h채nda p책 serversidan med v책r connection n채r vi anv채nder WebSockets
     const { socket, response } = Deno.upgradeWebSocket(request);
 
-    let myID = connectionID;
-    
+    myID = connectionID;
+    connections[myID] = socket;
     connectionID++;
+    
+    
     socket.addEventListener("open", (event) => {
         console.log(`Connection ${myID} connected.`);
         socket.send(myID);
-        connections[myID] = socket;
         console.log(connections);
+
+        console.log(connections[myID]);
+
     });
 
     socket.addEventListener("message", (event) => {
+        const message = JSON.parse(event.data);
+
+        switch(message.event) {
+            case "updateUI":
+                broadcast(event, message);
+                break;
+        }
         console.log(event.data);
+        
     });
     
     socket.addEventListener("close", (event) => {
         console.log(`Connection ${myID} disconnected.`);
+
+        _state.games.forEach( (game) => {
+            for (let i = 0; i > game.players.length; i++) {
+                console.log("myID: " + myID + " , player: " + game.players[i]);
+                if (game.players[i].id == myID) {
+                    game.players.splice(i, 1);
+                    console.log(game.players[i] + " was deleted");
+                    broadcast(event, game.code);
+                }
+            }
+        });
+        
         delete connections[myID];
     });
     
     return response;
 }
 
-function handleRequest (request) { //Anv채nder denna som mellanhand, 채r det HTTP eller WS? Transferar till r채tt funktion beroende p책 protokoll.
+function handleRequest (request) { 
     if (request.headers.get("upgrade") == "websocket") {
         return handleWebSocket(request);
     } else {
