@@ -3,11 +3,10 @@
 
 #quizNav {
     display: flex;
-    width: 393px;
+    width: 100%;
     height: 33px;
-    padding: 10px 0px 10px 24px;
     align-items: center;
-    gap: 265px;
+    gap: 250px;
     margin-top: 30px;
 }
 
@@ -17,11 +16,16 @@
 
     display: flex;
     height: 32px;
-    width: 60px;
-    padding: 0px 20px 0px 12px;
+    width: 98px;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    position: fixed;
+    right: 0;
+}
+
+#quizNav > div > p {
+    color: var(--neutral800);
 }
 
 #quizNav > button {
@@ -37,15 +41,15 @@
 /* Header */
 
 #quizHeader {
-    width: 393px;
+    width: 100vw;
     height: 164px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(/static/media/images/background.png);
+    background: url('/static/media/images/background.png');
     background-size: contain;
     margin-top: 30px;
+    margin-left: -23px;
 }
 
 #quizHeader > h1 {
@@ -76,8 +80,8 @@
 }
 
 #questionProgress {
-    width: 45px;
-    height: 8px;
+    width: 67px;
+    height: 32px;
     border-radius: 100px;
     background-color: var(--neutral100);
     display: flex;
@@ -85,15 +89,18 @@
     align-items: center;
     justify-content: center;
     align-self: stretch;
-    margin: 20px 0 -20px 0;
+    margin: 20px 0 0 0;
     transform: rotate(-5deg);
 }
 
 #questionProgress > p {
     font-size: 12px;
+    color: var(--neutral800);
 }
 
 #questionText {
+    display: flex;
+    align-items: center;
     width: 100%;
     text-align: center;
 }
@@ -103,7 +110,8 @@
     word-wrap: break-word;
     overflow: hidden;
     max-width: 100%;
-    max-height: 80px;
+    min-height: 60px;
+    max-height: 90px;
     overflow: auto;
 }
 
@@ -118,7 +126,7 @@
     background-color: var(--secondary200);
     border-radius: 10px;
     display: flex;
-    height: 18px;
+    height: 16px;
     width: 100%;
     align-items: flex-start;
     gap: 10px;
@@ -131,6 +139,7 @@
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     align-self: stretch;
+    gap: 16px;
 }
 
 .optionButton {
@@ -145,6 +154,4 @@
     padding: 20px;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
 }

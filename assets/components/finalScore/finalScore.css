@@ -14,6 +14,14 @@ h1 {
     margin-top: 30px;
 }
 
+#crown {
+    width: 43.577px;
+    height: 44px;
+    position: absolute;
+    right: 175px;
+    top: 135px;
+}
+
 .podiumDiv {
     width: 100%;
     display: flex;
@@ -45,6 +53,10 @@ h1 {
     border-radius: 100%;
     width: 30px;
     height: 30px;
+
+    box-shadow: 2.667px -2.667px 2.667px 0px rgba(194, 181, 0, 0.10) inset, -2.667px 2.667px 2.667px 0px rgba(255, 255, 255, 0.10) inset;
+    backdrop-filter: blur(2.6666667461395264px);
+    border: 1px solid #000;
 }
 
 .position > h4 {
@@ -53,18 +65,22 @@ h1 {
 
 .position-1 {
     background-color: rgba(255, 238, 0, 0.80);
+    filter: drop-shadow(0px 0px 30px #AEAEAE);
+
 }
 .position-2 {
     background-color: rgba(192, 192, 192, 0.80);
+    filter: drop-shadow(0px 0px 30px #F3FF6C);
 }
 .position-3 {
     background-color: rgba(205, 127, 50, 0.80);
+    filter: drop-shadow(0px 0px 30px #5C5E3B);
 }
 
 /* Score Board */ 
 
 #scoreBoard {
-    height: 200px;
+    height: 220px;
 }
 
 /* Text */ 

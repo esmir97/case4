@@ -10,6 +10,11 @@ export function renderFinalScore (parentElement) {
     let podiumContainer = document.createElement("div");
     podiumContainer.id = "podiumContainer";
 
+    let crown = document.createElement("img");
+    crown.id = "crown";
+    crown.src = "/static/media/icons/crown.svg";
+    podiumContainer.appendChild(crown);
+
     for (let i = 1; i <= 3; i++) {
         let podiumDiv = document.createElement("div");
         podiumDiv.classList.add("podiumDiv");
