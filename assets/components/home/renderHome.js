@@ -74,7 +74,7 @@ export function renderStart (parentElement) {
 }
 
 function renderGenres (parentElement) {
-    const allGenres = ["Pop", "Rock", "Christmas", "R&B", "Hiphop", "Jazz", "Country", "Folk"];
+    const allGenres = ["Best of Centurys","Pop", "Rock", "R&B", "Hiphop", "Jazz", "Country", "Folk"];
 
     for (let genre of allGenres) {
         const div = document.createElement("div");
