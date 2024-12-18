@@ -93,7 +93,6 @@
     background-color: var(--neutral300); 
 }
 
-
 #name.error {
     border: 2px solid red;
     outline: none; 

@@ -130,7 +130,7 @@ export async function renderLobby(parentElement) {
         startQuizButton.classList.add("startQuizButton");
         startQuizButton.innerHTML = `
             <p class="p-bold">Start Quiz</p>
-            <img src="/static/media/icons/next2.svg" class="startQuizArrow">
+            <img src="/static/media/icons/next.svg" class="startQuizArrow">
         `;
         parentElement.appendChild(startQuizButton);
     } else {
