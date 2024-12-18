@@ -1,4 +1,13 @@
 
+.homeButtonContainer {
+    margin-top: 10px;
+}
+
+.homeButton {
+    width: 24px;
+    height: 24px;
+}
+
 .joinTitle {
     text-align: center;
 }
@@ -82,4 +91,10 @@
     border-radius: 1000px;
     padding: 0 20px; 
     background-color: var(--neutral300); 
+}
+
+
+#name.error {
+    border: 2px solid red;
+    outline: none; 
 }

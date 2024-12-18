@@ -16,6 +16,20 @@ export async function renderLobby(parentElement) {
 
 
     // Övre delen
+    let homeButtonContainer = document.createElement("div");
+    homeButtonContainer.classList.add("homeButtonContainer");
+    homeButtonContainer.innerHTML = `
+        <img src="/static/media/icons/home.svg" class="homeButton">
+    `;
+    homeButtonContainer.addEventListener("click", () => {
+        parentElement.innerHTML = ``;
+        renderStart(parentElement);
+
+        // Player Left Function Here
+    });
+
+    parentElement.appendChild(homeButtonContainer);
+
     let title = document.createElement("h2");
     title.textContent = "Join Quiz";
     title.classList.add("joinTitle");

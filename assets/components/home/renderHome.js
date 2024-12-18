@@ -93,46 +93,39 @@ function renderGenres (parentElement) {
     }
 }
 
-async function createNewGame (event) {
+async function createNewGame({ genre }) {
+    let centuryLOL = document.getElementById("slider").value;
+    let century = centuryLOL.slice(2);
 
-    if (event.type == "click") {
-        let genre = event.currentTarget.id;
-        // let century = document.getElementById("century").value;
-        let centuryLOL = document.getElementById("slider").value;
-        let century = centuryLOL.slice(2);
+    console.log(genre, century);
 
-        console.log(genre, century);
-        
-        
-        if (century == null) {
-            century = "mixed";
-        }
-
-        let gameParams = {
-            name: document.getElementById("name").value,
-            genre: genre,
-            century: century
-        };
-        
-        let options = { method: "POST", headers: { "Content-Type": "application/json"}, body: JSON.stringify(gameParams) };
-        
-        
-        let rqst = await fetch("/api/test", options);
-        let response = await rqst.json();
-
-        console.log(response);
-
-        let player = JSON.stringify(response.players[response.players.length - 1]);
-
-        //------------------SETTING VALUES IN LOCALSTORAGE FOR EASY ACCESS LATER------------------
-        localStorage.setItem("gameCode", response.code);
-        localStorage.setItem("player", player);
-
-        const wrapper = document.getElementById("wrapper");
-        document.querySelector(".popup").remove();
-        renderLobby(wrapper);
+    if (century == null) {
+        century = "mixed";
     }
+
+    let gameParams = {
+        name: document.getElementById("name").value,
+        genre: genre,
+        century: century,
+    };
+
+    let options = { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(gameParams) };
+
+    let rqst = await fetch("/api/test", options);
+    let response = await rqst.json();
+
+    console.log(response);
+
+    let player = JSON.stringify(response.players[response.players.length - 1]);
+
+    localStorage.setItem("gameCode", response.code);
+    localStorage.setItem("player", player);
+
+    const wrapper = document.getElementById("wrapper");
+    document.querySelector(".popup").remove();
+    renderLobby(wrapper);
 }
+
 
 async function newGameCard(event) {
     event.stopPropagation();
@@ -158,7 +151,7 @@ async function newGameCard(event) {
             </div>
             <div class="line"></div>
             <h4 class="h4-bold">Name</h4>
-            <input id="name" type="text" placeholder="eg. theo">
+            <input id="name" type="text" placeholder="e.g., Theo" class="name-input">
             <div class="line"></div>
             <div class="startButton" id="${event.currentTarget.id}">
                 <p>Start Quiz</p>
@@ -170,27 +163,22 @@ async function newGameCard(event) {
     });
 
     wrapper.appendChild(startGamePopup);
-    
-    let mixedQuestionsButton = document.querySelector(".mixedQuestionsButton");
-    let output = document.getElementById('selected-decade');
+
+    const mixedQuestionsButton = document.querySelector(".mixedQuestionsButton");
+    const output = document.getElementById('selected-decade');
+    const nameInput = document.getElementById('name');
+    const startButton = document.querySelector(".startButton");
 
     document.getElementById("card").addEventListener("click", (event) => {
         event.stopPropagation();
     });
 
-    document.querySelector(".startButton").addEventListener("click", createNewGame);
-
     // Slider
     const slider = document.getElementById('slider');
-    
-    // Ändrar så att output är samma som årtalet
     slider.addEventListener('input', () => {
         const decade = slider.value;
-        console.log(slider.value);
         output.textContent = formatDecade(decade);
     });
-
-    // Default värde på output
     output.textContent = formatDecade(slider.value);
 
     mixedQuestionsButton.addEventListener("click", () => {
@@ -202,7 +190,23 @@ async function newGameCard(event) {
             output.style.display = "block";
         }
     });
+
+    // Start button click handler
+    startButton.addEventListener("click", () => {
+        if (nameInput.value.trim().length === 0) {
+            nameInput.classList.add("error");
+            nameInput.placeholder = "Name is required"; // Optional for better UX
+        } else {
+            nameInput.classList.remove("error");
+            const genre = startButton.id; // Retrieve the genre from the startButton's ID
+            createNewGame({ genre }); // Pass as an object
+        }
+    });    
 }
+
+
+
+
 
 function formatDecade(value) {
     const suffix = value.slice(-2) === '60' ? '60s' : value.slice(-2) + 's';
