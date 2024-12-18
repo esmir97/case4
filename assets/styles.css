@@ -16,6 +16,9 @@
 :root {
     --page-width: 393px;
 
+    --border1: 8px;
+    --border2: 1000px;
+
     /*  Colors    */
     --neutral100: #FFFFFF;
     --neutral200: #EBEBEB;
@@ -45,6 +48,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  line-height: auto;
 }
 
 body {
@@ -54,7 +58,6 @@ body {
 #wrapper {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     padding: 20px 23px 20px 23px;
 }
 

@@ -66,6 +66,11 @@ export function renderStart (parentElement) {
     parentElement.appendChild(allGenresContainer);    
     renderGenres(allGenresContainer);
     
+    let creatorText = document.createElement("p");
+    creatorText.classList.add("details");
+    creatorText.classList.add("creatorText");
+    creatorText.textContent = "Made by Malmö University Students";
+    parentElement.appendChild(creatorText);
 }
 
 function renderGenres (parentElement) {
