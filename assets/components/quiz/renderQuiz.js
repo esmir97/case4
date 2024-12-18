@@ -28,8 +28,6 @@ export function renderQuizHeader (parentElement, /* category */) {
     header.appendChild(headerText);
 }
 
-/*
-
 export function renderQuizCounter (parentElement) {
     let counterCon = document.createElement("div");
     counterCon.id = "counterCon";
@@ -69,8 +67,6 @@ export function renderQuizCounter (parentElement) {
     }, 1000);
 
 }
-
-*/
 
 export function renderQuizQuestion (parentElement) {
     const quizContent = document.createElement("div");

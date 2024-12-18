@@ -35,7 +35,9 @@
     line-height: normal;
     padding-left: 24px;
     margin-bottom: 20px;
+    border-top: 1px solid white;
 }
+
 h1, h3, .scoreboard, ol, .correctAnswer, .currentPlacement{
     color: var(--neutral100);
 }
