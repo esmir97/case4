@@ -14,7 +14,7 @@ let connectionID = 1;
 const testData = await Deno.readTextFile("./database.json");
 
 function generateGameCode (n = 6) {
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const characters = '0123456789';
     let result = '';
     for (let i = 0; i < n; i++) {
         result += characters.charAt(Math.floor(Math.random() * characters.length));
@@ -162,6 +162,7 @@ async function handleHTTPRequest (request) { //Säger till vad som ska hända n�
 
 function getQuestionsForGame(genre, century) { //Randomises an array with 20 questions depending on genre/century
     let questions = JSON.parse(testData);
+    
     let questionsToChooseFrom = [];
     let chosenQuestions = [];
     century = century.toString();
