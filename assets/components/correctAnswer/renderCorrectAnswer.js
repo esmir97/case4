@@ -111,7 +111,7 @@ export function startConfetti() {
     container.style.width = '100%';
     container.style.height = '0';
     container.style.overflow = 'visible';
-    container.style.zIndex = '9999';
+    container.style.zIndex = '-1';
   
     function Confetto(theme) {
       this.frame = 0;
