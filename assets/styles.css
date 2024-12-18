@@ -133,6 +133,11 @@ p {
 
 /* Popups */
 
+/* Moderator Information Popup */
+.moderatorInformationTitle {
+    margin-bottom: 16px;
+}
+
 /* Join Game Popup */
 .overlay {
     position: fixed;
@@ -200,6 +205,8 @@ p {
     align-items: end;    
     
     background-color: rgba(0, 0, 0, 0.3);
+
+    z-index: 99;
 }
 
 .popup {
@@ -212,6 +219,7 @@ p {
     backdrop-filter: blur(17.5px);
 
     padding: 20px 32px 44px 32px;
+    z-index: 100;
 }
 
 .dragClose {
