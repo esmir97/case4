@@ -48,8 +48,7 @@
     align-items: center;
     background: url('/static/media/images/background.png');
     background-size: contain;
-    margin-top: 30px;
-    margin-left: -23px;
+    margin: 30px 0 20px -23px;
 }
 
 #quizHeader > h1 {
@@ -67,12 +66,16 @@
 .gif {
     height: 200px;
     width: auto;
-    margin: 70px 0 12px 0;
+    margin: 50px 0 12px 0;
 }
 
 #counterCon > h2, h1 {
     color: white;
     text-align: center;
+}
+
+#counterCon > h2 {
+    margin: 10px 0 20px 0;
 }
 
 /* Question */
@@ -132,12 +135,8 @@
 #progressBar {
     background-color: var(--secondary200);
     border-radius: 10px;
-    display: flex;
     height: 16px;
     width: 100%;
-    align-items: flex-start;
-    gap: 10px;
-    align-self: stretch;
     transition: width 20s linear;
 }
 
@@ -161,4 +160,11 @@
     padding: 20px;
     justify-content: center;
     align-items: center;
+
+    cursor: pointer;
+}
+
+.clickedOptionButton {
+    background-color: var(--secondary200);
+    color: var(--neutral800);
 }
