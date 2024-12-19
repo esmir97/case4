@@ -7,7 +7,7 @@
     height: 33px;
     align-items: center;
     gap: 250px;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 #quizNav > div {
@@ -48,10 +48,10 @@
     align-items: center;
     background: url('/static/media/images/background.png');
     background-size: contain;
-    margin: 30px 0 20px -23px;
+    margin: 10px 0 10px -23px;
 }
 
-#quizHeader > h1 {
+#quizHeader > div > h1 {
     color: var(--neutral100);
 }
 
@@ -66,7 +66,7 @@
 .gif {
     height: 200px;
     width: auto;
-    margin: 50px 0 12px 0;
+    margin: 30px 0 12px 0;
 }
 
 #counterCon > h2, h1 {
@@ -75,7 +75,7 @@
 }
 
 #counterCon > h2 {
-    margin: 10px 0 20px 0;
+    margin: 20px 0 20px 0;
 }
 
 /* Question */
@@ -99,7 +99,6 @@
     align-items: center;
     justify-content: center;
     align-self: stretch;
-    margin: 20px 0 0 0;
     transform: rotate(-5deg);
 }
 

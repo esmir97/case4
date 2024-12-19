@@ -23,8 +23,10 @@ export function renderQuizHeader (parentElement, /* category */) {
     header.id = "quizHeader";
     parentElement.appendChild(header);
 
-    let headerText = document.createElement("h1");
-    headerText.textContent = "Finish the lyrics!"; // category 
+    let headerText = document.createElement("div");
+    headerText.innerHTML = `
+        <h1>Year <br> Genre</h1>
+    `;
     header.appendChild(headerText);
 }
 
@@ -80,7 +82,7 @@ export function renderQuizQuestion (parentElement) {
             <p>1 / 20</p>
         </div>
         <div id="questionText">
-            <p>We don’t need no education, we don’t need no thought control...</p>
+            <p>We don’t need no education, we don’t need no thought control...We don’t need no education, we don’t need no thought control...</p>
         </div>
         <div id="progressBarContainer">
             <div id="progressBar"></div>
