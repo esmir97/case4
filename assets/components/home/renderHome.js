@@ -56,8 +56,6 @@ function renderGenres(parentElement) {
 }
 
 async function createNewGame(event) {
-    let centuryLOL = document.getElementById("slider").value;
-    let century = centuryLOL.slice(2);
 
     if (event.type == "click") {
         let genre = event.currentTarget.id;
@@ -176,8 +174,11 @@ async function newGameCard(event) {
             nameInput.placeholder = "Name is required"; // Optional for better UX
         } else {
             nameInput.classList.remove("error");
-            const genre = startButton.id; // Retrieve the genre from the startButton's ID
-            createNewGame({ genre }); // Pass as an object
+            const genre = startButton.id;
+            console.log(slider.value.slice(2));
+            ws.send(JSON.stringify( {event: "createGame", data: {genre: genre, century: slider.value.slice(2), name: nameInput.value}}));
+                                // Retrieve the genre from the startButton's ID
+             // Pass as an object
         }
     });
 }
