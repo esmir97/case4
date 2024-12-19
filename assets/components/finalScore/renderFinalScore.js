@@ -45,25 +45,56 @@ export function renderFinalScore (parentElement) {
 
     // Scoreboard
 
-    let scoreBoard = document.createElement("div");
-    scoreBoard.id = "scoreBoard";
-    parentElement.appendChild(scoreBoard);
+    let finalPlayers = [
+        { emoji: "🤓", name: "Dumbledork", score: 1850 },
+        { emoji: "🔥", name: "HotShot", score: 1700 },
+        { emoji: "🎵", name: "Melody", score: 1650 },
+        { emoji: "💪", name: "Muscle", score: 1600 },
+        { emoji: "⚡", name: "Spark", score: 1550 },
+        { emoji: "🎨", name: "Artist", score: 1500 },
+        { emoji: "🚀", name: "Rocket", score: 1450 },
+        { emoji: "👑", name: "Royalty", score: 1400 },
+    ];
 
-    // Final placement
+    let finalScoreboard = document.createElement("div");
+    finalScoreboard.id = "finalScoreboard";
+    parentElement.appendChild(finalScoreboard);
 
-    let finalPlacement = document.createElement("div");
-    finalPlacement.id = "finalPlacement";
-    finalPlacement.innerHTML = `
-        <p>Good Job!</p>
-        <p>You finished in ... place!</p>
-    `;
+    let finalScoreboardTitle = document.createElement("h3");
+    finalScoreboardTitle.textContent = "Scoreboard";
+    finalScoreboard.appendChild(finalScoreboardTitle);
+
+    let finalListContainer = document.createElement("ol");
+    finalScoreboard.appendChild(finalListContainer);
+
+    finalPlayers.forEach((player, index) => {
+        let finalListItem = document.createElement("div");
+        finalListItem.classList.add("finalListItem");
+        finalListItem.innerHTML = `
+            <p>${index + 1}.</p>
+            <p>${player.emoji}</p> 
+            <p>${player.name}</p>
+            <p>${player.score}</p>
+        `;
+
+        finalListContainer.appendChild(finalListItem);
+    });
+    
+    // Final Placement
+
+    let finalPlacement = document.createElement("h4");
+    finalPlacement.innerHTML = `Good Job! <br class="break"> You finished in ...`;
+                                
+    finalPlacement.classList.add("finalPlacement");
     parentElement.appendChild(finalPlacement);
+
+    // Next Button
 
     let nextButton = document.createElement("button");
     nextButton.id = "nextButton";
     nextButton.innerHTML = `
         <p>Next</p>
-        <img class="nextIcon" src="/static/media/icons/nextWhite.png"/>
+        <img class="nextIcon" src="/static/media/icons/next.svg"/>
     `;
     parentElement.appendChild(nextButton);
 

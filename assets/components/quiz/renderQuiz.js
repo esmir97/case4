@@ -61,6 +61,7 @@ export function renderQuizCounter (parentElement) {
         countdownValue--;
 
         if (countdownValue < 0) {
+            renderQuizQuestion(wrapper);
             clearInterval(countdownInterval);
             counterCon.remove();
         }
@@ -93,23 +94,31 @@ export function renderQuizQuestion (parentElement) {
     `;
 
     const progressBar = quizContent.querySelector("#progressBar");
+    progressBar.style.width = "100%";
+    progressBar.offsetWidth;
     setTimeout(() => {
         progressBar.style.width = "0%";
     }, 0);
 
-    /*
     const optionButtons = quizContent.querySelectorAll(".optionButton");
-    optionButtons.forEach((button, index) => {
+    optionButtons.forEach(button => {
         button.addEventListener("click", () => {
-            const selectedOption = questionData.options[index];
-            const isCorrect = selectedOption === questionData.correct;
 
-            if (isCorrect) {
+        optionButtons.forEach(button => button.classList.remove("clickedOptionButton"));
+
+        button.classList.add("clickedOptionButton");
+            
+            /*
+            const selectedOption = questionData.options[index];
+            const correctAnswer = selectedOption === questionData.correct;
+
+            if (correctAnswer) {
                 console.log("Correct!");
             } else {
                 console.log("Wrong answer!");
             }
+            */
+
         });
     });
-    */
 }
