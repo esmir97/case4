@@ -1,6 +1,8 @@
 // deno run -A --watch server.js
 
 export function renderQuizNav (parentElement) {
+    parentElement.innerHTML = ``;
+
     let quizNav = document.createElement("div");
     quizNav.id = "quizNav";
     parentElement.appendChild(quizNav);
