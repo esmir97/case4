@@ -1,4 +1,5 @@
 import { renderLobby } from "./../lobby/renderLobby.js";
+import { ws } from "../../index.js";
 
 export function renderStart(parentElement) {
 
@@ -35,7 +36,7 @@ export function renderStart(parentElement) {
 }
 
 function renderGenres(parentElement) {
-    const allGenres = ["Best of Centurys", "R&B", "Rock", "Country", "Hiphop", "Pop", "Pop", "Folk"];
+    const allGenres = ["Best of Centurys", "R&B", "Rock", "Country", "Hiphop", "Jazz", "Pop", "Folk"];
 
     for (let genre of allGenres) {
         const div = document.createElement("div");
@@ -54,37 +55,52 @@ function renderGenres(parentElement) {
     }
 }
 
-async function createNewGame({ genre }) {
-    let centuryLOL = document.getElementById("slider").value;
-    let century = centuryLOL.slice(2);
+async function createNewGame(event) {
 
-    console.log(genre, century);
+    if (event.type == "click") {
+        let genre = event.currentTarget.id;
+        // let century = document.getElementById("century").value;
+        let centuryFull = document.getElementById("slider").value;
+        let century = centuryFull.slice(2);
 
-    if (century == null) {
-        century = "mixed";
+        console.log(genre, century);
+        
+        
+        if (century == null) {
+            century = "mixed";
+        }
+
+        let gameParams = {
+            name: document.getElementById("name").value,
+            genre: genre,
+            century: century
+        };
+
+        if (gameParams.name === "") {
+            window.alert("You need to enter name before creating a new game.");
+            return;
+        } 
+        
+        //let options = { method: "POST", headers: { "Content-Type": "application/json"}, body: JSON.stringify(gameParams) };
+        
+        //let rqst = await fetch("/api/test", options);
+
+        //let response = await rqst.json();
+
+        ws.send(JSON.stringify( {event: "createGame", data: gameParams})); //gameParams is obj
+
+        /*
+        let player = JSON.stringify(response.players[response.players.length - 1]);
+
+        //------------------SETTING VALUES IN LOCALSTORAGE FOR EASY ACCESS LATER------------------
+        localStorage.setItem("gameCode", response.code);
+        localStorage.setItem("player", player);
+
+        const wrapper = document.getElementById("wrapper");
+        document.querySelector(".popup").remove();
+        renderLobby(wrapper);*/
     }
-
-    let gameParams = {
-        name: document.getElementById("name").value,
-        genre: genre,
-        century: century,
-    };
-
-    let options = { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(gameParams) };
-
-    let rqst = await fetch("/api/test", options);
-    let response = await rqst.json();
-
-    console.log(response);
-
-    let player = JSON.stringify(response.players[response.players.length - 1]);
-
-    localStorage.setItem("gameCode", response.code);
-    localStorage.setItem("player", player);
-
-    const wrapper = document.getElementById("wrapper");
-    document.querySelector(".popup").remove();
-    renderLobby(wrapper);
+    return;
 }
 
 async function newGameCard(event) {
@@ -158,8 +174,11 @@ async function newGameCard(event) {
             nameInput.placeholder = "Name is required"; // Optional for better UX
         } else {
             nameInput.classList.remove("error");
-            const genre = startButton.id; // Retrieve the genre from the startButton's ID
-            createNewGame({ genre }); // Pass as an object
+            const genre = startButton.id;
+            console.log(slider.value.slice(2));
+            ws.send(JSON.stringify( {event: "createGame", data: {genre: genre, century: slider.value.slice(2), name: nameInput.value}}));
+                                // Retrieve the genre from the startButton's ID
+             // Pass as an object
         }
     });
 }
@@ -175,24 +194,26 @@ async function joinGame(event) {
         let code = document.getElementById("joinCode").value;
         let inputField = document.querySelector("#joinCode");
 
-        let options = { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ "code": code }) };
+        if (code.length !== 6) renderError("wrapper", "Code needs to be 6 characters long");
+        
+        let options = { method: "POST", headers: { "Content-Type": "application/json"}, body: JSON.stringify({"code": code}) };
+        ws.send(JSON.stringify( {event: "joinGame", data: code})); //gameParams is obj
 
-        let response = await (await fetch(`/api/test`, options)).json();
-        console.log(response);
-        if (response == "game doesn't exist") {
-            inputField.value = "";
-            inputField.placeholder = "Invalid Code"; // Optional for better UX
+        //let response = await( await fetch(`/api/test`, options) ).json();
+        //console.log(response);
+        /*if (response == "game doesn't exist") {
+            
+            renderError("wrapper", "No game with that code exists");
+
         } else {
-            let player = JSON.stringify(response.players[response.players.length - 1]);
-            console.log(player);
-
-            //------------------SETTING VALUES IN LOCALSTORAGE FOR EASY ACCESS LATER------------------
-            localStorage.setItem("gameCode", response.code);
-            localStorage.setItem("player", player);
+            let player = JSON.stringify(response.players[response.players.length - 1]);            
 
             renderLobby(document.getElementById("wrapper"));
+        }*/
+
+        
         }
-    }
+    
     return;
 }
 
