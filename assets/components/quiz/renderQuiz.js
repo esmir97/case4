@@ -70,6 +70,7 @@ export function renderQuizCounter (parentElement) {
     }, 1000);
 }
 
+
 export function renderQuizQuestion (parentElement) {
     const quizContent = document.createElement("div");
     quizContent.id = "quizContent";
