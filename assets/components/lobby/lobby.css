@@ -32,6 +32,10 @@
     letter-spacing: 80%;
 }
 
+.quizDetailsTitle {
+    margin-bottom: 4px;
+}
+
 .quizDetailsTitle,
 .waitingForPlayers {
     text-align: center;
@@ -43,6 +47,7 @@
 
 .waitingForPlayers {
     margin-bottom: 36px;
+    margin-top: 12px;
 }
 
 .moderatorInfoIconContainer {
@@ -96,4 +101,23 @@
 #name.error {
     border: 2px solid red;
     outline: none; 
+}
+
+#playerContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    min-height: 50vh;
+}
+
+.playerLobby {
+    background-color: var(--neutral100);
+    padding: 8px 16px;
+    border-radius: 100px;
+    height: fit-content;
+}
+
+.playerLobby p {
+    color: var(--neutral700);
+    font-size: 16px;
 }
