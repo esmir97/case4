@@ -7,9 +7,9 @@ export const ws = establishWebsocket();
 const wrapper = document.getElementById("wrapper");
 
 renderStart(wrapper);
-//renderQuizNav(wrapper);
+// renderQuizNav(wrapper);
 // renderRanking(wrapper, false);
-//renderQuizHeader(wrapper);
+// renderQuizHeader(wrapper);
 //renderQuizCounter(wrapper);
 // renderQuizQuestion(wrapper);
 
