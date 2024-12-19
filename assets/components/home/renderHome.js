@@ -1,92 +1,53 @@
 import { renderLobby } from "./../lobby/renderLobby.js";
 
-export function renderStart (parentElement) {    
+export function renderStart(parentElement) {
 
-    // Övre delen
-    let title = document.createElement("h2");
-    title.textContent = "Join Quiz";
-    title.classList.add("title");
-    parentElement.appendChild(title);
+    parentElement.innerHTML = `
+        <h2 class="title">Join Quiz</h2>
+        <div class="joinOptions">
+            <input id="joinCode" class="codeOption" placeholder="Enter Pin">
+            <p class="details">or</p>
+            <div id="buttonQR" class="qrButton">
+                <img src="/static/media/icons/QrCode.svg" class="qr">
+            </div>
+        </div>
+        <div class="divider"></div>
 
-    let joinOptions = document.createElement("div");
-    joinOptions.classList.add("joinOptions");
-    parentElement.appendChild(joinOptions);
-    
-    const joinCode = document.createElement("input");
-    joinCode.id = "joinCode";
-    joinCode.classList.add("codeOption");
-    joinCode.placeholder = "Enter Pin";
-    joinOptions.appendChild(joinCode);
+        <div class="popularTitleSection">
+            <h3 class="popularTitel">Popular Right Now</h3>
+            <img src="/static/media/icons/nextPink.svg" class="arrow">
+        </div>
+        <div class="popularSection"></div>
+
+        <h3 class="allGenresTitel">All Genres</h3>
+        <div class="allGenresContainer"></div>
+        <p class="details creatorText">Made by Malmö University Students</p>
+    `;
+
+    const joinCode = parentElement.querySelector("#joinCode");
     joinCode.addEventListener("keydown", joinGame);
-    
-    const text = document.createElement("p");
-    text.classList.add("details");
-    text.textContent = "or";
-    joinOptions.appendChild(text);
 
-    const buttonQR = document.createElement("div");
-    buttonQR.id = "buttonQR";
-    buttonQR.classList.add("qrButton");
-    buttonQR.innerHTML = `
-        <img src="/static/media/icons/QrCode.svg" class="qr">
-    `;
-    joinOptions.appendChild(buttonQR);
-    //buttonPin.addEventListener("click" ); QR-code function
-
-    const divider = document.createElement("div");
-    divider.classList.add("divider");
-    parentElement.appendChild(divider);
-
-
-    // Mellersta delen
-    // Titel och Pil
-    let popularTitleSection = document.createElement("div");
-    popularTitleSection.classList.add("popularTitleSection");
-    popularTitleSection.innerHTML = `
-        <h3 class="popularTitel">Popular Right Now</h3>
-        <img src="/static/media/icons/nextPink.svg" class="arrow">
-    `;
-    parentElement.appendChild(popularTitleSection);
-    
-    let popularSection = document.createElement("div");
-    popularSection.classList.add("popularSection");
-    parentElement.appendChild(popularSection);
+    const popularSection = parentElement.querySelector(".popularSection");
     renderGenres(popularSection);
 
-
-    // Nedre delen
-    // Titel
-    let allGenresTitel = document.createElement("h3");
-    allGenresTitel.textContent = "All Genres";
-    allGenresTitel.classList.add("allGenresTitel");
-    parentElement.appendChild(allGenresTitel);
-
-    let allGenresContainer = document.createElement("div");
-    allGenresContainer.classList.add("allGenresContainer");
-    parentElement.appendChild(allGenresContainer);    
+    const allGenresContainer = parentElement.querySelector(".allGenresContainer");
     renderGenres(allGenresContainer);
-    
-    let creatorText = document.createElement("p");
-    creatorText.classList.add("details");
-    creatorText.classList.add("creatorText");
-    creatorText.textContent = "Made by Malmö University Students";
-    parentElement.appendChild(creatorText);
 }
 
-function renderGenres (parentElement) {
-    const allGenres = ["Best of Centurys","Pop", "Rock", "R&B", "Hiphop", "Jazz", "Country", "Folk"];
+function renderGenres(parentElement) {
+    const allGenres = ["Best of Centurys", "Pop", "Rock", "R&B", "Hiphop", "Jazz", "Country", "Folk"];
 
     for (let genre of allGenres) {
         const div = document.createElement("div");
         div.id = genre;
         div.classList.add("genre");
         div.innerHTML = `
-                        <div class="genreImg">
-                            <img src="/static/media/images/${genre}.jpg">
-                        </div>
-                        <div class="genreText">
-                            <p class="p-bold">${genre}</p>
-                        </div>
+            <div class="genreImg">
+                <img src="/static/media/images/${genre}.jpg">
+            </div>
+            <div class="genreText">
+                <p class="p-bold">${genre}</p>
+            </div>
         `;
         div.addEventListener("click", newGameCard);
         parentElement.appendChild(div);
@@ -126,16 +87,15 @@ async function createNewGame({ genre }) {
     renderLobby(wrapper);
 }
 
-
 async function newGameCard(event) {
     event.stopPropagation();
     console.log(event.currentTarget.id);
-    
+
     let wrapper = document.querySelector('#wrapper');
     let startGamePopup = document.createElement("div");
     startGamePopup.classList.add("startOverlay");
-   
-    startGamePopup.innerHTML = 
+
+    startGamePopup.innerHTML =
         `<div id="card" class="popup">
             <div class="dragClose"></div>
             <h3>${event.currentTarget.id}</h3>
@@ -150,7 +110,7 @@ async function newGameCard(event) {
                 <p>Mixed Questions</p>
             </div>
             <div class="line"></div>
-            <h4 class="h4-bold">Name</h4>
+            <h4 class="h4-bold">Name *</h4>
             <input id="name" type="text" placeholder="eg. Theo" class="name-input">
             <div class="line"></div>
             <div class="startButton" id="${event.currentTarget.id}">
@@ -201,7 +161,7 @@ async function newGameCard(event) {
             const genre = startButton.id; // Retrieve the genre from the startButton's ID
             createNewGame({ genre }); // Pass as an object
         }
-    });    
+    });
 }
 
 function formatDecade(value) {
@@ -213,17 +173,15 @@ async function joinGame(event) {
 
     if (event.key === "Enter") {
         let code = document.getElementById("joinCode").value;
+        let inputField = document.querySelector("#joinCode");
 
-        if (code.length !== 6) renderError("wrapper", "Code needs to be 6 characters long");
-        
-        let options = { method: "POST", headers: { "Content-Type": "application/json"}, body: JSON.stringify({"code": code}) };
+        let options = { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ "code": code }) };
 
-        let response = await( await fetch(`/api/test`, options) ).json();
+        let response = await (await fetch(`/api/test`, options)).json();
         console.log(response);
         if (response == "game doesn't exist") {
-            
-            renderError("wrapper", "No game with that code exists");
-
+            inputField.value = "";
+            inputField.placeholder = "Invalid Code"; // Optional for better UX
         } else {
             let player = JSON.stringify(response.players[response.players.length - 1]);
             console.log(player);
