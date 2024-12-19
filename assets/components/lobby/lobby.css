@@ -67,6 +67,7 @@
     border-radius: 1000px;
     padding: 0 20px; 
     background-color: var(--primary100); 
+    border: 1px solid var(--neutral100);
 }
 
 .startQuizButton p {
@@ -96,3 +97,4 @@
     border: 2px solid red;
     outline: none; 
 }
+
