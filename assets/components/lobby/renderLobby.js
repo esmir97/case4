@@ -51,6 +51,8 @@ export async function renderLobby(parentElement, game) {
     let quizDetailsTitle = parentElement.querySelector(".quizDetailsTitle");
     if (["00", "10", "20"].includes(game.century)) {
         quizDetailsTitle.textContent = "20" + game.century + "´s " + game.genre + " Quiz";
+    } else if (game.century == 'mixed') {
+        quizDetailsTitle.textContent = "All Time " + game.genre + " Quiz";
     } else {
         quizDetailsTitle.textContent = game.century + "´s " + game.genre + " Quiz";
     }
