@@ -117,7 +117,7 @@ if (player.role === "admin") {
     const waitingForHostButton = document.createElement("div");
     waitingForHostButton.classList.add("waitingForHostButton");
     waitingForHostButton.innerHTML = `
-        <p class="p-bold">Waiting for host to start</p>
+        <p class="p-bold">Waiting for host to start...</p>
     `;
     parentElement.appendChild(waitingForHostButton);
 }
