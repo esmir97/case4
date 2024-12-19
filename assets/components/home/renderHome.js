@@ -1,4 +1,5 @@
 import { renderLobby } from "./../lobby/renderLobby.js";
+import { ws } from "../../index.js";
 
 export function renderStart (parentElement) {    
 
@@ -93,8 +94,8 @@ async function createNewGame (event) {
     if (event.type == "click") {
         let genre = event.currentTarget.id;
         // let century = document.getElementById("century").value;
-        let centuryLOL = document.getElementById("slider").value;
-        let century = centuryLOL.slice(2);
+        let centuryFull = document.getElementById("slider").value;
+        let century = centuryFull.slice(2);
 
         console.log(genre, century);
         
@@ -108,15 +109,21 @@ async function createNewGame (event) {
             genre: genre,
             century: century
         };
-        
-        let options = { method: "POST", headers: { "Content-Type": "application/json"}, body: JSON.stringify(gameParams) };
-        
-        
-        let rqst = await fetch("/api/test", options);
-        let response = await rqst.json();
 
-        console.log(response);
+        if (gameParams.name === "") {
+            window.alert("You need to enter name before creating a new game.");
+            return;
+        } 
+        
+        //let options = { method: "POST", headers: { "Content-Type": "application/json"}, body: JSON.stringify(gameParams) };
+        
+        //let rqst = await fetch("/api/test", options);
 
+        //let response = await rqst.json();
+
+        ws.send(JSON.stringify( {event: "createGame", data: gameParams})); //gameParams is obj
+
+        /*
         let player = JSON.stringify(response.players[response.players.length - 1]);
 
         //------------------SETTING VALUES IN LOCALSTORAGE FOR EASY ACCESS LATER------------------
@@ -125,10 +132,10 @@ async function createNewGame (event) {
 
         const wrapper = document.getElementById("wrapper");
         document.querySelector(".popup").remove();
-        renderLobby(wrapper);
+        renderLobby(wrapper);*/
     }
+    return;
 }
-
 
 async function newGameCard(event) {
     event.stopPropagation();
@@ -210,27 +217,24 @@ async function joinGame(event) {
 
     if (event.key === "Enter") {
         let code = document.getElementById("joinCode").value;
+        let inputField = document.querySelector("#joinCode");
 
         if (code.length !== 6) renderError("wrapper", "Code needs to be 6 characters long");
         
         let options = { method: "POST", headers: { "Content-Type": "application/json"}, body: JSON.stringify({"code": code}) };
+        ws.send(JSON.stringify( {event: "joinGame", data: code})); //gameParams is obj
 
-        let response = await( await fetch(`/api/test`, options) ).json();
-        console.log(response);
-        if (response == "game doesn't exist") {
+        //let response = await( await fetch(`/api/test`, options) ).json();
+        //console.log(response);
+        /*if (response == "game doesn't exist") {
             
             renderError("wrapper", "No game with that code exists");
 
         } else {
-            let player = JSON.stringify(response.players[response.players.length - 1]);
-            console.log(player);
-
-            //------------------SETTING VALUES IN LOCALSTORAGE FOR EASY ACCESS LATER------------------
-            localStorage.setItem("gameCode", response.code);
-            localStorage.setItem("player", player);
+            let player = JSON.stringify(response.players[response.players.length - 1]);            
 
             renderLobby(document.getElementById("wrapper"));
-        }
+        }*/
 
         
     }
