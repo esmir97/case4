@@ -252,7 +252,7 @@ function handleWebSocket (request) { //Säger vad som ska hända på serversidan
             i++;
         }
 
-        _state.games[indexGame].players.splice(indexPlayer, 1);
+        //_state.games[indexGame].players.splice(indexPlayer, 1);
 
 
         /*
