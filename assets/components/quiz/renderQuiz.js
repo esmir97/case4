@@ -68,7 +68,6 @@ export function renderQuizCounter (parentElement) {
             counterCon.remove();
         }
     }, 1000);
-
 }
 
 export function renderQuizQuestion (parentElement) {
