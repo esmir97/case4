@@ -18,7 +18,7 @@ export function renderQuizNav (parentElement) {
     quizNav.appendChild(pointsCon);
 }
 
-export function renderQuizHeader (parentElement, /* category */) {
+export function renderQuizHeader (parentElement, /* year and genre */) {
     let header = document.createElement("div");
     header.id = "quizHeader";
     parentElement.appendChild(header);
