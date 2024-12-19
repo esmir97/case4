@@ -301,16 +301,13 @@ input[type="range"] {
     font-size: 16px;
 }
 
-.clickedButton {
-    background-color: var(--secondary200);
-}
 
 .popup #slider {
     margin-top: 24px;
 }
 
 .popup #name {
-    border-radius: 100px;
+    border-radius: var(--border2);
     border: 1px solid var(--primary100);
     background: var(--neutral100);
     box-shadow: 0px 2px 8px 0px rgba(109, 109, 109, 0.25);
@@ -319,6 +316,8 @@ input[type="range"] {
     text-align: center;
 
     margin-top: 24px;
+
+    font-size: 16px;
 }
 
 .line {
@@ -363,9 +362,11 @@ input[type="range"] {
     color: var(--neutral700);
 }
 
-
 .orText {
     margin: 20px 0;
     text-align: center;
 }
 
+.clickedButton {
+    background-color: var(--secondary200);
+}
