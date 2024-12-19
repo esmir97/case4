@@ -35,7 +35,7 @@ export function renderStart(parentElement) {
 }
 
 function renderGenres(parentElement) {
-    const allGenres = ["Best of Centurys", "R&B", "Rock", "Country", "Hiphop", "Pop", "Pop", "Folk"];
+    const allGenres = ["Best of Centurys", "R&B", "Rock", "Country", "Hiphop", "Jazz", "Pop", "Folk"];
 
     for (let genre of allGenres) {
         const div = document.createElement("div");
@@ -102,8 +102,8 @@ async function newGameCard(event) {
             <p class="amountOfQuestions">20 Questions</p>
             <h4 class="h4-bold">Choose year</h4>
             <div class="slider-container">
-                <input id="slider" type="range" min="1960" max="2020" step="10" value="1990">
                 <p id="selected-decade">1990s</p>
+                <input id="slider" type="range" min="1960" max="2020" step="10" value="1990">
             </div>
             <p class="orText">or</p>
             <div class="mixedQuestionsButton">

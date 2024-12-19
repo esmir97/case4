@@ -293,17 +293,19 @@ p {
 
 input[type="range"] {
     width: 100%;
-    margin: 10px 0;
+    margin-top: 0px;
 }
 
 #selected-decade {
     font-family: "Montserrat-Medium";
     font-size: 16px;
+
+    margin-top: 16px;
 }
 
 
 .popup #slider {
-    margin-top: 24px;
+    margin-top: 20px;
 }
 
 .popup #name {
@@ -315,7 +317,7 @@ input[type="range"] {
     height: 46px;
     text-align: center;
 
-    margin-top: 24px;
+    margin-top: 16px;
 
     font-size: 16px;
 }
@@ -363,7 +365,7 @@ input[type="range"] {
 }
 
 .orText {
-    margin: 20px 0;
+    margin: 16px 0 20px 0;
     text-align: center;
 }
 
