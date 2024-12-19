@@ -5,17 +5,49 @@ export function renderQuizNav (parentElement) {
     quizNav.id = "quizNav";
     parentElement.appendChild(quizNav);
 
-    let exitButton = document.createElement("button");
-    quizNav.appendChild(exitButton);
-    // exitButton.addEventListener... 
-
-    // sålänge
-    let pointsCon = document.createElement("div");
-    pointsCon.innerHTML = `
-        <h4>🤓</h4>
-        <p id="points">0p</p>
+    quizNav.innerHTML = `
+        <div class="homeButtonContainer">
+            <img src="/static/media/icons/back.svg" class="homeButton">
+        </div>
+        <div class="pointsCon">
+            <h4>🤓</h4>
+            <p id="points">0p</p>
+        </div>
     `
-    quizNav.appendChild(pointsCon);
+
+    const homeButtonContainer = parentElement.querySelector(".homeButtonContainer");
+    homeButtonContainer.addEventListener("click", () => {
+        const wrapper = document.querySelector("#wrapper");
+        const overlay = document.createElement("div");
+        overlay.classList.add("overlay");
+        overlay.innerHTML = `
+            <div class="middlePopup">
+                <img src="/static/media/icons/close.svg" class="closeButton">
+                <h3 class="leaveTitle">Leave Quiz?</h3>
+                <div class="leaveOptionsContainer">
+                    <div class="leaveQuizYes">
+                        <p>Yes</p>
+                    </div>
+                    <div class="leaveQuizNo">
+                        <p>No</p>
+                    </div>
+                </div>
+            </div>
+        `;
+        wrapper.appendChild(overlay);
+    
+        overlay.addEventListener("click", () => overlay.remove());
+        const popup = overlay.querySelector(".middlePopup");
+        popup.addEventListener("click", (event) => event.stopPropagation());
+        const closeButton = overlay.querySelector(".closeButton");
+        closeButton.addEventListener("click", () => overlay.remove());
+    
+        overlay.querySelector(".leaveQuizYes").addEventListener("click", () => {
+            wrapper.innerHTML = "";
+            renderStart(wrapper);
+        });
+        overlay.querySelector(".leaveQuizNo").addEventListener("click", () => overlay.remove());
+    });
 }
 
 export function renderQuizHeader (parentElement, /* year and genre */) {
@@ -88,10 +120,10 @@ export function renderQuizQuestion (parentElement) {
             <div id="progressBar"></div>
         </div>
         <div id="optionsContainer">
-            <button class="optionButton">No dark sarcasm in the classroom.</button>
-            <button class="optionButton">No fear, no pain.</button>
-            <button class="optionButton">Just leave us alone.</button>
-            <button class="optionButton">Just give us something to sing.</button>
+            <button class="optionButton"><p>No dark sarcasm in the classroom.</p></button>
+            <button class="optionButton"><p>No fear, no pain.</p></button>
+            <button class="optionButton"><p>Just leave us alone.</p></button>
+            <button class="optionButton"><p>Just give us something to sing.</p></button>
         </div>
     `;
 
