@@ -10,7 +10,7 @@
     margin-top: 10px;
 }
 
-#quizNav > div {
+.pointsCon {
     background-color: white;
     border-radius: 100px 0px 0px 100px;
 
@@ -24,18 +24,8 @@
     right: 0;
 }
 
-#quizNav > div > p {
+.pointsCon > p {
     color: var(--neutral800);
-}
-
-#quizNav > button {
-    width: 24px;
-    height: 24px;
-
-    background: url('/static/media/icons/back.svg') no-repeat center;
-    background-size: cover;
-    border: none;
-    cursor: pointer;
 }
 
 /* Header */
