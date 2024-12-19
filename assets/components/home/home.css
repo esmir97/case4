@@ -94,12 +94,12 @@
 }
 
 .allGenresContainer {
-    display: flex;
-    align-items: flex-start;
-    align-content: flex-start;
-    gap: 20px 16px; 
-    align-self: stretch;
-    flex-wrap: wrap;
+   
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 188px;
+    gap: 20px 16px;
 
     margin-bottom: 70px;
 }
@@ -116,9 +116,8 @@
 .genre {
     display: flex;
     flex-direction: column;
-    flex: 0 0 164px;
-    
-    height: 188px;
+    min-width: 50%;
+    height: 100%;
     border-radius: var(--border1);
     background-color: white;
 }
