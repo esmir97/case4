@@ -1371,6 +1371,298 @@
         "category": "",
         "instruction": ""
       }
+    ],
+    "10": [
+      {
+        "question": "Which 2010 album by Arcade Fire won the Grammy Award for Album of the Year?",
+        "options": ["The Suburbs", "Funeral", "Reflektor", "Neon Bible"],
+        "correct": "The Suburbs",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2010 song by Foo Fighters features the lyrics 'These are my famous last words'?",
+        "options": ["Rope", "The Pretender", "Walk", "These Days"],
+        "correct": "Walk",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2010 album by Muse includes the song 'Uprising'?",
+        "options": ["The Resistance", "Absolution", "Drones", "Black Holes and Revelations"],
+        "correct": "The Resistance",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2011 album by The Black Keys includes the song 'Lonely Boy'?",
+        "options": ["El Camino", "Brothers", "Attack & Release", "Rubber Factory"],
+        "correct": "El Camino",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2011 song by Arctic Monkeys features the lyrics 'Do I wanna know? If this feeling flows both ways?'",
+        "options": ["Do I Wanna Know?", "R U Mine?", "Why'd You Only Call Me When You're High?", "505"],
+        "correct": "Do I Wanna Know?",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2010 album by Kings of Leon includes the song 'Radioactive'?",
+        "options": ["Come Around Sundown", "Only by the Night", "Youth and Young Manhood", "Aha Shake Heartbreak"],
+        "correct": "Come Around Sundown",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2011 album by Foo Fighters includes the song 'Walk'?",
+        "options": ["Wasting Light", "Echoes, Silence, Patience & Grace", "In Your Honor", "The Colour and the Shape"],
+        "correct": "Wasting Light",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2010 album by The National includes the song 'Bloodbuzz Ohio'?",
+        "options": ["High Violet", "Boxer", "Alligator", "Sad Songs for Dirty Lovers"],
+        "correct": "High Violet",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2010 song by Florence + The Machine features the lyrics 'It's hard to dance with a devil on your back'?",
+        "options": ["Dog Days Are Over", "Shake It Out", "Spectrum", "You've Got the Love"],
+        "correct": "Dog Days Are Over",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2012 album by Jack White includes the song 'Sixteen Saltines'?",
+        "options": ["Blunderbuss", "Lazaretto", "Get Behind Me Satan", "White Blood Cells"],
+        "correct": "Blunderbuss",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2010 album by Weezer includes the song 'Memories'?",
+        "options": ["Hurley", "Raditude", "The Red Album", "Make Believe"],
+        "correct": "Hurley",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2011 album by Mumford & Sons includes the song 'The Cave'?",
+        "options": ["Sigh No More", "Babel", "Delta", "Wilder Mind"],
+        "correct": "Sigh No More",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2012 album by The Black Keys includes the song 'Gold on the Ceiling'?",
+        "options": ["El Camino", "Brothers", "Rubber Factory", "Attack & Release"],
+        "correct": "El Camino",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2011 song by The Strokes features the lyrics 'I try but you see it's hard to believe'?",
+        "options": ["Under Control", "Last Nite", "Machu Picchu", "Reptilia"],
+        "correct": "Machu Picchu",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2010 album by LCD Soundsystem includes the song 'Dance Yrself Clean'?",
+        "options": ["This Is Happening", "Sound of Silver", "LCD Soundsystem", "American Dream"],
+        "correct": "This Is Happening",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2011 album by Bon Iver includes the song 'Holocene'?",
+        "options": ["Bon Iver", "For Emma, Forever Ago", "22, A Million", "Blood Bank"],
+        "correct": "Bon Iver",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2010 album by The Dead Weather includes the song 'Treat Me Like Your Mother'?",
+        "options": ["Sea of Cowards", "Horehound", "Dodge and Burn", "Blue Blood Blues"],
+        "correct": "Sea of Cowards",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2012 album by Of Monsters and Men includes the song 'Little Talks'?",
+        "options": ["My Head Is an Animal", "Beneath the Skin", "Fever Dream", "So Much for That"],
+        "correct": "My Head Is an Animal",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2010 song by Vampire Weekend features the lyrics 'Who's in control?'?",
+        "options": ["Cousins", "Horchata", "Giving Up the Gun", "Oxford Comma"],
+        "correct": "Cousins",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2010 album by Paramore includes the song 'The Only Exception'?",
+        "options": ["Brand New Eyes", "Riot!", "All We Know Is Falling", "Paramore"],
+        "correct": "Brand New Eyes",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2011 album by Radiohead includes the song 'Lotus Flower'?",
+        "options": ["The King of Limbs", "In Rainbows", "Hail to the Thief", "Kid A"],
+        "correct": "The King of Limbs",
+        "category": "",
+        "instruction": ""
+      }
+    ],
+    "20": 
+    [
+      {
+        "question": "Which 2020 album by Foo Fighters features the song 'Shame Shame'?",
+        "options": ["Medicine at Midnight", "Concrete and Gold", "Wasting Light", "The Colour and the Shape"],
+        "correct": "Medicine at Midnight",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by Tame Impala includes the song 'Lost in Yesterday'?",
+        "options": ["The Slow Rush", "Currents", "Lonerism", "Innerspeaker"],
+        "correct": "The Slow Rush",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which band released the 2020 album 'What's Your Pleasure?'?",
+        "options": ["Jessie Ware", "The 1975", "Glass Animals", "Bastille"],
+        "correct": "Jessie Ware",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by The Strokes includes the song 'Bad Decisions'?",
+        "options": ["The New Abnormal", "Room on Fire", "First Impressions of Earth", "Angles"],
+        "correct": "The New Abnormal",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by AC/DC includes the song 'Shot in the Dark'?",
+        "options": ["Power Up", "Black Ice", "Stiff Upper Lip", "Ballbreaker"],
+        "correct": "Power Up",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by Phoebe Bridgers includes the song 'Kyoto'?",
+        "options": ["Punisher", "Stranger in the Alps", "Mockingbird", "Boygenius"],
+        "correct": "Punisher",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which band released the 2020 album 'Future Nostalgia'?",
+        "options": ["Dua Lipa", "Miley Cyrus", "Lorde", "Billie Eilish"],
+        "correct": "Dua Lipa",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by The Killers includes the song 'Caution'?",
+        "options": ["Imploding the Mirage", "Battle Born", "Hot Fuss", "Sam's Town"],
+        "correct": "Imploding the Mirage",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by Bring Me the Horizon includes the song 'Parasite Eve'?",
+        "options": ["Post Human: Survival Horror", "Sempiternal", "That's the Spirit", "There Is a Hell, Believe Me, I've Seen It"],
+        "correct": "Post Human: Survival Horror",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by Pearl Jam includes the song 'Dance of the Clairvoyants'?",
+        "options": ["Gigaton", "Lightning Bolt", "Backspacer", "No Code"],
+        "correct": "Gigaton",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by Mac Miller includes the song 'Good News'?",
+        "options": ["Circles", "Swimming", "The Divine Feminine", "Watching Movies with the Sound Off"],
+        "correct": "Circles",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by Hayley Williams includes the song 'Simmer'?",
+        "options": ["Petals for Armor", "After Laughter", "Paramore", "Riot!"],
+        "correct": "Petals for Armor",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by Kid Cudi includes the song 'The Adventures of Moon Man & Slim Shady'?",
+        "options": ["Man on the Moon III: The Chosen", "Kid Cudi Man on the Moon", "Passion, Pain & Demon Slayin'", "Indicud"],
+        "correct": "Man on the Moon III: The Chosen",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by Royal Blood includes the song 'Trouble's Coming'?",
+        "options": ["Typhoons", "How Did We Get So Dark?", "Royal Blood", "Back to the Water Below"],
+        "correct": "Typhoons",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by The 1975 includes the song 'If You're Too Shy (Let Me Know)'?",
+        "options": ["Notes on a Conditional Form", "A Brief Inquiry into Online Relationships", "I Like It When You Sleep", "The 1975"],
+        "correct": "Notes on a Conditional Form",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by The Lumineers includes the song 'Gloria'?",
+        "options": ["III", "Cleopatra", "The Lumineers", "Stubborn Love"],
+        "correct": "III",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by Black Pumas includes the song 'Colors'?",
+        "options": ["Black Pumas", "Capitol Cuts", "The Pumas", "Beneath the Surface"],
+        "correct": "Black Pumas",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by The Smashing Pumpkins includes the song 'Cyr'?",
+        "options": ["Cyr", "Oceania", "Mellon Collie and the Infinite Sadness", "Adore"],
+        "correct": "Cyr",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by Liam Gallagher includes the song 'One of Us'?",
+        "options": ["Why Me? Why Not.", "As You Were", "Be Here Now", "Dig Out Your Soul"],
+        "correct": "Why Me? Why Not.",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by Imagine Dragons includes the song 'Follow You'?",
+        "options": ["Mercury - Act 1", "Evolve", "Smoke + Mirrors", "Night Visions"],
+        "correct": "Mercury - Act 1",
+        "category": "",
+        "instruction": ""
+      }
     ]
   },
   "pop": {
@@ -5735,6 +6027,4039 @@
           "Brandi Carlile"
         ],
         "correct": "By the Way, I Forgive You",
+        "category": "",
+        "instruction": ""
+      }
+    ]
+  },
+  "jazz": {
+    "60": [
+      {
+        "question": "Which 1960 album by Miles Davis is considered a landmark in jazz and features the song 'So What'?",
+        "options": ["Kind of Blue", "Sketches of Spain", "Miles Ahead", "In a Silent Way"],
+        "correct": "Kind of Blue",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1965 album by John Coltrane features the iconic track 'A Love Supreme'?",
+        "options": ["A Love Supreme", "Giant Steps", "Blue Train", "My Favorite Things"],
+        "correct": "A Love Supreme",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1961 album by Ornette Coleman introduced the concept of free jazz?",
+        "options": ["Free Jazz", "The Shape of Jazz to Come", "Science Fiction", "Change of the Century"],
+        "correct": "Free Jazz",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1960 album by Thelonious Monk includes the track 'Round Midnight'?",
+        "options": ["Thelonious Monk with John Coltrane", "Monk's Dream", "Solo Monk", "Live at the Five Spot"],
+        "correct": "Monk's Dream",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1962 album by Duke Ellington features the track 'Take the A Train'?",
+        "options": ["Ellington at Newport", "Masterpieces by Ellington", "The Blanton-Webster Band", "Indigo Blue"],
+        "correct": "Ellington at Newport",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1963 album by Charles Mingus features the track 'Goodbye Pork Pie Hat'?",
+        "options": ["Mingus Ah Um", "Pithecanthropus Erectus", "Blues & Roots", "The Black Saint and the Sinner Lady"],
+        "correct": "Mingus Ah Um",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1961 album by Stan Getz and João Gilberto includes the famous track 'The Girl from Ipanema'?",
+        "options": ["Getz/Gilberto", "Jazz Samba", "Big Band Bossa Nova", "The Best of Stan Getz"],
+        "correct": "Getz/Gilberto",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1967 album by Aretha Franklin is a fusion of jazz and soul, featuring the track 'I Never Loved a Man (The Way I Love You)'?",
+        "options": ["I Never Loved a Man the Way I Love You", "Lady Soul", "Respect", "Aretha Arrives"],
+        "correct": "I Never Loved a Man the Way I Love You",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1960 album by Bill Evans features the track 'Peace Piece'?",
+        "options": ["Everybody Digs Bill Evans", "Portrait in Jazz", "Sunday at the Village Vanguard", "Waltz for Debby"],
+        "correct": "Everybody Digs Bill Evans",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1965 album by Horace Silver is a classic in hard bop, featuring the track 'Song for My Father'?",
+        "options": ["Song for My Father", "Blowin' the Blues Away", "The Cape Verdean Blues", "Finger Poppin'"],
+        "correct": "Song for My Father",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1967 album by John Coltrane features the track 'Ascension'?",
+        "options": ["Ascension", "My Favorite Things", "Olé Coltrane", "Live at the Village Vanguard"],
+        "correct": "Ascension",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1964 album by Cannonball Adderley includes the track 'Mercy, Mercy, Mercy'?",
+        "options": ["Mercy, Mercy, Mercy! Live at 'The Club'", "Somethin' Else", "Cannonball Adderley Quintet in San Francisco", "Nippon Soul"],
+        "correct": "Mercy, Mercy, Mercy! Live at 'The Club'",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1968 album by Miles Davis features the track 'In a Silent Way'?",
+        "options": ["In a Silent Way", "Bitches Brew", "Filles de Kilimanjaro", "Someday My Prince Will Come"],
+        "correct": "In a Silent Way",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1962 album by Max Roach features the track 'Ain't But the One'?",
+        "options": ["Max Roach + 4", "We Insist! Max Roach's Freedom Now Suite", "Drums Unlimited", "The Max Roach Trio Featuring the Legendary Max Roach"],
+        "correct": "We Insist! Max Roach's Freedom Now Suite",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1964 album by Art Blakey & The Jazz Messengers features the track 'A Night in Tunisia'?",
+        "options": ["A Night in Tunisia", "Moanin'", "The Big Beat", "Free for All"],
+        "correct": "A Night in Tunisia",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1961 album by Ella Fitzgerald features the track 'Misty'?",
+        "options": ["Ella Fitzgerald Sings the Rodgers & Hart Songbook", "Ella Fitzgerald Sings the Duke Ellington Songbook", "Ella Fitzgerald Sings the Irving Berlin Songbook", "Ella Fitzgerald Sings the George Gershwin Songbook"],
+        "correct": "Ella Fitzgerald Sings the Rodgers & Hart Songbook",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1960 album by Jimmy Smith is known for bringing the Hammond B3 organ into the jazz spotlight?",
+        "options": ["Back at the Chicken Shack", "The Sermon!", "Midnight Special", "Standards"],
+        "correct": "Back at the Chicken Shack",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1963 album by Charles Mingus features the track 'Better Get It in Your Soul'?",
+        "options": ["Mingus Ah Um", "The Black Saint and the Sinner Lady", "Blues & Roots", "Pithecanthropus Erectus"],
+        "correct": "Mingus Ah Um",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1961 album by Miles Davis features the song 'Someday My Prince Will Come'?",
+        "options": ["Someday My Prince Will Come", "Kind of Blue", "Bitches Brew", "In a Silent Way"],
+        "correct": "Someday My Prince Will Come",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1964 album by Charles Mingus features the track 'Fables of Faubus'?",
+        "options": ["Mingus Mingus Mingus Mingus Mingus", "Mingus Ah Um", "Blues & Roots", "The Black Saint and the Sinner Lady"],
+        "correct": "Mingus Mingus Mingus Mingus Mingus",
+        "category": "",
+        "instruction": ""
+      }
+    ],
+    "70": [
+      {
+        "question": "Which 1970 album by Miles Davis marks a pivotal shift to jazz fusion with the track 'Bitches Brew'?",
+        "options": ["Bitches Brew", "In a Silent Way", "On the Corner", "Filles de Kilimanjaro"],
+        "correct": "Bitches Brew",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1971 album by John Coltrane features the track 'Stellar Regions'?",
+        "options": ["Stellar Regions", "A Love Supreme", "Meditations", "Ascension"],
+        "correct": "Stellar Regions",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1973 album by Herbie Hancock features the hit 'Chameleon'?",
+        "options": ["Head Hunters", "Man-Child", "Thrust", "Secrets"],
+        "correct": "Head Hunters",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1975 album by Weather Report features the iconic track 'Birdland'?",
+        "options": ["Heavy Weather", "Mysterious Traveller", "Black Market", "Sweetnighter"],
+        "correct": "Heavy Weather",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1974 album by Miles Davis is known for its funk-driven jazz fusion and includes the track 'Silent Way'?",
+        "options": ["On the Corner", "In a Silent Way", "Bitches Brew", "Filles de Kilimanjaro"],
+        "correct": "On the Corner",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1976 album by Keith Jarrett is a landmark in solo jazz piano performance?",
+        "options": ["The Köln Concert", "The Sun Bear Concerts", "My Song", "Changes"],
+        "correct": "The Köln Concert",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1973 album by Thelonious Monk features his iconic track 'I Mean You'?",
+        "options": ["Monk's Dream", "Straight, No Chaser", "Thelonious Himself", "Live at the Jazz Corner of the World"],
+        "correct": "Straight, No Chaser",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1972 album by Charles Mingus is considered one of his final masterpieces?",
+        "options": ["Let My Children Hear Music", "The Black Saint and the Sinner Lady", "Mingus Mingus Mingus Mingus Mingus", "Blues & Roots"],
+        "correct": "Let My Children Hear Music",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1977 album by Art Blakey & The Jazz Messengers features the track 'A La Mode'?",
+        "options": ["The Witch Doctor", "A La Mode", "Moanin'", "Free for All"],
+        "correct": "A La Mode",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1975 album by Chick Corea's Return to Forever features the track 'Spain'?",
+        "options": ["Light as a Feather", "Romantic Warrior", "Hymn of the Seventh Galaxy", "Where Have I Known You Before"],
+        "correct": "Light as a Feather",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1970 album by Santana blends Latin rhythms with jazz improvisation, featuring the track 'Black Magic Woman'?",
+        "options": ["Abraxas", "Santana III", "Caravanserai", "Shaman"],
+        "correct": "Abraxas",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1979 album by Pat Metheny is known for its fusion of jazz and rock, featuring the track 'Phase Dance'?",
+        "options": ["Pat Metheny Group", "Offramp", "American Garage", "Bright Size Life"],
+        "correct": "Pat Metheny Group",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1971 album by Miles Davis is a precursor to his electric period, featuring the track 'Pharaoh's Dance'?",
+        "options": ["Bitches Brew", "A Tribute to Jack Johnson", "In a Silent Way", "On the Corner"],
+        "correct": "A Tribute to Jack Johnson",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1972 album by Herbie Hancock is known for pioneering jazz-funk fusion, including the track 'Actual Proof'?",
+        "options": ["Thrust", "Head Hunters", "Secrets", "Man-Child"],
+        "correct": "Thrust",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1973 album by Miles Davis includes the track 'On the Corner'?",
+        "options": ["On the Corner", "Filles de Kilimanjaro", "Bitches Brew", "In a Silent Way"],
+        "correct": "On the Corner",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1975 album by Frank Zappa and the Mothers of Invention blends jazz, rock, and experimental music?",
+        "options": ["One Size Fits All", "Hot Rats", "Weasels Ripped My Flesh", "Over-Nite Sensation"],
+        "correct": "One Size Fits All",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1978 album by the Crusaders features the track 'Street Life'?",
+        "options": ["Street Life", "Images", "Free as the Wind", "The Crusaders"],
+        "correct": "Street Life",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1970 album by Gil Scott-Heron includes the track 'The Revolution Will Not Be Televised'?",
+        "options": ["Small Talk at 125th and Lenox", "Pieces of a Man", "Winter in America", "Free Will"],
+        "correct": "Small Talk at 125th and Lenox",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1974 album by Sun Ra features the track 'Space is the Place'?",
+        "options": ["Space is the Place", "The Magic City", "Jazz by Sun Ra", "The Heliocentric Worlds of Sun Ra"],
+        "correct": "Space is the Place",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1972 album by Duke Ellington is a standout in his career, featuring the track 'The Moon Mist'?",
+        "options": ["The Afro-Eurasian Eclipse", "Newport 1956", "Live at the Whitney", "The Popular Duke Ellington"],
+        "correct": "The Afro-Eurasian Eclipse",
+        "category": "",
+        "instruction": ""
+      }
+    ],
+    "80": [
+      {
+        "question": "Which 1982 album by Miles Davis is known for its experimental fusion of jazz, rock, and electronic music?",
+        "options": ["Tutu", "Amandla", "We Want Miles", "The Man with the Horn"],
+        "correct": "Tutu",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1984 album by Herbie Hancock features the hit track 'Rockit'?",
+        "options": ["Future Shock", "Thrust", "Man-Child", "Head Hunters"],
+        "correct": "Future Shock",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1985 album by Weather Report features the track 'D-Flat Waltz'?",
+        "options": ["Sportin' Life", "Black Market", "Heavy Weather", "Mysterious Traveller"],
+        "correct": "Sportin' Life",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1980 album by Pat Metheny Group features the track 'Phase Dance'?",
+        "options": ["Pat Metheny Group", "Offramp", "American Garage", "Bright Size Life"],
+        "correct": "Pat Metheny Group",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1987 album by Stan Getz features the track 'The Girl from Ipanema' in a live performance?",
+        "options": ["Getz/Gilberto '87", "The Best of Stan Getz", "Live at the Café Montmartre", "The Stan Getz Quartet"],
+        "correct": "Getz/Gilberto '87",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1981 album by Miles Davis features his return to acoustic jazz with the album 'The Man with the Horn'?",
+        "options": ["The Man with the Horn", "We Want Miles", "Tutu", "In a Silent Way"],
+        "correct": "The Man with the Horn",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1984 album by Wynton Marsalis was pivotal in the revival of traditional jazz?",
+        "options": ["Think of One", "Hot House Flowers", "Black Codes (From the Underground)", "J Mood"],
+        "correct": "Hot House Flowers",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1982 album by John Coltrane, released posthumously, features live recordings of his 1966 performances?",
+        "options": ["The Olatunji Concert: The Last Live Recording", "A Love Supreme", "Live at the Village Vanguard", "Impressions"],
+        "correct": "The Olatunji Concert: The Last Live Recording",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1987 album by Chick Corea features the track 'Spanish Fantasy'?",
+        "options": ["Trilogy", "Touchstone", "The Leprechaun", "My Spanish Heart"],
+        "correct": "Touchstone",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1986 album by David Sanborn features the track 'Nothing Will Ever Change'?",
+        "options": ["Voyeur", "Backstreet", "Straight to the Heart", "As We Speak"],
+        "correct": "Voyeur",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1986 album by Keith Jarrett features a recording of a concert in Paris?",
+        "options": ["Standards, Vol. 1", "The Köln Concert", "My Song", "Changes"],
+        "correct": "Standards, Vol. 1",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1983 album by Sonny Rollins features the track 'Mambo Bounce'?",
+        "options": ["Saxophone Colossus", "The Bridge", "On Impulse!", "No Problem"],
+        "correct": "No Problem",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1989 album by Art Blakey & The Jazz Messengers features a live performance at the Village Vanguard?",
+        "options": ["The Best of Art Blakey", "Live at the Village Vanguard", "Night at Birdland", "Mosaic"],
+        "correct": "Live at the Village Vanguard",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1985 album by Michael Brecker features the track 'African Skies'?",
+        "options": ["Michael Brecker", "Don't Try This at Home", "Tales from the Hudson", "Time Is of the Essence"],
+        "correct": "Michael Brecker",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1988 album by Joe Henderson features the track 'Tetragon'?",
+        "options": ["The State of the Tenor", "Lush Life", "Power to the People", "So Near, So Far"],
+        "correct": "The State of the Tenor",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1980 album by McCoy Tyner features the track 'Passion Dance'?",
+        "options": ["The Real McCoy", "Echoes of a Friend", "Sahara", "Arietta"],
+        "correct": "Sahara",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1983 album by Bill Evans features the track 'One for Helen'?",
+        "options": ["Conception", "Alone", "You Must Believe in Spring", "Intermodulation"],
+        "correct": "You Must Believe in Spring",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1989 album by Pat Metheny Group features the track 'Last Train Home'?",
+        "options": ["Still Life (Talking)", "Offramp", "Imaginary Day", "The Way Up"],
+        "correct": "Still Life (Talking)",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1984 album by Chet Baker features the track 'But Not for Me'?",
+        "options": ["Chet Baker Sings", "My Funny Valentine", "Live at the Ipanema", "The Best of Chet Baker"],
+        "correct": "Chet Baker Sings",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1986 album by Stanley Clarke features the track 'School Days'?",
+        "options": ["Journey to Love", "If This Bass Could Only Talk", "Time Exposure", "Stanley Clarke"],
+        "correct": "School Days",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1985 album by Diana Krall, known for its smooth jazz vocals, includes the track 'Let's Fall in Love'?",
+        "options": ["All for You", "The Look of Love", "When I Look in Your Eyes", "Live in Paris"],
+        "correct": "All for You",
+        "category": "",
+        "instruction": ""
+      }
+    ],
+    "90": [
+      {
+        "question": "Which 1991 album by Miles Davis features a mix of jazz, funk, and rock elements, marking his return to the music scene?",
+        "options": ["Amandla", "We Want Miles", "Tutu", "In a Silent Way"],
+        "correct": "Amandla",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1990 album by Wynton Marsalis was crucial in the resurgence of traditional jazz in the 1990s?",
+        "options": ["Black Codes (From the Underground)", "J Mood", "Think of One", "Hot House Flowers"],
+        "correct": "Black Codes (From the Underground)",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1997 album by John Coltrane features previously unreleased live recordings from 1966?",
+        "options": ["The Olatunji Concert: The Last Live Recording", "Impressions", "Ascension", "A Love Supreme"],
+        "correct": "The Olatunji Concert: The Last Live Recording",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1992 album by Chick Corea features his band, Return to Forever, and mixes jazz with Latin music?",
+        "options": ["Antidote", "Return to Forever", "My Spanish Heart", "The Ultimate Adventure"],
+        "correct": "Antidote",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1990s jazz artist is known for his 'Nu Jazz' style and album 'Head Rush'?",
+        "options": ["Herbie Hancock", "Brad Mehldau", "Roy Hargrove", "St Germain"],
+        "correct": "Roy Hargrove",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1992 album by Pat Metheny Group features the track 'The Way Up'?",
+        "options": ["Still Life (Talking)", "Offramp", "Imaginary Day", "The Way Up"],
+        "correct": "Still Life (Talking)",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1996 album by Diana Krall marked her breakthrough in the jazz scene, including the track 'Let's Fall in Love'?",
+        "options": ["When I Look in Your Eyes", "The Look of Love", "All for You", "Live in Paris"],
+        "correct": "When I Look in Your Eyes",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1990 album by Brad Mehldau is known for its modern, intricate approach to jazz?",
+        "options": ["Elegiac Cycle", "The Art of the Trio", "Largo", "Highway Rider"],
+        "correct": "The Art of the Trio",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which jazz legend released the 1993 album 'In a Silent Way: The Complete Columbia Studio Recordings'?",
+        "options": ["John Coltrane", "Herbie Hancock", "Miles Davis", "Bill Evans"],
+        "correct": "Miles Davis",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1997 album by Sonny Rollins is considered one of his finest works in the 1990s?",
+        "options": ["This Is What I Do", "Saxophone Colossus", "Nighthawks", "Without a Song"],
+        "correct": "This Is What I Do",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1995 album by Cassandra Wilson blends jazz with blues and folk influences?",
+        "options": ["Blue Light 'Til Dawn", "New Moon Daughter", "Traveling Miles", "Jumpworld!"],
+        "correct": "Blue Light 'Til Dawn",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1999 album by Joshua Redman features a mix of contemporary jazz with soulful grooves?",
+        "options": ["Timeless Tales (For Changing Times)", "Spirit of the Moment", "MoodSwing", "Freedom in the Groove"],
+        "correct": "Timeless Tales (For Changing Times)",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1996 album by Kenny Garrett blends jazz with elements of funk and R&B?",
+        "options": ["Black Hope", "Pushing the World Away", "Simply Said", "Songbook"],
+        "correct": "Black Hope",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1990s album by Mulgrew Miller helped define the modern post-bop jazz sound?",
+        "options": ["The Sequel", "Tales of the Stave", "Live at the Village Vanguard", "Mosaic"],
+        "correct": "The Sequel",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1994 album by Keith Jarrett captures his improvisational style in solo piano performances?",
+        "options": ["The Köln Concert", "Standards Vol. 1", "The Melody at Night, With You", "La Scala"],
+        "correct": "The Melody at Night, With You",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1990 album by Bobby McFerrin features a mix of jazz, pop, and vocal improvisation?",
+        "options": ["Spontaneous Inventions", "Simple Pleasures", "Vocabularies", "Beyond Words"],
+        "correct": "Spontaneous Inventions",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1995 album by Michael Brecker features the track 'African Skies'?",
+        "options": ["Tales from the Hudson", "Don't Try This at Home", "The Michael Brecker Quartet", "Now You See It... Now You Don't"],
+        "correct": "Tales from the Hudson",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1990s jazz musician is credited with popularizing the fusion of jazz and hip-hop with the album 'Resonance'?",
+        "options": ["Robert Glasper", "Herbie Hancock", "Takuya Kuroda", "Muggsy Spanier"],
+        "correct": "Herbie Hancock",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1991 album by John Scofield features collaborations with bassist Steve Swallow and drummer Adam Nussbaum?",
+        "options": ["Shining Hour", "A Go Go", "Hand Jive", "Time on My Hands"],
+        "correct": "Shining Hour",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1990s album by the Dave Holland Quintet blends jazz with contemporary styles?",
+        "options": ["The Razor's Edge", "Triplicate", "Not For Nothin'", "Prime Directive"],
+        "correct": "Prime Directive",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1995 album by Roy Hargrove was nominated for a Grammy Award for Best Jazz Instrumental Album?",
+        "options": ["The Vibe", "Family", "Nothing Serious", "Of Kindred Souls"],
+        "correct": "Family",
+        "category": "",
+        "instruction": ""
+      }
+    ],
+    "00": [
+      {
+        "question": "Which 2001 album by Herbie Hancock features collaborations with artists like Christina Aguilera and John Mayer?",
+        "options": ["Future 2 Future", "Possibilities", "The Imagine Project", "River: The Joni Letters"],
+        "correct": "Possibilities",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2000 album by Brad Mehldau is known for its incorporation of pop and rock songs into jazz arrangements?",
+        "options": ["Largo", "Live in Tokyo", "Art of the Trio", "Day is Done"],
+        "correct": "Largo",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2000s album by Diana Krall won the Grammy Award for Best Jazz Vocal Album in 2002?",
+        "options": ["The Look of Love", "All for You", "When I Look in Your Eyes", "Live in Paris"],
+        "correct": "The Look of Love",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2005 album by Pat Metheny Group is known for blending jazz, world music, and electronica?",
+        "options": ["The Way Up", "Speaking of Now", "Imaginary Day", "Pat Metheny Trio"],
+        "correct": "The Way Up",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2004 album by Michael Brecker features a fusion of jazz, rock, and electronic music?",
+        "options": ["Wide Angles", "Time is of the Essence", "Don't Try This at Home", "Tales from the Hudson"],
+        "correct": "Wide Angles",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2000 album by Wynton Marsalis was a tribute to the music of John Coltrane?",
+        "options": ["True Life Blues", "The Magic Hour", "Standard Time, Vol. 6", "Crescent"],
+        "correct": "Crescent",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2003 album by Cassandra Wilson blends jazz with blues, soul, and country influences?",
+        "options": ["New Moon Daughter", "Traveling Miles", "Blue Light 'Til Dawn", "Glamoured"],
+        "correct": "Glamoured",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2002 album by Wayne Shorter received a Grammy Award for Best Jazz Instrumental Album?",
+        "options": ["Alegría", "Footprints Live!", "Schizophrenia", "Beyond the Sound"],
+        "correct": "Alegría",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2001 album by Joshua Redman features the track 'Hide and Seek'?",
+        "options": ["Timeless Tales (For Changing Times)", "Freedom in the Groove", "Live at the Village Vanguard", "Compass"],
+        "correct": "Timeless Tales (For Changing Times)",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2005 album by Roy Hargrove features a mix of hard bop and soul jazz?",
+        "options": ["Nothing Serious", "Earfood", "Crisol", "Family"],
+        "correct": "Nothing Serious",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2007 album by Kurt Elling features a blend of jazz with poetry and modern vocal arrangements?",
+        "options": ["Nightmoves", "The Messenger", "The Brill Building Sessions", "This Time It's Love"],
+        "correct": "Nightmoves",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2006 album by Brad Mehldau is a live recording of his trio performing jazz standards?",
+        "options": ["Live in Tokyo", "Art of the Trio Volume 3", "Highway Rider", "The Folly of Youth"],
+        "correct": "Live in Tokyo",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2000s album by Norah Jones blends jazz, pop, and soul influences?",
+        "options": ["Come Away with Me", "Feels Like Home", "The Fall", "Day Breaks"],
+        "correct": "Come Away with Me",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2003 album by the Dave Holland Quintet features a mix of modern jazz and world music?",
+        "options": ["Not For Nothin'", "Prime Directive", "Triplicate", "Courage"],
+        "correct": "Prime Directive",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2004 album by Joe Lovano features his 'Us Five' band and blends jazz with post-bop and avant-garde elements?",
+        "options": ["Us Five", "Streams of Expression", "Quartet", "Rush Hour"],
+        "correct": "Us Five",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2008 album by Vijay Iyer features a fusion of jazz, classical music, and Indian influences?",
+        "options": ["Historicity", "Solo", "Flesh and Stone", "The Dreamer"],
+        "correct": "Historicity",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2009 album by Esperanza Spalding is a fusion of jazz with classical, R&B, and soul music?",
+        "options": ["Chamber Music Society", "Radio Music Society", "Esperanza", "The Radio Recordings"],
+        "correct": "Chamber Music Society",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2002 album by Pat Metheny is a collaboration with Brazilian guitarist Antonio Carlos Jobim?",
+        "options": ["Speaking of Now", "The Way Up", "One Quiet Night", "Still Life (Talking)"],
+        "correct": "One Quiet Night",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2000 album by John Scofield blends jazz with funk and soul influences?",
+        "options": ["A Go Go", "Bump", "Hand Jive", "This Meets That"],
+        "correct": "A Go Go",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2005 album by Hiromi Uehara is her debut album and blends jazz with classical and progressive rock?",
+        "options": ["Another Mind", "Brain", "Time Control", "Place to Be"],
+        "correct": "Another Mind",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2001 album by Christian McBride features a mix of hard bop and post-bop jazz?",
+        "options": ["Vertical Vision", "Live at the Village Vanguard", "The Good Feeling", "Kind of Brown"],
+        "correct": "Vertical Vision",
+        "category": "",
+        "instruction": ""
+      }
+    ],
+    "10": [
+      {
+        "question": "Which 2010 album by Robert Glasper Experiment blends jazz with R&B and hip-hop?",
+        "options": ["Black Radio", "In My Element", "Double Booked", "Canvas"],
+        "correct": "Black Radio",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2012 album by Esperanza Spalding won the Grammy Award for Best Jazz Vocal Album?",
+        "options": ["Radio Music Society", "Chamber Music Society", "Esperanza", "Songwrights Apothecary Lab"],
+        "correct": "Radio Music Society",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2015 album by Kamasi Washington is considered a modern masterpiece of jazz and jazz fusion?",
+        "options": ["The Epic", "Heaven and Earth", "The Choice", "Love Supreme"],
+        "correct": "The Epic",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2013 album by Brad Mehldau features collaborations with artists such as Chris Thile and Mark Guiliana?",
+        "options": ["Largo", "Art of the Trio", "Where Do You Start?", "The Blues and the Abstract Truth"],
+        "correct": "Where Do You Start?",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2014 album by Robert Glasper Experiment features contributions from artists like Erykah Badu and Lalah Hathaway?",
+        "options": ["Black Radio", "In My Element", "Double Booked", "Black Radio 2"],
+        "correct": "Black Radio 2",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2010 album by Michael Brecker features live recordings of his performances with his band?",
+        "options": ["The Brecker Brothers Band", "Wide Angles", "Live in Japan", "Pilgrimage"],
+        "correct": "Pilgrimage",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2011 album by Hiromi Uehara combines jazz with classical music and progressive rock influences?",
+        "options": ["Place to Be", "Another Mind", "Time Control", "Voice"],
+        "correct": "Voice",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2016 album by Christian Scott aTunde Adjuah blends jazz with African and Caribbean influences?",
+        "options": ["Stretch Music", "Diaspora", "The Past and the Present", "The Emancipation of Sound"],
+        "correct": "Stretch Music",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2013 album by Cecile McLorin Salvant won the Grammy Award for Best Jazz Vocal Album?",
+        "options": ["WomanChild", "For One to Love", "Dreams and Daggers", "The Secret of the Sea"],
+        "correct": "WomanChild",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2018 album by Marcus Miller blends jazz with funk, soul, and electronic music?",
+        "options": ["Laid Black", "Tales of the Exonerated Flea", "Afrodeezia", "The Sun Don't Lie"],
+        "correct": "Laid Black",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2014 album by Avishai Cohen is an exploration of jazz and Middle Eastern music?",
+        "options": ["Into the Silence", "From Darkness", "The 20th Century", "Aurora"],
+        "correct": "Into the Silence",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2017 album by Brad Mehldau features a jazz trio interpretation of Radiohead's music?",
+        "options": ["Jazz Impressions of Radiohead", "The Art of the Trio", "Largo", "Highway Rider"],
+        "correct": "Jazz Impressions of Radiohead",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2015 album by the Charles Lloyd Quartet features compositions inspired by jazz, blues, and gospel?",
+        "options": ["Wild Man Dance", "All the Bells", "I Long to See You", "Mirror Mirror"],
+        "correct": "I Long to See You",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2018 album by Pat Metheny is a solo guitar album featuring improvisations on classical themes?",
+        "options": ["From This Place", "What It's All About", "Road to You", "One Quiet Night"],
+        "correct": "What It's All About",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2012 album by Brad Mehldau is a solo piano album and features jazz interpretations of popular songs?",
+        "options": ["Highway Rider", "Largo", "The Folly of Youth", "The Art of the Trio"],
+        "correct": "The Folly of Youth",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2019 album by Tigran Hamasyan blends jazz with Armenian folk music and electronic influences?",
+        "options": ["An Ancient Observer", "Mockroot", "Shogher", "The Call Within"],
+        "correct": "The Call Within",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2016 album by Kamasi Washington is known for its fusion of jazz with elements of funk, soul, and classical?",
+        "options": ["The Epic", "Heaven and Earth", "The Choice", "Love Supreme"],
+        "correct": "Heaven and Earth",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2011 album by Vijay Iyer features a mix of modern jazz with elements of Indian classical music?",
+        "options": ["Accelerando", "Solo", "Black and White", "Historicity"],
+        "correct": "Accelerando",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2019 album by Esperanza Spalding blends jazz with contemporary pop and experimental sounds?",
+        "options": ["12 Little Spells", "Radio Music Society", "Chamber Music Society", "Songwrights Apothecary Lab"],
+        "correct": "12 Little Spells",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2017 album by Nels Cline features an experimental approach to jazz and avant-garde music?",
+        "options": ["Lovers", "Share the Wealth", "Dirty Water", "The Eternal Return"],
+        "correct": "Lovers",
+        "category": "",
+        "instruction": ""
+      }
+    ],
+    "20": [
+      {
+        "question": "Which 2020 album by Kamasi Washington is a follow-up to his 2015 album 'The Epic'?",
+        "options": ["Heaven and Earth", "The Choice", "Love Supreme", "Gigaton"],
+        "correct": "Heaven and Earth",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by Terri Lyne Carrington and Social Science explores jazz with political themes?",
+        "options": ["Waiting Game", "The Mosaic Project", "The Unconditional", "Social Science"],
+        "correct": "Social Science",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by Christian Scott aTunde Adjuah blends jazz with African and Caribbean rhythms?",
+        "options": ["Stretch Music", "The Emancipation of Sound", "Ancestral Recall", "The Past and the Present"],
+        "correct": "Ancestral Recall",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by Esperanza Spalding blends jazz with elements of pop and experimental music?",
+        "options": ["12 Little Spells", "Chamber Music Society", "Radio Music Society", "Songwrights Apothecary Lab"],
+        "correct": "Songwrights Apothecary Lab",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by Makaya McCraven is a mix of live recordings and studio improvisation?",
+        "options": ["Universal Beings", "In the Moment", "The Breathing Effect", "The Spiral"],
+        "correct": "Universal Beings",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by Charles Lloyd is a collaboration with Bill Frisell and Greg Leisz?",
+        "options": ["Vanished Gardens", "I Long to See You", "The Water is Wide", "Cultural Manifesto"],
+        "correct": "Vanished Gardens",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by Brad Mehldau explores jazz with a mix of classical and contemporary influences?",
+        "options": ["Finding Gabriel", "The Art of the Trio", "Largo", "American Garage"],
+        "correct": "Finding Gabriel",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by Joshua Redman was a collaborative project with Brad Mehldau and Christian McBride?",
+        "options": ["RoundAgain", "The Cover Up", "Momentum", "Elastic"],
+        "correct": "RoundAgain",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by the late McCoy Tyner was released posthumously, featuring live performances?",
+        "options": ["The Real McCoy", "McCoy Tyner & Friends", "Infinity", "Live at Newport"],
+        "correct": "Infinity",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by Nicholas Payton was a celebration of jazz history, blending traditional and modern sounds?",
+        "options": ["Blues for New Orleans", "Meditation in Times Square", "Bitches Brew", "The Creation"],
+        "correct": "Blues for New Orleans",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by Ravi Coltrane features collaborations with musicians such as David Virelles and E.J. Strickland?",
+        "options": ["Spirit Fiction", "The Master", "Good People", "Metamodern"],
+        "correct": "Spirit Fiction",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by Robert Glasper explores jazz fusion with elements of hip-hop, soul, and R&B?",
+        "options": ["Black Radio 3", "Double Booked", "In My Element", "Canvas"],
+        "correct": "Black Radio 3",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by Marcus Miller fuses jazz with funk and soul, with contributions from artists like Trombone Shorty?",
+        "options": ["Laid Black", "Tales of the Exonerated Flea", "Afrodeezia", "The Sun Don't Lie"],
+        "correct": "Laid Black",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by Tigran Hamasyan combines jazz with Armenian folk and rock elements?",
+        "options": ["Mockroot", "An Ancient Observer", "The Call Within", "Shogher"],
+        "correct": "The Call Within",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by Snakehips blends jazz and electronic music, creating an experimental sound?",
+        "options": ["The Vibe", "After Hours", "The White Noise", "Electric Soul"],
+        "correct": "After Hours",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by Jean-Luc Ponty combines jazz fusion with progressive rock influences?",
+        "options": ["Aurora", "Cosmic Dance", "The Gift of Time", "Funky Progressions"],
+        "correct": "The Gift of Time",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by Nubya Garcia features contributions from musicians like Makaya McCraven and Johnny Marshall?",
+        "options": ["Source", "Stargazer", "Before and After", "Contemplations"],
+        "correct": "Source",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by Jon Batiste became a huge success and earned a Grammy for Best Jazz Instrumental Album?",
+        "options": ["We Are", "The Art of the Trio", "Live at Carnegie Hall", "Kirk's Groove"],
+        "correct": "We Are",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by Kenny Barron features collaborations with artists like Dave Holland and Jeff Watts?",
+        "options": ["The Art of the Trio", "The Master", "Folk Songs", "The Real McCoy"],
+        "correct": "Folk Songs",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by Cecile McLorin Salvant blends jazz with folk and classical music?",
+        "options": ["The Window", "Dreams and Daggers", "Ghost Song", "The Secret of the Sea"],
+        "correct": "Ghost Song",
+        "category": "",
+        "instruction": ""
+      }
+    ]  
+  },
+  "country": {
+    "60": [
+      {
+        "question": "Which 1960s hit by Patsy Cline became one of the most iconic songs in country music history?",
+        "options": ["I Fall to Pieces", "Crazy", "Walking After Midnight", "Sweet Dreams"],
+        "correct": "Crazy",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1960s country legend released the 1965 album 'Ring of Fire'?",
+        "options": ["Johnny Cash", "Hank Williams", "Loretta Lynn", "Willie Nelson"],
+        "correct": "Johnny Cash",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1960s country artist was known for the hit song 'Okie from Muskogee'?",
+        "options": ["Merle Haggard", "Buck Owens", "Loretta Lynn", "Jim Reeves"],
+        "correct": "Merle Haggard",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1960s album by George Jones is often regarded as one of the best country albums of all time?",
+        "options": ["I Am What I Am", "The Grand Tour", "The Great George Jones", "He Stopped Loving Her Today"],
+        "correct": "The Great George Jones",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1960s song by Tammy Wynette became an anthem for women in country music?",
+        "options": ["Stand by Your Man", "D-I-V-O-R-C-E", "Your Good Girl's Gonna Go Bad", "I Don't Wanna Play House"],
+        "correct": "Stand by Your Man",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1960s country singer was known as the 'Cowboy Copas' and had a major hit with 'Alabam'?",
+        "options": ["Cowboy Copas", "Hank Snow", "Jim Reeves", "Roger Miller"],
+        "correct": "Cowboy Copas",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1960s country artist recorded the hit song 'He'll Have to Go'?",
+        "options": ["Jim Reeves", "Hank Williams", "Johnny Cash", "Eddy Arnold"],
+        "correct": "Jim Reeves",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which country legend released the 1964 album 'I Walk the Line'?",
+        "options": ["Johnny Cash", "Willie Nelson", "George Jones", "Buck Owens"],
+        "correct": "Johnny Cash",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1960s song by Buck Owens became a hit and was later covered by The Beatles?",
+        "options": ["Act Naturally", "I've Got a Tiger by the Tail", "Together Again", "Love's Gonna Live Here"],
+        "correct": "Act Naturally",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1960s country singer was known for the hits 'Jolene' and 'Coat of Many Colors'?",
+        "options": ["Dolly Parton", "Loretta Lynn", "Tammy Wynette", "Patsy Cline"],
+        "correct": "Dolly Parton",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1960s country singer was known for her powerful voice and hits like 'The Pill' and 'Rated X'?",
+        "options": ["Loretta Lynn", "Tammy Wynette", "Conway Twitty", "Patsy Cline"],
+        "correct": "Loretta Lynn",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1960s country album by Willie Nelson became a breakthrough in his career?",
+        "options": ["Shotgun Willie", "Red Headed Stranger", "Phases and Stages", "The Essential Willie Nelson"],
+        "correct": "Shotgun Willie",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1960s country artist was known for the hit song 'If I Had a Hammer'?",
+        "options": ["Peter, Paul and Mary", "Johnny Cash", "Hank Snow", "Pete Seeger"],
+        "correct": "Pete Seeger",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1960s country album by Patsy Cline became an instant classic?",
+        "options": ["Patsy Cline's Greatest Hits", "Sentimentally Patsy", "Crazy Dreams", "Now, Patsy Cline"],
+        "correct": "Patsy Cline's Greatest Hits",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1960s country song by Glen Campbell became a huge hit and is often associated with the Vietnam War?",
+        "options": ["Rhinestone Cowboy", "Gentle on My Mind", "Wichita Lineman", "By the Time I Get to Phoenix"],
+        "correct": "Wichita Lineman",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1960s song by Roger Miller became famous for its witty lyrics and comedic style?",
+        "options": ["King of the Road", "Dang Me", "Chug-a-Lug", "You Can't Rollerskate in a Buffalo Herd"],
+        "correct": "King of the Road",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1960s album by Merle Haggard is a defining album of the Bakersfield sound?",
+        "options": ["I'm a Lonesome Fugitive", "The Legend of Merle Haggard", "Mama Tried", "Haggard's Greatest Hits"],
+        "correct": "I'm a Lonesome Fugitive",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1960s country singer had the hit song 'You Don't Know Me', which was later covered by Ray Charles?",
+        "options": ["Eddy Arnold", "Jim Reeves", "Hank Williams", "Patsy Cline"],
+        "correct": "Eddy Arnold",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1960s country legend had the hit 'I Can't Stop Loving You'?",
+        "options": ["Ray Charles", "Jim Reeves", "George Jones", "Eddy Arnold"],
+        "correct": "Ray Charles",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1960s country artist was known for his 'singing cowboy' persona and hits like 'Cool Water'?",
+        "options": ["Gene Autry", "Roy Rogers", "Tex Ritter", "Eddy Arnold"],
+        "correct": "Gene Autry",
+        "category": "",
+        "instruction": ""
+      }
+    ],
+    "70": [
+      {
+        "question": "Which 1970s hit by Dolly Parton became one of her signature songs?",
+        "options": ["Jolene", "Coat of Many Colors", "9 to 5", "I Will Always Love You"],
+        "correct": "Jolene",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1970s country song by Willie Nelson became a huge crossover hit?",
+        "options": ["Blue Eyes Crying in the Rain", "On the Road Again", "Always on My Mind", "Whiskey River"],
+        "correct": "Blue Eyes Crying in the Rain",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1970s country artist had the hit song 'The Gambler'?",
+        "options": ["Kenny Rogers", "Charlie Rich", "Jim Reeves", "Johnny Cash"],
+        "correct": "Kenny Rogers",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1973 album by Johnny Cash became a defining moment in his career?",
+        "options": ["Live at Folsom Prison", "At San Quentin", "The Man in Black", "The Johnny Cash Show"],
+        "correct": "Live at Folsom Prison",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1970s hit song by Charlie Rich became an anthem of the era?",
+        "options": ["Behind Closed Doors", "The Most Beautiful Girl", "The Silver Fox", "I Love My Friend"],
+        "correct": "Behind Closed Doors",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1971 album by Bob Dylan had a significant influence on country music?",
+        "options": ["Nashville Skyline", "Blood on the Tracks", "Desire", "The Times They Are a-Changin'"],
+        "correct": "Nashville Skyline",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which country legend was known for the 1970s hit 'He'll Have to Go'?",
+        "options": ["Jim Reeves", "Eddy Arnold", "George Jones", "Hank Williams"],
+        "correct": "Jim Reeves",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1970s album by Loretta Lynn became a breakthrough in her career?",
+        "options": ["Coal Miner's Daughter", "The Pill", "You Ain't Woman Enough", "Don't Come Home A-Drinkin'"],
+        "correct": "Coal Miner’s Daughter",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1970s song by Glen Campbell became a classic?",
+        "options": ["Wichita Lineman", "Gentle on My Mind", "By the Time I Get to Phoenix", "Rhinestone Cowboy"],
+        "correct": "Wichita Lineman",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1972 hit by Lynn Anderson became one of the best-selling country songs of all time?",
+        "options": ["Rose Garden", "How Can I Unlove You", "Listen to a Country Song", "I Never Promised You a Rose Garden"],
+        "correct": "Rose Garden",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1977 song by Emmylou Harris became a hit?",
+        "options": ["Two More Bottles of Wine", "Boulder to Birmingham", "Pancho and Lefty", "Sweet Dreams"],
+        "correct": "Two More Bottles of Wine",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1970s country artist was known for his distinctive voice and hits like 'Take Me Home, Country Roads'?",
+        "options": ["John Denver", "Kenny Rogers", "Willie Nelson", "Charlie Rich"],
+        "correct": "John Denver",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1971 song by The Statler Brothers became a country hit?",
+        "options": ["Flowers on the Wall", "Bed of Roses", "I'll Go to My Grave Loving You", "Do You Remember These"],
+        "correct": "Flowers on the Wall",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which country legend was known for the hit song 'I Am a Man of Constant Sorrow'?",
+        "options": ["Ralph Stanley", "Johnny Cash", "Hank Williams", "Willie Nelson"],
+        "correct": "Ralph Stanley",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1976 song by Dolly Parton became a major hit and was later covered by Whitney Houston?",
+        "options": ["I Will Always Love You", "Jolene", "9 to 5", "Coat of Many Colors"],
+        "correct": "I Will Always Love You",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1979 song by the Oak Ridge Boys became one of their most recognizable hits?",
+        "options": ["Elvira", "Thank God for Kids", "American Made", "I Guess It Never Hurts to Hurt Sometimes"],
+        "correct": "Elvira",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1970s album by Willie Nelson marked his crossover into mainstream success?",
+        "options": ["Red Headed Stranger", "Phases and Stages", "Shotgun Willie", "Stardust"],
+        "correct": "Red Headed Stranger",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1975 song by Johnny Cash became famous for its prison theme?",
+        "options": ["Folsom Prison Blues", "I Walk the Line", "Ring of Fire", "Man in Black"],
+        "correct": "Folsom Prison Blues",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1978 hit by Willie Nelson became one of his signature songs?",
+        "options": ["On the Road Again", "Whiskey River", "Blue Eyes Crying in the Rain", "Always on My Mind"],
+        "correct": "On the Road Again",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1970s country artist had the hit song 'The Devil Went Down to Georgia'?",
+        "options": ["The Charlie Daniels Band", "The Oak Ridge Boys", "Hank Williams Jr.", "Kenny Rogers"],
+        "correct": "The Charlie Daniels Band",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1970s hit by Conway Twitty became one of his most famous songs?",
+        "options": ["Hello Darlin'", "I'd Love to Lay You Down", "Tight Fittin' Jeans", "The Rose"],
+        "correct": "Hello Darlin'",
+        "category": "",
+        "instruction": ""
+      }
+    ],
+    "80": [
+      {
+        "question": "Which 1980s hit by Dolly Parton became a classic country anthem?",
+        "options": ["9 to 5", "Jolene", "Coat of Many Colors", "I Will Always Love You"],
+        "correct": "9 to 5",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1980s song by Willie Nelson became a huge crossover hit?",
+        "options": ["On the Road Again", "Always on My Mind", "Blue Eyes Crying in the Rain", "Whiskey River"],
+        "correct": "On the Road Again",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1982 hit song by Kenny Rogers is known for its storytelling style?",
+        "options": ["The Gambler", "Lucille", "Coward of the County", "Ruby, Don't Take Your Love to Town"],
+        "correct": "The Gambler",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1980s album by George Strait became one of the best-selling country albums of all time?",
+        "options": ["Straight from the Heart", "Does Fort Worth Ever Cross Your Mind", "Right or Wrong", "Blue Clear Sky"],
+        "correct": "Straight from the Heart",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1981 hit by The Judds helped launch their successful career?",
+        "options": ["Mama He's Crazy", "Why Not Me", "Love Can Build a Bridge", "Grandpa (Tell Me 'Bout the Good Old Days)"],
+        "correct": "Mama He's Crazy",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1983 song by Alabama became one of their biggest hits?",
+        "options": ["Mountain Music", "Dixieland Delight", "Tennessee River", "If You're Gonna Play in Texas (You Gotta Have a Fiddle in the Band)"],
+        "correct": "Mountain Music",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1982 hit by Randy Travis was a defining moment in his career?",
+        "options": ["On the Other Hand", "Forever and Ever, Amen", "Diggin' Up Bones", "Honky Tonk Moon"],
+        "correct": "On the Other Hand",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1987 hit by Reba McEntire became a major hit on the country charts?",
+        "options": ["Whoever's in New England", "Fancy", "Is There Life Out There", "The Night the Lights Went Out in Georgia"],
+        "correct": "Whoever's in New England",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1980 song by Willie Nelson won multiple Grammy Awards?",
+        "options": ["Always on My Mind", "On the Road Again", "Whiskey River", "Blue Eyes Crying in the Rain"],
+        "correct": "Always on My Mind",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1984 song by George Strait became one of his most famous tracks?",
+        "options": ["Amarillo by Morning", "The Chair", "All My Ex's Live in Texas", "Does Fort Worth Ever Cross Your Mind"],
+        "correct": "Amarillo by Morning",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1980s artist was known for his song 'I Got Friends in Low Places'?",
+        "options": ["Garth Brooks", "Alan Jackson", "Travis Tritt", "Clint Black"],
+        "correct": "Garth Brooks",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1985 hit by Willie Nelson and Julio Iglesias became a classic duet?",
+        "options": ["To All the Girls I've Loved Before", "Blue Eyes Crying in the Rain", "On the Road Again", "Always on My Mind"],
+        "correct": "To All the Girls I've Loved Before",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1989 hit by Clint Black became one of his breakout songs?",
+        "options": ["Killin' Time", "A Better Man", "Nothin' But the Taillights", "Like the Rain"],
+        "correct": "Killin' Time",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1986 song by Ricky Van Shelton became one of his biggest hits?",
+        "options": ["Wild-Eyed Dream", "I Am a Simple Man", "Life Turned Her That Way", "Statue of a Fool"],
+        "correct": "I Am a Simple Man",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1988 song by Alan Jackson was a breakthrough hit for the artist?",
+        "options": ["Here in the Real World", "Don't Rock the Jukebox", "Chattahoochee", "Gone Country"],
+        "correct": "Here in the Real World",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1981 album by Dolly Parton included the hit song '9 to 5'?",
+        "options": ["9 to 5 and Odd Jobs", "Coat of Many Colors", "Heartbreaker", "Jolene"],
+        "correct": "9 to 5 and Odd Jobs",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1987 album by Randy Travis included the hit 'Forever and Ever, Amen'?",
+        "options": ["Always and Forever", "Storms of Life", "Old 8x10", "The Closer You Get"],
+        "correct": "Always and Forever",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which country singer was known for the hit 'The Night the Lights Went Out in Georgia' in 1981?",
+        "options": ["Reba McEntire", "Vicki Lawrence", "Tammy Wynette", "Loretta Lynn"],
+        "correct": "Vicki Lawrence",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1989 song by Travis Tritt became a popular anthem for the country music scene?",
+        "options": ["I'm Gonna Be Somebody", "Here's a Quarter (Call Someone Who Cares)", "Anymore", "T-R-O-U-B-L-E"],
+        "correct": "Here's a Quarter (Call Someone Who Cares)",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1986 song by Alabama became one of their biggest hits?",
+        "options": ["If You're Gonna Play in Texas", "Tennessee River", "Love in the First Degree", "Dixieland Delight"],
+        "correct": "If You're Gonna Play in Texas (You Gotta Have a Fiddle in the Band)",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1985 song by The Oak Ridge Boys became a crossover hit in country and pop?",
+        "options": ["Elvira", "American Made", "Thank God for Kids", "Y'all Come Back Saloon"],
+        "correct": "Elvira",
+        "category": "",
+        "instruction": ""
+      }
+    ],
+    "90": [
+      {
+        "question": "Which 1990 song by Garth Brooks became one of his breakout hits?",
+        "options": ["Friends in Low Places", "The Dance", "If Tomorrow Never Comes", "The Thunder Rolls"],
+        "correct": "Friends in Low Places",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1991 song by Alan Jackson became a major hit on country charts?",
+        "options": ["Chattahoochee", "Don't Rock the Jukebox", "Gone Country", "Here in the Real World"],
+        "correct": "Don't Rock the Jukebox",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1992 hit by Clint Black was his breakout song?",
+        "options": ["Killin' Time", "A Better Man", "Nothin' But the Taillights", "Like the Rain"],
+        "correct": "A Better Man",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1990 song by Travis Tritt was a major hit and anthem for his career?",
+        "options": ["T-R-O-U-B-L-E", "Anymore", "Here's a Quarter", "I'm Gonna Be Somebody"],
+        "correct": "T-R-O-U-B-L-E",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1994 song by Tim McGraw became a breakthrough hit?",
+        "options": ["Indian Outlaw", "Don't Take the Girl", "I Like It, I Love It", "Live Like You Were Dying"],
+        "correct": "Indian Outlaw",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1995 song by Shania Twain became a huge crossover hit?",
+        "options": ["Any Man of Mine", "Whose Bed Have Your Boots Been Under?", "Man! I Feel Like a Woman!", "You're Still the One"],
+        "correct": "Any Man of Mine",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1996 hit by Dixie Chicks became a massive hit on country and pop charts?",
+        "options": ["Wide Open Spaces", "Not Ready to Make Nice", "Cowboy Take Me Away", "Sin Wagon"],
+        "correct": "Wide Open Spaces",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1993 song by George Strait became one of his most iconic tracks?",
+        "options": ["Check Yes or No", "Amarillo by Morning", "The Chair", "All My Ex's Live in Texas"],
+        "correct": "Check Yes or No",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1990 song by Vince Gill won multiple Grammy Awards?",
+        "options": ["When I Call Your Name", "Go Rest High on That Mountain", "I Still Believe in You", "Don't Let Our Love Start Slippin' Away"],
+        "correct": "When I Call Your Name",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1992 hit by Randy Travis became a classic country ballad?",
+        "options": ["Forever and Ever, Amen", "Deeper Than the Holler", "Diggin' Up Bones", "On the Other Hand"],
+        "correct": "Forever and Ever, Amen",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1997 song by the Dixie Chicks was a major country crossover hit?",
+        "options": ["Wide Open Spaces", "Cowboy Take Me Away", "Not Ready to Make Nice", "Travelin' Soldier"],
+        "correct": "Wide Open Spaces",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1994 song by Alan Jackson became one of his most popular tracks?",
+        "options": ["Chattahoochee", "Don't Rock the Jukebox", "Livin' on Love", "It's Five O'Clock Somewhere"],
+        "correct": "Chattahoochee",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1991 hit by Mary Chapin Carpenter became a classic country song?",
+        "options": ["Down at the Twist and Shout", "He Thinks He'll Keep Her", "Passionate Kisses", "I Take My Chances"],
+        "correct": "Down at the Twist and Shout",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1999 hit by Shania Twain became one of her biggest anthems?",
+        "options": ["Man! I Feel Like a Woman!", "You're Still the One", "That Don't Impress Me Much", "From This Moment On"],
+        "correct": "That Don't Impress Me Much",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1994 song by Garth Brooks became one of his signature tracks?",
+        "options": ["The Dance", "Friends in Low Places", "The Thunder Rolls", "If Tomorrow Never Comes"],
+        "correct": "The Dance",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1998 song by Trisha Yearwood became a crossover hit?",
+        "options": ["How Do I Live", "She's in Love with the Boy", "The Song Remembers When", "Walkaway Joe"],
+        "correct": "How Do I Live",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1993 song by Randy Travis was a huge hit for his career?",
+        "options": ["Deeper Than the Holler", "Forever and Ever, Amen", "On the Other Hand", "Diggin' Up Bones"],
+        "correct": "Deeper Than the Holler",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1990s hit by Brooks & Dunn became one of their signature songs?",
+        "options": ["Boot Scootin' Boogie", "Neon Moon", "My Maria", "Believe"],
+        "correct": "Boot Scootin' Boogie",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1998 song by Tim McGraw became one of his biggest hits?",
+        "options": ["Live Like You Were Dying", "I Like It, I Love It", "Don't Take the Girl", "It's Your Love"],
+        "correct": "Live Like You Were Dying",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1991 song by Brooks & Dunn became a massive hit in country music?",
+        "options": ["Brand New Man", "Boot Scootin' Boogie", "Neon Moon", "My Maria"],
+        "correct": "Brand New Man",
+        "category": "",
+        "instruction": ""
+      }
+    ], 
+    "00": [
+      {
+        "question": "Which 2000 song by Tim McGraw became one of his signature hits?",
+        "options": ["Live Like You Were Dying", "I Like It, I Love It", "Don't Take the Girl", "Something Like That"],
+        "correct": "Something Like That",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2001 hit by Shania Twain became a massive crossover success?",
+        "options": ["I'm Gonna Getcha Good!", "Man! I Feel Like a Woman!", "That Don't Impress Me Much", "You're Still the One"],
+        "correct": "I'm Gonna Getcha Good!",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2003 song by Keith Urban became a big hit on country charts?",
+        "options": ["Somebody Like You", "Blue Ain't Your Color", "Days Go By", "You'll Think of Me"],
+        "correct": "Somebody Like You",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2004 song by Carrie Underwood became an iconic country anthem?",
+        "options": ["Before He Cheats", "Jesus, Take the Wheel", "Cowboy Casanova", "Blown Away"],
+        "correct": "Jesus, Take the Wheel",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2002 song by Alan Jackson became a major hit on country radio?",
+        "options": ["Where Were You (When the World Stopped Turning)", "Chattahoochee", "Don't Rock the Jukebox", "Drive (For Daddy Gene)"],
+        "correct": "Where Were You (When the World Stopped Turning)",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2007 song by Taylor Swift became one of her biggest hits?",
+        "options": ["Tim McGraw", "Love Story", "Our Song", "Teardrops on My Guitar"],
+        "correct": "Tim McGraw",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2006 song by Rascal Flatts became a crossover hit?",
+        "options": ["Life Is a Highway", "Bless the Broken Road", "Me and My Gang", "Fast Cars and Freedom"],
+        "correct": "Bless the Broken Road",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2003 song by Toby Keith became an anthem for American patriotism?",
+        "options": ["Courtesy of the Red, White and Blue (The Angry American)", "Should've Been a Cowboy", "How Do You Like Me Now?!", "I Love This Bar"],
+        "correct": "Courtesy of the Red, White and Blue (The Angry American)",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2008 song by Lady Antebellum became a massive crossover success?",
+        "options": ["Need You Now", "American Honey", "I Run to You", "Lookin' for a Good Time"],
+        "correct": "Need You Now",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2001 song by the Dixie Chicks became an anthem for the country trio?",
+        "options": ["Wide Open Spaces", "Cowboy Take Me Away", "Travelin' Soldier", "Not Ready to Make Nice"],
+        "correct": "Cowboy Take Me Away",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2009 song by Jason Aldean became one of his biggest hits?",
+        "options": ["Big Green Tractor", "Dirt Road Anthem", "She's Country", "My Kinda Party"],
+        "correct": "She's Country",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2002 song by Brad Paisley became a top-charting hit?",
+        "options": ["I'm Gonna Miss Her (The Fishin' Song)", "Ticks", "Mud on the Tires", "Waitin' on a Woman"],
+        "correct": "I'm Gonna Miss Her (The Fishin' Song)",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2007 song by Luke Bryan became one of his earliest hits?",
+        "options": ["All My Friends Say", "Drunk on You", "That's My Kind of Night", "I Don't Want This Night to End"],
+        "correct": "All My Friends Say",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2004 song by Blake Shelton became a hit in country music?",
+        "options": ["Austin", "Some Beach", "Honey Bee", "God Gave Me You"],
+        "correct": "Austin",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2000 song by Dixie Chicks became a breakout song for the group?",
+        "options": ["Not Ready to Make Nice", "Cowboy Take Me Away", "Wide Open Spaces", "Travelin' Soldier"],
+        "correct": "Wide Open Spaces",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2001 song by George Strait became a classic hit?",
+        "options": ["Living and Living Well", "Write This Down", "Check Yes or No", "Carrying Your Love With Me"],
+        "correct": "Living and Living Well",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2009 song by Keith Urban became a big hit on country radio?",
+        "options": ["Only You Can Love Me This Way", "Days Go By", "Somebody Like You", "Making Memories of Us"],
+        "correct": "Only You Can Love Me This Way",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2005 song by Kenny Chesney became one of his signature songs?",
+        "options": ["Live Those Songs", "Summertime", "I Go Back", "When the Sun Goes Down"],
+        "correct": "Summertime",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2006 song by Sugarland became a massive hit on the country charts?",
+        "options": ["Want To", "Settlin'", "Stay", "Baby Girl"],
+        "correct": "Stay",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2000 song by Toby Keith became a breakout hit for the singer?",
+        "options": ["How Do You Like Me Now?!", "I Love This Bar", "Should've Been a Cowboy", "Made in America"],
+        "correct": "How Do You Like Me Now?!",
+        "category": "",
+        "instruction": ""
+      }
+    ],
+    "10": [
+      {
+        "question": "Which 2010 song by Luke Bryan became his first number-one hit?",
+        "options": ["Do I", "Country Girl (Shake It for Me)", "Rain Is a Good Thing", "All My Friends Say"],
+        "correct": "Rain Is a Good Thing",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2013 hit by Florida Georgia Line became a massive crossover success?",
+        "options": ["Cruise", "This Is How We Roll", "Get Your Shine On", "Round Here"],
+        "correct": "Cruise",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2014 song by Blake Shelton became a hit and a fan favorite?",
+        "options": ["Neon Light", "Doin' What She Likes", "Honey Bee", "Boys 'Round Here"],
+        "correct": "Boys 'Round Here",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2012 song by Carrie Underwood became an anthem of empowerment?",
+        "options": ["Before He Cheats", "Blown Away", "Two Black Cadillacs", "Good Girl"],
+        "correct": "Blown Away",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2011 song by Jason Aldean was his first number-one hit on the Billboard Hot Country Songs chart?",
+        "options": ["Dirt Road Anthem", "She's Country", "Big Green Tractor", "My Kinda Party"],
+        "correct": "Dirt Road Anthem",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2016 song by Maren Morris became a breakout hit?",
+        "options": ["My Church", "I Could Use a Love Song", "Rich", "80s Mercedes"],
+        "correct": "My Church",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2017 song by Sam Hunt became a massive hit on country charts?",
+        "options": ["Body Like a Back Road", "Take Your Time", "Break Up in a Small Town", "Leave the Night On"],
+        "correct": "Body Like a Back Road",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2013 song by Kacey Musgraves was a breakthrough single for the artist?",
+        "options": ["Merry Go 'Round", "Follow Your Arrow", "Blowin' Smoke", "Silver Lining"],
+        "correct": "Merry Go 'Round",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2010 song by Zac Brown Band became a major crossover hit?",
+        "options": ["Chicken Fried", "Toes", "Colder Weather", "Free"],
+        "correct": "Chicken Fried",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2015 song by Chris Stapleton won multiple Grammy Awards?",
+        "options": ["Tennessee Whiskey", "Fire Away", "Traveller", "Parachute"],
+        "correct": "Tennessee Whiskey",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2018 song by Dan + Shay became a major hit on country radio?",
+        "options": ["Tequila", "All to Myself", "Speechless", "How Not To"],
+        "correct": "Tequila",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2019 song by Luke Combs became his breakout single?",
+        "options": ["Hurricane", "Beautiful Crazy", "When It Rains It Pours", "Beer Never Broke My Heart"],
+        "correct": "Hurricane",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2014 song by Miranda Lambert became a massive hit?",
+        "options": ["Automatic", "Gunpowder & Lead", "The House That Built Me", "Little Red Wagon"],
+        "correct": "Automatic",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2017 song by Thomas Rhett became a chart-topping hit?",
+        "options": ["Die a Happy Man", "Crash and Burn", "Unforgettable", "Marry Me"],
+        "correct": "Die a Happy Man",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2015 song by Luke Bryan became a huge hit on country radio?",
+        "options": ["Kick the Dust Up", "Strip It Down", "I See You", "Huntin', Fishin' and Lovin' Every Day"],
+        "correct": "Kick the Dust Up",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2011 song by Blake Shelton became one of his signature hits?",
+        "options": ["God Gave Me You", "Honey Bee", "Footloose", "Over"],
+        "correct": "God Gave Me You",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2018 song by Maren Morris became a chart-topping hit?",
+        "options": ["Rich", "I Could Use a Love Song", "The Bones", "GIRL"],
+        "correct": "The Bones",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2010 song by Taylor Swift was one of her biggest hits in the 2010s?",
+        "options": ["You Belong with Me", "We Are Never Ever Getting Back Together", "Mine", "Shake It Off"],
+        "correct": "Mine",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2016 song by Keith Urban became a huge hit?",
+        "options": ["Blue Ain't Your Color", "The Fighter", "Parallel Line", "John Cougar, John Deere, John 3:16"],
+        "correct": "Blue Ain't Your Color",
+        "category": "",
+        "instruction": ""
+      }
+    ], 
+    "20": [
+      {
+        "question": "Which 2020 song by Morgan Wallen became one of the biggest hits of the year?",
+        "options": ["Whiskey Glasses", "Sand In My Boots", "7 Summers", "More Than My Hometown"],
+        "correct": "7 Summers",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2021 song by Luke Combs became a chart-topping hit?",
+        "options": ["Forever After All", "Does To Me", "Beer Never Broke My Heart", "She Got the Best of Me"],
+        "correct": "Forever After All",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 song by Gabby Barrett became a breakout hit on country radio?",
+        "options": ["I Hope", "The Good Ones", "Pick Me Up", "Footprints on the Moon"],
+        "correct": "I Hope",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2022 song by Lainey Wilson became a fan favorite?",
+        "options": ["Things a Man Oughta Know", "Never Say Never", "Heart Like a Truck", "WWDD"],
+        "correct": "Things a Man Oughta Know",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 song by Kane Brown reached number one on the Billboard Hot Country Songs chart?",
+        "options": ["Cool Again", "Be Like That", "Worship You", "Heaven"],
+        "correct": "Be Like That",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2021 song by Chris Stapleton won a Grammy for Best Country Solo Performance?",
+        "options": ["Starting Over", "Tennessee Whiskey", "Broken Halos", "You Should Probably Leave"],
+        "correct": "Starting Over",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 hit by Thomas Rhett became one of his biggest songs of the decade?",
+        "options": ["What's Your Country Song", "Die a Happy Man", "Be a Light", "Unforgettable"],
+        "correct": "What's Your Country Song",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2022 song by Walker Hayes went viral with its dance challenges?",
+        "options": ["Fancy Like", "AA", "U Gurl", "Trash My Heart"],
+        "correct": "Fancy Like",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2021 song by Morgan Wallen became a massive success despite controversy?",
+        "options": ["Wasted On You", "Sand In My Boots", "Broadway Girls", "More Than My Hometown"],
+        "correct": "Wasted On You",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2021 hit by Jordan Davis became his first number-one song on country radio?",
+        "options": ["Buy Dirt", "Slow Dance in a Parking Lot", "Almost Maybes", "Singles You Up"],
+        "correct": "Buy Dirt",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 song by Luke Combs was released as a tribute to his wife?",
+        "options": ["Better Together", "Does To Me", "Cold As You", "Forever After All"],
+        "correct": "Forever After All",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 song by Carrie Underwood was part of her holiday album 'My Gift'?",
+        "options": ["Hallelujah", "The Champion", "Cry Pretty", "Something in the Water"],
+        "correct": "Hallelujah",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2021 song by Zac Brown Band was a hit with a mix of country and reggae sounds?",
+        "options": ["Out in the Middle", "Same Boat", "Chicken Fried", "Knee Deep"],
+        "correct": "Out in the Middle",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 hit by Miranda Lambert became a fan favorite and top-charting hit?",
+        "options": ["Bluebird", "Settling Down", "Tequila Does", "Drunk (And I Don't Want to Go Home)"],
+        "correct": "Bluebird",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2021 song by the duo Dan + Shay became a top country hit?",
+        "options": ["I Should Probably Go to Bed", "10,000 Hours", "Tequila", "How Not To"],
+        "correct": "I Should Probably Go to Bed",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2022 song by Old Dominion became a fan favorite?",
+        "options": ["I Was on a Boat That Day", "Make It Sweet", "One Man Band", "Hotel Key"],
+        "correct": "I Was on a Boat That Day",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 hit by Jimmy Allen became a fan favorite and chart success?",
+        "options": ["Make Me Want To", "Freedom Was a Highway", "Best Shot", "Down Home"],
+        "correct": "Make Me Want To",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2021 song by Luke Bryan became a summer anthem?",
+        "options": ["Waves", "Down To One", "Huntin', Fishin', Lovin' Every Day", "Country On"],
+        "correct": "Waves",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2022 song by Tim McGraw became a top-charting hit?",
+        "options": ["7500 OBO", "Humble and Kind", "I Called Mama", "Live Like You Were Dying"],
+        "correct": "7500 OBO",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2021 song by Elle King and Miranda Lambert became a crossover hit?",
+        "options": ["Drunk (And I Don't Want to Go Home)", "I’m So Lonesome I Could Cry", "Barbie Girl", "Only Pretty Girls"],
+        "correct": "Drunk (And I Don't Want to Go Home)",
+        "category": "",
+        "instruction": ""
+      }
+    ] 
+  },
+  "r&b": {
+    "60": [
+      {
+        "question": "Which 1960 song by Ray Charles became a major hit and is considered a classic?",
+        "options": ["Hit the Road Jack", "Georgia On My Mind", "What'd I Say", "I Can't Stop Loving You"],
+        "correct": "Hit the Road Jack",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1964 song by The Temptations became one of their signature hits?",
+        "options": ["My Girl", "Just My Imagination", "Papa Was a Rolling Stone", "Ain't Too Proud to Beg"],
+        "correct": "My Girl",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1965 song by The Supremes became one of Motown's biggest hits?",
+        "options": ["Stop! In the Name of Love", "Baby Love", "You Can't Hurry Love", "Come See About Me"],
+        "correct": "Stop! In the Name of Love",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1961 hit by Jackie Wilson is a classic of R&B music?",
+        "options": ["Lonely Teardrops", "Reet Petite", "Higher and Higher", "To Be Loved"],
+        "correct": "Lonely Teardrops",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1967 song by Aretha Franklin became her first hit for Atlantic Records?",
+        "options": ["Respect", "Think", "You Make Me Feel Like A Natural Woman", "Chain of Fools"],
+        "correct": "Respect",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1960 hit by Ben E. King became a major hit and is still widely loved today?",
+        "options": ["Stand By Me", "Spanish Harlem", "There Goes My Baby", "Supernatural Thing"],
+        "correct": "Stand By Me",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1965 song by The Miracles is known for its upbeat, soulful melody?",
+        "options": ["The Tracks of My Tears", "Shop Around", "Ooo Baby Baby", "Mickey's Monkey"],
+        "correct": "The Tracks of My Tears",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1966 song by James Brown is considered a major influence on funk music?",
+        "options": ["Papa's Got a Brand New Bag", "I Got You (I Feel Good)", "It's a Man's Man's Man's World", "Cold Sweat"],
+        "correct": "Papa's Got a Brand New Bag",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1962 hit by Sam Cooke became a soulful anthem of its time?",
+        "options": ["A Change Is Gonna Come", "Cupid", "You Send Me", "Chain Gang"],
+        "correct": "A Change Is Gonna Come",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1960 song by The Shirelles became the first girl group hit to reach number one on the Billboard Hot 100?",
+        "options": ["Will You Love Me Tomorrow", "Baby It's You", "Soldier Boy", "Foolish Little Girl"],
+        "correct": "Will You Love Me Tomorrow",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1968 song by Marvin Gaye became a classic of Motown and soul music?",
+        "options": ["I Heard It Through the Grapevine", "Ain't No Mountain High Enough", "Mercy Mercy Me", "Let's Get It On"],
+        "correct": "I Heard It Through the Grapevine",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1963 song by The Drifters is widely regarded as a classic of R&B and soul music?",
+        "options": ["Under the Boardwalk", "Save the Last Dance for Me", "This Magic Moment", "There Goes My Baby"],
+        "correct": "Under the Boardwalk",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1965 hit by Otis Redding became an anthem for soul music?",
+        "options": ["I've Been Loving You Too Long", "Try a Little Tenderness", "Sittin' On The Dock of the Bay", "Respect"],
+        "correct": "I've Been Loving You Too Long",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1961 song by Ray Charles is known for blending gospel, R&B, and pop music?",
+        "options": ["What'd I Say", "I Got A Woman", "Hallelujah I Love Her So", "Unchain My Heart"],
+        "correct": "What'd I Say",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1964 hit by The Four Seasons became a classic of the era's R&B and pop crossover?",
+        "options": ["Big Girls Don't Cry", "Sherry", "Walk Like a Man", "Rag Doll"],
+        "correct": "Sherry",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1966 song by the Isley Brothers is known for its funk influence and is a classic in soul music?",
+        "options": ["Shout", "Twist and Shout", "Fight the Power", "Who's That Lady"],
+        "correct": "Shout",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1960 hit by Ray Charles is known for its gospel-inspired sound?",
+        "options": ["Georgia On My Mind", "Hallelujah I Love Her So", "Unchain My Heart", "I Can't Stop Loving You"],
+        "correct": "Georgia On My Mind",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1969 hit by Sly & The Family Stone helped pioneer funk and soul music?",
+        "options": ["Thank You (Falettinme Be Mice Elf Agin)", "Dance to the Music", "Everyday People", "I Want to Take You Higher"],
+        "correct": "Thank You (Falettinme Be Mice Elf Agin)",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1963 song by Marvin Gaye became one of his early hits?",
+        "options": ["Can I Get a Witness", "Pride and Joy", "Ain't No Mountain High Enough", "Let's Get It On"],
+        "correct": "Can I Get a Witness",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1961 song by The Miracles was a major hit and became one of Motown's signature songs?",
+        "options": ["Shop Around", "The Tracks of My Tears", "Ooo Baby Baby", "I Second That Emotion"],
+        "correct": "Shop Around",
+        "category": "",
+        "instruction": ""
+      }
+    ],
+    "70": [
+      {
+        "question": "Which 1971 song by The Temptations became a major hit and is known for its psychedelic soul influence?",
+        "options": ["Just My Imagination", "Papa Was a Rolling Stone", "Ain't Too Proud to Beg", "Ball of Confusion"],
+        "correct": "Papa Was a Rolling Stone",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1972 album by Al Green included the hit 'Let's Stay Together'?",
+        "options": ["I'm Still in Love with You", "Call Me", "Let's Stay Together", "The Belle Album"],
+        "correct": "Let's Stay Together",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1977 hit by Gloria Gaynor became an anthem for empowerment and is a classic disco song?",
+        "options": ["I Will Survive", "Never Can Say Goodbye", "Honey Bee", "Let's Mend What's Been Broken"],
+        "correct": "I Will Survive",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1971 song by Marvin Gaye became a soulful anthem for the Vietnam War generation?",
+        "options": ["What's Going On", "Mercy Mercy Me", "Let's Get It On", "Inner City Blues"],
+        "correct": "What's Going On",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1973 song by Stevie Wonder became one of his biggest hits?",
+        "options": ["Superstition", "Higher Ground", "Sir Duke", "Isn't She Lovely"],
+        "correct": "Superstition",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1973 song by The O'Jays became a defining hit in the Philly soul genre?",
+        "options": ["Love Train", "For the Love of Money", "Back Stabbers", "I Love Music"],
+        "correct": "Love Train",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1978 song by Anita Ward became a hit and is known for its catchy disco beat?",
+        "options": ["Ring My Bell", "Bad Luck", "Love Rollercoaster", "Don't Stop 'Til You Get Enough"],
+        "correct": "Ring My Bell",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1972 song by Curtis Mayfield became a socially conscious anthem of the time?",
+        "options": ["Move On Up", "Superfly", "Pusherman", "Freddie's Dead"],
+        "correct": "Move On Up",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1977 hit by Sister Sledge is known for its upbeat and empowering message?",
+        "options": ["We Are Family", "He's the Greatest Dancer", "Lost in Music", "Thinking of You"],
+        "correct": "We Are Family",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1970 song by Bill Withers became a timeless classic with the lyrics 'Lean on me'?",
+        "options": ["Lean on Me", "Ain't No Sunshine", "Lovely Day", "Use Me"],
+        "correct": "Lean on Me",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1975 song by Earth, Wind & Fire became a defining track in their early years?",
+        "options": ["Shining Star", "September", "Reasons", "Sing a Song"],
+        "correct": "Shining Star",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1976 song by The Stylistics became one of their biggest hits?",
+        "options": ["You Make Me Feel Brand New", "Betcha By Golly, Wow", "I'm Stone in Love with You", "You Are Everything"],
+        "correct": "You Make Me Feel Brand New",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1974 song by The Spinners is known for its smooth soul sound?",
+        "options": ["Could It Be I'm Falling in Love", "I'll Be Around", "Working My Way Back to You", "Then Came You"],
+        "correct": "Could It Be I'm Falling in Love",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1970 song by James Brown became a major hit and helped solidify his role in developing funk music?",
+        "options": ["Get Up (I Feel Like Being a) Sex Machine", "Cold Sweat", "Papa's Got a Brand New Bag", "Say It Loud – I'm Black and I'm Proud"],
+        "correct": "Get Up (I Feel Like Being a) Sex Machine",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1976 hit by Chicago blended elements of R&B and rock?",
+        "options": ["If You Leave Me Now", "Saturday in the Park", "Hard to Say I'm Sorry", "25 or 6 to 4"],
+        "correct": "If You Leave Me Now",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1971 song by The Isley Brothers became a classic and has been widely covered?",
+        "options": ["Love the One You're With", "It's Your Thing", "That Lady", "Who's That Lady"],
+        "correct": "It's Your Thing",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1973 hit by Marvin Gaye is known for its sensuous melody and romantic lyrics?",
+        "options": ["Let's Get It On", "Sexual Healing", "Inner City Blues", "Mercy Mercy Me"],
+        "correct": "Let's Get It On",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1971 album by The Temptations included the iconic track 'Papa Was a Rolling Stone'?",
+        "options": ["Sky's the Limit", "The Temptations Do the Temptations", "Masterpiece", "All Directions"],
+        "correct": "All Directions",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1979 hit by The Pointer Sisters became a major disco hit?",
+        "options": ["Fire", "I'm So Excited", "Jump (For My Love)", "Slow Hand"],
+        "correct": "Fire",
+        "category": "",
+        "instruction": ""
+      }
+    ],
+    "80": [
+      {
+        "question": "Which 1982 song by Michael Jackson became an anthem of the 80s with its iconic music video featuring a zombie dance?",
+        "options": ["Billie Jean", "Thriller", "Beat It", "Wanna Be Startin' Somethin'"],
+        "correct": "Thriller",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1987 hit by Whitney Houston became one of her signature songs and was a worldwide smash?",
+        "options": ["I Will Always Love You", "How Will I Know", "Greatest Love of All", "I Wanna Dance with Somebody"],
+        "correct": "I Wanna Dance with Somebody",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1984 song by Prince became a massive hit and is known for its funky beat and catchy lyrics?",
+        "options": ["When Doves Cry", "Let's Go Crazy", "Kiss", "Purple Rain"],
+        "correct": "When Doves Cry",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1989 song by Bobby Brown marked his debut as a solo artist after leaving New Edition?",
+        "options": ["My Prerogative", "Every Little Step", "Roni", "Don't Be Cruel"],
+        "correct": "My Prerogative",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1983 song by The Isley Brothers featured the iconic line 'Between the sheets'?",
+        "options": ["Footsteps in the Dark", "Between the Sheets", "Voyage to Atlantis", "I Can't Win"],
+        "correct": "Between the Sheets",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1980 song by Diana Ross became a hit and is known for its disco-inspired sound?",
+        "options": ["I'm Coming Out", "Upside Down", "Love Hangover", "Touch Me in the Morning"],
+        "correct": "I'm Coming Out",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1987 song by Janet Jackson was the title track of her breakthrough album?",
+        "options": ["Control", "Nasty", "Let's Wait Awhile", "What Have You Done for Me Lately"],
+        "correct": "Control",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1985 song by Whitney Houston was originally a Dolly Parton hit and became a massive success in the 80s?",
+        "options": ["I Will Always Love You", "Saving All My Love for You", "Greatest Love of All", "How Will I Know"],
+        "correct": "Saving All My Love for You",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1984 hit by Ray Parker Jr. became a theme song for a popular movie franchise?",
+        "options": ["Ghostbusters", "You Can't Change That", "I Still Can't Get Over Loving You", "Other Woman"],
+        "correct": "Ghostbusters",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1981 song by Rick James became a hit and is known for its funky, upbeat sound?",
+        "options": ["Super Freak", "Mary Jane", "Give It to Me Baby", "Cold Blooded"],
+        "correct": "Super Freak",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1989 song by Paula Abdul became a hit with its signature dance moves and catchy chorus?",
+        "options": ["Straight Up", "Forever Your Girl", "Opposites Attract", "Cold Hearted"],
+        "correct": "Straight Up",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1986 hit by The Bangles, although not strictly R&B, became a massive success with its catchy chorus?",
+        "options": ["Walk Like an Egyptian", "Manic Monday", "Eternal Flame", "Hazy Shade of Winter"],
+        "correct": "Walk Like an Egyptian",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1987 song by Whitney Houston became an international hit and is known for its empowering message?",
+        "options": ["The Greatest Love of All", "I Wanna Dance with Somebody", "How Will I Know", "Didn't We Almost Have It All"],
+        "correct": "The Greatest Love of All",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1985 song by Mary Jane Girls, produced by Rick James, became a hit and is known for its funky sound?",
+        "options": ["In My House", "All Night Long", "Candy Man", "Boys"],
+        "correct": "In My House",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1981 song by Kool & the Gang became a classic and is often played at celebrations and parties?",
+        "options": ["Celebration", "Get Down on It", "Ladies' Night", "Jungle Boogie"],
+        "correct": "Celebration",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1986 song by The System became a hit with its smooth electro-funk sound?",
+        "options": ["Don't Disturb This Groove", "You Are in My System", "People Get Ready", "It's a Love Thing"],
+        "correct": "Don't Disturb This Groove",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1983 hit by Lionel Richie became a classic ballad, showcasing his smooth vocals?",
+        "options": ["Hello", "All Night Long", "Say You Say Me", "Endless Love"],
+        "correct": "Hello",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1984 hit by Chaka Khan became a funk classic with its signature horn section and upbeat rhythm?",
+        "options": ["I Feel for You", "Through the Fire", "Tell Me Something Good", "Sweet Thing"],
+        "correct": "I Feel for You",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1989 hit by Jody Watley became a hit in both the R&B and pop charts?",
+        "options": ["Looking for a New Love", "Real Love", "Some Kind of Lover", "Don't You Want Me"],
+        "correct": "Looking for a New Love",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1980 song by The Commodores became a soulful anthem with its heartfelt lyrics?",
+        "options": ["Endless Love", "Nightshift", "Zoom", "Three Times a Lady"],
+        "correct": "Nightshift",
+        "category": "",
+        "instruction": ""
+      }
+    ],
+    "90": [
+      {
+        "question": "Which 1991 song by Boyz II Men became a massive hit and is known for its smooth harmonies?",
+        "options": ["End of the Road", "I'll Make Love to You", "Motownphilly", "On Bended Knee"],
+        "correct": "End of the Road",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1997 song by Puff Daddy featured a tribute to The Notorious B.I.G.?",
+        "options": ["I'll Be Missing You", "Mo Money Mo Problems", "Hypnotize", "Can’t Nobody Hold Me Down"],
+        "correct": "I'll Be Missing You",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1993 hit by Whitney Houston became a global smash and is considered one of her signature songs?",
+        "options": ["I Will Always Love You", "I Wanna Dance with Somebody", "Greatest Love of All", "How Will I Know"],
+        "correct": "I Will Always Love You",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1999 song by Lauryn Hill became an anthem of the '90s with its powerful lyrics?",
+        "options": ["Doo Wop (That Thing)", "Ex-Factor", "Everything Is Everything", "Lost Ones"],
+        "correct": "Doo Wop (That Thing)",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1997 song by Mariah Carey and Boyz II Men became one of the best-selling singles of all time?",
+        "options": ["One Sweet Day", "Fantasy", "Vision of Love", "Heartbreaker"],
+        "correct": "One Sweet Day",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1992 song by R. Kelly became a major hit with its sensual lyrics?",
+        "options": ["Bump N' Grind", "Ignition (Remix)", "I Believe I Can Fly", "Your Body's Calling"],
+        "correct": "Bump N' Grind",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1994 hit by TLC became a feminist anthem with its empowering lyrics?",
+        "options": ["Creep", "No Scrubs", "Waterfalls", "Unpretty"],
+        "correct": "No Scrubs",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1996 song by Aaliyah became a hit with its smooth R&B sound and catchy chorus?",
+        "options": ["If Your Girl Only Knew", "Are You That Somebody", "One in a Million", "Back and Forth"],
+        "correct": "If Your Girl Only Knew",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1995 hit by TLC became a worldwide anthem with its unforgettable hook?",
+        "options": ["Waterfalls", "Creep", "Unpretty", "Red Light Special"],
+        "correct": "Waterfalls",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1998 song by Brandy and Monica became a hit with its emotional lyrics about a love triangle?",
+        "options": ["The Boy Is Mine", "Angel in Disguise", "Have You Ever", "Sitting Up in My Room"],
+        "correct": "The Boy Is Mine",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1991 song by Color Me Badd became a major hit with its romantic lyrics and smooth melody?",
+        "options": ["I Wanna Sex You Up", "All 4 Love", "I Adore Mi Amor", "It's Gonna Be Me"],
+        "correct": "I Wanna Sex You Up",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1992 song by Johnny Gill became a massive hit with its powerful vocals and sensual tone?",
+        "options": ["My, My, My", "Rub You the Right Way", "Fairweather Friend", "You're the One"],
+        "correct": "My, My, My",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1996 hit by Ginuwine became famous for its slow jam sound and romantic theme?",
+        "options": ["Pony", "Differences", "So Anxious", "In Those Jeans"],
+        "correct": "Pony",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1995 hit by Montell Jordan became a popular anthem with its catchy party vibe?",
+        "options": ["This Is How We Do It", "Let's Ride", "Somethin' 4 Da Honeyz", "Falling"],
+        "correct": "This Is How We Do It",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1993 song by SWV became a hit with its soulful melody and lyrics about love and relationships?",
+        "options": ["Weak", "I'm So Into You", "Right Here (Human Nature Remix)", "Always"],
+        "correct": "Weak",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1997 song by Usher helped launch his career with its smooth R&B style?",
+        "options": ["You Make Me Wanna", "Nice & Slow", "U Got It Bad", "Climax"],
+        "correct": "You Make Me Wanna",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1999 song by Sisqo became famous for its catchy hook and sexual lyrics?",
+        "options": ["Thong Song", "Incomplete", "Tell Me", "Got to Get It"],
+        "correct": "Thong Song",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1995 song by Mary J. Blige became a major hit with its raw, emotional lyrics and soulful sound?",
+        "options": ["Be Without You", "Not Gon' Cry", "Real Love", "No More Drama"],
+        "correct": "Be Without You",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1998 hit by Lauryn Hill became famous for its mix of R&B, hip-hop, and soul?",
+        "options": ["Doo Wop (That Thing)", "Ex-Factor", "Everything Is Everything", "Lost Ones"],
+        "correct": "Doo Wop (That Thing)",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1992 song by Shai became a massive hit with its smooth R&B vocals and love theme?",
+        "options": ["If I Ever Fall in Love", "Baby, I'm Yours", "Comforter", "Let's Go to Bed"],
+        "correct": "If I Ever Fall in Love",
+        "category": "",
+        "instruction": ""
+      }
+    ],
+    "00": [
+      {
+        "question": "Which 2004 hit by Usher became a global smash and is known for its signature dance moves?",
+        "options": ["Yeah!", "U Got It Bad", "Climax", "Nice & Slow"],
+        "correct": "Yeah!",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2000 hit by Destiny's Child became an anthem of female empowerment?",
+        "options": ["Independent Women", "Say My Name", "Survivor", "Bootylicious"],
+        "correct": "Independent Women",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2005 hit by Mariah Carey featured the line 'I can't live if living is without you'?",
+        "options": ["We Belong Together", "Touch My Body", "Fantasy", "Always Be My Baby"],
+        "correct": "We Belong Together",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2001 song by Alicia Keys became an international hit with its piano-driven melody?",
+        "options": ["Fallin'", "If I Ain't Got You", "You Don't Know My Name", "Girl on Fire"],
+        "correct": "Fallin'",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2006 hit by Ne-Yo became famous for its smooth lyrics and catchy hook?",
+        "options": ["So Sick", "Because of You", "Miss Independent", "Sexy Love"],
+        "correct": "So Sick",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2003 song by Beyoncé became a hit with its catchy hook and energetic rhythm?",
+        "options": ["Crazy in Love", "Irreplaceable", "Single Ladies", "Run the World (Girls)"],
+        "correct": "Crazy in Love",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2007 song by Rihanna featured the line 'Umbrella, ella, ella, eh, eh, eh'?",
+        "options": ["Umbrella", "SOS", "Only Girl (In the World)", "We Found Love"],
+        "correct": "Umbrella",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2000 hit by Sisqo became famous for its catchy hook and sexual lyrics?",
+        "options": ["Thong Song", "Incomplete", "Got to Get It", "Tell Me"],
+        "correct": "Thong Song",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2005 hit by Chris Brown helped launch his career with its smooth vocals and danceable beat?",
+        "options": ["Run It!", "Forever", "Kiss Kiss", "With You"],
+        "correct": "Run It!",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2002 song by Ashanti became a huge hit with its melodic hook and romantic lyrics?",
+        "options": ["Foolish", "Rock Wit U", "Happy", "Rain On Me"],
+        "correct": "Foolish",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2004 hit by Mariah Carey was known for its high-pitched notes and became one of her signature songs?",
+        "options": ["We Belong Together", "Vision of Love", "Hero", "Heartbreaker"],
+        "correct": "We Belong Together",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2007 hit by T-Pain became known for its use of auto-tune and catchy lyrics?",
+        "options": ["Buy U a Drank", "I'm Sprung", "Bartender", "Blame It"],
+        "correct": "Buy U a Drank",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2001 song by Ja Rule featured Ashanti and became a chart-topping hit?",
+        "options": ["Always On Time", "Livin' It Up", "Mesmerize", "New York"],
+        "correct": "Always On Time",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2008 hit by Beyoncé featured the line 'To the left, to the left'?",
+        "options": ["Irreplaceable", "Single Ladies", "Halo", "Love On Top"],
+        "correct": "Irreplaceable",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2006 song by Rihanna featured Jay-Z and became one of her biggest hits?",
+        "options": ["Umbrella", "Pon de Replay", "We Found Love", "Only Girl (In the World)"],
+        "correct": "Umbrella",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2009 song by the Black Eyed Peas became a worldwide anthem for the summer?",
+        "options": ["Boom Boom Pow", "I Gotta Feeling", "Where Is the Love?", "Shut Up"],
+        "correct": "I Gotta Feeling",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2000s hit by Justin Timberlake featured the line 'I'm bringing sexy back'?",
+        "options": ["SexyBack", "Cry Me a River", "What Goes Around... Comes Around", "Can't Stop the Feeling!"],
+        "correct": "SexyBack",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2002 song by Mary J. Blige became a hit with its emotional lyrics about love and heartbreak?",
+        "options": ["No More Drama", "Be Without You", "Just Fine", "Family Affair"],
+        "correct": "No More Drama",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2003 song by 50 Cent became a hit with its catchy hook and street-smart lyrics?",
+        "options": ["In Da Club", "21 Questions", "P.I.M.P.", "Candy Shop"],
+        "correct": "In Da Club",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2005 song by Gwen Stefani was known for its ska influence and catchy beat?",
+        "options": ["Hollaback Girl", "Sweet Escape", "Rich Girl", "The Sweet Escape"],
+        "correct": "Hollaback Girl",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2003 hit by Beyoncé featured the line 'You must not know 'bout me'?",
+        "options": ["Irreplaceable", "Single Ladies", "Crazy in Love", "Dangerously in Love"],
+        "correct": "Irreplaceable",
+        "category": "",
+        "instruction": ""
+      }
+    ],
+    "10": [
+      {
+        "question": "Which 2011 hit by Frank Ocean became a breakthrough track and is known for its introspective lyrics?",
+        "options": ["Thinkin Bout You", "Pyramids", "Lost", "Novacane"],
+        "correct": "Thinkin Bout You",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2013 hit by Beyoncé featured the line 'I woke up like this'?",
+        "options": ["Flawless", "Single Ladies", "Run the World (Girls)", "Drunk in Love"],
+        "correct": "Flawless",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2016 song by Solange was praised for its fusion of R&B, funk, and soul?",
+        "options": ["Cranes in the Sky", "Losing You", "Don't Touch My Hair", "A Seat at the Table"],
+        "correct": "Cranes in the Sky",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2011 hit by Miguel became an anthem for modern R&B with its smooth production?",
+        "options": ["Sure Thing", "Adorn", "Coffee", "How Many Drinks?"],
+        "correct": "Adorn",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2017 song by SZA became a massive hit with its relatable lyrics and smooth melody?",
+        "options": ["The Weekend", "Love Galore", "Broken Clocks", "Good Days"],
+        "correct": "The Weekend",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2016 hit by Rihanna became a global anthem with its tropical production?",
+        "options": ["Work", "Diamonds", "We Found Love", "Umbrella"],
+        "correct": "Work",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2019 song by Lizzo became a viral hit with its empowering lyrics and catchy hook?",
+        "options": ["Truth Hurts", "Good as Hell", "Juice", "Cuz I Love You"],
+        "correct": "Truth Hurts",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2018 song by Childish Gambino combined R&B, funk, and social commentary?",
+        "options": ["This Is America", "Redbone", "3005", "Sober"],
+        "correct": "Redbone",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2013 hit by Justin Timberlake featured the line 'I'm bringing sexy back'?",
+        "options": ["Suit & Tie", "Can't Stop the Feeling!", "Mirrors", "SexyBack"],
+        "correct": "Suit & Tie",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2014 song by The Weeknd became an international hit with its moody atmosphere?",
+        "options": ["Can't Feel My Face", "Earned It", "The Hills", "Blinding Lights"],
+        "correct": "Can't Feel My Face",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2018 song by Khalid became a hit for its mellow vibe and emotional lyrics?",
+        "options": ["Better", "Talk", "Location", "OTW"],
+        "correct": "Better",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2019 song by Ariana Grande featured the line 'I'm so f***ing grateful for my ex'?",
+        "options": ["Thank U, Next", "No Tears Left to Cry", "Into You", "Dangerous Woman"],
+        "correct": "Thank U, Next",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2010 song by Usher became a worldwide hit with its catchy hook and danceable beat?",
+        "options": ["OMG", "Yeah!", "Climax", "U Got It Bad"],
+        "correct": "OMG",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2015 song by Drake became a hit with its catchy hook and smooth delivery?",
+        "options": ["Hotline Bling", "One Dance", "God's Plan", "Controlla"],
+        "correct": "Hotline Bling",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2017 song by Jhené Aiko became a breakout hit with its sensual and laid-back vibe?",
+        "options": ["The Worst", "P*$$Y Fairy", "Spotless Mind", "While We're Young"],
+        "correct": "The Worst",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2015 song by Sam Smith became an international hit with its emotional lyrics about heartbreak?",
+        "options": ["Stay With Me", "I'm Not the Only One", "Lay Me Down", "Too Good at Goodbyes"],
+        "correct": "Stay With Me",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2016 hit by Frank Ocean became a defining song of modern R&B with its complex production?",
+        "options": ["Nikes", "Pink + White", "Pyramids", "Solo"],
+        "correct": "Nikes",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2019 song by Billie Eilish incorporated R&B elements with haunting lyrics?",
+        "options": ["Bad Guy", "When the Party's Over", "Everything I Wanted", "Bury a Friend"],
+        "correct": "When the Party's Over",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2016 song by Rihanna was featured in the movie 'Ocean's 8' and became a hit?",
+        "options": ["Love on the Brain", "Work", "Needed Me", "Stay"],
+        "correct": "Needed Me",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2017 song by Khalid was a breakout hit that gained widespread popularity?",
+        "options": ["Location", "Talk", "OTW", "Young Dumb & Broke"],
+        "correct": "Location",
+        "category": "",
+        "instruction": ""
+      }
+    ],
+    "20":[
+      {
+        "question": "Which 2020 song by The Weeknd became a massive hit with its retro '80s-inspired sound?",
+        "options": ["Blinding Lights", "Save Your Tears", "Heartless", "In Your Eyes"],
+        "correct": "Blinding Lights",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 song by Doja Cat became a viral hit with its catchy chorus and playful music video?",
+        "options": ["Say So", "Streets", "Kiss Me More", "Need to Know"],
+        "correct": "Say So",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2021 album by Silk Sonic (Bruno Mars & Anderson .Paak) became a critical and commercial success?",
+        "options": ["An Evening with Silk Sonic", "24K Magic", "Oxnard", "Ventura"],
+        "correct": "An Evening with Silk Sonic",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 hit by Megan Thee Stallion became a cultural anthem with its empowering message?",
+        "options": ["Savage", "WAP", "Body", "Hot Girl Summer"],
+        "correct": "Savage",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2021 song by SZA went viral on TikTok and gained popularity with its relatable lyrics?",
+        "options": ["Good Days", "Kiss Me More", "I Hate U", "The Weekend"],
+        "correct": "Good Days",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2021 song by Lil Nas X blended elements of R&B and pop with bold visuals?",
+        "options": ["Montero (Call Me by Your Name)", "Industry Baby", "Old Town Road", "Panini"],
+        "correct": "Montero (Call Me by Your Name)",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 song by Chloe x Halle was praised for its lush production and emotional vocals?",
+        "options": ["Do It", "Ungodly Hour", "Happy Without Me", "Tipsy"],
+        "correct": "Do It",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2021 song by Olivia Rodrigo blended elements of pop and R&B with raw, emotional lyrics?",
+        "options": ["Drivers License", "Good 4 U", "Deja Vu", "Traitor"],
+        "correct": "Drivers License",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2022 song by Jazmine Sullivan became a hit for its soulful vocals and powerful lyrics?",
+        "options": ["Pick Up Your Feelings", "Bust Your Windows", "Need U Bad", "Lost One"],
+        "correct": "Pick Up Your Feelings",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 album by H.E.R. earned critical acclaim and Grammy nominations?",
+        "options": ["Back of My Mind", "I Used to Know Her", "The Baddest", "Warrior"],
+        "correct": "Back of My Mind",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2021 song by Silk Sonic (Bruno Mars & Anderson .Paak) paid homage to classic R&B with its smooth vibe?",
+        "options": ["Leave the Door Open", "Skate", "After Last Night", "Blast Off"],
+        "correct": "Leave the Door Open",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2021 song by SZA was praised for its dreamy production and confessional lyrics?",
+        "options": ["I Hate U", "Good Days", "Hit Different", "The Weekend"],
+        "correct": "I Hate U",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 song by Justin Bieber marked his return to R&B after a long hiatus?",
+        "options": ["Yummy", "Intentions", "Peaches", "Holy"],
+        "correct": "Yummy",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 song by Summer Walker became a breakout hit with its melancholic lyrics and seductive vocals?",
+        "options": ["Girls Need Love", "Come Thru", "Playing Games", "Session 32"],
+        "correct": "Playing Games",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2021 song by Giveon became popular for its deep voice and emotional storytelling?",
+        "options": ["Heartbreak Anniversary", "Like I Want You", "Stuck On You", "For Tonight"],
+        "correct": "Heartbreak Anniversary",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 song by The Weeknd became a worldwide hit, topping charts for months?",
+        "options": ["Blinding Lights", "Save Your Tears", "Heartless", "In Your Eyes"],
+        "correct": "Blinding Lights",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2021 album by J Cole featured the hit 'My Life' and was praised for its introspective lyrics?",
+        "options": ["The Off-Season", "KOD", "Born Sinner", "4 Your Eyez Only"],
+        "correct": "The Off-Season",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2022 hit by Beyoncé brought R&B and dance music together, becoming a summer anthem?",
+        "options": ["Break My Soul", "Cuff It", "Drunk in Love", "Formation"],
+        "correct": "Break My Soul",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 song by 6lack became a fan favorite for its smooth vocals and emotional depth?",
+        "options": ["Switch", "In Between", "Sorry", "Nonchalant"],
+        "correct": "Switch",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 song by Jhené Aiko became a standout hit with its ethereal production and soulful vocals?",
+        "options": ["P*$$Y Fairy (OTW)", "Spotless Mind", "The Worst", "None of Your Concern"],
+        "correct": "P*$$Y Fairy (OTW)",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2022 song by Ari Lennox became a breakout hit with its smooth groove and romantic themes?",
+        "options": ["Pressure", "Shea Butter Baby", "BMO", "New Apartment"],
+        "correct": "Pressure",
+        "category": "",
+        "instruction": ""
+      }
+    ]
+  },
+  "Best of": {
+    "60": [
+      {
+        "question": "Which 1965 hit by The Beatles became an anthem for the 1960s and is widely regarded as one of the greatest songs of all time?",
+        "options": ["Hey Jude", "Let It Be", "Yesterday", "A Hard Day's Night"],
+        "correct": "Yesterday",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which song by The Rolling Stones, released in 1965, is known for its iconic riff and became one of their most famous tracks?",
+        "options": ["Paint It Black", "Satisfaction", "Angie", "Ruby Tuesday"],
+        "correct": "Satisfaction",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1969 song by The Beatles was one of the band's final hits before their breakup?",
+        "options": ["Come Together", "Hey Jude", "Let It Be", "Something"],
+        "correct": "Let It Be",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1965 song by Bob Dylan marked his transition to electric music and became an anthem for the civil rights movement?",
+        "options": ["Like a Rolling Stone", "Blowin' in the Wind", "The Times They Are A-Changin'", "Mr. Tambourine Man"],
+        "correct": "Like a Rolling Stone",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1968 song by Aretha Franklin became one of her signature songs, known for its soulful vocals and powerful message?",
+        "options": ["Respect", "Think", "Chain of Fools", "Natural Woman"],
+        "correct": "Respect",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1969 song by The Temptations is considered one of the greatest songs in the history of Motown?",
+        "options": ["My Girl", "Ain't Too Proud to Beg", "Just My Imagination", "I Can't Get Next to You"],
+        "correct": "My Girl",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1967 song by The Doors became one of their most iconic tracks with its psychedelic sound and dark lyrics?",
+        "options": ["Light My Fire", "Riders on the Storm", "People Are Strange", "Break On Through (To the Other Side)"],
+        "correct": "Light My Fire",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1963 song by The Beach Boys is widely regarded as one of the best pop songs ever written?",
+        "options": ["Good Vibrations", "Surfin' USA", "California Girls", "I Get Around"],
+        "correct": "Good Vibrations",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1965 song by The Byrds is known for its jangly guitars and folk rock influence, and became a major hit in the US and UK?",
+        "options": ["Turn! Turn! Turn!", "Mr. Tambourine Man", "Eight Miles High", "I'll Feel a Whole Lot Better"],
+        "correct": "Mr. Tambourine Man",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1966 song by The Mamas & the Papas became one of the biggest hits of the decade and a defining moment of the '60s?",
+        "options": ["California Dreamin'", "Monday, Monday", "I Saw Her Again", "Dedicated to the One I Love"],
+        "correct": "California Dreamin'",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1967 song by The Beatles marked a significant shift in their sound and became one of the most influential songs of all time?",
+        "options": ["A Day in the Life", "Lucy in the Sky with Diamonds", "Strawberry Fields Forever", "Penny Lane"],
+        "correct": "Strawberry Fields Forever",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1965 song by The Supremes became one of the most popular Motown hits and was their signature song?",
+        "options": ["Stop! In the Name of Love", "You Can't Hurry Love", "Baby Love", "Where Did Our Love Go"],
+        "correct": "Stop! In the Name of Love",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1964 song by The Beach Boys became one of their most enduring hits and a symbol of the California surf culture?",
+        "options": ["Surfin' USA", "Fun, Fun, Fun", "Little Deuce Coupe", "Help Me, Rhonda"],
+        "correct": "Surfin' USA",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1963 hit by The Chiffons became a major pop success and is still widely loved today?",
+        "options": ["One Fine Day", "He's So Fine", "Sweet Talkin' Guy", "Baby It's You"],
+        "correct": "He's So Fine",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1968 song by Simon & Garfunkel became an anthem of the '60s and is known for its reflective lyrics and haunting melody?",
+        "options": ["The Sound of Silence", "Bridge Over Troubled Water", "Scarborough Fair", "I Am a Rock"],
+        "correct": "The Sound of Silence",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1965 hit by The Rolling Stones became a defining moment in the rock genre with its rebellious attitude?",
+        "options": ["Satisfaction", "Ruby Tuesday", "Paint It Black", "As Tears Go By"],
+        "correct": "Paint It Black",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1964 song by The Beatles became the first song in history to sell a million copies in the United States?",
+        "options": ["I Want to Hold Your Hand", "A Hard Day's Night", "Can't Buy Me Love", "Twist and Shout"],
+        "correct": "I Want to Hold Your Hand",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1967 song by Jimi Hendrix became one of his most iconic tracks, known for its psychedelic guitar solos?",
+        "options": ["Purple Haze", "All Along the Watchtower", "Voodoo Child (Slight Return)", "Hey Joe"],
+        "correct": "Purple Haze",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1968 song by the Temptations became one of their most successful tracks, blending R&B with psychedelic influences?",
+        "options": ["I Heard It Through the Grapevine", "Ain't Too Proud to Beg", "Just My Imagination", "Cloud Nine"],
+        "correct": "Cloud Nine",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1961 song by Ben E. King became a timeless classic and is frequently covered by artists across genres?",
+        "options": ["Stand by Me", "Spanish Harlem", "There Goes My Baby", "Don't Play That Song"],
+        "correct": "Stand by Me",
+        "category": "",
+        "instruction": ""
+      }
+    ],
+    "70": [
+      {
+        "question": "Which 1971 song by John Lennon became an anthem for peace and is known for its iconic chorus?",
+        "options": ["Imagine", "Instant Karma!", "Give Peace a Chance", "Working Class Hero"],
+        "correct": "Imagine",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1977 song by the Bee Gees became a disco classic and one of their most successful tracks?",
+        "options": ["Stayin' Alive", "Night Fever", "How Deep Is Your Love", "Jive Talkin'"],
+        "correct": "Stayin' Alive",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1971 song by Led Zeppelin is often considered one of the greatest rock songs of all time?",
+        "options": ["Stairway to Heaven", "Whole Lotta Love", "Black Dog", "Rock and Roll"],
+        "correct": "Stairway to Heaven",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1973 song by Pink Floyd is known for its experimental sound and philosophical lyrics?",
+        "options": ["Money", "Comfortably Numb", "Wish You Were Here", "Time"],
+        "correct": "Money",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1971 song by Marvin Gaye became a hit for its social commentary and powerful message?",
+        "options": ["What's Going On", "Mercy Mercy Me", "Let's Get It On", "Sexual Healing"],
+        "correct": "What's Going On",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1978 song by Donna Summer became a hit and a major influence on the disco era?",
+        "options": ["Last Dance", "Hot Stuff", "Bad Girls", "She Works Hard for the Money"],
+        "correct": "Last Dance",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1974 song by Elton John became one of his signature songs with its memorable piano intro?",
+        "options": ["Rocket Man", "Your Song", "Bennie and the Jets", "Crocodile Rock"],
+        "correct": "Rocket Man",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1972 song by The Temptations was a major hit that mixed psychedelic soul with funk?",
+        "options": ["Papa Was a Rollin' Stone", "Just My Imagination", "Ain't Too Proud to Beg", "Cloud Nine"],
+        "correct": "Papa Was a Rollin' Stone",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1976 song by ABBA became one of their most popular tracks and an iconic disco anthem?",
+        "options": ["Dancing Queen", "Mamma Mia", "Take a Chance on Me", "Waterloo"],
+        "correct": "Dancing Queen",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1970 song by The Jackson 5 became a major hit, showcasing Michael Jackson's vocal talents?",
+        "options": ["ABC", "I Want You Back", "I'll Be There", "The Love You Save"],
+        "correct": "I Want You Back",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1973 song by The Rolling Stones became one of their most famous tracks, known for its riff and rebellious attitude?",
+        "options": ["Angie", "Brown Sugar", "Miss You", "Start Me Up"],
+        "correct": "Angie",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1979 song by Gloria Gaynor became a defining anthem of the disco era?",
+        "options": ["I Will Survive", "Never Can Say Goodbye", "Hot Stuff", "Reach Out I'll Be There"],
+        "correct": "I Will Survive",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1970 song by Simon & Garfunkel became an iconic folk song, featuring reflective lyrics and haunting melody?",
+        "options": ["Bridge Over Troubled Water", "The Sound of Silence", "Scarborough Fair", "I Am a Rock"],
+        "correct": "Bridge Over Troubled Water",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1976 song by Fleetwood Mac is considered one of their greatest hits and a defining moment in their career?",
+        "options": ["Go Your Own Way", "Landslide", "Rhiannon", "Dreams"],
+        "correct": "Go Your Own Way",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1971 song by Carole King became a classic and remains one of her most beloved tracks?",
+        "options": ["You've Got a Friend", "So Far Away", "I Feel the Earth Move", "Natural Woman"],
+        "correct": "You've Got a Friend",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1979 song by The Knack became a major hit with its catchy riff and pop rock style?",
+        "options": ["My Sharona", "Good Girls Don't", "Baby Talks Dirty", "Let Me Out"],
+        "correct": "My Sharona",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1978 song by The Clash became a punk rock anthem and is widely regarded as one of their signature songs?",
+        "options": ["London Calling", "Should I Stay or Should I Go", "White Riot", "Rock the Casbah"],
+        "correct": "London Calling",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1973 song by Stevie Wonder became one of his most iconic tracks and showcased his blend of soul and funk?",
+        "options": ["Superstition", "Sir Duke", "Isn't She Lovely", "Signed, Sealed, Delivered I'm Yours"],
+        "correct": "Superstition",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1974 song by Bob Dylan became a major hit with its unique blend of folk and rock elements?",
+        "options": ["Tangled Up in Blue", "Knockin' on Heaven's Door", "The Times They Are A-Changin'", "Like a Rolling Stone"],
+        "correct": "Tangled Up in Blue",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1975 song by Queen became one of their most iconic anthems, with Freddie Mercury's powerful vocals leading the way?",
+        "options": ["Bohemian Rhapsody", "We Are the Champions", "Killer Queen", "Somebody to Love"],
+        "correct": "Bohemian Rhapsody",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1977 song by David Bowie is widely regarded as one of his greatest tracks and showcases his glam rock persona?",
+        "options": ["Heroes", "Space Oddity", "Changes", "Rebel Rebel"],
+        "correct": "Heroes",
+        "category": "",
+        "instruction": ""
+      }
+    ],
+    "80": [
+      {
+        "question": "Which 1982 song by Michael Jackson became one of the best-selling singles of all time?",
+        "options": ["Billie Jean", "Thriller", "Beat It", "Wanna Be Startin' Somethin'"],
+        "correct": "Billie Jean",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1984 song by Madonna became a global hit and is known for its catchy chorus and danceable beat?",
+        "options": ["Like a Virgin", "Holiday", "Material Girl", "Into the Groove"],
+        "correct": "Like a Virgin",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1981 song by The Police became a major hit with its reggae-influenced sound?",
+        "options": ["Every Breath You Take", "Roxanne", "Message in a Bottle", "Don't Stand So Close to Me"],
+        "correct": "Every Breath You Take",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1980 song by Queen became an anthem for sports and has been widely used in stadiums around the world?",
+        "options": ["We Are the Champions", "Another One Bites the Dust", "Under Pressure", "Somebody to Love"],
+        "correct": "We Are the Champions",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1984 song by Prince became a major hit with its funky groove and sensual lyrics?",
+        "options": ["Purple Rain", "When Doves Cry", "Kiss", "Let's Go Crazy"],
+        "correct": "When Doves Cry",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1983 song by David Bowie is known for its futuristic sound and was a huge influence on the new wave genre?",
+        "options": ["Let's Dance", "China Girl", "Modern Love", "Ashes to Ashes"],
+        "correct": "Let's Dance",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1985 song by Tears for Fears became a worldwide anthem for overcoming adversity?",
+        "options": ["Shout", "Everybody Wants to Rule the World", "Head Over Heels", "Mad World"],
+        "correct": "Everybody Wants to Rule the World",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1987 song by U2 became one of their most iconic hits with its emotional lyrics and powerful message?",
+        "options": ["With or Without You", "Where the Streets Have No Name", "I Still Haven't Found What I'm Looking For", "One"],
+        "correct": "With or Without You",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1986 song by Bon Jovi became a massive rock anthem, solidifying their place in 80s music history?",
+        "options": ["Livin' on a Prayer", "Wanted Dead or Alive", "You Give Love a Bad Name", "Bad Medicine"],
+        "correct": "Livin' on a Prayer",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1982 song by Survivor became a motivational anthem for athletes and is associated with the movie 'Rocky III'?",
+        "options": ["Eye of the Tiger", "Burning Heart", "The Search Is Over", "I Can't Hold Back"],
+        "correct": "Eye of the Tiger",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1985 song by Whitney Houston became a huge hit and solidified her as a pop superstar?",
+        "options": ["How Will I Know", "I Wanna Dance with Somebody", "The Greatest Love of All", "Saving All My Love for You"],
+        "correct": "I Wanna Dance with Somebody",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1981 song by Journey became a classic rock anthem with its catchy melody and sing-along chorus?",
+        "options": ["Don't Stop Believin'", "Open Arms", "Any Way You Want It", "Wheel in the Sky"],
+        "correct": "Don't Stop Believin'",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1980 song by Billy Joel became a hit with its upbeat piano melody and has become one of his signature songs?",
+        "options": ["It's Still Rock and Roll to Me", "Piano Man", "We Didn't Start the Fire", "Uptown Girl"],
+        "correct": "It's Still Rock and Roll to Me",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1982 song by Michael Jackson is one of the best-selling singles of all time and is associated with his groundbreaking music video?",
+        "options": ["Thriller", "Beat It", "Wanna Be Startin' Somethin'", "Billie Jean"],
+        "correct": "Thriller",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1989 song by Madonna became one of her most iconic hits and was praised for its innovative music video?",
+        "options": ["Like a Prayer", "Like a Virgin", "Vogue", "Into the Groove"],
+        "correct": "Like a Prayer",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1986 song by Peter Gabriel became a worldwide hit and is known for its emotionally charged lyrics and music video?",
+        "options": ["Sledgehammer", "Big Time", "Don't Give Up", "Shock the Monkey"],
+        "correct": "Sledgehammer",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1985 song by Madonna became one of her most iconic hits with its catchy melody and colorful music video?",
+        "options": ["Material Girl", "Holiday", "Like a Virgin", "Into the Groove"],
+        "correct": "Material Girl",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1984 song by Cyndi Lauper became a hit and is widely considered a feminist anthem?",
+        "options": ["Girls Just Want to Have Fun", "Time After Time", "True Colors", "She Bop"],
+        "correct": "Girls Just Want to Have Fun",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1987 song by Rick Astley became a viral sensation many years after its release, especially on the internet?",
+        "options": ["Never Gonna Give You Up", "Together Forever", "Whenever You Need Somebody", "She Wants to Dance with Me"],
+        "correct": "Never Gonna Give You Up",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1980 song by Blondie became a massive hit, blending new wave with disco influences?",
+        "options": ["Call Me", "Heart of Glass", "Rapture", "One Way or Another"],
+        "correct": "Call Me",
+        "category": "",
+        "instruction": ""
+      }
+    ],
+    "90": [
+      {
+        "question": "Which 1991 song by Nirvana became an anthem for Generation X and changed the music landscape?",
+        "options": ["Smells Like Teen Spirit", "Come as You Are", "Heart-Shaped Box", "Lithium"],
+        "correct": "Smells Like Teen Spirit",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1994 song by Whitney Houston became a worldwide hit and is known for its powerful vocal performance?",
+        "options": ["I Will Always Love You", "My Heart Will Go On", "Greatest Love of All", "I Wanna Dance with Somebody"],
+        "correct": "I Will Always Love You",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1995 song by Coolio became a cultural anthem, largely thanks to its appearance in the movie 'Dangerous Minds'?",
+        "options": ["Gangsta's Paradise", "Fantastic Voyage", "1, 2, 3, 4", "Too Hot"],
+        "correct": "Gangsta's Paradise",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1997 song by The Notorious B.I.G. became a signature hit and is considered one of the greatest rap songs of all time?",
+        "options": ["Mo Money Mo Problems", "Juicy", "Big Poppa", "Hypnotize"],
+        "correct": "Mo Money Mo Problems",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1994 song by Oasis became one of the biggest Britpop anthems?",
+        "options": ["Wonderwall", "Don't Look Back in Anger", "Live Forever", "Champagne Supernova"],
+        "correct": "Wonderwall",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1999 hit by Britney Spears catapulted her to fame and became an iconic pop song?",
+        "options": ["...Baby One More Time", "Oops!...I Did It Again", "Toxic", "I'm a Slave 4 U"],
+        "correct": "...Baby One More Time",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1991 song by R.E.M. became a defining track for alternative rock in the 1990s?",
+        "options": ["Losing My Religion", "Everybody Hurts", "Shiny Happy People", "Man on the Moon"],
+        "correct": "Losing My Religion",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1999 song by Ricky Martin became a global sensation and is known for its energetic Latin beats?",
+        "options": ["Livin' la Vida Loca", "She Bangs", "La Copa de la Vida", "María"],
+        "correct": "Livin' la Vida Loca",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1994 song by The Cranberries became a massive hit, known for its haunting vocals and melancholic tone?",
+        "options": ["Zombie", "Linger", "Ode to My Family", "Dreams"],
+        "correct": "Zombie",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1993 song by Mariah Carey became one of her signature hits with its high-pitched vocal range?",
+        "options": ["Hero", "Fantasy", "Vision of Love", "All I Want for Christmas Is You"],
+        "correct": "Hero",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1997 song by Hanson became a worldwide hit with its catchy chorus and pop-rock style?",
+        "options": ["MMMBop", "Where's the Love", "I Will Come to You", "This Time Around"],
+        "correct": "MMMBop",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1996 song by Spice Girls became a worldwide anthem of girl power?",
+        "options": ["Wannabe", "Spice Up Your Life", "2 Become 1", "Say You'll Be There"],
+        "correct": "Wannabe",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1990 song by MC Hammer became a cultural phenomenon with its catchy beat and viral dance moves?",
+        "options": ["U Can't Touch This", "2 Legit 2 Quit", "Pray", "Hammer Don't Hurt 'Em"],
+        "correct": "U Can't Touch This",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1994 song by Green Day became a defining track for the punk rock revival?",
+        "options": ["Basket Case", "Good Riddance (Time of Your Life)", "Longview", "When I Come Around"],
+        "correct": "Basket Case",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1993 song by Whitney Houston was featured in the movie 'The Bodyguard' and became a massive hit?",
+        "options": ["I Will Always Love You", "Run to You", "I'm Every Woman", "Queen of the Night"],
+        "correct": "I Will Always Love You",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1999 hit by Santana featuring Rob Thomas became a worldwide smash?",
+        "options": ["Smooth", "Maria Maria", "Black Magic Woman", "Oye Como Va"],
+        "correct": "Smooth",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1994 song by Ace of Base became a massive pop hit, known for its catchy hook and reggae influences?",
+        "options": ["All That She Wants", "The Sign", "Beautiful Life", "Don't Turn Around"],
+        "correct": "All That She Wants",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1995 song by Alanis Morissette became a defining anthem of '90s angst and female empowerment?",
+        "options": ["You Oughta Know", "Ironic", "Hand in My Pocket", "Thank U"],
+        "correct": "You Oughta Know",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1992 song by Whitney Houston became a global hit and was a cover of Dolly Parton's original?",
+        "options": ["I Will Always Love You", "Greatest Love of All", "I Wanna Dance with Somebody", "I'm Every Woman"],
+        "correct": "I Will Always Love You",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1999 hit by Shania Twain became one of the best-selling singles of all time?",
+        "options": ["Man! I Feel Like a Woman!", "You're Still the One", "Any Man of Mine", "That Don't Impress Me Much"],
+        "correct": "Man! I Feel Like a Woman!",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 1997 song by Daft Punk helped popularize electronic music in the mainstream?",
+        "options": ["Around the World", "Da Funk", "One More Time", "Digital Love"],
+        "correct": "Around the World",
+        "category": "",
+        "instruction": ""
+      }
+    ],
+    "00": [
+      {
+        "question": "Which 2000 song by Santana featuring Rob Thomas became a massive hit and topped the charts for several weeks?",
+        "options": ["Smooth", "Maria Maria", "Black Magic Woman", "Oye Como Va"],
+        "correct": "Smooth",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2001 hit by Alicia Keys became her breakthrough single and topped the charts?",
+        "options": ["Fallin'", "If I Ain't Got You", "No One", "A Woman's Worth"],
+        "correct": "Fallin'",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2004 song by Usher became a massive hit and topped the Billboard Hot 100 for 12 consecutive weeks?",
+        "options": ["Yeah!", "Burn", "Confessions Part II", "U Got It Bad"],
+        "correct": "Yeah!",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2003 song by 50 Cent became his breakthrough hit and launched him into superstardom?",
+        "options": ["In Da Club", "Candy Shop", "21 Questions", "P.I.M.P."],
+        "correct": "In Da Club",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2004 song by OutKast became an international hit and popularized the 'crunk' style?",
+        "options": ["Hey Ya!", "Ms. Jackson", "Roses", "The Way You Move"],
+        "correct": "Hey Ya!",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2008 song by Beyoncé became one of her biggest hits and is known for its empowering lyrics?",
+        "options": ["Single Ladies (Put a Ring on It)", "Crazy in Love", "Halo", "Irreplaceable"],
+        "correct": "Single Ladies (Put a Ring on It)",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2002 song by Kelly Clarkson became an anthem for overcoming adversity and winning 'American Idol'?",
+        "options": ["A Moment Like This", "Since U Been Gone", "Because of You", "Stronger (What Doesn't Kill You)"],
+        "correct": "A Moment Like This",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2007 hit by Rihanna featuring Jay-Z became a worldwide anthem and popularized the 'Umbrella' dance?",
+        "options": ["Umbrella", "We Found Love", "Diamonds", "Only Girl (In the World)"],
+        "correct": "Umbrella",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2003 song by Evanescence became a chart-topping hit and is known for its haunting, gothic style?",
+        "options": ["My Immortal", "Bring Me to Life", "Going Under", "Call Me When You're Sober"],
+        "correct": "Bring Me to Life",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2005 hit by Green Day became an anthem of defiance and was part of their politically charged album 'American Idiot'?",
+        "options": ["Boulevard of Broken Dreams", "Wake Me Up When September Ends", "Holiday", "American Idiot"],
+        "correct": "Boulevard of Broken Dreams",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2000 song by Nelly became a breakout hit and is known for its catchy chorus and country-inspired beats?",
+        "options": ["Country Grammar", "Hot in Herre", "Ride Wit Me", "Air Force Ones"],
+        "correct": "Hot in Herre",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2009 song by Lady Gaga became a global hit and is known for its infectious dance beat and catchy hook?",
+        "options": ["Poker Face", "Bad Romance", "Just Dance", "LoveGame"],
+        "correct": "Poker Face",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2000 song by Destiny's Child became one of their biggest hits and is known for its empowering lyrics?",
+        "options": ["Say My Name", "Survivor", "Bootylicious", "Independent Women Part I"],
+        "correct": "Say My Name",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2001 hit by Shakira became a global sensation and made her an international pop star?",
+        "options": ["Hips Don't Lie", "Whenever, Wherever", "Underneath Your Clothes", "La Tortura"],
+        "correct": "Whenever, Wherever",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2006 song by Justin Timberlake became a massive hit and featured a dance-pop style with funk influences?",
+        "options": ["SexyBack", "Cry Me a River", "What Goes Around... Comes Around", "Rock Your Body"],
+        "correct": "SexyBack",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2008 hit by Katy Perry became one of her biggest songs, featuring a catchy pop-rock hook?",
+        "options": ["I Kissed a Girl", "Hot n Cold", "Teenage Dream", "California Gurls"],
+        "correct": "I Kissed a Girl",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2004 song by Franz Ferdinand became a hit and is known for its danceable indie rock sound?",
+        "options": ["Take Me Out", "Do You Want To", "The Dark of the Matinée", "Michael"],
+        "correct": "Take Me Out",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2005 hit by The Black Eyed Peas became a worldwide sensation, known for its futuristic beats?",
+        "options": ["Don't Phunk with My Heart", "Where Is the Love?", "Boom Boom Pow", "My Humps"],
+        "correct": "Boom Boom Pow",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2007 song by Amy Winehouse became a breakout hit and is known for its retro soul and jazz influences?",
+        "options": ["Rehab", "Back to Black", "You Know I'm No Good", "Love Is a Losing Game"],
+        "correct": "Rehab",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2006 song by The Fray became a breakout hit, known for its emotional lyrics and piano-driven melody?",
+        "options": ["How to Save a Life", "Over My Head (Cable Car)", "Look After You", "Never Say Never"],
+        "correct": "How to Save a Life",
+        "category": "",
+        "instruction": ""
+      }
+    ],
+    "10": [
+      {
+        "question": "Which 2010 song by Katy Perry became a global hit and is known for its catchy hook 'I kissed a girl and I liked it'?",
+        "options": ["Teenage Dream", "Firework", "I Kissed a Girl", "California Gurls"],
+        "correct": "Teenage Dream",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2011 song by Adele became a massive hit and is known for its soulful vocals and heartbreaking lyrics?",
+        "options": ["Rolling in the Deep", "Someone Like You", "Set Fire to the Rain", "Hello"],
+        "correct": "Rolling in the Deep",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2014 song by Taylor Swift marked her transition from country to pop and became a massive success?",
+        "options": ["Love Story", "Shake It Off", "You Belong with Me", "Blank Space"],
+        "correct": "Shake It Off",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2015 song by Mark Ronson featuring Bruno Mars became a worldwide hit with its retro funk vibes?",
+        "options": ["Uptown Funk", "Just the Way You Are", "Grenade", "Locked Out of Heaven"],
+        "correct": "Uptown Funk",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2016 song by Justin Bieber became a breakout hit and is known for its tropical house beat?",
+        "options": ["Sorry", "Love Yourself", "What Do You Mean?", "Where Are Ü Now"],
+        "correct": "Sorry",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2013 song by Macklemore & Ryan Lewis became a global hit and was known for its positive message on self-empowerment?",
+        "options": ["Thrift Shop", "Same Love", "Can't Hold Us", "Downtown"],
+        "correct": "Thrift Shop",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2018 song by Drake became a worldwide sensation with the viral dance move known as the 'Kiki Challenge'?",
+        "options": ["Hotline Bling", "In My Feelings", "God's Plan", "Nice for What"],
+        "correct": "In My Feelings",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2017 song by Luis Fonsi featuring Daddy Yankee became one of the most-viewed YouTube videos of all time?",
+        "options": ["Despacito", "Bailando", "Dákiti", "Vivir Mi Vida"],
+        "correct": "Despacito",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2019 song by Lil Nas X became a cultural phenomenon and topped the Billboard Hot 100 for a record-breaking number of weeks?",
+        "options": ["Old Town Road", "Panini", "Rodeo", "Montero (Call Me by Your Name)"],
+        "correct": "Old Town Road",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2016 song by The Chainsmokers featuring Halsey became a massive hit and is known for its electronic pop sound?",
+        "options": ["Closer", "Don't Let Me Down", "Something Just Like This", "Paris"],
+        "correct": "Closer",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2015 song by The Weeknd became a global hit and is known for its dark, moody sound and memorable lyrics?",
+        "options": ["Can't Feel My Face", "The Hills", "Blinding Lights", "Starboy"],
+        "correct": "Can't Feel My Face",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2013 song by Daft Punk featuring Pharrell Williams became a worldwide sensation with its funky beat?",
+        "options": ["Get Lucky", "One More Time", "Harder, Better, Faster, Stronger", "Lose Yourself to Dance"],
+        "correct": "Get Lucky",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2012 song by Carly Rae Jepsen became a breakout hit and was known for its catchy 'Call Me Maybe' chorus?",
+        "options": ["Call Me Maybe", "Good Time", "I Really Like You", "This Kiss"],
+        "correct": "Call Me Maybe",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2017 song by Ed Sheeran became one of the most-streamed songs of all time and topped charts worldwide?",
+        "options": ["Shape of You", "Castle on the Hill", "Galway Girl", "Perfect"],
+        "correct": "Shape of You",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2019 song by Billie Eilish became a massive hit with its haunting lyrics and minimalist production?",
+        "options": ["Bad Guy", "When the Party's Over", "Bury a Friend", "Everything I Wanted"],
+        "correct": "Bad Guy",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2016 song by Sia became a global hit and was known for its powerful vocals and emotional lyrics?",
+        "options": ["Chandelier", "Elastic Heart", "Cheap Thrills", "Alive"],
+        "correct": "Chandelier",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2019 song by Shawn Mendes and Camila Cabello became a massive hit with its romantic lyrics and Latin-inspired rhythm?",
+        "options": ["Señorita", "Treat You Better", "Stitches", "I Know What You Did Last Summer"],
+        "correct": "Señorita",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2011 song by Lady Gaga became one of her most iconic hits, known for its catchy chorus and extravagant music video?",
+        "options": ["Born This Way", "Poker Face", "Bad Romance", "The Edge of Glory"],
+        "correct": "Born This Way",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2018 song by Ariana Grande became a chart-topping hit and is known for its empowering message and catchy chorus?",
+        "options": ["No Tears Left to Cry", "Thank U, Next", "7 Rings", "Dangerous Woman"],
+        "correct": "No Tears Left to Cry",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2011 song by Bruno Mars became a massive hit with its upbeat, doo-wop style and catchy lyrics?",
+        "options": ["Just the Way You Are", "Grenade", "Lazy Song", "When I Was Your Man"],
+        "correct": "Just the Way You Are",
+        "category": "",
+        "instruction": ""
+      }
+    ],
+    "20": [
+      {
+        "question": "Which 2020 song by The Weeknd became a massive hit and was known for its 80s-inspired sound and the memorable lyric 'I can't feel my face'?",
+        "options": ["Blinding Lights", "Save Your Tears", "Heartless", "Starboy"],
+        "correct": "Blinding Lights",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2021 song by Olivia Rodrigo became a breakout hit and was known for its raw emotional lyrics and pop-punk sound?",
+        "options": ["Good 4 U", "Driver's License", "Deja Vu", "Brutal"],
+        "correct": "Driver's License",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2021 song by Lil Nas X became a cultural phenomenon with its catchy beat and viral music video?",
+        "options": ["Montero (Call Me by Your Name)", "Industry Baby", "Old Town Road", "Panini"],
+        "correct": "Montero (Call Me by Your Name)",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 song by Dua Lipa became a hit and was known for its disco-inspired sound and empowering lyrics?",
+        "options": ["Don't Start Now", "Levitating", "Physical", "Break My Heart"],
+        "correct": "Don't Start Now",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2021 song by BTS became a global hit and was known for its catchy chorus and upbeat, funky sound?",
+        "options": ["Butter", "Dynamite", "Boy With Luv", "Permission to Dance"],
+        "correct": "Butter",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2021 song by Billie Eilish became a massive hit and was known for its haunting sound and introspective lyrics?",
+        "options": ["Happier Than Ever", "Everything I Wanted", "No Time to Die", "Therefore I Am"],
+        "correct": "Happier Than Ever",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 song by Harry Styles became a major hit and is known for its soft rock style and nostalgic vibes?",
+        "options": ["Watermelon Sugar", "Adore You", "Lights Up", "Falling"],
+        "correct": "Watermelon Sugar",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2022 song by Harry Styles became a viral hit and was known for its catchy chorus and upbeat rhythm?",
+        "options": ["As It Was", "Late Night Talking", "Golden", "Music for a Sushi Restaurant"],
+        "correct": "As It Was",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 song by Megan Thee Stallion and Beyoncé became a cultural phenomenon with its catchy hook and empowering lyrics?",
+        "options": ["Savage Remix", "Body", "Hot Girl Summer", "Cry Baby"],
+        "correct": "Savage Remix",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2021 song by Silk Sonic (Bruno Mars and Anderson .Paak) became a global hit and was known for its smooth, retro funk sound?",
+        "options": ["Leave the Door Open", "Skate", "After Last Night", "Fly as Me"],
+        "correct": "Leave the Door Open",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 song by Travis Scott became a hit and was known for its hypnotic beat and catchy hook?",
+        "options": ["SICKO MODE", "Highest in the Room", "The Scotts", "Franchise"],
+        "correct": "Highest in the Room",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2022 song by Jack Harlow became a breakout hit and was known for its catchy, laid-back vibe?",
+        "options": ["First Class", "Industry Baby", "Whats Poppin", "Tyler Herro"],
+        "correct": "First Class",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2021 song by Doja Cat became a viral hit and was known for its catchy chorus and playful lyrics?",
+        "options": ["Kiss Me More", "Say So", "Need to Know", "Streets"],
+        "correct": "Kiss Me More",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2021 song by Olivia Rodrigo became a hit and was known for its heartbreak anthem vibe and pop-punk influence?",
+        "options": ["Good 4 U", "Brutal", "Deja Vu", "Traitor"],
+        "correct": "Good 4 U",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 song by Bad Bunny became a global hit and was known for its reggaeton and Latin trap sound?",
+        "options": ["Yo Perreo Sola", "Vete", "Ignorantes", "Dákiti"],
+        "correct": "Yo Perreo Sola",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2022 song by Beyoncé became a major hit and was known for its danceable, house music-inspired sound?",
+        "options": ["Break My Soul", "Cuff It", "Alien Superstar", "Love on Top"],
+        "correct": "Break My Soul",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2021 song by Lil Nas X became a massive hit and was known for its catchy beat and colorful, controversial music video?",
+        "options": ["Montero (Call Me by Your Name)", "Industry Baby", "Panini", "Old Town Road"],
+        "correct": "Industry Baby",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2021 song by Lil Baby and Lil Durk became a hit and was known for its introspective lyrics about struggles and success?",
+        "options": ["Every Chance I Get", "Rags2Riches", "Wants and Needs", "Humble"],
+        "correct": "Every Chance I Get",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2022 song by Lizzo became a breakout hit and was known for its empowering message and infectious chorus?",
+        "options": ["About Damn Time", "Truth Hurts", "Juice", "Good as Hell"],
+        "correct": "About Damn Time",
+        "category": "",
+        "instruction": ""
+      },
+      {
+        "question": "Which 2020 song by Post Malone became a hit and was known for its blend of pop and rock elements?",
+        "options": ["Circles", "Wow.", "Sunflower", "Goodbyes"],
+        "correct": "Circles",
         "category": "",
         "instruction": ""
       }

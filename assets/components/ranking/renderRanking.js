@@ -1,76 +1,101 @@
-export function renderCorrectAnswer (parentElement){
-    
-    let title = document.createElement("h3");
-    title.textContent = "You're Right!"
-    title.classList.add("correct");
-    parentElement.appendChild(title);
+// Nav
 
-    let score = document.createElement("h1");
-    score.textContent = "+80 Points"
-    score.classList.add("score");
-    parentElement.appendChild(score);
+export function renderQuizNav (parentElement) {
+    let quizNav = document.createElement("div");
+    quizNav.id = "quizNav";
+    parentElement.appendChild(quizNav);
 
-    renderScoreBoard(wrapper);
-    startConfetti();  //anropar confetti funktionen
+    let exitButton = document.createElement("button");
+    quizNav.appendChild(exitButton);
+    // exitButton.addEventListener... 
+
+    // sålänge
+    let pointsCon = document.createElement("div");
+    pointsCon.innerHTML = `
+        <h4>🤓</h4>
+        <p id="points">0p</p>
+    `
+    quizNav.appendChild(pointsCon);
 }
 
-/*
-player = [
-    {name: "Johan"},
-    {name: "Esmir"},
-    {name:"Theo"},
-    {name:"Johanna"},
-];
-   */
+export function renderRanking (parentElement, answer) { /*rightAnswer*/
 
-//scoreboard
-async function renderScoreBoard (parentElement){
-    
-    let correctAnswer = document.createElement("p");
-    correctAnswer.innerHTML = `<p>is the correct answer!</p>`; //lägg till backtic literals här med rätt fråga som text ${}
+    // Text
+
+    let topContainer = document.createElement("div");
+    topContainer.id = "topContainer";
+    parentElement.appendChild(topContainer);
+
+    let title = document.createElement("h3");
+    title.classList.add("rankingTitle");
+    let score = document.createElement("h1");
+    score.classList.add("rankingScore");
+    topContainer.appendChild(title);
+    topContainer.appendChild(score);
+
+    // let answer = player.latestAnswer;
+
+    if (answer === true) { /*rightAnswer*/
+        parentElement.style.backgroundColor = "var(--success)";
+        title.textContent = "You're Right!";
+        title.classList.add("correct");
+        score.textContent = "+80 Points"
+        startConfetti();
+    } else {
+        parentElement.style.backgroundColor = "var(--error)";
+        title.textContent = "Wrong Answer!";
+        title.classList.add("wrong");
+        score.textContent = "0 Points"
+    }
+
+    let correctAnswer = document.createElement("h4");
+    correctAnswer.innerHTML = `blablabla <br class="break"> is the correct answer!` //lägg till backtic literals här med rätt fråga som text ${}
     correctAnswer.classList.add("correctAnswer");
     parentElement.appendChild(correctAnswer);
 
-    let scoreboard = document.createElement("h4");
-    scoreboard.textContent = "Scoreboard";
-    scoreboard.classList.add("scoreboard");
+    // Scoreboard
+
+    let players = [
+        { emoji: "🤓", name: "Dumbledork", score: 1850 },
+        { emoji: "🔥", name: "HotShot", score: 1700 },
+        { emoji: "🎵", name: "Melody", score: 1650 },
+    ];
+
+    let scoreboard = document.createElement("div");
+    scoreboard.id = "scoreboard";
     parentElement.appendChild(scoreboard);
 
-    //Skapar en oderList
-    let ol = document.createElement("ol");
-   // ol.textContent = "Scoreboard"; //kan ha texten scoreboard här med men vet ej?
-    parentElement.appendChild(ol);
-    //För varje spelare skapas en li element med strukturen: player emoji & namn samt dess score
-   
+    let scoreBoardTitle = document.createElement("h3");
+    scoreBoardTitle.textContent = "Scoreboard";
+    scoreboard.appendChild(scoreBoardTitle);
 
+    let listCon = document.createElement("ol");
+    scoreboard.appendChild(listCon);
 
-    /* VIKTIGT!!!! AVKOMMENTERA detta sen! måste koppla till vår ARRAY!!!
-    player.forEach(player => {
-        let listItem = document.createElement("li");
+    players.forEach((player, index) => {
+        let listItem = document.createElement("div");
         listItem.classList.add("listItem");
         listItem.innerHTML = `
-        <span>${player.emoji} ${player.name}</span> 
-        <span>${player.score}</span>
-      `;
-    ol.appendChild(listItem);
-    });
- */
+            <p>${index + 1}.</p>
+            <p>${player.emoji}</p> 
+            <p>${player.name}</p>
+            <p>${player.score}</p>
+        `;
 
+      listCon.appendChild(listItem);
+    });
 
     let currentPlacement = document.createElement("h4");
-    currentPlacement.innerHTML = `You're in ... place just ... point behind ...`;   //använda <br>?
+    currentPlacement.innerHTML = `You're in ... place <br class="break"> only ... point behind ...`;   //använda <br>?
                                 
     currentPlacement.classList.add("currentPlacement");
     parentElement.appendChild(currentPlacement);
 }
-//renderCorrectAnswer(wrapper);
-
-
-
 
 // CONFETTI
+
 function startConfetti() {
-    // Globals
+
     var random = Math.random,
       cos = Math.cos,
       sin = Math.sin,
@@ -118,7 +143,7 @@ function startConfetti() {
     container.style.width = '100%';
     container.style.height = '0';
     container.style.overflow = 'visible';
-    container.style.zIndex = '9999';
+    container.style.zIndex = '1';
   
     function Confetto(theme) {
       this.frame = 0;
@@ -161,7 +186,7 @@ function startConfetti() {
       })(0);
   
       requestAnimationFrame(function loop(timestamp) {
-        var delta = 16; // fixed delta
+        var delta = 16;
         var height = window.innerHeight;
   
         for (var i = confetti.length - 1; i >= 0; --i) {

@@ -1,4 +1,16 @@
 
+.homeButtonContainer {
+    margin-top: 10px;
+}
+
+.homeButton {
+    width: 24px;
+    height: 24px;
+}
+
+.joinTitle {
+    text-align: center;
+}
 
 .gameCodePreview {
     background-color: var(--neutral100);
@@ -18,4 +30,70 @@
     font-size: 20px;
     font-weight: bold;
     letter-spacing: 80%;
+}
+
+.quizDetailsTitle,
+.waitingForPlayers {
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.waitingForPlayers {
+    margin-bottom: 36px;
+}
+
+.moderatorInfoIconContainer {
+    display: flex;
+    justify-content: end;
+}
+
+.moderatorInfoIcon {
+    height: 24px;
+    width: 24px;
+    margin-bottom: 10px;
+}
+
+.startQuizButton {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 46px;
+    align-items: center; 
+    justify-content: space-between; 
+
+    width: 100%;
+    border-radius: 1000px;
+    padding: 0 20px; 
+    background-color: var(--primary100); 
+}
+
+.startQuizButton p {
+    text-align: center;
+    justify-self: center; 
+}
+
+.startQuizButton img {
+    justify-self: end; 
+    width: 24px;
+    height: 24px;
+}
+
+.waitingForHostButton {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 46px;
+    align-items: center; 
+    justify-content: space-between; 
+
+    width: 100%;
+    border-radius: 1000px;
+    padding: 0 20px; 
+    background-color: var(--neutral300); 
+}
+
+#name.error {
+    border: 2px solid red;
+    outline: none; 
 }

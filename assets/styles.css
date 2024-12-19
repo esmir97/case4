@@ -16,6 +16,9 @@
 :root {
     --page-width: 393px;
 
+    --border1: 8px;
+    --border2: 1000px;
+
     /*  Colors    */
     --neutral100: #FFFFFF;
     --neutral200: #EBEBEB;
@@ -45,6 +48,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  line-height: auto;
 }
 
 body {
@@ -52,22 +56,23 @@ body {
 }
 
 #wrapper {
-display: flex;
-flex-direction: column;
-gap: 20px;
-padding: 20px 23px 20px 23px;
+    display: flex;
+    flex-direction: column;
+    
+    padding: 20px 23px 20px 23px;
+    min-height: 852px;
 }
 
 .hide {
     display: none;
 }
 
-#joinCard {
+/* #joinCard {
     background-color: white;
     height: 75vh;
     width: 75vw;
 }
-
+ */
 
 
 
@@ -122,4 +127,246 @@ p {
 .details {
     font-family: "Montserrat-Medium";
     font-size: 12px;
+}
+
+
+
+/* Popups */
+
+/* Leave Quiz Popup */
+.leaveOptionsContainer {
+    display: flex;
+    gap: 16px; /* 16px between Yes and No buttons */
+    justify-content: center; /* Center the buttons */
+}
+
+.leaveTitle {
+    margin-bottom: 32px;
+}
+
+.leaveQuizYes,
+.leaveQuizNo {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border2);
+}
+
+.leaveQuizYes {
+    background-color: var(--primary100); /* Yes button color */
+    color: #fff; /* Text color for Yes button */
+}
+
+.leaveQuizNo {
+    border: 2px solid var(--primary100); /* Border color for No button */
+    background-color: var(--neutral100); /* Fill color for No button */
+}
+
+.leaveQuizNo p {
+    color: var(--primary100); /* Text color for No button */
+}
+
+.leaveQuizYes:hover {
+    background-color: var(--primary200); /* Slightly darker shade for hover effect */
+}
+
+.leaveQuizNo:hover {
+    background-color: var(--neutral200); /* Slightly darker shade for hover effect */
+}
+
+
+/* Moderator Information Popup */
+.moderatorInformationTitle {
+    margin-bottom: 16px;
+}
+
+/* Join Game Popup */
+.overlay {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.middlePopup {
+    position: relative; 
+    display: flex;
+    flex-direction: column;    
+
+    width: calc(100% - 46px); 
+    margin: 0 23px; 
+    border-radius: 8px;
+    border: 1px solid #FFF;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 237, 255, 0.10) 100%);
+    backdrop-filter: blur(17.5px);
+
+    padding: 40px 32px;
+}
+
+.closeButton {
+    position: absolute; 
+    top: 12px; 
+    right: 12px; 
+    height: 24px;
+    width: 24px;
+    cursor: pointer; 
+}
+
+.middlePopupTitle {
+    margin-bottom: 32px;
+}
+
+.middlePopup input {
+    border-radius: 100px;
+    border: 1px solid var(--primary100);
+    background: var(--neutral100);
+    box-shadow: 0px 2px 8px 0px rgba(109, 109, 109, 0.25);
+
+    height: 46px;
+    width: 100%;
+    text-align: center;
+
+    margin-top: 16px;
+}
+
+
+/* Start Game Popup */
+.startOverlay {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    
+    display: flex;
+    align-items: end;    
+    
+    background-color: rgba(0, 0, 0, 0.3);
+
+    z-index: 99;
+}
+
+.popup {
+    display: flex;
+    flex-direction: column;    
+
+    border-radius: 40px 40px 0px 0px;
+    border: 1px solid #FFF;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 237, 255, 0.10) 100%);
+    backdrop-filter: blur(17.5px);
+
+    padding: 20px 32px 44px 32px;
+    z-index: 100;
+}
+
+.dragClose {
+    background-color: var(--neutral100);
+    margin: 0 auto 24px auto;
+    width: 45px;
+    height: 3px;
+    flex-shrink: 0;
+    border-radius: var(--border2);
+}
+
+.popup h3 {
+    margin-bottom: 4px;
+}
+
+.amountOfQuestions {
+    margin-bottom: 32px;
+}
+
+/* Slider */
+.slider-container {
+    text-align: center;
+    color: var(--neutral100);
+}
+
+input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+}
+
+#selected-decade {
+    font-family: "Montserrat-Medium";
+    font-size: 16px;
+}
+
+
+.popup #slider {
+    margin-top: 24px;
+}
+
+.popup #name {
+    border-radius: var(--border2);
+    border: 1px solid var(--primary100);
+    background: var(--neutral100);
+    box-shadow: 0px 2px 8px 0px rgba(109, 109, 109, 0.25);
+
+    height: 46px;
+    text-align: center;
+
+    margin-top: 24px;
+
+    font-size: 16px;
+}
+
+.line {
+    height: 1px;
+    background-color: var(--neutral100);
+
+    margin: 32px 0;
+}
+
+.startButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 46px;
+    width: 329px;
+
+    background-color: var(--primary100);
+    border-radius: 1000px;
+    box-shadow: 0px 2px 8px 0px rgba(109, 109, 109, 0.25);
+}
+
+.mixedQuestionsButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 46px;
+    width: 329px;
+
+    background-color: var(--neutral100);
+    border: 1px solid var(--primary100);
+    border-radius: 1000px;
+    box-shadow: 0px 2px 8px 0px rgba(109, 109, 109, 0.25);
+}
+
+.popup select {
+    margin-top: 16px;
+}
+
+.mixedQuestionsButton p {
+    color: var(--neutral700);
+}
+
+.orText {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.clickedButton {
+    background-color: var(--secondary200);
 }

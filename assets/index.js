@@ -8,8 +8,10 @@ const wrapper = document.getElementById("wrapper");
 
 renderStart(wrapper);
 // renderQuizNav(wrapper);
+// renderRanking(wrapper, false);
 // renderQuizHeader(wrapper);
+// renderQuizCounter(wrapper);
 // renderQuizQuestion(wrapper);
-//renderCorrectAnswer(wrapper);
 
 //renderWrongAnswer(wrapper);
+// renderFinalScore(wrapper);

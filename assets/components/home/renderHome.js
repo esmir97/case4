@@ -1,95 +1,63 @@
 import { renderLobby } from "./../lobby/renderLobby.js";
 import { ws } from "../../index.js";
 
-export function renderStart (parentElement) {    
+export function renderStart(parentElement) {
 
-    // Övre delen
-    let title = document.createElement("h2");
-    title.textContent = "Join Quiz";
-    title.classList.add("title");
-    parentElement.appendChild(title);
+    parentElement.innerHTML = `
+        <h2 class="title">Join Quiz</h2>
+        <div class="joinOptions">
+            <input id="joinCode" class="codeOption" placeholder="Enter Pin">
+            <p class="details">or</p>
+            <div id="buttonQR" class="qrButton">
+                <img src="/static/media/icons/QrCode.svg" class="qr">
+            </div>
+        </div>
+        <div class="divider"></div>
 
-    let joinOptions = document.createElement("div");
-    joinOptions.classList.add("joinOptions");
-    parentElement.appendChild(joinOptions);
-    
-    const joinCode = document.createElement("input");
-    joinCode.id = "joinCode";
-    joinCode.classList.add("codeOption");
-    joinCode.placeholder = "Enter Pin";
-    joinOptions.appendChild(joinCode);
+        <div class="popularTitleSection">
+            <h3 class="popularTitel">Popular Right Now</h3>
+            <img src="/static/media/icons/nextPink.svg" class="arrow">
+        </div>
+        <div class="popularSection"></div>
+
+        <h3 class="allGenresTitel">All Genres</h3>
+        <div class="allGenresContainer"></div>
+        <p class="details creatorText">Made by Malmö University Students</p>
+    `;
+
+    const joinCode = parentElement.querySelector("#joinCode");
     joinCode.addEventListener("keydown", joinGame);
-    
-    const text = document.createElement("p");
-    text.classList.add("details");
-    text.textContent = "or";
-    joinOptions.appendChild(text);
 
-    const buttonQR = document.createElement("div");
-    buttonQR.id = "buttonQR";
-    buttonQR.classList.add("qrButton");
-    buttonQR.innerHTML = `
-        <img src="/static/media/icons/QrCode.svg" class="qr">
-    `;
-    joinOptions.appendChild(buttonQR);
-    //buttonPin.addEventListener("click" ); QR-code function
-
-    const divider = document.createElement("div");
-    divider.classList.add("divider");
-    parentElement.appendChild(divider);
-
-
-    // Mellersta delen
-    // Titel och Pil
-    let popularTitleSection = document.createElement("div");
-    popularTitleSection.classList.add("popularTitleSection");
-    popularTitleSection.innerHTML = `
-        <h3 class="popularTitel">Popular Right Now</h3>
-        <img src="/static/media/icons/next2.svg" class="arrow">
-    `;
-    parentElement.appendChild(popularTitleSection);
-    
-    let popularSection = document.createElement("div");
-    popularSection.classList.add("popularSection");
-    parentElement.appendChild(popularSection);
+    const popularSection = parentElement.querySelector(".popularSection");
     renderGenres(popularSection);
 
-
-    // Nedre delen
-    // Titel
-    let allGenresTitel = document.createElement("h3");
-    allGenresTitel.textContent = "All Genres";
-    allGenresTitel.classList.add("allGenresTitel");
-    parentElement.appendChild(allGenresTitel);
-
-    let allGenresContainer = document.createElement("div");
-    allGenresContainer.classList.add("allGenresContainer");
-    parentElement.appendChild(allGenresContainer);    
+    const allGenresContainer = parentElement.querySelector(".allGenresContainer");
     renderGenres(allGenresContainer);
-    
 }
 
-function renderGenres (parentElement) {
-    const allGenres = ["Pop", "Rock", "Christmas", "R&B", "Hiphop", "Jazz", "Country", "Folk"];
+function renderGenres(parentElement) {
+    const allGenres = ["Best of Centurys", "R&B", "Rock", "Country", "Hiphop", "Pop", "Pop", "Folk"];
 
     for (let genre of allGenres) {
         const div = document.createElement("div");
         div.id = genre;
         div.classList.add("genre");
         div.innerHTML = `
-                        <div class="genreImg">
-                            <img src="/static/media/images/${genre}.jpg">
-                        </div>
-                        <div class="genreText">
-                            <p class="p-bold">${genre}</p>
-                        </div>
+            <div class="genreImg">
+                <img src="/static/media/images/${genre}.jpg">
+            </div>
+            <div class="genreText">
+                <p class="p-bold">${genre}</p>
+            </div>
         `;
         div.addEventListener("click", newGameCard);
         parentElement.appendChild(div);
     }
 }
 
-async function createNewGame (event) {
+async function createNewGame(event) {
+    let centuryLOL = document.getElementById("slider").value;
+    let century = centuryLOL.slice(2);
 
     if (event.type == "click") {
         let genre = event.currentTarget.id;
@@ -140,12 +108,12 @@ async function createNewGame (event) {
 async function newGameCard(event) {
     event.stopPropagation();
     console.log(event.currentTarget.id);
-    
+
     let wrapper = document.querySelector('#wrapper');
     let startGamePopup = document.createElement("div");
-    startGamePopup.classList.add("overlay");
-   
-    startGamePopup.innerHTML = 
+    startGamePopup.classList.add("startOverlay");
+
+    startGamePopup.innerHTML =
         `<div id="card" class="popup">
             <div class="dragClose"></div>
             <h3>${event.currentTarget.id}</h3>
@@ -160,8 +128,8 @@ async function newGameCard(event) {
                 <p>Mixed Questions</p>
             </div>
             <div class="line"></div>
-            <h4 class="h4-bold">Name</h4>
-            <input id="name" type="text" placeholder="eg. theo">
+            <h4 class="h4-bold">Name *</h4>
+            <input id="name" type="text" placeholder="eg. Theo" class="name-input">
             <div class="line"></div>
             <div class="startButton" id="${event.currentTarget.id}">
                 <p>Start Quiz</p>
@@ -173,27 +141,22 @@ async function newGameCard(event) {
     });
 
     wrapper.appendChild(startGamePopup);
-    
-    let mixedQuestionsButton = document.querySelector(".mixedQuestionsButton");
-    let output = document.getElementById('selected-decade');
+
+    const mixedQuestionsButton = document.querySelector(".mixedQuestionsButton");
+    const output = document.getElementById('selected-decade');
+    const nameInput = document.getElementById('name');
+    const startButton = document.querySelector(".startButton");
 
     document.getElementById("card").addEventListener("click", (event) => {
         event.stopPropagation();
     });
 
-    document.querySelector(".startButton").addEventListener("click", createNewGame);
-
     // Slider
     const slider = document.getElementById('slider');
-    
-    // Ändrar så att output är samma som årtalet
     slider.addEventListener('input', () => {
         const decade = slider.value;
-        console.log(slider.value);
         output.textContent = formatDecade(decade);
     });
-
-    // Default värde på output
     output.textContent = formatDecade(slider.value);
 
     mixedQuestionsButton.addEventListener("click", () => {
@@ -205,8 +168,19 @@ async function newGameCard(event) {
             output.style.display = "block";
         }
     });
-}
 
+    // Start button click handler
+    startButton.addEventListener("click", () => {
+        if (nameInput.value.trim().length === 0) {
+            nameInput.classList.add("error");
+            nameInput.placeholder = "Name is required"; // Optional for better UX
+        } else {
+            nameInput.classList.remove("error");
+            const genre = startButton.id; // Retrieve the genre from the startButton's ID
+            createNewGame({ genre }); // Pass as an object
+        }
+    });
+}
 
 function formatDecade(value) {
     const suffix = value.slice(-2) === '60' ? '60s' : value.slice(-2) + 's';
@@ -237,7 +211,8 @@ async function joinGame(event) {
         }*/
 
         
-    }
+        }
+    
     return;
 }
 
