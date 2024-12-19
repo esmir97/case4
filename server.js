@@ -215,6 +215,8 @@ function handleWebSocket (request) { //Säger vad som ska hända på serversidan
                 break;
 
             case "createGame":
+                console.log("DATA HEEEERE<----------------------");
+                console.log(message.data);
                 createGame(socket, message.data.genre, message.data.century, message.data.name);
                 break;
             
