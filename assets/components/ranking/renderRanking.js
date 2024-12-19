@@ -1,5 +1,4 @@
 
-
 export function renderQuizNav (parentElement) {
     let quizNav = document.createElement("div");
     quizNav.id = "quizNav";
@@ -94,7 +93,7 @@ export function renderRanking (parentElement, answer) { /*rightAnswer*/
 
 // CONFETTI
 
-export function startConfetti() {
+function startConfetti() {
     // Globals
     var random = Math.random,
       cos = Math.cos,
