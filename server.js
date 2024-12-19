@@ -104,9 +104,12 @@ function send(socket, event, data) {
 
 function broadcast(event, data) {
     let game = _state.games.find( (game) => {
+        console.log ("Comparing " + game.code + " AND " + data.code)
         return data.code == game.code;
     });
-
+    console.log("HEEEEEJ HÄR KOMMER DATAN <---------------------------------------")
+    console.log(data);
+    console.log(game);
     for (let player of game.players) {
         if (player.connection && player.connection.readyState === WebSocket.OPEN) {
             console.log("Sending to " + player.id);
@@ -231,6 +234,10 @@ function handleWebSocket (request) { //Säger vad som ska hända på serversidan
                 break;
             case "getGame":
                 getGame(socket, message.data);
+                break;
+            case "startGame":
+                console.log('Starting game!');
+                startGame(socket, message.data);
                 break;
         }
     });
@@ -404,5 +411,17 @@ function cleanupConnections() {
 }
 setInterval(cleanupConnections, 30000);
 */
+
+function startGame(socket, code) {
+    let foundGame = _state.games.find( (game) => {
+        return game.code == code;
+    });
+
+    console.log(code);
+    console.log(foundGame);
+
+    
+    broadcast("startedGame", foundGame);
+}
 
 Deno.serve(handleRequest);

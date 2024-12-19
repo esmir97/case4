@@ -148,6 +148,10 @@ export async function renderLobby(parentElement, game) {
             <img src="/static/media/icons/next.svg" class="startQuizArrow">
         `;
         parentElement.appendChild(startQuizButton);
+        startQuizButton.addEventListener("click", (event) => {
+            ws.send(JSON.stringify( {event: "startGame", data: game.code}));
+        });
+
     } else {
         let startQuizButton = document.createElement("div");
         startQuizButton.classList.add("waitingForHostButton");

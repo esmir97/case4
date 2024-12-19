@@ -2,6 +2,9 @@ import { playerJoined } from "./../components/lobby/renderLobby.js";
 import { playerLeft } from "./../components/lobby/renderLobby.js";
 import { playerChangedName } from "./../components/lobby/renderLobby.js";
 import { renderLobby } from "./../components/lobby/renderLobby.js";
+import { renderQuizNav } from "../components/quiz/renderQuiz.js";
+import { renderQuizHeader } from "../components/quiz/renderQuiz.js";
+import { renderQuizCounter } from "../components/quiz/renderQuiz.js";
 
 export let game;
 
@@ -53,6 +56,12 @@ export function establishWebsocket () {
             case "gotGame":
                 game = message.data;
                 break;
+
+            case "startedGame":
+                let wrapper = document.querySelector("#wrapper");
+                renderQuizNav(wrapper);
+                renderQuizHeader(wrapper);
+                renderQuizCounter(wrapper);
         }
         //socket.send(event.data);
     
