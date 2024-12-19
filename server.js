@@ -63,7 +63,12 @@ function getQuestionsForGame(genre, century) { //Randomises an array with 20 que
     
     let questionsToChooseFrom = [];
     let chosenQuestions = [];
-    century = century.toString();
+    console.log(century);
+    if (typeof century != 'string') {
+        century = century.toString();
+        console.log("'Century' value is not a string! :)")
+    }
+    
     
     if (century != "mixed") {
         genre = genre.toLowerCase();
@@ -73,7 +78,6 @@ function getQuestionsForGame(genre, century) { //Randomises an array with 20 que
         }
         
     } else {
-
         let questionGenre = testData[genre];
 
         for (let century in questionGenre) {
@@ -82,7 +86,6 @@ function getQuestionsForGame(genre, century) { //Randomises an array with 20 que
             }
         }
     }
-    
 
     for (let i = 0; i < 20; i++) {
         chosenQuestions.push(questionsToChooseFrom[Math.floor( Math.random() * questionsToChooseFrom.length )]);
@@ -310,6 +313,7 @@ async function createGame (socket, genre, century, name) {
                       
     let newCode = generateGameCode();
     let questions = getQuestionsForGame(genre, century);
+    console.log("century: " + century);
 
     let newPlayerID = generateConnectionID();
 
