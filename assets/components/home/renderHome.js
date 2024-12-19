@@ -157,16 +157,21 @@ async function newGameCard(event) {
     });
     output.textContent = formatDecade(slider.value);
 
+    let decade = null;
+
     mixedQuestionsButton.addEventListener("click", () => {
         mixedQuestionsButton.classList.toggle("clickedButton");
 
         if (mixedQuestionsButton.classList.contains("clickedButton")) {
             output.style.display = "none";
+            decade = 'mixed';
         } else {
             output.style.display = "block";
+            decade = slider.value.slice(2);
         }
     });
 
+    
     // Start button click handler
     startButton.addEventListener("click", () => {
         if (nameInput.value.trim().length === 0) {
@@ -176,7 +181,7 @@ async function newGameCard(event) {
             nameInput.classList.remove("error");
             const genre = startButton.id;
             console.log(slider.value.slice(2));
-            ws.send(JSON.stringify( {event: "createGame", data: {genre: genre, century: slider.value.slice(2), name: nameInput.value}}));
+            ws.send(JSON.stringify( {event: "createGame", data: {genre: genre, century: decade, name: nameInput.value}}));
                                 // Retrieve the genre from the startButton's ID
              // Pass as an object
         }
