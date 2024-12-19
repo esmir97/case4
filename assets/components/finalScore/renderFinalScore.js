@@ -1,10 +1,50 @@
 
 export function renderFinalScore (parentElement) {
     // Header
-    let header = document.createElement("h1");
-    header.textContent = "FINAL SCORE";
-    header.classList.add("scoreHeader");
+    let header = document.createElement("div");
+    header.id = "finalHeader";
     parentElement.appendChild(header);
+
+    header.innerHTML = `
+        <div class="homeButtonContainer">
+            <img src="/static/media/icons/back.svg" class="homeButton">
+        </div>
+        <h1>FINAL SCORE</h1>
+    `;
+
+    const homeButtonContainer = parentElement.querySelector(".homeButtonContainer");
+    homeButtonContainer.addEventListener("click", () => {
+        const wrapper = document.querySelector("#wrapper");
+        const overlay = document.createElement("div");
+        overlay.classList.add("overlay");
+        overlay.innerHTML = `
+            <div class="middlePopup">
+                <img src="/static/media/icons/close.svg" class="closeButton">
+                <h3 class="leaveTitle">Leave Quiz?</h3>
+                <div class="leaveOptionsContainer">
+                    <div class="leaveQuizYes">
+                        <p>Yes</p>
+                    </div>
+                    <div class="leaveQuizNo">
+                        <p>No</p>
+                    </div>
+                </div>
+            </div>
+        `;
+        wrapper.appendChild(overlay);
+    
+        overlay.addEventListener("click", () => overlay.remove());
+        const popup = overlay.querySelector(".middlePopup");
+        popup.addEventListener("click", (event) => event.stopPropagation());
+        const closeButton = overlay.querySelector(".closeButton");
+        closeButton.addEventListener("click", () => overlay.remove());
+    
+        overlay.querySelector(".leaveQuizYes").addEventListener("click", () => {
+            wrapper.innerHTML = "";
+            renderStart(wrapper);
+        });
+        overlay.querySelector(".leaveQuizNo").addEventListener("click", () => overlay.remove());
+    });
 
     // Podium
     // Ska ändras till rätt spelare 
@@ -82,7 +122,7 @@ export function renderFinalScore (parentElement) {
     // Final Placement
 
     let finalPlacement = document.createElement("h4");
-    finalPlacement.innerHTML = `Good Job! <br class="break"> You finished in ...`;
+    finalPlacement.innerHTML = `Good Job! <br class="break"> You finished in ... place`;
                                 
     finalPlacement.classList.add("finalPlacement");
     parentElement.appendChild(finalPlacement);
@@ -103,7 +143,7 @@ export function renderFinalScore (parentElement) {
 // CONFETTI
 
 function startConfetti() {
-    // Globals
+
     var random = Math.random,
       cos = Math.cos,
       sin = Math.sin,
@@ -194,7 +234,7 @@ function startConfetti() {
       })(0);
   
       requestAnimationFrame(function loop(timestamp) {
-        var delta = 16; // fixed delta
+        var delta = 16;
         var height = window.innerHeight;
   
         for (var i = confetti.length - 1; i >= 0; --i) {
