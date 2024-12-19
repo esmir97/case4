@@ -150,7 +150,7 @@ async function newGameCard(event) {
                 <p>Mixed Questions</p>
             </div>
             <div class="line"></div>
-            <h4 class="h4-bold">Name</h4>
+            <h4 class="h4-bold">Name *</h4>
             <input id="name" type="text" placeholder="eg. Theo" class="name-input">
             <div class="line"></div>
             <div class="startButton" id="${event.currentTarget.id}">
@@ -213,17 +213,15 @@ async function joinGame(event) {
 
     if (event.key === "Enter") {
         let code = document.getElementById("joinCode").value;
-
-        if (code.length !== 6) renderError("wrapper", "Code needs to be 6 characters long");
-        
+        let inputField = document.querySelector("#joinCode");
+    
         let options = { method: "POST", headers: { "Content-Type": "application/json"}, body: JSON.stringify({"code": code}) };
 
         let response = await( await fetch(`/api/test`, options) ).json();
         console.log(response);
         if (response == "game doesn't exist") {
-            
-            renderError("wrapper", "No game with that code exists");
-
+            inputField.value = "";
+            inputField.placeholder = "Invalid Code"; // Optional for better UX
         } else {
             let player = JSON.stringify(response.players[response.players.length - 1]);
             console.log(player);
