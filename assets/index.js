@@ -6,11 +6,11 @@ import { establishWebsocket } from "./logic/client.js";
 export const ws = establishWebsocket();
 const wrapper = document.getElementById("wrapper");
 
-// renderStart(wrapper);
-renderQuizNav(wrapper);
+renderStart(wrapper);
+//renderQuizNav(wrapper);
 // renderRanking(wrapper, false);
-renderQuizHeader(wrapper);
-renderQuizCounter(wrapper);
+//renderQuizHeader(wrapper);
+//renderQuizCounter(wrapper);
 // renderQuizQuestion(wrapper);
 
 //renderWrongAnswer(wrapper);
