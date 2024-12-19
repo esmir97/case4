@@ -88,10 +88,10 @@ export function renderQuizQuestion (parentElement) {
             <div id="progressBar"></div>
         </div>
         <div id="optionsContainer">
-            <button class="optionButton">No dark sarcasm in the classroom.</button>
-            <button class="optionButton">No fear, no pain.</button>
-            <button class="optionButton">Just leave us alone.</button>
-            <button class="optionButton">Just give us something to sing.</button>
+            <button class="optionButton"><p>No dark sarcasm in the classroom.</p></button>
+            <button class="optionButton"><p>No fear, no pain.</p></button>
+            <button class="optionButton"><p>Just leave us alone.</p></button>
+            <button class="optionButton"><p>Just give us something to sing.</p></button>
         </div>
     `;
 
