@@ -60,9 +60,10 @@ export async function renderLobby(parentElement, game) {
         quizDetailsTitle.textContent = game.century + "´s " + game.genre + " Quiz";
     }
 
-    common.homePopup(parentElement);
+    // Home Button Behaviour
+    const homeButtonContainer = parentElement.querySelector(".homeButtonContainer");
+    homeButtonContainer.addEventListener("click", common.homePopup);
     
-
     // Add moderator info overlay behavior
     const moderatorInfoIconContainer = parentElement.querySelector(".moderatorInfoIconContainer");
     moderatorInfoIconContainer.addEventListener("click", () => {
