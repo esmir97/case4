@@ -71,7 +71,9 @@ function getQuestionsForGame(genre, century) { //Randomises an array with 20 que
 
     
     if (century != "mixed") {
-        genre = genre.toLowerCase();
+
+        if (genre != "Best of decades") genre = genre.toLowerCase();
+        
         let requestedQuestions = questions[genre][century];    
 
         for (let question of requestedQuestions) {
@@ -221,6 +223,9 @@ function handleWebSocket (request) { //Säger vad som ska hända på serversidan
             case "startGame":
                 console.log('Starting game!');
                 startGame(socket, message.data);
+                break;
+            case "kickPlayer":
+                kickPlayer(message.data);
                 break;
         }
     });
@@ -389,6 +394,40 @@ function startGame(socket, code) {
 
     
     broadcast("startedGame", foundGame);
+}
+
+function kickPlayer (data) {
+    let playerID = data.id;
+    let code = data.code;
+
+    console.log("playerID: " + playerID);
+    console.log("code: " + code);
+
+    let game = _state.games.find( (game) => {
+        console.log("COMPARING " + code + " AND " + game.code);
+        return game.code == code;
+    });
+
+    console.log(game);
+    let kickedPlayer;
+
+    for (let i = 0; i < game.players.length; i++) {
+        if (game.players[i].id == playerID) {
+            kickedPlayer = game.players[i];
+            game.players.splice(i, 1);
+        }
+    }
+
+    
+
+    console.log("KICKING THIS BOZO BAHA @@@@@@@@@@@@@@@@@@@@@@@@@@");
+    console.log(kickedPlayer);
+
+    console.log(game);
+    send(kickedPlayer.connection, "youWereKicked", null);
+    broadcast("someoneLeft", {code: code, playerID: playerID});
+
+
 }
 
 Deno.serve(handleRequest);
