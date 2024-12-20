@@ -1,30 +1,66 @@
 // deno run -A --watch server.js
 
 export function renderQuizNav (parentElement) {
+    parentElement.innerHTML = ``;
+
     let quizNav = document.createElement("div");
     quizNav.id = "quizNav";
     parentElement.appendChild(quizNav);
 
-    let exitButton = document.createElement("button");
-    quizNav.appendChild(exitButton);
-    // exitButton.addEventListener... 
-
-    // sålänge
-    let pointsCon = document.createElement("div");
-    pointsCon.innerHTML = `
-        <h4>🤓</h4>
-        <p id="points">0p</p>
+    quizNav.innerHTML = `
+        <div class="homeButtonContainer">
+            <img src="/static/media/icons/back.svg" class="homeButton">
+        </div>
+        <div class="pointsCon">
+            <h4>🤓</h4>
+            <p id="points">0p</p>
+        </div>
     `
-    quizNav.appendChild(pointsCon);
+
+    const homeButtonContainer = parentElement.querySelector(".homeButtonContainer");
+    homeButtonContainer.addEventListener("click", () => {
+        const wrapper = document.querySelector("#wrapper");
+        const overlay = document.createElement("div");
+        overlay.classList.add("overlay");
+        overlay.innerHTML = `
+            <div class="middlePopup">
+                <img src="/static/media/icons/close.svg" class="closeButton">
+                <h3 class="leaveTitle">Leave Quiz?</h3>
+                <div class="leaveOptionsContainer">
+                    <div class="leaveQuizYes">
+                        <p>Yes</p>
+                    </div>
+                    <div class="leaveQuizNo">
+                        <p>No</p>
+                    </div>
+                </div>
+            </div>
+        `;
+        wrapper.appendChild(overlay);
+    
+        overlay.addEventListener("click", () => overlay.remove());
+        const popup = overlay.querySelector(".middlePopup");
+        popup.addEventListener("click", (event) => event.stopPropagation());
+        const closeButton = overlay.querySelector(".closeButton");
+        closeButton.addEventListener("click", () => overlay.remove());
+    
+        overlay.querySelector(".leaveQuizYes").addEventListener("click", () => {
+            wrapper.innerHTML = "";
+            renderStart(wrapper);
+        });
+        overlay.querySelector(".leaveQuizNo").addEventListener("click", () => overlay.remove());
+    });
 }
 
-export function renderQuizHeader (parentElement, /* category */) {
+export function renderQuizHeader (parentElement, /* year and genre */) {
     let header = document.createElement("div");
     header.id = "quizHeader";
     parentElement.appendChild(header);
 
-    let headerText = document.createElement("h1");
-    headerText.textContent = "Finish the lyrics!"; // category 
+    let headerText = document.createElement("div");
+    headerText.innerHTML = `
+        <h1>Year <br> Genre</h1>
+    `;
     header.appendChild(headerText);
 }
 
@@ -66,8 +102,8 @@ export function renderQuizCounter (parentElement) {
             counterCon.remove();
         }
     }, 1000);
-
 }
+
 
 export function renderQuizQuestion (parentElement) {
     const quizContent = document.createElement("div");
@@ -80,16 +116,16 @@ export function renderQuizQuestion (parentElement) {
             <p>1 / 20</p>
         </div>
         <div id="questionText">
-            <p>We don’t need no education, we don’t need no thought control...</p>
+            <p>We don’t need no education, we don’t need no thought control...We don’t need no education, we don’t need no thought control...</p>
         </div>
         <div id="progressBarContainer">
             <div id="progressBar"></div>
         </div>
         <div id="optionsContainer">
-            <button class="optionButton">No dark sarcasm in the classroom.</button>
-            <button class="optionButton">No fear, no pain.</button>
-            <button class="optionButton">Just leave us alone.</button>
-            <button class="optionButton">Just give us something to sing.</button>
+            <button class="optionButton"><p>No dark sarcasm in the classroom.</p></button>
+            <button class="optionButton"><p>No fear, no pain.</p></button>
+            <button class="optionButton"><p>Just leave us alone.</p></button>
+            <button class="optionButton"><p>Just give us something to sing.</p></button>
         </div>
     `;
 

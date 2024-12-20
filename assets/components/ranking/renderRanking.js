@@ -1,3 +1,4 @@
+// Nav
 
 export function renderQuizNav (parentElement) {
     let quizNav = document.createElement("div");
@@ -94,7 +95,7 @@ export function renderRanking (parentElement, answer) { /*rightAnswer*/
 // CONFETTI
 
 function startConfetti() {
-    // Globals
+
     var random = Math.random,
       cos = Math.cos,
       sin = Math.sin,
@@ -185,7 +186,7 @@ function startConfetti() {
       })(0);
   
       requestAnimationFrame(function loop(timestamp) {
-        var delta = 16; // fixed delta
+        var delta = 16;
         var height = window.innerHeight;
   
         for (var i = confetti.length - 1; i >= 0; --i) {
