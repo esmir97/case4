@@ -3,7 +3,8 @@ import { game } from "../../logic/client.js";
 import { handlePopup } from "../common/common.js";
 import { renderStart } from "../home/renderHome.js";
 import * as common from "../common/common.js";
-
+import { renderPlayers } from "../../logic/helpers.js";
+ 
 let globalGame;
 
 export async function renderLobby(parentElement, game) {
@@ -59,35 +60,8 @@ export async function renderLobby(parentElement, game) {
         quizDetailsTitle.textContent = game.century + "´s " + game.genre + " Quiz";
     }
 
-    // Add home button overlay behavior
-    const homeButtonContainer = parentElement.querySelector(".homeButtonContainer");
-    homeButtonContainer.addEventListener("click", () => {
-        const wrapper = document.querySelector("#wrapper");
-        const overlay = document.createElement("div");
-        overlay.classList.add("overlay");
-        overlay.innerHTML = `
-            <div class="middlePopup">
-                <img src="/static/media/icons/close.svg" class="closeButton">
-                <h3 class="leaveTitle">Leave Quiz?</h3>
-                <div class="leaveOptionsContainer">
-                    <div class="leaveQuizYes">
-                        <p>Yes</p>
-                    </div>
-                    <div class="leaveQuizNo">
-                        <p>No</p>
-                    </div>
-                </div>
-            </div>
-        `;
-        wrapper.appendChild(overlay);
-
-        common.handlePopup();
-        
-        overlay.querySelector(".leaveQuizYes").addEventListener("click", () => {
-            wrapper.innerHTML = "";
-            renderStart(wrapper);
-        });
-    });
+    common.homePopup(parentElement);
+    
 
     // Add moderator info overlay behavior
     const moderatorInfoIconContainer = parentElement.querySelector(".moderatorInfoIconContainer");
@@ -106,73 +80,10 @@ export async function renderLobby(parentElement, game) {
         common.handlePopup();
     });
 
+    // Rendera alla spelare
+    renderPlayers(parentElement, player, game);
+
     //Understa delen
-    let playerContainer = document.createElement("div");
-    playerContainer.id = "playerContainer";
-    parentElement.appendChild(playerContainer);
-    //let game = await (await fetch(`/api/test?code=${gameCode}`)).json();
-
-    game.players.forEach((player) => {
-        const div = document.createElement("div");
-        const p = document.createElement("p");
-        p.textContent = `${player.emoji} ${player.name}`;
-        div.classList.add("playerLobby");
-        div.id = `${player.id}`;
-
-        div.appendChild(p);
-        playerContainer.appendChild(div);
-    });
-
-    playerContainer.addEventListener("click", (event) => {
-
-        let clickedElement = event.target.closest(".playerLobby");
-        if (player.role === "admin" && clickedElement) {
-            const playerId = clickedElement.id;
-            const playerName = clickedElement.querySelector("p").textContent.split(" ").slice(1).join(" ");
-
-            if (player.role === "admin" && playerId === player.id) {
-                console.log("You cannot kick yourself!");
-                return; 
-            }
-
-            const overlay = document.createElement("div");
-            overlay.classList.add("overlay");
-            overlay.innerHTML = `
-                <div class="middlePopup">
-                    <img src="/static/media/icons/close.svg" class="closeButton">
-                    <h3 class="leaveTitle">Kick: "${playerName}"?</h3>
-                    <div class="leaveOptionsContainer">
-                        <div class="leaveQuizYes">
-                            <p>Yes</p>
-                        </div>
-                        <div class="leaveQuizNo">
-                            <p>No</p>
-                        </div>
-                    </div>
-                </div>
-            `;
-
-            wrapper.appendChild(overlay);
-
-            common.handlePopup();
-            
-
-            overlay.querySelector(".leaveQuizYes").addEventListener("click", () => {
-                const playerElement = document.getElementById(playerId);
-                if (playerElement) {
-                    playerElement.parentElement.removeChild(playerElement);
-                }
-
-                console.log(`Player "${playerName}" with ID ${playerId} has been kicked.`);
-
-                // Kick player Function here
-
-                wrapper.removeChild(overlay);
-            });
-        }
-    });
-    // End of this shit
-
     if (player.name == "") {
         renderNameCard();
     }
