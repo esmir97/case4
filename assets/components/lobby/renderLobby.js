@@ -1,6 +1,8 @@
 import { ws } from "../../index.js";
 import { game } from "../../logic/client.js";
+import { handlePopup } from "../common/common.js";
 import { renderStart } from "../home/renderHome.js";
+import * as common from "../common/common.js";
 
 let globalGame;
 
@@ -79,17 +81,13 @@ export async function renderLobby(parentElement, game) {
         `;
         wrapper.appendChild(overlay);
 
-        overlay.addEventListener("click", () => overlay.remove());
-        const popup = overlay.querySelector(".middlePopup");
-        popup.addEventListener("click", (event) => event.stopPropagation());
-        const closeButton = overlay.querySelector(".closeButton");
-        closeButton.addEventListener("click", () => overlay.remove());
-
+        common.handlePopup();
+        
+        overlay.querySelector(".leaveQuizNo").addEventListener("click", () => overlay.remove());
         overlay.querySelector(".leaveQuizYes").addEventListener("click", () => {
             wrapper.innerHTML = "";
             renderStart(wrapper);
         });
-        overlay.querySelector(".leaveQuizNo").addEventListener("click", () => overlay.remove());
     });
 
     // Add moderator info overlay behavior
@@ -107,11 +105,7 @@ export async function renderLobby(parentElement, game) {
         `;
         wrapper.appendChild(overlay);
 
-        overlay.addEventListener("click", () => overlay.remove());
-        const popup = overlay.querySelector(".middlePopup");
-        popup.addEventListener("click", (event) => event.stopPropagation());
-        const closeButton = overlay.querySelector(".closeButton");
-        closeButton.addEventListener("click", () => overlay.remove());
+        common.handlePopup();
     });
 
 
@@ -166,9 +160,8 @@ export async function renderLobby(parentElement, game) {
 
             wrapper.appendChild(overlay);
 
-            overlay.addEventListener("click", () => overlay.remove());
-            const closeButton = overlay.querySelector(".closeButton");
-            closeButton.addEventListener("click", () => overlay.remove());
+            common.handlePopup();
+            
             overlay.querySelector(".leaveQuizNo").addEventListener("click", () => overlay.remove());
 
             overlay.querySelector(".leaveQuizYes").addEventListener("click", () => {
@@ -312,7 +305,6 @@ export async function playerJoined(message) {
     playerContainer.appendChild(div);
 
     console.log("player joined");
-
 }
 
 export async function playerLeft(message) {
