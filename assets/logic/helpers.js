@@ -1,4 +1,5 @@
 import * as common from "../components/common/common.js";
+import { ws } from "../index.js";
 
 export function renderPlayers(parentElement, player, game) {
     let playerContainer = document.createElement("div");
@@ -54,6 +55,7 @@ export function renderPlayers(parentElement, player, game) {
                 overlay.querySelector(".leaveQuizYes").addEventListener("click", () => {
                     const playerElement = document.getElementById(playerId);
                     if (playerElement) {
+                        ws.send(JSON.stringify({ event: "kickPlayer", data: {code: localStorage.getItem("code"), id: playerId }}));
                         playerElement.parentElement.removeChild(playerElement);
                     }
     

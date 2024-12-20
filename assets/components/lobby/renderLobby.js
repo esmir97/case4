@@ -221,11 +221,21 @@ export async function playerChangedName(message) {
         if (ele.id == player.id) {
             let p = ele.querySelector("p");
             p.textContent = `${player.emoji} ${player.name}`;
-            console.log("hejsvejs")
+            console.log("hejsvejs");
         }
     })
 }
 
 export function updateLobby() {
     console.log("Uuuh hej huhuh updating lobby!!! XDD");
+}
+
+export function youWereKicked () {
+    localStorage.clear();
+    renderStart(document.getElementById("wrapper"), true);
+}
+    
+export function someoneLeft (data) {
+    console.log(data);
+    
 }
