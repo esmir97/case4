@@ -176,7 +176,8 @@ export async function renderLobby(parentElement, game) {
                 if (playerElement) {
                     playerElement.parentElement.removeChild(playerElement);
                 }
-
+                ws.send(JSON.stringify({ event: "kickPlayer", data: {id: playerId, code: localStorage.getItem("code")} }));
+                
                 console.log(`Player "${playerName}" with ID ${playerId} has been kicked.`);
 
                 // Kick player Function here
@@ -338,6 +339,12 @@ export async function playerChangedName(message) {
         }
     })
 }
-export function updateLobby() {
-    console.log("Uuuh hej huhuh updating lobby!!! XDD");
+
+export function youWereKicked () {
+    localStorage.clear();
+    renderStart(document.getElementById("wrapper"), true);
+}
+
+export function someoneLeft (data) {
+    console.log(data);
 }
