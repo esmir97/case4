@@ -5,7 +5,7 @@ import { renderStart } from "../home/renderHome.js";
 let globalGame;
 
 export async function renderLobby(parentElement, game) {
-   // Fetch and parse the player and game details
+    // Fetch and parse the player and game details
 
     localStorage.setItem("code", game.code);
     localStorage.setItem("player", JSON.stringify(game.players[game.players.length - 1]));
@@ -77,22 +77,22 @@ export async function renderLobby(parentElement, game) {
                 </div>
             </div>
         `;
-    wrapper.appendChild(overlay);
+        wrapper.appendChild(overlay);
 
-    overlay.addEventListener("click", () => overlay.remove());
-    const popup = overlay.querySelector(".middlePopup");
-    popup.addEventListener("click", (event) => event.stopPropagation());
-    const closeButton = overlay.querySelector(".closeButton");
-    closeButton.addEventListener("click", () => overlay.remove());
+        overlay.addEventListener("click", () => overlay.remove());
+        const popup = overlay.querySelector(".middlePopup");
+        popup.addEventListener("click", (event) => event.stopPropagation());
+        const closeButton = overlay.querySelector(".closeButton");
+        closeButton.addEventListener("click", () => overlay.remove());
 
-    overlay.querySelector(".leaveQuizYes").addEventListener("click", () => {
-        wrapper.innerHTML = "";
-        renderStart(wrapper);
+        overlay.querySelector(".leaveQuizYes").addEventListener("click", () => {
+            wrapper.innerHTML = "";
+            renderStart(wrapper);
+        });
+        overlay.querySelector(".leaveQuizNo").addEventListener("click", () => overlay.remove());
     });
-    overlay.querySelector(".leaveQuizNo").addEventListener("click", () => overlay.remove());
-});
 
-// Add moderator info overlay behavior
+    // Add moderator info overlay behavior
     const moderatorInfoIconContainer = parentElement.querySelector(".moderatorInfoIconContainer");
     moderatorInfoIconContainer.addEventListener("click", () => {
         const wrapper = document.querySelector("#wrapper");
@@ -120,25 +120,81 @@ export async function renderLobby(parentElement, game) {
 
     let playerContainer = document.createElement("div");
     playerContainer.id = "playerContainer";
+    parentElement.appendChild(playerContainer);
 
     //let game = await (await fetch(`/api/test?code=${gameCode}`)).json();
 
-    game.players.forEach( (player) => {
+    game.players.forEach((player) => {
         const div = document.createElement("div");
         const p = document.createElement("p");
         p.textContent = `${player.emoji} ${player.name}`;
         div.classList.add("playerLobby");
         div.id = `${player.id}`;
-        
+
         div.appendChild(p);
         playerContainer.appendChild(div);
     });
 
-    parentElement.appendChild(playerContainer);
+    playerContainer.addEventListener("click", (event) => {
+
+        let clickedElement = event.target.closest(".playerLobby");
+        if (player.role === "admin" && clickedElement) {
+            const playerId = clickedElement.id;
+            const playerName = clickedElement.querySelector("p").textContent.split(" ").slice(1).join(" ");
+
+            if (player.role === "admin" && playerId === player.id) {
+                console.log("You cannot kick yourself!");
+                return; 
+            }
+
+            const overlay = document.createElement("div");
+            overlay.classList.add("overlay");
+            overlay.innerHTML = `
+                <div class="middlePopup">
+                    <img src="/static/media/icons/close.svg" class="closeButton">
+                    <h3 class="leaveTitle">Kick: "${playerName}"?</h3>
+                    <div class="leaveOptionsContainer">
+                        <div class="leaveQuizYes">
+                            <p>Yes</p>
+                        </div>
+                        <div class="leaveQuizNo">
+                            <p>No</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            wrapper.appendChild(overlay);
+
+            overlay.addEventListener("click", () => overlay.remove());
+            const closeButton = overlay.querySelector(".closeButton");
+            closeButton.addEventListener("click", () => overlay.remove());
+            overlay.querySelector(".leaveQuizNo").addEventListener("click", () => overlay.remove());
+
+            overlay.querySelector(".leaveQuizYes").addEventListener("click", () => {
+                const playerElement = document.getElementById(playerId);
+                if (playerElement) {
+                    playerElement.parentElement.removeChild(playerElement);
+                }
+
+                console.log(`Player "${playerName}" with ID ${playerId} has been kicked.`);
+
+                // Kick player Function here
+
+                wrapper.removeChild(overlay);
+            });
+        }
+
+    });
+
+
+
+    // End of this shit
+
 
     if (player.name == "") {
         renderNameCard();
-    } 
+    }
 
     if (player.role === "admin") {
         let startQuizButton = document.createElement("div");
@@ -149,7 +205,7 @@ export async function renderLobby(parentElement, game) {
         `;
         parentElement.appendChild(startQuizButton);
         startQuizButton.addEventListener("click", (event) => {
-            ws.send(JSON.stringify( {event: "startGame", data: game.code}));
+            ws.send(JSON.stringify({ event: "startGame", data: game.code }));
         });
 
     } else {
@@ -165,9 +221,11 @@ export async function renderLobby(parentElement, game) {
 
 }
 
+
+
 async function renderNameCard() {
     let code = localStorage.getItem("code");
-    ws.send(JSON.stringify( {event: "getGame", data: code}));
+    ws.send(JSON.stringify({ event: "getGame", data: code }));
 
     console.log(globalGame);
     //let game = await (await fetch(`/api/test?code=${gameCode}`)).json();
@@ -217,7 +275,7 @@ async function enterName(event) {
         let newName = document.getElementById("name").value;
         let code = localStorage.getItem("code");
 
-        ws.send(JSON.stringify( {event: "changeName", data: {code: code, player: player, newName: newName}}));
+        ws.send(JSON.stringify({ event: "changeName", data: { code: code, player: player, newName: newName } }));
 
         if (newName.length < 1) {
             let error = document.getElementById("error");
@@ -230,17 +288,17 @@ async function enterName(event) {
     }
 }
 
-export async function playerJoined (message) {
+export async function playerJoined(message) {
     let game = message.data.game;
 
-        let newPlayer = game.players.find( (player) => {
+    let newPlayer = game.players.find((player) => {
         return player.id == message.data.id;
     });
-    
+
     if (document.getElementById(newPlayer.id)) {
         return;
     }
-    
+
     let playerContainer = document.getElementById("playerContainer");
 
     const div = document.createElement("div");
@@ -248,22 +306,22 @@ export async function playerJoined (message) {
     p.textContent = `${newPlayer.emoji} ${newPlayer.name}`;
     div.classList.add("playerLobby");
     div.id = `${newPlayer.id}`;
-    
-    
+
+
     div.appendChild(p);
     playerContainer.appendChild(div);
 
     console.log("player joined");
-    
+
 }
 
-export async function playerLeft (message) {
+export async function playerLeft(message) {
     console.log("player left");
 
     console.log(message.data);
 }
 
-export async function playerChangedName (message) {
+export async function playerChangedName(message) {
     console.log("changed name");
     console.log(message.data);
 
@@ -271,13 +329,13 @@ export async function playerChangedName (message) {
 
     let nodeListPlayers = document.querySelectorAll(".playerLobby");
 
-    nodeListPlayers.forEach( (ele) => {
+    nodeListPlayers.forEach((ele) => {
         console.log(ele.querySelector("p").textContent);
         if (ele.id == player.id) {
             let p = ele.querySelector("p");
             p.textContent = `${player.emoji} ${player.name}`;
             console.log("hejsvejs")
-        } 
+        }
     })
 }
 export function updateLobby() {
