@@ -5,8 +5,6 @@ import { renderLobby } from "./../components/lobby/renderLobby.js";
 import { renderQuizNav } from "../components/quiz/renderQuiz.js";
 import { renderQuizHeader } from "../components/quiz/renderQuiz.js";
 import { renderQuizCounter } from "../components/quiz/renderQuiz.js";
-import { someoneLeft } from "./../components/lobby/renderLobby.js";
-import { youWereKicked } from "./../components/lobby/renderLobby.js";
 
 export let game;
 
@@ -64,15 +62,6 @@ export function establishWebsocket () {
                 renderQuizNav(wrapper);
                 renderQuizHeader(wrapper);
                 renderQuizCounter(wrapper);
-                break;
-
-            case "youWereKicked":
-                youWereKicked();
-                break;
-            
-            case "someoneLeft":
-                someoneLeft(message);
-            
         }
         //socket.send(event.data);
     
