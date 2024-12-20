@@ -63,17 +63,18 @@ function getQuestionsForGame(genre, century) { //Randomises an array with 20 que
     
     let questionsToChooseFrom = [];
     let chosenQuestions = [];
-    console.log(century);
+
     if (typeof century != 'string') {
         century = century.toString();
         console.log("'Century' value is not a string! :)")
     }
-    
+
+    let requestedQuestions = questions[genre][century];    
     
     if (century != "mixed") {
         genre = genre.toLowerCase();
 
-        for (let question of questions[genre][century]) {
+        for (let question of requestedQuestions) {
             questionsToChooseFrom.push(question);
         }
         
@@ -107,9 +108,10 @@ function broadcast(event, data) {
         console.log ("Comparing " + game.code + " AND " + data.code)
         return data.code == game.code;
     });
+
     console.log("HEEEEEJ HÄR KOMMER DATAN <---------------------------------------")
     console.log(data);
-    console.log(game);
+
     for (let player of game.players) {
         if (player.connection && player.connection.readyState === WebSocket.OPEN) {
             console.log("Sending to " + player.id);
@@ -137,7 +139,7 @@ async function handleHTTPRequest (request) { //Säger till vad som ska hända n�
         const options = {
             headers: { "Content-Type": "application/json"}
         }
-/*
+
         if (request.method == 'GET') { //GET entire game obj with gameCode
             const GETdata = await request;
             let code = GETdata.url.slice(GETdata.url.length - 6);
@@ -156,40 +158,21 @@ async function handleHTTPRequest (request) { //Säger till vad som ska hända n�
 
         }
 
-        /*if (request.method == 'POST') {
-            
-                    
+        if (request.method == 'POST') {
             return new Response(JSON.stringify(response), options);
-
-            } else if (POSTdata.code) { // Join Game
-                
-                    return new Response(JSON.stringify(filteredGame), options);
-                } else {
-                    return new Response(JSON.stringify("game doesn't exist"), options);
-                }
+        }
     
-            } else {
-                console.log("good job with the codes bozo");
-                return new Response(JSON.stringify({ error: "wrong keys in rqst" }), options);
-            }
-            
-        }*/
-    
-/*
         if (request.method == 'PATCH') {
 
         }
 
         if (request.method == 'DELETE') {
-            //När en spelare lämnar ett spel/blir kickad, kör en DELETE på den spelaren från deras lobby
             
-        }*/
+        }
     }
+
     return serveFile(request, './index.html');
 }
-
-
-
 
 function handleWebSocket (request) { //Säger vad som ska hända på serversidan med vår connection när vi använder WebSockets
     const { socket, response } = Deno.upgradeWebSocket(request);
@@ -268,6 +251,7 @@ function handleWebSocket (request) { //Säger vad som ska hända på serversidan
         //_state.games[indexGame].players.splice(indexPlayer, 1);
 
 
+
         /*
         for (const game of _state.games) {
             const playerIndex = game.players.findIndex(player => player.id == myID);
@@ -321,8 +305,6 @@ async function createGame (socket, genre, century, name) {
     let newCode = generateGameCode();
     let questions = getQuestionsForGame(genre, century);
     console.log("century: " + century);
-
-    let newPlayerID = generateConnectionID();
 
     let players = [
         {
@@ -396,21 +378,6 @@ function joinGame (socket, code) {
 
     return JSON.stringify(filteredGame);
 }
-    /*
-function cleanupConnections() {
-    for (const game of _state.games) {
-        game.players = game.players.filter(player => {
-            if (player.connection && player.connection.readyState === WebSocket.OPEN) {
-                return true; // Keep valid connections
-            } else {
-                console.log(`Removing stale connection for player ID: ${player.id}`);
-                return false; // Remove stale connections
-            }
-        });
-    }
-}
-setInterval(cleanupConnections, 30000);
-*/
 
 function startGame(socket, code) {
     let foundGame = _state.games.find( (game) => {
