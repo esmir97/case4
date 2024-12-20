@@ -83,7 +83,6 @@ export async function renderLobby(parentElement, game) {
 
         common.handlePopup();
         
-        overlay.querySelector(".leaveQuizNo").addEventListener("click", () => overlay.remove());
         overlay.querySelector(".leaveQuizYes").addEventListener("click", () => {
             wrapper.innerHTML = "";
             renderStart(wrapper);
@@ -104,18 +103,13 @@ export async function renderLobby(parentElement, game) {
             </div>
         `;
         wrapper.appendChild(overlay);
-
         common.handlePopup();
     });
 
-
-
     //Understa delen
-
     let playerContainer = document.createElement("div");
     playerContainer.id = "playerContainer";
     parentElement.appendChild(playerContainer);
-
     //let game = await (await fetch(`/api/test?code=${gameCode}`)).json();
 
     game.players.forEach((player) => {
@@ -162,7 +156,6 @@ export async function renderLobby(parentElement, game) {
 
             common.handlePopup();
             
-            overlay.querySelector(".leaveQuizNo").addEventListener("click", () => overlay.remove());
 
             overlay.querySelector(".leaveQuizYes").addEventListener("click", () => {
                 const playerElement = document.getElementById(playerId);
@@ -177,13 +170,8 @@ export async function renderLobby(parentElement, game) {
                 wrapper.removeChild(overlay);
             });
         }
-
     });
-
-
-
     // End of this shit
-
 
     if (player.name == "") {
         renderNameCard();
@@ -209,12 +197,7 @@ export async function renderLobby(parentElement, game) {
         `;
         parentElement.appendChild(startQuizButton);
     };
-
-
-
 }
-
-
 
 async function renderNameCard() {
     let code = localStorage.getItem("code");
@@ -330,6 +313,7 @@ export async function playerChangedName(message) {
         }
     })
 }
+
 export function updateLobby() {
     console.log("Uuuh hej huhuh updating lobby!!! XDD");
 }
