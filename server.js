@@ -69,10 +69,10 @@ function getQuestionsForGame(genre, century) { //Randomises an array with 20 que
         console.log("'Century' value is not a string! :)")
     }
 
-    let requestedQuestions = questions[genre][century];    
     
     if (century != "mixed") {
         genre = genre.toLowerCase();
+        let requestedQuestions = questions[genre][century];    
 
         for (let question of requestedQuestions) {
             questionsToChooseFrom.push(question);
