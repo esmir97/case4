@@ -236,6 +236,10 @@ export function youWereKicked () {
 }
     
 export function someoneLeft (data) {
-    console.log(data);
+    let code = data.data.code;
+    let id = data.data.playerID;
+
+    document.getElementById(id).remove();
     
+    console.log("Player " + id + " left the game.");
 }

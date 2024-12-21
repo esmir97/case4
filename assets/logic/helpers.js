@@ -56,7 +56,6 @@ export function renderPlayers(parentElement, player, game) {
                     const playerElement = document.getElementById(playerId);
                     if (playerElement) {
                         ws.send(JSON.stringify({ event: "kickPlayer", data: {code: localStorage.getItem("code"), id: playerId }}));
-                        playerElement.parentElement.removeChild(playerElement);
                     }
     
                     console.log(`Player "${playerName}" with ID ${playerId} has been kicked.`);

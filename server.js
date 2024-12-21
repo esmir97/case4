@@ -110,12 +110,8 @@ function broadcast(event, data) {
         return data.code == game.code;
     });
 
-    console.log("HEEEEEJ HÄR KOMMER DATAN <---------------------------------------")
-    console.log(data);
-
     for (let player of game.players) {
         if (player.connection && player.connection.readyState === WebSocket.OPEN) {
-            console.log("Sending to " + player.id);
             send(player.connection, event, data);
         } else {
             console.log("Player connection not found for player ID: " + player.id);
@@ -178,16 +174,14 @@ async function handleHTTPRequest (request) { //Säger till vad som ska hända n�
 function handleWebSocket (request) { //Säger vad som ska hända på serversidan med vår connection när vi använder WebSockets
     const { socket, response } = Deno.upgradeWebSocket(request);
     myID = generateConnectionID();
+    console.log("myID CHANGED VALUE, NEW VALUE IS: " + myID);
     connections[myID] = socket;
     connectionID++;
+    console.log("CONNECTIONID INCREMENTED: " + connectionID);
     
     socket.addEventListener("open", (event) => {
-        console.log("CONNECTIOOOOOOOOOOOOONS");
-        console.log(connections);
-
         console.log(`Connection ${myID} connected.`);
         
-        console.log("CONNECTION ID IS NOW: " + connectionID);
     });
 
     socket.addEventListener("message", (event) => {
@@ -200,13 +194,10 @@ function handleWebSocket (request) { //Säger vad som ska hända på serversidan
                 break;
     
             case "changeName":
-                console.log(message);
                 changeName(socket, message.data.code, message.data.player, message.data.newName);
                 break;
 
             case "createGame":
-                console.log("DATA HEEEERE<----------------------");
-                console.log(message.data);
                 createGame(socket, message.data.genre, message.data.century, message.data.name);
                 break;
             
@@ -220,7 +211,6 @@ function handleWebSocket (request) { //Säger vad som ska hända på serversidan
                 getGame(socket, message.data);
                 break;
             case "startGame":
-                console.log('Starting game!');
                 startGame(socket, message.data);
                 break;
             case "kickPlayer":
@@ -233,56 +223,11 @@ function handleWebSocket (request) { //Säger vad som ska hända på serversidan
         console.log(`Connection ${myID} disconnected.`);
         console.log(myID);
 
-        let indexGame = null;
-        let indexPlayer = null;
-        let i = 0;
         
-        for (let game of _state.games) {
-            let k = 0;
-            for (let player of game.players) {
-
-                if (player.connection == connections[myID]) {
-                    indexGame = i;
-                    indexPlayer = k;
-                }
-                console.log("playerID: " + player.id);
-                console.log("myID: " +  myID)
-                k++;
-            }
-            i++;
-        }
-
-        //_state.games[indexGame].players.splice(indexPlayer, 1);
-
-
-
-        /*
-        for (const game of _state.games) {
-            const playerIndex = game.players.findIndex(player => player.id == myID);
-            console.log("INDALOOP")
-            console.log(myID);
-            console.log(game.players);
-            if (playerIndex !== -1) { // Player found in this game
-                const player = game.players[playerIndex];
-                console.log(`Removing player ${player.name} from game ${game.code}`);
-                
-                // Remove the player from the game
-                game.players.splice(playerIndex, 1);
-                
-                // Broadcast updated lobby state to remaining players
-                broadcast("playerLeft", { 
-                    code: game.code, 
-                    players: game.players,
-                    playerID: myID
-                });
-                
-                break; // Exit loop since the player has been found and removed
-            }
-        }*/
         
         delete connections[myID];
     });
-    if(_state.games.length > 0) console.log(_state.games[0].players);
+    /* if(_state.games.length > 0) console.log(_state.games[0].players); */
     return response;
 }
 
@@ -308,7 +253,6 @@ async function createGame (socket, genre, century, name) {
                       
     let newCode = generateGameCode();
     let questions = getQuestionsForGame(genre, century);
-    console.log("century: " + century);
 
     let players = [
         {
@@ -342,8 +286,6 @@ function changeName (socket, code, playerData, newName) {
     let game = _state.games.find( (game) => {
         return game.code == code;
     });
-
-    console.log(code);
 
     let playerToPatch = game.players.find( (player) => {
         return playerData.id == player.id;
@@ -387,10 +329,6 @@ function startGame(socket, code) {
     let foundGame = _state.games.find( (game) => {
         return game.code == code;
     });
-
-    console.log(code);
-    console.log(foundGame);
-
     
     broadcast("startedGame", foundGame);
 }
@@ -399,16 +337,12 @@ function kickPlayer (data) {
     let playerID = data.id;
     let code = data.code;
 
-    console.log(data);
 
     let game = _state.games.find( (game) => {
-        console.log("COMPARING " + code + " AND " + game.code);
         return game.code == code;
     });
 
-    console.log(game);
     let kickedPlayer;
-    console.log(game.players);
     for (let i = 0; i < game.players.length; i++) {
         if (game.players[i].id == playerID) {
             kickedPlayer = game.players[i];
@@ -416,15 +350,8 @@ function kickPlayer (data) {
         }
     }
 
-    
-
-    console.log("KICKING THIS BOZO BAHA @@@@@@@@@@@@@@@@@@@@@@@@@@");
-    console.log(kickedPlayer);
-
     send(kickedPlayer.connection, "youWereKicked", null);
     broadcast("someoneLeft", {code: code, playerID: playerID});
-
-
 }
 
 Deno.serve(handleRequest);
