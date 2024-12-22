@@ -55,7 +55,7 @@ export function renderPlayers(parentElement, player, game) {
                 overlay.querySelector(".leaveQuizYes").addEventListener("click", () => {
                     const playerElement = document.getElementById(playerId);
                     if (playerElement) {
-                        ws.send(JSON.stringify({ event: "kickPlayer", data: {code: localStorage.getItem("code"), id: playerId }}));
+                        ws.send(JSON.stringify({ event: "kickPlayer", data: { code: localStorage.getItem("code"), id: playerId }}));
                     }
     
                     console.log(`Player "${playerName}" with ID ${playerId} has been kicked.`);

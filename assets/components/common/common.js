@@ -1,4 +1,5 @@
 import { renderStart } from "../home/renderHome.js";
+import { ws } from "../../index.js";
 
 // Hanterar hur Popups Stängs
 export function handlePopup() {
@@ -39,8 +40,19 @@ export function homePopup(parentElement) {
     handlePopup();
 
     overlay.querySelector(".leaveQuizYes").addEventListener("click", () => {
+        let player = JSON.parse( localStorage.getItem("player") );
+        ws.send(JSON.stringify({ event: "playerLeft", data: { code: localStorage.getItem("code"), player: player }}));
         wrapper.innerHTML = "";
         renderStart(wrapper);
     });
     ;
 };
+
+function endGame (data) {
+    let code = data.code;
+    console.log("ENDING GAME " + code);
+    let wrapper = document.getElementById("wrapper");
+
+    localStorage.clear();
+    renderStart(wrapper);
+}

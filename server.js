@@ -105,10 +105,16 @@ function send(socket, event, data) {
 }
 
 function broadcast(event, data) {
+    console.log("DATA HERE");
+    console.log(data);
     let game = _state.games.find( (game) => {
         console.log ("Comparing " + game.code + " AND " + data.code)
         return data.code == game.code;
     });
+
+    console.log("HERES DA GAME");
+    console.log(event);
+    console.log(game);
 
     for (let player of game.players) {
         if (player.connection && player.connection.readyState === WebSocket.OPEN) {
@@ -204,15 +210,19 @@ function handleWebSocket (request) { //Säger vad som ska hända på serversidan
             case "joinGame":
                 joinGame(socket, message.data);
                 break;
+
             case "changeName":
                 //changeName(socket, id, newName)
                 break;
+
             case "getGame":
                 getGame(socket, message.data);
                 break;
+
             case "startGame":
                 startGame(socket, message.data);
                 break;
+
             case "kickPlayer":
                 kickPlayer(message.data);
                 break;
@@ -352,6 +362,32 @@ function kickPlayer (data) {
 
     send(kickedPlayer.connection, "youWereKicked", null);
     broadcast("someoneLeft", {code: code, playerID: playerID});
+}
+
+function playerLeft (data) {
+    let code = data.data.code;
+    let player = data.data.player;
+    let games = _state.games;
+    
+    if (player.role === "admin") {
+        let gameIndex = games.findIndex( (game) => {
+            return game.code == code;
+        });
+
+        broadcast("endGame", {code: code});
+        games.splice(gameIndex, 1);
+    } else {
+        let game = games.find( (game) => {
+            return game.code == code;
+        });
+
+        let playerIndex = game.players.findIndex( (playerToRemove) => {
+            return playerToRemove.id == player.id;
+        });
+
+        game.players.splice(playerIndex, 1);
+        broadcast("someoneLeft", {code: code, playerID: player.id});
+    }
 }
 
 Deno.serve(handleRequest);

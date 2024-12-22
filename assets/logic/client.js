@@ -7,6 +7,7 @@ import { renderQuizHeader } from "../components/quiz/renderQuiz.js";
 import { renderQuizCounter } from "../components/quiz/renderQuiz.js";
 import { someoneLeft } from "./../components/lobby/renderLobby.js";
 import { youWereKicked } from "./../components/lobby/renderLobby.js";
+import { renderStart } from "../components/home/renderHome.js";
 
 export let game;
 
@@ -19,6 +20,7 @@ export function establishWebsocket () {
     
     socket.addEventListener("message", (event) => {
         const message = JSON.parse(event.data);
+        let wrapper = document.querySelector("#wrapper");
 
         switch(message.event) {
             case "playerJoined":
@@ -60,7 +62,6 @@ export function establishWebsocket () {
                 break;
 
             case "startedGame":
-                let wrapper = document.querySelector("#wrapper");
                 renderQuizNav(wrapper);
                 renderQuizHeader(wrapper);
                 renderQuizCounter(wrapper);
@@ -72,6 +73,11 @@ export function establishWebsocket () {
             
             case "someoneLeft":
                 someoneLeft(message);
+                break;
+
+            case "endGame":
+                localStorage.clear();
+                renderStart(wrapper);
                 break;
         }
         //socket.send(event.data);
