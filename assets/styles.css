@@ -264,8 +264,19 @@ p {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 237, 255, 0.10) 100%);
     backdrop-filter: blur(17.5px);
 
-    padding: 20px 32px 44px 32px;
+    padding: 0px 32px 44px 32px;
     z-index: 100;
+
+    transform: translateY(0); /* Default position */
+    transition: transform 0.3s; /* Smooth animations */
+    touch-action: none; /* Disable default scrolling on touch */
+}
+
+.dragCloseContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
 }
 
 .dragClose {
@@ -372,3 +383,4 @@ input[type="range"] {
 .clickedButton {
     background-color: var(--secondary200);
 }
+

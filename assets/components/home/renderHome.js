@@ -113,7 +113,9 @@ async function newGameCard(event) {
 
     startGamePopup.innerHTML =
         `<div id="card" class="popup">
-            <div class="dragClose"></div>
+            <div class="dragCloseContainer">
+                <div class="dragClose"></div>
+            </div>
             <h3>${event.currentTarget.id}</h3>
             <p class="amountOfQuestions">20 Questions</p>
             <h4 class="h4-bold">Choose year</h4>
@@ -134,11 +136,56 @@ async function newGameCard(event) {
             </div>
         </div>`;
 
+        wrapper.appendChild(startGamePopup);
+
+
+        let startY = 0; // Starting Y position
+        let currentY = 0; // Current Y position
+        let isDragging = false;
+        
+        const popup = document.querySelector('.popup');
+        const dragClose = document.querySelector('.dragCloseContainer');
+        
+        dragClose.addEventListener('touchstart', (event) => {
+            isDragging = true;
+            startY = event.touches[0].clientY;
+            popup.style.transition = 'none';
+        });
+        
+        document.addEventListener('touchmove', (event) => {
+            if (isDragging) {
+                currentY = event.touches[0].clientY - startY;
+                if (currentY > 0) {
+                    popup.style.transform = `translateY(${currentY}px)`;
+                }
+            }
+        });
+        
+        document.addEventListener('touchend', () => {
+            if (isDragging) {
+                isDragging = false;
+                if (currentY > 150) { 
+                    closePopup();
+                } else {
+                    popup.style.transition = 'transform 0.3s';
+                    popup.style.transform = 'translateY(0)';
+                }
+            }
+        });
+        
+        function closePopup() {
+            popup.style.transition = 'transform 0.3s';
+            popup.style.transform = 'translateY(100vh)';
+            setTimeout(() => {
+                document.querySelector('.startOverlay').remove();
+            }, 300);
+        }
+        
+
     startGamePopup.addEventListener("click", (event) => {
         startGamePopup.remove();
     });
 
-    wrapper.appendChild(startGamePopup);
 
     const mixedQuestionsButton = document.querySelector(".mixedQuestionsButton");
     const output = document.getElementById('selected-decade');
