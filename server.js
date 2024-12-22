@@ -8,6 +8,7 @@ let _state = {
 
 let connections = {};
 let connectionID = 1;
+let questionIndex = 0;
 let myID;
 
 const testData = await Deno.readTextFile("./database.json");
@@ -105,8 +106,6 @@ function send(socket, event, data) {
 }
 
 function broadcast(event, data) {
-    console.log("DATA HERE");
-    console.log(data);
     let game = _state.games.find( (game) => {
         console.log ("Comparing " + game.code + " AND " + data.code)
         return data.code == game.code;
@@ -226,6 +225,14 @@ function handleWebSocket (request) { //Säger vad som ska hända på serversidan
             case "kickPlayer":
                 kickPlayer(message.data);
                 break;
+
+            case "answerGiven":
+                answerGiven(socket, message.data);
+                break;
+
+            case "timeIsUp":
+                timeIsUp(message.data);
+                break;
         }
     });
     
@@ -271,7 +278,9 @@ async function createGame (socket, genre, century, name) {
             connection: socket,
             role: "admin",
             points: 0,
-            emoji: getRandomEmoji()
+            emoji: getRandomEmoji(),
+            answerGiven: false,
+            timeIsUp: false
         }
     ]
 
@@ -315,7 +324,9 @@ function joinGame (socket, code) {
         connection: socket,
         role: "player",
         points: 0,
-        emoji: getRandomEmoji()
+        emoji: getRandomEmoji(),
+        answerGiven: false,
+        timeIsUp: false
     }
     
     let filteredGame = _state.games.find( (game) => {
@@ -340,7 +351,7 @@ function startGame(socket, code) {
         return game.code == code;
     });
     
-    broadcast("startedGame", foundGame);
+    broadcast("startedGame", {code: foundGame.code, game: foundGame, question: foundGame.questions[questionIndex]});
 }
 
 function kickPlayer (data) {
@@ -388,6 +399,87 @@ function playerLeft (data) {
         game.players.splice(playerIndex, 1);
         broadcast("someoneLeft", {code: code, playerID: player.id});
     }
+}
+
+function answerGiven (socket, data) {
+    let code = data.code;
+    let player = data.player;
+    let answer = data.answer;
+    let question = data.question;
+    let timeLeft = data.timeLeft;
+    let pointsEarned = 0;
+
+    let game = _state.games.find( (game) => {
+        return game.code == code;
+    });
+
+    let questionAnswered = game.questions.find( (questionObj) => {
+        return questionObj.question.trim().toLowerCase() === question.trim().toLowerCase();
+    });
+
+
+    let playerInState = game.players.find( (playerInArray) => {
+        return playerInArray.id == player.id;
+    });
+
+
+    playerInState.answerGiven = true;
+    if (questionAnswered.correct == answer) {
+        pointsEarned = timeLeft;
+    }
+    playerInState.points += pointsEarned;
+
+    sortPlayers(game.players);
+    if (checkNumberOfAnswers(game)) broadcast("endRound", {code: game.code, game: game});
+
+    send(socket, "answerChecked");
+}
+
+function sortPlayers (playerArray) {
+    playerArray.sort(sortNumbers);
+    console.log("AFTER SORT");
+    console.log(playerArray);
+}
+
+function sortNumbers (a, b) {
+    return a.points - b.points;
+}
+
+function checkNumberOfAnswers (game) {
+    let numberOfPlayers = game.players.length;
+    let numberOfAnswers = 0;
+
+    game.players.forEach( (player) => {
+        if (player.answerGiven) numberOfAnswers++;
+    });
+
+    return numberOfPlayers == numberOfAnswers;
+}
+
+function timeIsUp (data) {
+    let player = data.player;
+    let code = data.code;
+
+    let game = _state.games.find( (game) => {
+        return game.code == code;
+    });  
+
+    let timeIsUpCounter = 0;
+    let numberOfPlayers = game.players.length;
+
+    game.players.forEach( (playerInState) => {
+        if (playerInState.id == player.id) {
+            playerInState.timeIsUp = true;
+        }
+
+        if (playerInState.timeIsUp) timeIsUpCounter++;
+    });
+    
+    if (timeIsUpCounter == numberOfPlayers) {
+        questionIndex++;
+        broadcast("endRound", {code: game.code, game: game});
+    }
+    
 }
 
 Deno.serve(handleRequest);

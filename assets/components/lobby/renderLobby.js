@@ -46,10 +46,6 @@ export async function renderLobby(parentElement, game) {
         </div>
     `;
 
-    // Fetch game details
-    //let gameJoined = await (await fetch(`/api/test?code=${gameCode}`)).json();
-    //console.log(gameJoined);
-    console.log(game);
     // Set quiz details title
     let quizDetailsTitle = parentElement.querySelector(".quizDetailsTitle");
     if (["00", "10", "20"].includes(game.century)) {

@@ -1,7 +1,10 @@
+import { ws } from "../../index.js";
 // deno run -A --watch server.js
 
 export function renderQuizNav (parentElement) {
     parentElement.innerHTML = ``;
+
+    let player = JSON.parse( localStorage.getItem("player") );
 
     let quizNav = document.createElement("div");
     quizNav.id = "quizNav";
@@ -12,7 +15,7 @@ export function renderQuizNav (parentElement) {
             <img src="/static/media/icons/back.svg" class="homeButton">
         </div>
         <div class="pointsCon">
-            <h4>🤓</h4>
+            <h4>${player.emoji}</h4>
             <p id="points">0p</p>
         </div>
     `
@@ -52,19 +55,21 @@ export function renderQuizNav (parentElement) {
     });
 }
 
-export function renderQuizHeader (parentElement, /* year and genre */) {
+export function renderQuizHeader (parentElement, data) {
+    let game = data.game;
     let header = document.createElement("div");
+    let genre = game.genre.charAt(0).toUpperCase() + game.genre.slice(1);
     header.id = "quizHeader";
     parentElement.appendChild(header);
 
     let headerText = document.createElement("div");
     headerText.innerHTML = `
-        <h1>Year <br> Genre</h1>
+        <h1>${game.century}´s <br> ${genre}</h1>
     `;
     header.appendChild(headerText);
 }
 
-export function renderQuizCounter (parentElement) {
+export function renderQuizCounter (parentElement, question) {
     let counterCon = document.createElement("div");
     counterCon.id = "counterCon";
     parentElement.appendChild(counterCon);
@@ -97,7 +102,7 @@ export function renderQuizCounter (parentElement) {
         countdownValue--;
 
         if (countdownValue < 0) {
-            renderQuizQuestion(wrapper);
+            renderQuizQuestion(wrapper, question);
             clearInterval(countdownInterval);
             counterCon.remove();
         }
@@ -105,7 +110,10 @@ export function renderQuizCounter (parentElement) {
 }
 
 
-export function renderQuizQuestion (parentElement) {
+export function renderQuizQuestion (parentElement, question) {
+    question = question.question;
+
+    console.log(question);
     const quizContent = document.createElement("div");
     quizContent.id = "quizContent";
     parentElement.appendChild(quizContent);
@@ -116,16 +124,16 @@ export function renderQuizQuestion (parentElement) {
             <p>1 / 20</p>
         </div>
         <div id="questionText">
-            <p>We don’t need no education, we don’t need no thought control...We don’t need no education, we don’t need no thought control...</p>
+            <p>${question.question}</p>
         </div>
         <div id="progressBarContainer">
             <div id="progressBar"></div>
         </div>
         <div id="optionsContainer">
-            <button class="optionButton"><p>No dark sarcasm in the classroom.</p></button>
-            <button class="optionButton"><p>No fear, no pain.</p></button>
-            <button class="optionButton"><p>Just leave us alone.</p></button>
-            <button class="optionButton"><p>Just give us something to sing.</p></button>
+            <button class="optionButton"><p>${question.options[0]}</p></button>
+            <button class="optionButton"><p>${question.options[1]}</p></button>
+            <button class="optionButton"><p>${question.options[2]}</p></button>
+            <button class="optionButton"><p>${question.options[3]}</p></button>
         </div>
     `;
 
@@ -136,14 +144,49 @@ export function renderQuizQuestion (parentElement) {
         progressBar.style.width = "0%";
     }, 0);
 
+    //-------------------------TIMER END EVENT----------------------------------
+    progressBar.addEventListener('transitionend', () => {
+        if (progressBar.style.width === "0%") {
+            eventTriggered = true;
+            let player = JSON.parse( localStorage.getItem("player") );
+            let code = JSON.parse( localStorage.getItem("code") );
+            let data = {player, code};
+            ws.send(JSON.stringify({ event: "timeIsUp", data }));
+        }
+    });
+
     const optionButtons = quizContent.querySelectorAll(".optionButton");
+    let eventTriggered = false;
+
     optionButtons.forEach(button => {
-        button.addEventListener("click", () => {
+        button.addEventListener("click", function giveAnswer (event) {
+        if (eventTriggered) return;
 
         optionButtons.forEach(button => button.classList.remove("clickedOptionButton"));
 
         button.classList.add("clickedOptionButton");
-            
+
+        let prog = document.getElementById("progressBar");
+
+        let computedWidth = getComputedStyle(prog).width;
+        let timeLeft = computedWidth.replace("px", "");
+
+        let player = JSON.parse( localStorage.getItem("player") );
+
+        let answer = event.currentTarget.textContent;
+
+        let question = document.getElementById("questionText").textContent;
+
+        let data = { 
+            code: localStorage.getItem("code"), 
+            player: player, 
+            answer: answer, 
+            question: question,
+            timeLeft: timeLeft
+        }
+        
+        eventTriggered = true;
+        ws.send(JSON.stringify({ event: "answerGiven", data }));
             /*
             const selectedOption = questionData.options[index];
             const correctAnswer = selectedOption === questionData.correct;

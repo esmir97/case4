@@ -67,3 +67,22 @@ export function renderPlayers(parentElement, player, game) {
             }
         });
 };
+
+export function answerChecked () {
+    console.log("checked");
+    let nodeListAnswers = document.querySelectorAll(".optionButton");
+
+    nodeListAnswers.forEach( (ele) => {
+        ele.addEventListener("click", (event) => {
+            event.preventDefault;
+        })
+    })
+}
+
+export function endRound (data) {
+    let game = data.game;
+    let code = data.code;
+    let player = localStorage.getItem("player");
+
+    
+}
