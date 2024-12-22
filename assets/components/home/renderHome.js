@@ -161,10 +161,11 @@ async function newGameCard(event) {
         mixedQuestionsButton.classList.toggle("clickedButton");
 
         if (mixedQuestionsButton.classList.contains("clickedButton")) {
-            output.style.display = "none";
+            output.style.visibility = "hidden";
         } else {
-            output.style.display = "block";
+            output.style.visibility = "visible";
         }
+        
     });
 
     
