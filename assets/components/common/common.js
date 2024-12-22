@@ -15,7 +15,7 @@ export function handlePopup() {
     };
 };
 
-
+// Rendera Home Popup
 export function homePopup(parentElement) {
     const wrapper = document.querySelector("#wrapper");
     const overlay = document.createElement("div");
