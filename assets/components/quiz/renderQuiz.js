@@ -6,7 +6,6 @@ import * as common from '../common/common.js';
 let parentElement = document.querySelector("#wrapper");
 common.renderQuizNav(parentElement);
 
-
 export function renderQuizHeader (parentElement, data) {
     let game = data.game;
     let header = document.createElement("div");
@@ -30,6 +29,10 @@ export function renderQuizCounter (parentElement, question) {
         <img class="gif" src="/static/media/images/vinyl.gif"/>
         <h2>Quiz starts in</h2>
         <h1 id="countdownNumber">3</h1>
+        <div class="quizInfoText">
+            <p>Remember: One pick, no take-backs!</p>
+            <p>Speed is key: the faster you lock it in, the more points you get!<p>
+        </div>
     `
 
     // För att testa
@@ -86,6 +89,10 @@ export function renderQuizQuestion (parentElement, question) {
             <button class="optionButton"><p>${question.options[1]}</p></button>
             <button class="optionButton"><p>${question.options[2]}</p></button>
             <button class="optionButton"><p>${question.options[3]}</p></button>
+        </div>
+        <div class="quizInfoText" class="quizInfoTextQuestion">
+            <p>Remember: One pick, no take-backs!</p>
+            <p>Speed is key: the faster you lock it in, the more points you get!<p>
         </div>
     `;
 
