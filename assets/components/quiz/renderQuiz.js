@@ -1,59 +1,10 @@
 import { ws } from "../../index.js";
+import * as common from '../common/common.js';
+
 // deno run -A --watch server.js
 
-export function renderQuizNav (parentElement) {
-    parentElement.innerHTML = ``;
-
-    let player = JSON.parse( localStorage.getItem("player") );
-
-    let quizNav = document.createElement("div");
-    quizNav.id = "quizNav";
-    parentElement.appendChild(quizNav);
-
-    quizNav.innerHTML = `
-        <div class="homeButtonContainer">
-            <img src="/static/media/icons/back.svg" class="homeButton">
-        </div>
-        <div class="pointsCon">
-            <h4>${player.emoji}</h4>
-            <p id="points">0p</p>
-        </div>
-    `
-
-    const homeButtonContainer = parentElement.querySelector(".homeButtonContainer");
-    homeButtonContainer.addEventListener("click", () => {
-        const wrapper = document.querySelector("#wrapper");
-        const overlay = document.createElement("div");
-        overlay.classList.add("overlay");
-        overlay.innerHTML = `
-            <div class="middlePopup">
-                <img src="/static/media/icons/close.svg" class="closeButton">
-                <h3 class="leaveTitle">Leave Quiz?</h3>
-                <div class="leaveOptionsContainer">
-                    <div class="leaveQuizYes">
-                        <p>Yes</p>
-                    </div>
-                    <div class="leaveQuizNo">
-                        <p>No</p>
-                    </div>
-                </div>
-            </div>
-        `;
-        wrapper.appendChild(overlay);
-    
-        overlay.addEventListener("click", () => overlay.remove());
-        const popup = overlay.querySelector(".middlePopup");
-        popup.addEventListener("click", (event) => event.stopPropagation());
-        const closeButton = overlay.querySelector(".closeButton");
-        closeButton.addEventListener("click", () => overlay.remove());
-    
-        overlay.querySelector(".leaveQuizYes").addEventListener("click", () => {
-            wrapper.innerHTML = "";
-            renderStart(wrapper);
-        });
-        overlay.querySelector(".leaveQuizNo").addEventListener("click", () => overlay.remove());
-    });
-}
+let parentElement = document.querySelector("#wrapper");
+common.renderQuizNav(parentElement);
 
 export function renderQuizHeader (parentElement, data) {
     let game = data.game;
@@ -78,6 +29,10 @@ export function renderQuizCounter (parentElement, question) {
         <img class="gif" src="/static/media/images/vinyl.gif"/>
         <h2>Quiz starts in</h2>
         <h1 id="countdownNumber">3</h1>
+        <div class="quizInfoText">
+            <p>Remember: One pick, no take-backs!</p>
+            <p>Speed is key: the faster you lock it in, the more points you get!<p>
+        </div>
     `
 
     // För att testa
@@ -134,6 +89,10 @@ export function renderQuizQuestion (parentElement, question) {
             <button class="optionButton"><p>${question.options[1]}</p></button>
             <button class="optionButton"><p>${question.options[2]}</p></button>
             <button class="optionButton"><p>${question.options[3]}</p></button>
+        </div>
+        <div class="quizInfoText" class="quizInfoTextQuestion">
+            <p>Remember: One pick, no take-backs!</p>
+            <p>Speed is key: the faster you lock it in, the more points you get!<p>
         </div>
     `;
 

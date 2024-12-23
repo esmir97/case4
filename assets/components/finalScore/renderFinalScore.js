@@ -1,3 +1,5 @@
+import * as common from "../common/common.js";
+
 
 export function renderFinalScore (parentElement) {
     // Header
@@ -137,7 +139,7 @@ export function renderFinalScore (parentElement) {
     `;
     parentElement.appendChild(nextButton);
 
-    startConfetti()
+    common.startConfetti();
 }
 
 // CONFETTI

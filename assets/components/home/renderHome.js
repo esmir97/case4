@@ -28,17 +28,17 @@ export function renderStart(parentElement) {
 
     const joinCode = parentElement.querySelector("#joinCode");
     joinCode.addEventListener("keydown", joinGame);
-
-    const popularSection = parentElement.querySelector(".popularSection");
-    renderGenres(popularSection);
-
-    const allGenresContainer = parentElement.querySelector(".allGenresContainer");
-    renderGenres(allGenresContainer);
-}
-
-function renderGenres(parentElement) {
+    
     const allGenres = ["Best of decades", "R&B", "Rock", "Country", "Hiphop", "Jazz", "Pop", "Folk"];
 
+    const popularSection = parentElement.querySelector(".popularSection");
+    renderGenres(popularSection, allGenres);
+
+    const allGenresContainer = parentElement.querySelector(".allGenresContainer");
+    renderGenres(allGenresContainer, allGenres);
+}
+
+export function renderGenres(parentElement, allGenres) {
     for (let genre of allGenres) {
         const div = document.createElement("div");
         div.id = genre;
