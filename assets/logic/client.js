@@ -40,7 +40,7 @@ export function establishWebsocket () {
                 playerChangedName(message);
                 break;
 
-            case "createGame":
+            case "createGame": //Not used
                 console.log(JSON.parse(message));
                 socket.send(JSON.stringify(socket, message.genre, message.century));
                 break;
@@ -59,7 +59,7 @@ export function establishWebsocket () {
                 //changeName(socket, id, newName)
                 break;
 
-            case "gotGame":
+            case "gotGame": //Not used
                 game = message.data;
                 break;
 
@@ -83,7 +83,7 @@ export function establishWebsocket () {
                 break;
 
             case "answerChecked":
-                answerChecked();
+                answerChecked(message.data);
                 break;
 
             case "endRound":
