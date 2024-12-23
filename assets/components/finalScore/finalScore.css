@@ -150,7 +150,7 @@
     background-color: var(--primary100);
     color: var(--neutral100);
     display: flex;
-    width: 345px;
+    width: 100%px;
     height: 46px;
     justify-content: center;
     align-items: center;
