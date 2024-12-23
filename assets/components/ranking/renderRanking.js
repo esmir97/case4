@@ -1,25 +1,9 @@
-import { renderQuizNav } from './common.js';
-import { startConfetti } from './common.js';
+import * as common from "../common/common.js";
 
 // Nav
 
-export function renderQuizNav (parentElement) {
-    let quizNav = document.createElement("div");
-    quizNav.id = "quizNav";
-    parentElement.appendChild(quizNav);
-
-    let exitButton = document.createElement("button");
-    quizNav.appendChild(exitButton);
-    // exitButton.addEventListener... 
-
-    // sålänge
-    let pointsCon = document.createElement("div");
-    pointsCon.innerHTML = `
-        <h4>🤓</h4>
-        <p id="points">0p</p>
-    `
-    quizNav.appendChild(pointsCon);
-}
+let parentElement = document.querySelector("#wrapper");
+common.renderQuizNav(parentElement);
 
 export function renderRanking (parentElement, answer) { /*rightAnswer*/
 
@@ -43,7 +27,7 @@ export function renderRanking (parentElement, answer) { /*rightAnswer*/
         title.textContent = "You're Right!";
         title.classList.add("correct");
         score.textContent = "+80 Points"
-        startConfetti();
+        common.startConfetti();
     } else {
         parentElement.style.backgroundColor = "var(--error)";
         title.textContent = "Wrong Answer!";

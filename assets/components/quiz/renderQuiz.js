@@ -1,10 +1,11 @@
 import { ws } from "../../index.js";
-import { renderQuizNav } from './common.js';
-import { confetti } from './common.js';
+import * as common from '../common/common.js';
 
 // deno run -A --watch server.js
 
-renderQuizNav(parentElement);
+let parentElement = document.querySelector("#wrapper");
+common.renderQuizNav(parentElement);
+
 
 export function renderQuizHeader (parentElement, data) {
     let game = data.game;
