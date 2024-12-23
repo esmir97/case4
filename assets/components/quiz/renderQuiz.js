@@ -3,8 +3,6 @@ import * as common from '../common/common.js';
 
 // deno run -A --watch server.js
 
-let parentElement = document.querySelector("#wrapper");
-common.renderQuizNav(parentElement);
 
 export function renderQuizHeader (parentElement, data) {
     let game = data.game;
