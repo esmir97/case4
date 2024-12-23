@@ -284,6 +284,12 @@ async function createGame (socket, genre, century, name) {
         }
     ]
 
+    let playerName = players[0].name;
+
+    if (playerName == "Sebbe" || playerName == "sebbe") {
+        players[0].emoji = "🐶";
+    }
+
     let response = {
         code: newCode,
         genre: genre,
@@ -311,6 +317,10 @@ function changeName (socket, code, playerData, newName) {
     });
 
     playerToPatch.name = newName;
+
+    if (playerToPatch.name == "Sebbe" || playerToPatch.name == "sebbe") {
+        playerToPatch.emoji = "🐶";
+    }
 
     broadcast("playerChangedName", {code: code, player: playerToPatch});
     
@@ -408,6 +418,7 @@ function answerGiven (socket, data) {
     let question = data.question;
     let timeLeft = data.timeLeft;
     let pointsEarned = 0;
+    let answerCheck = false;
 
     let game = _state.games.find( (game) => {
         return game.code == code;
@@ -417,22 +428,21 @@ function answerGiven (socket, data) {
         return questionObj.question.trim().toLowerCase() === question.trim().toLowerCase();
     });
 
-
     let playerInState = game.players.find( (playerInArray) => {
         return playerInArray.id == player.id;
     });
 
-
     playerInState.answerGiven = true;
     if (questionAnswered.correct == answer) {
-        pointsEarned = timeLeft;
+        pointsEarned = Math.floor(timeLeft);
+        answerCheck = true;
     }
     playerInState.points += pointsEarned;
 
     sortPlayers(game.players);
+    send(socket, "answerChecked", {answerGiven: answerCheck});
     if (checkNumberOfAnswers(game)) broadcast("endRound", {code: game.code, game: game});
 
-    send(socket, "answerChecked");
 }
 
 function sortPlayers (playerArray) {

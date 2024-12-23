@@ -1,5 +1,6 @@
 import * as common from "../components/common/common.js";
 import { ws } from "../index.js";
+import { renderRanking } from "../components/ranking/renderRanking.js";
 
 export function renderPlayers(parentElement, player, game) {
     let playerContainer = document.createElement("div");
@@ -68,8 +69,10 @@ export function renderPlayers(parentElement, player, game) {
         });
 };
 
-export function answerChecked () {
-    console.log("checked");
+export function answerChecked (data) {
+    let answerCheck = data.answerGiven;
+    localStorage.setItem("answerGiven", answerCheck);
+    console.log(answerCheck);
     let nodeListAnswers = document.querySelectorAll(".optionButton");
 
     nodeListAnswers.forEach( (ele) => {
@@ -83,6 +86,9 @@ export function endRound (data) {
     let game = data.game;
     let code = data.code;
     let player = localStorage.getItem("player");
-
     
+    let wrapper = document.getElementById("wrapper");
+    if (localStorage.getItem("answerGiven") == null) localStorage.setItem("answerGiven", false);
+
+    renderRanking(wrapper, game);
 }

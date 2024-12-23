@@ -2,6 +2,7 @@ import { renderLobby } from "./../lobby/renderLobby.js";
 import { ws } from "../../index.js";
 
 export function renderStart(parentElement) {
+    localStorage.clear();
 
     parentElement.innerHTML = `
         <h2 class="title">Join Quiz</h2>

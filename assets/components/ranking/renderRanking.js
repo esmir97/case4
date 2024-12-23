@@ -18,8 +18,15 @@ export function renderQuizNav (parentElement) {
     quizNav.appendChild(pointsCon);
 }
 
-export function renderRanking (parentElement, answer) { /*rightAnswer*/
+export function renderRanking (parentElement, game) { /*rightAnswer*/
+  let answer = localStorage.getItem("answerGiven");
 
+  console.log(answer);
+  console.log(answer == "true");
+  console.log(answer == "false");
+
+    parentElement.innerHTML = ``;
+    
     // Text
 
     let topContainer = document.createElement("div");
@@ -35,7 +42,7 @@ export function renderRanking (parentElement, answer) { /*rightAnswer*/
 
     // let answer = player.latestAnswer;
 
-    if (answer === true) { /*rightAnswer*/
+    if (answer == "true") { /*rightAnswer*/
         parentElement.style.backgroundColor = "var(--success)";
         title.textContent = "You're Right!";
         title.classList.add("correct");

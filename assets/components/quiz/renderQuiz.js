@@ -149,7 +149,7 @@ export function renderQuizQuestion (parentElement, question) {
         if (progressBar.style.width === "0%") {
             eventTriggered = true;
             let player = JSON.parse( localStorage.getItem("player") );
-            let code = JSON.parse( localStorage.getItem("code") );
+            let code = localStorage.getItem("code");
             let data = {player, code};
             ws.send(JSON.stringify({ event: "timeIsUp", data }));
         }
@@ -186,6 +186,7 @@ export function renderQuizQuestion (parentElement, question) {
         }
         
         eventTriggered = true;
+
         ws.send(JSON.stringify({ event: "answerGiven", data }));
             /*
             const selectedOption = questionData.options[index];
