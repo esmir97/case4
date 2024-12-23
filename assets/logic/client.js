@@ -2,7 +2,7 @@ import { playerJoined } from "./../components/lobby/renderLobby.js";
 import { playerLeft } from "./../components/lobby/renderLobby.js";
 import { playerChangedName } from "./../components/lobby/renderLobby.js";
 import { renderLobby } from "./../components/lobby/renderLobby.js";
-import { renderQuizNav } from "../components/quiz/renderQuiz.js";
+import { renderQuizNav } from "../components/common/common.js";
 import { renderQuizHeader } from "../components/quiz/renderQuiz.js";
 import { renderQuizCounter } from "../components/quiz/renderQuiz.js";
 import { someoneLeft } from "./../components/lobby/renderLobby.js";

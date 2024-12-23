@@ -1,0 +1,32 @@
+.endingTitle {
+  margin: 40px 0 32px 0;
+  color: var(--secondary200);
+}
+
+.endingContainer h4 {
+    margin-bottom: 8px;
+}
+
+
+
+.popularContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 188px;
+    gap: 20px 16px;
+
+    margin: 48px 0;
+}
+
+.homeButtonWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  border-radius: 1000px;
+  height: 46px;
+  background-color: var(--primary100);
+
+    margin-top: 48px;
+}

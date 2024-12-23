@@ -68,6 +68,23 @@
     margin: 20px 0 20px 0;
 }
 
+.quizInfoText {
+    text-align: center;
+}
+
+.quizInfoText > p:first-of-type {
+    margin-top: 30px;
+}
+
+.quizInfoTextQuestion > p:first-of-type {
+    margin-top: 0;
+}
+
+.quizInfoText > p {
+    margin-top: 10px;
+    color: var(--secondary200);
+}
+
 /* Question */
 
 #quizContent {
