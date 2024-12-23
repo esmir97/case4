@@ -74,12 +74,8 @@ export function renderRanking (parentElement, game, questionAnswered) { /*rightA
     let pointsBehind = 0;
     let playerAhead = null;
 
-    console.log(players.length);
     for (let i = 0; i < players.length; i++) {
-      console.log("HEEEEEJ HÄR ÄR FORLOOPEN")
-      console.log(" jämför " + players[i].id + " och " + playerID)
       if (players[i].id == playerID && i !== 0) {
-        console.log("comp " + players[i - 1].points + " and " + players[i].points)
         pointsBehind = players[i - 1].points - players[i].points;
         playerAhead = players[i - 1].name;
       }
@@ -106,7 +102,6 @@ function getOrdinalSuffix(num) {
   const lastDigit = num % 10;
   const lastTwoDigits = num % 100;
 
-  // Handle special cases for 11th, 12th, and 13th
   if (lastTwoDigits >= 11 && lastTwoDigits <= 13) {
       return `${num}th`;
   }
