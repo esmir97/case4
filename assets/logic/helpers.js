@@ -71,6 +71,8 @@ export function renderPlayers(parentElement, player, game) {
 
 export function answerChecked (data) {
     let answerCheck = data.answerGiven;
+    let pointsEarned = data.pointsEarned;
+    localStorage.setItem("pointsEarned", pointsEarned);
     localStorage.setItem("answerGiven", answerCheck);
     console.log(answerCheck);
     let nodeListAnswers = document.querySelectorAll(".optionButton");
@@ -85,10 +87,33 @@ export function answerChecked (data) {
 export function endRound (data) {
     let game = data.game;
     let code = data.code;
+    let questionAnswered = data.question;
+
     let player = localStorage.getItem("player");
     
     let wrapper = document.getElementById("wrapper");
     if (localStorage.getItem("answerGiven") == null) localStorage.setItem("answerGiven", false);
 
-    renderRanking(wrapper, game);
+    renderRanking(wrapper, game, questionAnswered);
 }
+
+function getOrdinalSuffix(num) {
+    const lastDigit = num % 10;
+    const lastTwoDigits = num % 100;
+  
+    // Handle special cases for 11th, 12th, and 13th
+    if (lastTwoDigits >= 11 && lastTwoDigits <= 13) {
+        return `${num}th`;
+    }
+  
+    switch (lastDigit) {
+        case 1:
+            return `${num}st`;
+        case 2:
+            return `${num}nd`;
+        case 3:
+            return `${num}rd`;
+        default:
+            return `${num}th`;
+    }
+  }

@@ -440,19 +440,18 @@ function answerGiven (socket, data) {
     playerInState.points += pointsEarned;
 
     sortPlayers(game.players);
-    send(socket, "answerChecked", {answerGiven: answerCheck});
-    if (checkNumberOfAnswers(game)) broadcast("endRound", {code: game.code, game: game});
+    console.log(game.players);
+    send(socket, "answerChecked", {answerGiven: answerCheck, pointsEarned: pointsEarned});
+    if (checkNumberOfAnswers(game)) broadcast("endRound", {code: game.code, game: game, question: questionAnswered});
 
 }
 
 function sortPlayers (playerArray) {
-    playerArray.sort(sortNumbers);
-    console.log("AFTER SORT");
-    console.log(playerArray);
+    return playerArray.sort(sortNumbers);
 }
 
 function sortNumbers (a, b) {
-    return a.points - b.points;
+    return b.points - a.points;
 }
 
 function checkNumberOfAnswers (game) {
