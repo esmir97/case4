@@ -1,4 +1,5 @@
 import * as common from "../common/common.js";
+import { ws } from "../../index.js";
 
 // Nav
 
@@ -96,6 +97,9 @@ export function renderRanking (parentElement, game, questionAnswered) { /*rightA
                                 
     currentPlacement.classList.add("currentPlacement");
     parentElement.appendChild(currentPlacement);
+
+    setTimeout(ws.send(JSON.stringify({ event: "nextQuestion"})));
+  
 }
 
 function getOrdinalSuffix(num) {

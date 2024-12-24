@@ -233,6 +233,10 @@ function handleWebSocket (request) { //Säger vad som ska hända på serversidan
             case "timeIsUp":
                 timeIsUp(message.data);
                 break;
+
+            case "nextQuestion":
+                nextQuestion();
+                break;
         }
     });
     
@@ -489,6 +493,10 @@ function timeIsUp (data) {
         broadcast("endRound", {code: game.code, game: game});
     }
     
+}
+
+function nextQuestion () {
+    console.log(questionIndex);
 }
 
 Deno.serve(handleRequest);
