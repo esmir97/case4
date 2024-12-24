@@ -233,10 +233,6 @@ function handleWebSocket (request) { //Säger vad som ska hända på serversidan
             case "timeIsUp":
                 timeIsUp(message.data);
                 break;
-
-            case "renderNextQuestion": // For rendering the rest of the quiz. Put setTimeout with func including ws msg to client to continue
-                renderNextQuestion(message.data);
-                break;
         }
     });
     
@@ -494,11 +490,6 @@ function timeIsUp (data) {
         broadcast("endRound", {code: game.code, game: game});
     }
     
-}
-
-function renderNextQuestion (data) {
-    console.log("in renderNext");
-    console.log(data);
 }
 
 Deno.serve(handleRequest);

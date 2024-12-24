@@ -6,6 +6,7 @@ export function renderPlayers(parentElement, player, game) {
     let playerContainer = document.createElement("div");
         playerContainer.id = "playerContainer";
         parentElement.appendChild(playerContainer);
+        //let game = await (await fetch(`/api/test?code=${gameCode}`)).json();
     
         game.players.forEach((player) => {
             const div = document.createElement("div");
@@ -89,5 +90,5 @@ export function endRound (data) {
     let wrapper = document.getElementById("wrapper");
     if (localStorage.getItem("answerGiven") == null) localStorage.setItem("answerGiven", false);
 
-    renderRanking(wrapper, game, questionAnswered);
+    renderRanking(wrapper, game);
 }
