@@ -74,7 +74,8 @@ async function createNewGame(event) {
         let gameParams = {
             name: document.getElementById("name").value,
             genre: genre,
-            century: century
+            century: century,
+            playerID: localStorage.getItem("id")
         };
 
         if (gameParams.name === "") {
@@ -233,8 +234,8 @@ async function newGameCard(event) {
             } else {
                 decade = slider.value.slice(2);
             }
-
-            ws.send(JSON.stringify( {event: "createGame", data: {genre: genre, century: decade, name: nameInput.value}}));
+            console.log(localStorage.getItem("id"));
+            ws.send(JSON.stringify( {event: "createGame", data: {genre: genre, century: decade, name: nameInput.value, playerID: localStorage.getItem("id")}}));
                                 // Retrieve the genre from the startButton's ID
              // Pass as an object
         }
@@ -255,7 +256,8 @@ async function joinGame(event) {
         if (code.length !== 6) renderError("wrapper", "Code needs to be 6 characters long");
         
         let options = { method: "POST", headers: { "Content-Type": "application/json"}, body: JSON.stringify({"code": code}) };
-        ws.send(JSON.stringify( {event: "joinGame", data: code})); //gameParams is obj
+
+        ws.send(JSON.stringify( {event: "joinGame", data: {code: code, playerID: localStorage.getItem("id")}})); //gameParams is obj
 
         //let response = await( await fetch(`/api/test`, options) ).json();
         //console.log(response);

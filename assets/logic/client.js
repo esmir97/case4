@@ -89,9 +89,12 @@ export function establishWebsocket () {
             case "endRound":
                 endRound(message.data);
                 break;
-        }
-        //socket.send(event.data);
-    
+
+            case "connection":
+                console.log(message.data);
+                localStorage.setItem("id", message.data);
+                break;
+        }    
     });
     
     socket.addEventListener("close", (event) => {

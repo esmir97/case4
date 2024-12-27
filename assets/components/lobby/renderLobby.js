@@ -180,6 +180,7 @@ export async function playerJoined(message) {
     });
 
     if (document.getElementById(newPlayer.id)) {
+        console.log("player with this ID already exists!");
         return;
     }
 
@@ -206,7 +207,6 @@ export async function playerLeft(message) {
 
 export async function playerChangedName(message) {
     console.log("changed name");
-    console.log(message.data);
 
     let player = message.data.player;
 
@@ -214,7 +214,9 @@ export async function playerChangedName(message) {
 
     nodeListPlayers.forEach((ele) => {
         console.log(ele.querySelector("p").textContent);
-        if (ele.id == player.id) {
+        console.log(typeof ele.id, typeof player.id);
+        if (ele.id === player.id) {
+            console.log("comparing " + ele.id + " and " + player.id);
             let p = ele.querySelector("p");
             p.textContent = `${player.emoji} ${player.name}`;
             console.log("hejsvejs");
@@ -235,8 +237,7 @@ export function someoneLeft (data) {
     let code = data.data.code;
     let id = data.data.playerID;
 
-    if (document.getElementById(id)) document.getElementById(id).remove();
-
+    if(document.getElementById(id)) document.getElementById(id).remove();
     
     console.log("Player " + id + " left the game.");
 }

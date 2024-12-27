@@ -9,7 +9,6 @@ let _state = {
 let connections = {};
 let connectionID = 1;
 let questionIndex = 0;
-let myID;
 
 const testData = await Deno.readTextFile("./database.json");
 
@@ -178,15 +177,13 @@ async function handleHTTPRequest (request) { //Säger till vad som ska hända n�
 
 function handleWebSocket (request) { //Säger vad som ska hända på serversidan med vår connection när vi använder WebSockets
     const { socket, response } = Deno.upgradeWebSocket(request);
-    myID = generateConnectionID();
-    console.log("myID CHANGED VALUE, NEW VALUE IS: " + myID);
+    let myID = connectionID;
     connections[myID] = socket;
     connectionID++;
-    console.log("CONNECTIONID INCREMENTED: " + connectionID);
     
     socket.addEventListener("open", (event) => {
         console.log(`Connection ${myID} connected.`);
-        
+        send(socket, "connection", myID);
     });
 
     socket.addEventListener("message", (event) => {
@@ -203,7 +200,9 @@ function handleWebSocket (request) { //Säger vad som ska hända på serversidan
                 break;
 
             case "createGame":
-                createGame(socket, message.data.genre, message.data.century, message.data.name);
+                console.log("ID HERE");
+                console.log(message.data.playerID);
+                createGame(socket, message.data.genre, message.data.century, message.data.name, message.data.playerID);
                 break;
             
             case "joinGame":
@@ -239,7 +238,7 @@ function handleWebSocket (request) { //Säger vad som ska hända på serversidan
     socket.addEventListener("close", (event) => {
         console.log(`Connection ${myID} disconnected.`);
         console.log(myID);
-
+        handleDisconnect(socket);
         
         
         delete connections[myID];
@@ -266,15 +265,16 @@ function getGame (socket, code) {
     return JSON.stringify(foundGame);
 }
 
-async function createGame (socket, genre, century, name) {
+async function createGame (socket, genre, century, name, playerID) {
                       
     let newCode = generateGameCode();
     let questions = getQuestionsForGame(genre, century);
 
+
     let players = [
         {
             name: name,
-            id: generateConnectionID(),
+            id: playerID,
             connection: socket,
             role: "admin",
             points: 0,
@@ -301,8 +301,6 @@ async function createGame (socket, genre, century, name) {
     _state.games.push(response);
 
     socket.send(JSON.stringify({event: "gameCreated", data: response}));
-    
-    
 
     return JSON.stringify(response);
 }
@@ -321,16 +319,21 @@ function changeName (socket, code, playerData, newName) {
     if (playerToPatch.name == "Sebbe" || playerToPatch.name == "sebbe") {
         playerToPatch.emoji = "🐶";
     }
-
+    console.log("patching");
+    console.log(playerToPatch);
     broadcast("playerChangedName", {code: code, player: playerToPatch});
     
 }
 
-function joinGame (socket, code) {
+function joinGame (socket, data) {
+    let code = data.code;
+    let playerID = data.playerID
+    console.log("ID IS HERE");
+    console.log(playerID);
                     
     let newPlayer = {
         name: "",
-        id: generateConnectionID(),
+        id: playerID,
         connection: socket,
         role: "player",
         points: 0,
@@ -489,6 +492,45 @@ function timeIsUp (data) {
         broadcast("endRound", {code: game.code, game: game});
     }
     
+}
+
+function handleDisconnect(socket) {
+    // Find the player and their game
+    let gameFound = null;
+    let playerFound = null;
+    console.log("REMOVING PLAYER ");
+    console.log(socket);
+    for (const game of _state.games) {
+        const playerIndex = game.players.findIndex(player => player.connection === socket);
+
+        if (playerIndex !== -1) {
+            gameFound = game;
+            playerFound = game.players[playerIndex];
+            
+            // Remove the player from the game
+            game.players.splice(playerIndex, 1);
+            break;
+        }
+    }
+
+    if (gameFound && playerFound) {
+        console.log(`Player ${playerFound.id} removed from game ${gameFound.code}.`);
+
+        // Notify other players in the game
+        broadcast("someoneLeft", { code: gameFound.code, playerID: playerFound.id });
+
+        // If the player was the admin, end the game
+        if (playerFound.role === "admin") {
+            console.log(`Admin disconnected. Ending game ${gameFound.code}.`);
+            broadcast("endGame", { code: gameFound.code });
+            
+            // Remove the game from the state
+            const gameIndex = _state.games.indexOf(gameFound);
+            _state.games.splice(gameIndex, 1);
+        }
+    } else {
+        console.log(`Connection ${connectionID} disconnected but no associated game/player found.`);
+    }
 }
 
 Deno.serve(handleRequest);
