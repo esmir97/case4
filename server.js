@@ -495,7 +495,6 @@ function timeIsUp (data) {
 }
 
 function handleDisconnect(socket) {
-    // Find the player and their game
     let gameFound = null;
     let playerFound = null;
     console.log("REMOVING PLAYER ");
@@ -507,7 +506,6 @@ function handleDisconnect(socket) {
             gameFound = game;
             playerFound = game.players[playerIndex];
             
-            // Remove the player from the game
             game.players.splice(playerIndex, 1);
             break;
         }
@@ -516,15 +514,12 @@ function handleDisconnect(socket) {
     if (gameFound && playerFound) {
         console.log(`Player ${playerFound.id} removed from game ${gameFound.code}.`);
 
-        // Notify other players in the game
         broadcast("someoneLeft", { code: gameFound.code, playerID: playerFound.id });
 
-        // If the player was the admin, end the game
         if (playerFound.role === "admin") {
             console.log(`Admin disconnected. Ending game ${gameFound.code}.`);
             broadcast("endGame", { code: gameFound.code });
             
-            // Remove the game from the state
             const gameIndex = _state.games.indexOf(gameFound);
             _state.games.splice(gameIndex, 1);
         }
