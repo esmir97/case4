@@ -1,8 +1,15 @@
 import * as common from "../common/common.js";
+import { getOrdinalSuffix } from "../ranking/renderRanking.js";
+import { renderEnding } from "../ending/ending.js";
 
 
-export function renderFinalScore (parentElement) {
+export function renderFinalScore (parentElement, data) {
     // Header
+    console.log(data);
+    let code = data.code;
+    let game = data.game;
+
+    parentElement.innerHTML = ``;
     let header = document.createElement("div");
     header.id = "finalHeader";
     parentElement.appendChild(header);
@@ -43,6 +50,7 @@ export function renderFinalScore (parentElement) {
     
         overlay.querySelector(".leaveQuizYes").addEventListener("click", () => {
             wrapper.innerHTML = "";
+            ws.send(JSON.stringify({ event: "playerLeft", data: { code: localStorage.getItem("code"), player: player }}));
             renderStart(wrapper);
         });
         overlay.querySelector(".leaveQuizNo").addEventListener("click", () => overlay.remove());
@@ -62,18 +70,23 @@ export function renderFinalScore (parentElement) {
         let podiumDiv = document.createElement("div");
         podiumDiv.classList.add("podiumDiv");
         
+        if (!game.players[i - 1]) {
+          break;
+        }
+        console.log(game.players[i - 1]);
+
         if (i === 1) {
             podiumDiv.classList.add("first");
         } else if (i === 2) {
             podiumDiv.classList.add("second");
-        } else {
+        } else if (i === 3) {
             podiumDiv.classList.add("third");
         }
     
         podiumDiv.innerHTML = `
-            <p class="podiumEmoji">🤓</p>
-            <p>Dumbledork</p>
-            <p>1850</p>
+            <p class="podiumEmoji">${game.players[i - 1].emoji}</p>
+            <p>${game.players[i - 1].name}</p>
+            <p>${game.players[i - 1].points}</p>
             <div class="position position-${i}">
                 <h4>${i}</h4>
             </div>
@@ -108,14 +121,14 @@ export function renderFinalScore (parentElement) {
     let finalListContainer = document.createElement("ol");
     finalScoreboard.appendChild(finalListContainer);
 
-    finalPlayers.forEach((player, index) => {
+    game.players.forEach((player, index) => {
         let finalListItem = document.createElement("div");
         finalListItem.classList.add("finalListItem");
         finalListItem.innerHTML = `
             <p>${index + 1}.</p>
             <p>${player.emoji}</p> 
             <p>${player.name}</p>
-            <p>${player.score}</p>
+            <p>${player.points}</p>
         `;
 
         finalListContainer.appendChild(finalListItem);
@@ -123,8 +136,15 @@ export function renderFinalScore (parentElement) {
     
     // Final Placement
 
+    let playerID = localStorage.getItem("id");
+    let playerIndex = game.players.findIndex( (player) => {
+      return player.id == playerID;
+    })
+
+    let playerPosition = getOrdinalSuffix(playerIndex + 1);
+
     let finalPlacement = document.createElement("h4");
-    finalPlacement.innerHTML = `Good Job! <br class="break"> You finished in ... place`;
+    finalPlacement.innerHTML = `Good Job! <br class="break"> You finished in ${playerPosition} place`;
                                 
     finalPlacement.classList.add("finalPlacement");
     parentElement.appendChild(finalPlacement);
@@ -140,6 +160,11 @@ export function renderFinalScore (parentElement) {
     parentElement.appendChild(nextButton);
 
     common.startConfetti();
+
+    nextButton.addEventListener("click", () => {
+      let wrapper = document.getElementById("wrapper");
+      renderEnding(wrapper);
+    });
 }
 
 // CONFETTI

@@ -103,7 +103,7 @@ export function renderRanking (parentElement, game, questionAnswered) { /*rightA
     }, 10000); */
 }
 
-function getOrdinalSuffix(num) {
+export function getOrdinalSuffix(num) {
   const lastDigit = num % 10;
   const lastTwoDigits = num % 100;
 

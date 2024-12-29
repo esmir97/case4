@@ -372,8 +372,7 @@ function startGame(code) {
         broadcast("startedGame", {code: foundGame.code, game: foundGame, question: foundGame.questions[foundGame.questionIndex], questionIndex: foundGame.questionIndex});
     } else {
         return;
-    }
-    
+    }   
 }
 
 function kickPlayer (data) {
@@ -457,16 +456,20 @@ function answerGiven (socket, data) {
     if (checkNumberOfAnswers(game)){
         broadcast("endRound", {code: game.code, game: game, question: questionAnswered});
 
-        setTimeout(() => { 
-            for (let player of game.players) {
-                player.answerGiven = false;
-                player.timeIsUp = false;
-            }
-
-            game.questionIndex++;
-            continueQuiz(game.code);
-            console.log("sending question number" + game.questionIndex);
-          }, 10000);
+        if (game.questionIndex < 19) {
+            setTimeout(() => { 
+                for (let player of game.players) {
+                    player.answerGiven = false;
+                    player.timeIsUp = false;
+                }
+    
+                game.questionIndex++;
+                continueQuiz(game.code);
+                console.log("sending question number" + game.questionIndex);
+              }, 10000);
+        } else {
+            broadcast("endGame", {code: game.code, game: game});
+        }
     } 
 
 }
@@ -512,16 +515,20 @@ function timeIsUp (data) {
     if (timeIsUpCounter == numberOfPlayers) {
         broadcast("endRound", {code: game.code, game: game, question: game.questions[game.questionIndex]});
 
-        setTimeout(() => { 
-            for (let player of game.players) {
-                player.answerGiven = false;
-                player.timeIsUp = false;
-            }
-
-            game.questionIndex++;
-            continueQuiz(game.code);
-            console.log("sending question");
-          }, 10000);
+        if (game.questionIndex < 19) {
+            setTimeout(() => { 
+                for (let player of game.players) {
+                    player.answerGiven = false;
+                    player.timeIsUp = false;
+                }
+    
+                game.questionIndex++;
+                continueQuiz(game.code);
+                console.log("sending question");
+              }, 10000);
+        } else {
+            broadcast("endGame", {code: game.code, game: game});
+        }
     }
 }
 

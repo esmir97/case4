@@ -82,10 +82,8 @@ export function renderQuizQuestion (parentElement, data) {
 
     
         for (let i = question.options.length - 1; i > 0; i--) {
-            // Pick a random index from 0 to i
             let randomIndex = Math.floor(Math.random() * (i + 1));
     
-            // Swap elements at i and randomIndex
             [question.options[i], question.options[randomIndex]] = [question.options[randomIndex], question.options[i]];
         }
         

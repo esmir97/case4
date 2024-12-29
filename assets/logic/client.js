@@ -10,6 +10,7 @@ import { youWereKicked } from "./../components/lobby/renderLobby.js";
 import { renderStart } from "../components/home/renderHome.js";
 import { answerChecked } from "./helpers.js";
 import { endRound } from "./helpers.js";
+import { renderFinalScore } from "../components/finalScore/renderFinalScore.js";
 
 export let game;
 
@@ -78,8 +79,7 @@ export function establishWebsocket () {
                 break;
 
             case "endGame":
-                localStorage.clear();
-                renderStart(wrapper);
+                renderFinalScore(wrapper, message.data);
                 break;
 
             case "answerChecked":
