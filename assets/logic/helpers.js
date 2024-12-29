@@ -101,7 +101,6 @@ function getOrdinalSuffix(num) {
     const lastDigit = num % 10;
     const lastTwoDigits = num % 100;
   
-    // Handle special cases for 11th, 12th, and 13th
     if (lastTwoDigits >= 11 && lastTwoDigits <= 13) {
         return `${num}th`;
     }

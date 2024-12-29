@@ -58,10 +58,14 @@ function endGame (data) {
 }
 
 // Renderar Quiz och Finalscore Nav
-export function renderQuizNav (parentElement) {
+export function renderQuizNav (parentElement, data) {
     parentElement.innerHTML = ``;
+    let game = data.game;
+    let playerLocalStorage = JSON.parse( localStorage.getItem("player") );
 
-    let player = JSON.parse( localStorage.getItem("player") );
+    let player = game.players.find( (playerObj) => {
+      return playerObj.id == playerLocalStorage.id;
+    });
 
     let quizNav = document.createElement("div");
     quizNav.id = "quizNav";
@@ -73,7 +77,7 @@ export function renderQuizNav (parentElement) {
         </div>
         <div class="pointsCon">
             <h4>${player.emoji}</h4>
-            <p id="points">0p</p>
+            <p id="points">${player.points}p</p>
         </div>
     `
 
@@ -106,6 +110,7 @@ export function renderQuizNav (parentElement) {
     
         overlay.querySelector(".leaveQuizYes").addEventListener("click", () => {
             wrapper.innerHTML = "";
+            ws.send(JSON.stringify({ event: "playerLeft", data: { code: localStorage.getItem("code"), player: player }}));
             renderStart(wrapper);
         });
         overlay.querySelector(".leaveQuizNo").addEventListener("click", () => overlay.remove());
@@ -196,6 +201,7 @@ export function startConfetti() {
     }
   
     function poof() {
+      container.id = 'confetti';
       document.body.appendChild(container);
       var theme = colorThemes[0];
       (function addConfetto() {

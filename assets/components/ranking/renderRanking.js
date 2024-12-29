@@ -1,4 +1,5 @@
 import * as common from "../common/common.js";
+import { ws } from "../../index.js"; 
 
 // Nav
 
@@ -91,11 +92,15 @@ export function renderRanking (parentElement, game, questionAnswered) { /*rightA
     if (myIndex == 0) {
       currentPlacement.innerHTML = `You're in first place!! Good job, keep it up!`;
     } else {
-      currentPlacement.innerHTML = `You're in ${myPlaceAndSuffix} place <br class="break"> only ${pointsBehind} point behind ${playerAhead}`;   //använda <br>?
+      currentPlacement.innerHTML = `You're in ${myPlaceAndSuffix} place <br class="break"> only ${pointsBehind} points behind ${playerAhead}`;   //använda <br>?
     }
                                 
     currentPlacement.classList.add("currentPlacement");
     parentElement.appendChild(currentPlacement);
+
+    /* setTimeout(() => { 
+      ws.send(JSON.stringify({ event: "continueQuiz", data: game.code }));
+    }, 10000); */
 }
 
 function getOrdinalSuffix(num) {

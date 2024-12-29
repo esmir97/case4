@@ -64,7 +64,7 @@ export function establishWebsocket () {
                 break;
 
             case "startedGame":
-                renderQuizNav(wrapper);
+                renderQuizNav(wrapper, message.data);
                 renderQuizHeader(wrapper, message.data);
                 renderQuizCounter(wrapper, message.data);
                 break;

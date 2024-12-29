@@ -8,7 +8,6 @@ let _state = {
 
 let connections = {};
 let connectionID = 1;
-let questionIndex = 0;
 
 const testData = await Deno.readTextFile("./database.json");
 
@@ -60,7 +59,6 @@ function generateGameCode (n = 6) {
 
 function getQuestionsForGame(genre, century) { //Randomises an array with 20 questions depending on genre/century
     let questions = JSON.parse(testData);
-    
     let questionsToChooseFrom = [];
     let chosenQuestions = [];
 
@@ -75,22 +73,23 @@ function getQuestionsForGame(genre, century) { //Randomises an array with 20 que
         
         let requestedQuestions = questions[genre][century];    
 
-        for (let question of requestedQuestions) {
-            questionsToChooseFrom.push(question);
-        }
+        questionsToChooseFrom = [...requestedQuestions];
         
     } else {
-        let questionGenre = testData[genre];
+        let questionGenre = questions[genre];
 
-        for (let century in questionGenre) {
-            for (let question of century) {
-                questionsToChooseFrom.push(question);
-            }
+        for (let centuryKey in questionGenre) {
+            questionsToChooseFrom.push(...questionGenre[centuryKey])
         }
     }
 
-    for (let i = 0; i < 20; i++) {
-        chosenQuestions.push(questionsToChooseFrom[Math.floor( Math.random() * questionsToChooseFrom.length )]);
+    let questionPool = [...questionsToChooseFrom];
+
+    while (chosenQuestions.length < 20 && questionPool.length > 0) {
+
+        let randomIndex = Math.floor(Math.random() * questionPool.length);
+        let [selectedQuestion] = questionPool.splice(randomIndex, 1);
+        chosenQuestions.push(selectedQuestion);
     }
     
     return chosenQuestions;
@@ -218,7 +217,7 @@ function handleWebSocket (request) { //Säger vad som ska hända på serversidan
                 break;
 
             case "startGame":
-                startGame(socket, message.data);
+                startGame(message.data);
                 break;
 
             case "kickPlayer":
@@ -231,6 +230,10 @@ function handleWebSocket (request) { //Säger vad som ska hända på serversidan
 
             case "timeIsUp":
                 timeIsUp(message.data);
+                break;
+
+            case "continueQuiz":
+                continueQuiz(message.data);
                 break;
         }
     });
@@ -295,7 +298,8 @@ async function createGame (socket, genre, century, name, playerID) {
         genre: genre,
         century: century,
         questions: questions,
-        players: players
+        players: players,
+        questionIndex: 0
     };
 
     _state.games.push(response);
@@ -359,12 +363,17 @@ function joinGame (socket, data) {
     return JSON.stringify(filteredGame);
 }
 
-function startGame(socket, code) {
+function startGame(code) {
     let foundGame = _state.games.find( (game) => {
         return game.code == code;
     });
+
+    if (foundGame) {
+        broadcast("startedGame", {code: foundGame.code, game: foundGame, question: foundGame.questions[foundGame.questionIndex], questionIndex: foundGame.questionIndex});
+    } else {
+        return;
+    }
     
-    broadcast("startedGame", {code: foundGame.code, game: foundGame, question: foundGame.questions[questionIndex]});
 }
 
 function kickPlayer (data) {
@@ -443,9 +452,22 @@ function answerGiven (socket, data) {
     playerInState.points += pointsEarned;
 
     sortPlayers(game.players);
-    console.log(game.players);
+
     send(socket, "answerChecked", {answerGiven: answerCheck, pointsEarned: pointsEarned});
-    if (checkNumberOfAnswers(game)) broadcast("endRound", {code: game.code, game: game, question: questionAnswered});
+    if (checkNumberOfAnswers(game)){
+        broadcast("endRound", {code: game.code, game: game, question: questionAnswered});
+
+        setTimeout(() => { 
+            for (let player of game.players) {
+                player.answerGiven = false;
+                player.timeIsUp = false;
+            }
+
+            game.questionIndex++;
+            continueQuiz(game.code);
+            console.log("sending question number" + game.questionIndex);
+          }, 10000);
+    } 
 
 }
 
@@ -488,13 +510,22 @@ function timeIsUp (data) {
     });
     
     if (timeIsUpCounter == numberOfPlayers) {
-        questionIndex++;
-        broadcast("endRound", {code: game.code, game: game});
+        broadcast("endRound", {code: game.code, game: game, question: game.questions[game.questionIndex]});
+
+        setTimeout(() => { 
+            for (let player of game.players) {
+                player.answerGiven = false;
+                player.timeIsUp = false;
+            }
+
+            game.questionIndex++;
+            continueQuiz(game.code);
+            console.log("sending question");
+          }, 10000);
     }
-    
 }
 
-function handleDisconnect(socket) {
+function handleDisconnect (socket) {
     let gameFound = null;
     let playerFound = null;
     console.log("REMOVING PLAYER ");
@@ -526,6 +557,11 @@ function handleDisconnect(socket) {
     } else {
         console.log(`Connection ${connectionID} disconnected but no associated game/player found.`);
     }
+}
+
+function continueQuiz (code) {
+    startGame(code);
+    console.log(code);
 }
 
 Deno.serve(handleRequest);

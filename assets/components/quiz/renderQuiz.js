@@ -5,6 +5,18 @@ import * as common from '../common/common.js';
 
 
 export function renderQuizHeader (parentElement, data) {
+
+    let wrapper = document.getElementById("wrapper");
+    let confetti = document.getElementById("confetti");
+
+    if (wrapper.style.backgroundColor == 'var(--success)' || wrapper.style.backgroundColor == 'var(--error)') {
+        wrapper.style.backgroundColor = '';
+    }
+
+    if (confetti) {
+        confetti.remove();
+    }
+
     let game = data.game;
     let header = document.createElement("div");
     let genre = game.genre.charAt(0).toUpperCase() + game.genre.slice(1);
@@ -18,7 +30,7 @@ export function renderQuizHeader (parentElement, data) {
     header.appendChild(headerText);
 }
 
-export function renderQuizCounter (parentElement, question) {
+export function renderQuizCounter (parentElement, data) {
     let counterCon = document.createElement("div");
     counterCon.id = "counterCon";
     parentElement.appendChild(counterCon);
@@ -51,7 +63,7 @@ export function renderQuizCounter (parentElement, question) {
         countdownValue--;
 
         if (countdownValue < 0) {
-            renderQuizQuestion(wrapper, question);
+            renderQuizQuestion(wrapper, data);
             clearInterval(countdownInterval);
             counterCon.remove();
         }
@@ -59,18 +71,30 @@ export function renderQuizCounter (parentElement, question) {
 }
 
 
-export function renderQuizQuestion (parentElement, question) {
-    question = question.question;
+export function renderQuizQuestion (parentElement, data) {
+    let question = data.question;
+    let questionIndex = data.questionIndex;
 
     console.log(question);
     const quizContent = document.createElement("div");
     quizContent.id = "quizContent";
     parentElement.appendChild(quizContent);
 
+    
+        for (let i = question.options.length - 1; i > 0; i--) {
+            // Pick a random index from 0 to i
+            let randomIndex = Math.floor(Math.random() * (i + 1));
+    
+            // Swap elements at i and randomIndex
+            [question.options[i], question.options[randomIndex]] = [question.options[randomIndex], question.options[i]];
+        }
+        
+    
+
     // sålänge
     quizContent.innerHTML = ` 
         <div id="questionProgress">
-            <p>1 / 20</p>
+            <p>${questionIndex + 1} / 20</p>
         </div>
         <div id="questionText">
             <p>${question.question}</p>
