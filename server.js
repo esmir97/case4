@@ -406,7 +406,7 @@ function playerLeft (data) {
             return game.code == code;
         });
 
-        broadcast("endGame", {code: code});
+        broadcast("quitGame", {code: code});
         games.splice(gameIndex, 1);
     } else {
         let game = games.find( (game) => {
@@ -556,7 +556,7 @@ function handleDisconnect (socket) {
 
         if (playerFound.role === "admin") {
             console.log(`Admin disconnected. Ending game ${gameFound.code}.`);
-            broadcast("endGame", { code: gameFound.code });
+            broadcast("quitGame", { code: gameFound.code });
             
             const gameIndex = _state.games.indexOf(gameFound);
             _state.games.splice(gameIndex, 1);

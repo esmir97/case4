@@ -94,6 +94,10 @@ export function establishWebsocket () {
                 console.log(message.data);
                 localStorage.setItem("id", message.data);
                 break;
+
+            case "quitGame":
+                renderStart(wrapper);
+                break;
         }    
     });
     

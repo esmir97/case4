@@ -2,7 +2,11 @@ import { renderLobby } from "./../lobby/renderLobby.js";
 import { ws } from "../../index.js";
 
 export function renderStart(parentElement) {
-    localStorage.clear();
+    if (localStorage.getItem("player")) localStorage.removeItem("player");
+    if (localStorage.getItem("code")) localStorage.removeItem("code");
+    if (localStorage.getItem("answerGiven")) localStorage.removeItem("answerGiven");
+    if (localStorage.getItem("pointsEarned")) localStorage.removeItem("pointsEarned");
+
 
     parentElement.innerHTML = `
         <h2 class="title">Join Quiz</h2>
