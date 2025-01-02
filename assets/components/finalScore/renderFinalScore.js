@@ -1,6 +1,7 @@
 import * as common from "../common/common.js";
 import { getOrdinalSuffix } from "../ranking/renderRanking.js";
 import { renderEnding } from "../ending/ending.js";
+import { renderStart } from "../home/renderHome.js";
 
 
 export function renderFinalScore (parentElement, data) {
@@ -154,16 +155,16 @@ export function renderFinalScore (parentElement, data) {
     let nextButton = document.createElement("button");
     nextButton.id = "nextButton";
     nextButton.innerHTML = `
-        <p>Next</p>
-        <img class="nextIcon" src="/static/media/icons/next.svg"/>
-    `;
+        <p>Back to Home</p>
+        
+    `; // <img class="nextIcon" src="/static/media/icons/next.svg"/>
     parentElement.appendChild(nextButton);
 
     common.startConfetti();
 
     nextButton.addEventListener("click", () => {
       let wrapper = document.getElementById("wrapper");
-      renderEnding(wrapper);
+      renderStart(wrapper);
     });
 }
 

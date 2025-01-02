@@ -1,4 +1,4 @@
-
+import { homePopup } from "../common/common.js";
 export function renderEnding (parentElement) {
     parentElement.innerHTML = "";
 
@@ -27,6 +27,9 @@ export function renderEnding (parentElement) {
     let homeButton = document.querySelector(".homeButtonWrap");
     homeButton.addEventListener("click", () => {
         // Funktioner för hemknappen
+        const wrapper = document.getElementById("wrapper");
+
+        homePopup(wrapper);
     });
 };
 

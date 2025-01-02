@@ -120,6 +120,7 @@ export function renderQuizNav (parentElement, data) {
 // CONFETTI
 
 export function startConfetti() {
+  if (document.getElementById("confetti")) return;
 
     var random = Math.random,
       cos = Math.cos,

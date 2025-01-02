@@ -7,6 +7,8 @@ export function renderStart(parentElement) {
     if (localStorage.getItem("answerGiven")) localStorage.removeItem("answerGiven");
     if (localStorage.getItem("pointsEarned")) localStorage.removeItem("pointsEarned");
 
+    if (document.getElementById("confetti")) confetti.remove();
+    if (parentElement.style.backgroundColor != "var(--background)") parentElement.style.backgroundColor = "var(--background)";
 
     parentElement.innerHTML = `
         <h2 class="title">Join Quiz</h2>
