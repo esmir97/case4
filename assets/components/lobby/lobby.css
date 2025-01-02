@@ -119,3 +119,89 @@
     color: var(--neutral700);
     font-size: 16px;
 }
+
+
+/* Responsiva stilar */
+@media (max-width: 392px) and (min-width: 370px) {
+    .homeButton {
+        width: 20px; /* Anpassa knappens storlek */
+        height: 20px;
+    }
+
+    .gameCodePreview {
+        height: 40px; /* Justera höjden */
+        border-radius: 800px; /* Behåll proportioner */
+    }
+
+    .gameCode {
+        font-size: 18px; /* Justera textstorlek */
+        letter-spacing: 70%; /* Minska bokstavsmellanrum */
+    }
+
+    .waitingForPlayers {
+        margin-bottom: 28px; /* Minska mellanrum */
+        margin-top: 10px;
+    }
+
+    .startQuizButton {
+        height: 42px; /* Anpassa höjden */
+        border-radius: 80px; /* Behåll proportioner */
+        padding: 16px; /* Justera inre marginaler */
+    }
+
+    .startQuizButton img {
+        width: 20px; /* Justera bildstorlek */
+        height: 20px;
+        right: 16px; /* Justera position */
+    }
+
+    .playerLobby {
+        padding: 6px 12px; /* Minska inre marginaler */
+    }
+
+    .playerLobby p {
+        font-size: 14px; /* Justera textstorlek */
+    }
+}
+
+@media (min-width: 394px) and (max-width: 460px) {
+    .homeButton {
+        width: 26px; /* Öka knappens storlek något */
+        height: 26px;
+    }
+
+    .gameCodePreview {
+        height: 48px; /* Justera höjden */
+        border-radius: 1200px; /* Behåll proportioner */
+    }
+
+    .gameCode {
+        font-size: 22px; /* Öka textstorlek något */
+        letter-spacing: 85%; /* Justera bokstavsmellanrum */
+    }
+
+    .waitingForPlayers {
+        margin-bottom: 40px; /* Öka mellanrum */
+        margin-top: 14px;
+    }
+
+    .startQuizButton {
+        height: 50px; /* Anpassa höjden */
+        border-radius: 120px; /* Behåll proportioner */
+        padding: 24px; /* Justera inre marginaler */
+    }
+
+    .startQuizButton img {
+        width: 28px; /* Justera bildstorlek */
+        height: 28px;
+        right: 24px; /* Justera position */
+    }
+
+    .playerLobby {
+        padding: 10px 20px; /* Öka inre marginaler */
+    }
+
+    .playerLobby p {
+        font-size: 18px; /* Justera textstorlek */
+    }
+}
