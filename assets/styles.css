@@ -269,6 +269,7 @@ p {
     transform: translateY(0); /* Default position */
     transition: transform 0.3s; /* Smooth animations */
     touch-action: none; /* Disable default scrolling on touch */
+    width: 100%;
 }
 
 .dragCloseContainer {
@@ -345,7 +346,6 @@ input[type="range"] {
     align-items: center;
 
     height: 46px;
-    width: 329px;
 
     background-color: var(--primary100);
     border-radius: 1000px;
@@ -358,7 +358,6 @@ input[type="range"] {
     align-items: center;
 
     height: 46px;
-    width: 329px;
 
     background-color: var(--neutral100);
     border: 1px solid var(--primary100);

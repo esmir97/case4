@@ -168,3 +168,141 @@
     position: absolute;
     right: 20px;
 }
+
+/* För skärmar mellan 370px och 392px */
+@media (min-width: 370px) and (max-width: 392px) {
+    #podiumContainer {
+        height: 190px; /* Mindre höjd för att passa mindre skärmar */
+        gap: 12px; /* Justerat gap */
+        margin: 30px 0 10px 0; /* Mindre marginaler */
+    }
+
+    #crown {
+        width: 35px; /* Mindre kronstorlek */
+        height: 35px;
+        right: 167px; /* Justerad position */
+        top: 120px;
+    }
+
+    .podiumEmoji {
+        font-size: 45px; /* Mindre storlek för emoji */
+    }
+
+    .first > .podiumEmoji {
+        font-size: 55px; /* Mindre storlek för första plats */
+    }
+
+    .second,
+    .third {
+        margin-top: 25px; /* Mindre avstånd för andra och tredje plats */
+    }
+
+    .position {
+        width: 26px;
+        height: 26px;
+    }
+
+    .position > h4 {
+        font-size: 10px;
+    }
+
+    #finalScoreboard {
+        max-height: 160px; /* Mindre maxhöjd */
+        padding-right: 6px; /* Mindre padding för scrollbar */
+    }
+
+    #finalScoreboard > ol {
+        font-size: 11px; /* Mindre textstorlek */
+        gap: 6px;
+    }
+
+    .finalListItem {
+        grid-template-columns: 15px 30px 245px 10px; /* Justerade kolumner */
+    }
+
+    .finalListItem > p:nth-child(2) {
+        font-size: 18px; /* Mindre fontstorlek */
+    }
+
+    
+
+    #nextButton {
+        height: 38px; /* Mindre knapphöjd */
+        padding: 12px; /* Justerad padding */
+    }
+
+    .nextIcon {
+        width: 18px;
+        height: 18px;
+        right: 12px;
+    }
+}
+
+/* För skärmar mellan 393px och 460px */
+@media (min-width: 393px) and (max-width: 460px) {
+    #podiumContainer {
+        height: 210px; 
+        gap: 18px; 
+        margin: 40px 0 15px 0;
+    }
+
+    #crown {
+        width: 40px; 
+        height: 40px;
+        right: 209px; 
+        top: 135px;
+    }
+
+    .podiumEmoji {
+        font-size: 55px; 
+    }
+
+    .first > .podiumEmoji {
+        font-size: 65px; 
+    }
+
+    .second,
+    .third {
+        margin-top: 35px; 
+    }
+
+    .position {
+        width: 28px;
+        height: 28px;
+    }
+
+    .position > h4 {
+        font-size: 12px;
+    }
+
+    #finalScoreboard {
+        max-height: 180px; 
+        padding-right: 8px; 
+    }
+
+    #finalScoreboard > ol {
+        font-size: 13px; 
+        gap: 8px;
+    }
+
+    .finalListItem {
+        grid-template-columns: 18px 35px 270px 10px; 
+    }
+
+    .finalListItem > p:nth-child(2) {
+        font-size: 22px; 
+    }
+
+    
+
+    #nextButton {
+        height: 42px; 
+        padding: 16px; 
+    }
+
+    .nextIcon {
+        width: 20px;
+        height: 20px;
+        right: 15px;
+    }
+}
