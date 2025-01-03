@@ -9,8 +9,6 @@ export function renderRanking (parentElement, game, questionAnswered) { /*rightA
   let players = game.players;
   let playerID = JSON.parse( localStorage.getItem("player") ).id;
 
-  console.log(game);
-
     parentElement.innerHTML = ``;
     
     // Text
