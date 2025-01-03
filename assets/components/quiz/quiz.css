@@ -172,3 +172,96 @@
     background-color: var(--secondary200);
     color: var(--neutral800);
 }
+
+
+
+/* Responsiva stilar */
+@media (max-width: 392px) and (min-width: 370px) {
+    #quizNav {
+        gap: 220px; /* Justera mellanrummet för mindre skärmar */
+    }
+
+    .pointsCon {
+        width: 90px; /* Anpassa bredd */
+        height: 30px; /* Behåll proportioner */
+    }
+
+    #questionText {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    #quizContent {
+        display: flex;
+        align-items: center;
+        width: 320px; /* Något smalare layout */
+        height: auto; /* Tillåt dynamisk höjd */
+
+    }
+
+    #progressBarContainer {
+        width: 320px; /* Matcha bredden på quizContent */
+    }
+
+    #optionsContainer {
+        gap: 12px; /* Minska mellanrum mellan knappar */
+    }
+
+    .optionButton {
+        width: 150px; /* Anpassa knappens storlek */
+        height: 90px; /* Behåll proportioner */
+        padding: 16px; /* Justera inre marginaler */
+    }
+}
+
+@media (min-width: 394px) and (max-width: 460px) {
+    #quizNav {
+        gap: 270px; /* Justera mellanrum för större skärmar */
+    }
+
+    .pointsCon {
+        width: 110px; /* Öka storleken något */
+        height: 36px; /* Behåll proportioner */
+    }
+    #questionText {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        margin-left: 55px;
+    }
+    #quizContent {
+        display: flex;
+        align-items: center;
+        width: 360px; /* Något bredare layout */
+        height: auto; /* Tillåt dynamisk höjd */
+    }
+
+    #progressBarContainer {
+        width: 360px; /* Matcha bredden på quizContent */
+        margin-left: 55px;
+    }
+
+    #optionsContainer {
+        gap: 18px; /* Öka mellanrum mellan knappar något */
+       
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        align-self: stretch;
+        margin-left: 20px;
+    }
+
+    .optionButton {
+        width: 180px; /* Anpassa knappens storlek */
+        height: 110px; /* Behåll proportioner */
+        padding: 24px; /* Justera inre marginaler */
+    }
+
+    .quizInfoText {
+        text-align: center;
+        margin-left: 55px;
+    }
+}

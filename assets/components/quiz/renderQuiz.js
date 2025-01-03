@@ -119,7 +119,7 @@ export function renderQuizQuestion (parentElement, data) {
     }, 0);
 
     //-------------------------TIMER END EVENT----------------------------------
-    progressBar.addEventListener('transitionend', () => {
+     progressBar.addEventListener('transitionend', () => {
         if (progressBar.style.width === "0%") {
             eventTriggered = true;
             let player = JSON.parse( localStorage.getItem("player") );
@@ -128,7 +128,7 @@ export function renderQuizQuestion (parentElement, data) {
             ws.send(JSON.stringify({ event: "timeIsUp", data }));
         }
     });
-
+    
     const optionButtons = quizContent.querySelectorAll(".optionButton");
     let eventTriggered = false;
 

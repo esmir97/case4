@@ -66,3 +66,62 @@
 .break {
     margin: 8px 0;
 }
+
+
+
+/* Responsiva stilar */
+@media (max-width: 392px) and (min-width: 370px) {
+    #topContainer {
+        max-height: 260px; /* Minska höjden något */
+        gap: 12px; /* Minska mellanrum mellan element */
+    }
+
+    #scoreboard > ol {
+        font-size: 12px; /* Justera textstorlek för mindre skärmar */
+        gap: 8px; /* Minska mellanrum mellan lista */
+    }
+
+    .listItem {
+        grid-template-columns: 15px 35px 250px 8px; /* Justera rutnät för mindre utrymme */
+    }
+
+    .listItem > p:nth-child(2) {
+        font-size: 22px; /* Anpassa textstorlek för att undvika overflow */
+    }
+
+    .currentPlacement {
+        margin-top: 16px; /* Justera marginalen för mindre skärmar */
+    }
+
+    .break {
+        margin: 6px 0; /* Minska mellanrum */
+    }
+}
+
+@media (min-width: 393px) and (max-width: 460px) {
+    #topContainer {
+        max-height: 300px; /* Justera höjden något */
+        gap: 20px; /* Öka mellanrum mellan element */
+    }
+
+    #scoreboard > ol {
+        font-size: 15px; /* Öka textstorlek något */
+        gap: 12px; /* Justera mellanrum mellan lista */
+    }
+
+    .listItem {
+        grid-template-columns: 25px 50px 300px 12px; /* Justera rutnät för mer utrymme */
+    }
+
+    .listItem > p:nth-child(2) {
+        font-size: 28px; /* Anpassa textstorlek för större skärmar */
+    }
+
+    .currentPlacement {
+        margin-top: 24px; /* Justera marginalen för större skärmar */
+    }
+
+    .break {
+        margin: 10px 0; /* Öka mellanrum */
+    }
+}
