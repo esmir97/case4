@@ -6,7 +6,6 @@ import { renderStart } from "../home/renderHome.js";
 
 export function renderFinalScore (parentElement, data) {
     // Header
-    console.log(data);
     let code = data.code;
     let game = data.game;
 

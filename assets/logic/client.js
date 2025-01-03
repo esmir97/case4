@@ -28,13 +28,11 @@ export function establishWebsocket () {
         switch(message.event) {
             case "playerJoined":
                 playerJoined(message);
-                console.log(message);
                 break;
             
             case "playerLeft":
                                 //playerLeft(socket, id)
                 console.log("PLAYER LEFT");
-                console.log(message.data);
                 break;
     
             case "playerChangedName":
@@ -42,18 +40,15 @@ export function establishWebsocket () {
                 break;
 
             case "createGame": //Not used
-                console.log(JSON.parse(message));
                 socket.send(JSON.stringify(socket, message.genre, message.century));
                 break;
             
             case "gameCreated":
-                console.log(message.event);
                 renderLobby(document.getElementById("wrapper"), message.data);
                 break;
 
             case "renderLobby":
                 renderLobby(document.getElementById("wrapper"), message.data);
-                console.log("IM JOINING")
                 //joinGame(socket, code)
                 break;
             case "changeName":
@@ -91,7 +86,6 @@ export function establishWebsocket () {
                 break;
 
             case "connection":
-                console.log(message.data);
                 localStorage.setItem("id", message.data);
                 break;
 

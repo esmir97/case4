@@ -68,10 +68,7 @@ async function createNewGame(event) {
         let genre = event.currentTarget.id;
         // let century = document.getElementById("century").value;
         let centuryFull = document.getElementById("slider").value;
-        let century = centuryFull.slice(2);
-
-        console.log(genre, century);
-        
+        let century = centuryFull.slice(2);        
         
         if (century == null) {
             century = "mixed";
@@ -113,7 +110,6 @@ async function createNewGame(event) {
 
 async function newGameCard(event) {
     event.stopPropagation();
-    console.log(event.currentTarget.id);
 
     let wrapper = document.querySelector('#wrapper');
     let startGamePopup = document.createElement("div");
@@ -240,7 +236,6 @@ async function newGameCard(event) {
             } else {
                 decade = slider.value.slice(2);
             }
-            console.log(localStorage.getItem("id"));
             ws.send(JSON.stringify( {event: "createGame", data: {genre: genre, century: decade, name: nameInput.value, playerID: localStorage.getItem("id")}}));
                                 // Retrieve the genre from the startButton's ID
              // Pass as an object

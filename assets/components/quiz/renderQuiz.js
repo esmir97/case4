@@ -75,7 +75,6 @@ export function renderQuizQuestion (parentElement, data) {
     let question = data.question;
     let questionIndex = data.questionIndex;
 
-    console.log(question);
     const quizContent = document.createElement("div");
     quizContent.id = "quizContent";
     parentElement.appendChild(quizContent);

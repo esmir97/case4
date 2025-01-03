@@ -15,14 +15,10 @@ export async function renderLobby(parentElement, game) {
     globalGame = game;
     let player = JSON.parse(localStorage.getItem("player"));
 
-    console.log(localStorage.getItem("player"));
-    console.log(game);
     // Redirect if the player name is missing
     if (player.name === "") {
         renderNameCard();
     }
-
-    console.log(player);
 
     parentElement.innerHTML = `
         <div class="homeButtonContainer">
@@ -111,7 +107,6 @@ async function renderNameCard() {
     let code = localStorage.getItem("code");
     ws.send(JSON.stringify({ event: "getGame", data: code }));
 
-    console.log(globalGame);
     //let game = await (await fetch(`/api/test?code=${gameCode}`)).json();
 
     let wrapper = document.querySelector('#wrapper');
@@ -180,7 +175,6 @@ export async function playerJoined(message) {
     });
 
     if (document.getElementById(newPlayer.id)) {
-        console.log("player with this ID already exists!");
         return;
     }
 
@@ -201,25 +195,18 @@ export async function playerJoined(message) {
 
 export async function playerLeft(message) {
     console.log("player left");
-
-    console.log(message.data);
 }
 
 export async function playerChangedName(message) {
-    console.log("changed name");
-
     let player = message.data.player;
 
     let nodeListPlayers = document.querySelectorAll(".playerLobby");
 
     nodeListPlayers.forEach((ele) => {
-        console.log(ele.querySelector("p").textContent);
-        console.log(typeof ele.id, typeof player.id);
+
         if (ele.id === player.id) {
-            console.log("comparing " + ele.id + " and " + player.id);
             let p = ele.querySelector("p");
             p.textContent = `${player.emoji} ${player.name}`;
-            console.log("hejsvejs");
         }
     })
 }
