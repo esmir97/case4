@@ -2,9 +2,12 @@ import * as common from "../common/common.js";
 import { getOrdinalSuffix } from "../ranking/renderRanking.js";
 import { renderEnding } from "../ending/ending.js";
 import { renderStart } from "../home/renderHome.js";
+import { getWebSocket } from "../../logic/client.js";
 
 
 export function renderFinalScore (parentElement, data) {
+    const ws = getWebSocket();
+
     // Header
     let code = data.code;
     let game = data.game;
@@ -73,7 +76,6 @@ export function renderFinalScore (parentElement, data) {
         if (!game.players[i - 1]) {
           break;
         }
-        console.log(game.players[i - 1]);
 
         if (i === 1) {
             podiumDiv.classList.add("first");

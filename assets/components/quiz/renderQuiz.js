@@ -1,4 +1,4 @@
-import { ws } from "../../index.js";
+import { getWebSocket } from "../../index.js";
 import * as common from '../common/common.js';
 
 // deno run -A --watch server.js
@@ -72,8 +72,11 @@ export function renderQuizCounter (parentElement, data) {
 
 
 export function renderQuizQuestion (parentElement, data) {
+    const ws = getWebSocket();
     let question = data.question;
     let questionIndex = data.questionIndex;
+    console.log(question);
+    console.log(questionIndex);
 
     const quizContent = document.createElement("div");
     quizContent.id = "quizContent";

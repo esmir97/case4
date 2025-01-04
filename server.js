@@ -1,4 +1,5 @@
 import { serveDir, serveFile } from "jsr:@std/http/file-server";
+import { networkInterfaces } from "https://deno.land/std@0.175.0/node/os.ts"; 
 
 let _state = {
     games: [
@@ -6,12 +7,22 @@ let _state = {
     ]
 }
 
+const ip = getLocalIP();
+
 let connections = {};
 let connectionID = 1;
 
 const testData = await Deno.readTextFile("./database.json");
 
-
+function getLocalIP() {
+    const interfaces = Deno.networkInterfaces();
+    for (const iface of interfaces) {
+        if (iface.family === "IPv4" && !iface.address.startsWith("127.")) {
+            return iface.address;
+        }
+    }
+    throw new Error("Unable to determine local IP address.");
+}
 
 function getRandomEmoji() {
     const emojis = [
@@ -95,10 +106,6 @@ function getQuestionsForGame(genre, century) { //Randomises an array with 20 que
     return chosenQuestions;
 }
 
-function generateConnectionID() {
-    return `conn-${Date.now()}-${connectionID}`;
-}
-
 function send(socket, event, data) {
     socket.send(JSON.stringify({ event, data }));
 }
@@ -108,10 +115,6 @@ function broadcast(event, data) {
         console.log ("Comparing " + game.code + " AND " + data.code)
         return data.code == game.code;
     });
-
-    console.log("HERES DA GAME");
-    console.log(event);
-    console.log(game);
 
     for (let player of game.players) {
         if (player.connection && player.connection.readyState === WebSocket.OPEN) {
@@ -132,6 +135,10 @@ async function handleHTTPRequest (request) { //S채ger till vad som ska h채nda n�
             fsRoot: 'assets',
             urlRoot: 'static'
         });
+    }
+
+    if (pathname === '/api/get-ip') {
+        return new Response(ip, { headers: { "Content-Type": "text/plain" } });
     }
 
     if (pathname == '/api/test') {
@@ -206,10 +213,6 @@ function handleWebSocket (request) { //S채ger vad som ska h채nda p책 serversidan
             
             case "joinGame":
                 joinGame(socket, message.data);
-                break;
-
-            case "changeName":
-                //changeName(socket, id, newName)
                 break;
 
             case "getGame":
@@ -299,7 +302,7 @@ async function createGame (socket, genre, century, name, playerID) {
         century: century,
         questions: questions,
         players: players,
-        questionIndex: 0
+        questionIndex: 10
     };
 
     _state.games.push(response);
@@ -499,7 +502,9 @@ function timeIsUp (data) {
 
     let game = _state.games.find( (game) => {
         return game.code == code;
-    });  
+    });
+
+    if (!game) return;
 
     let timeIsUpCounter = 0;
     let numberOfPlayers = game.players.length;

@@ -1,5 +1,5 @@
 import * as common from "../common/common.js";
-import { ws } from "../../index.js"; 
+import { getWebSocket } from "../../index.js"; 
 
 // Nav
 
@@ -99,6 +99,9 @@ export function renderRanking (parentElement, game, questionAnswered) { /*rightA
     /* setTimeout(() => { 
       ws.send(JSON.stringify({ event: "continueQuiz", data: game.code }));
     }, 10000); */
+
+    localStorage.setItem("answerGiven", false);
+    localStorage.getItem("pointsEarned", 0);
 }
 
 export function getOrdinalSuffix(num) {

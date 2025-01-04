@@ -1,4 +1,4 @@
-import { ws } from "../../index.js";
+import { getWebSocket } from "../../index.js";
 import { game } from "../../logic/client.js";
 import { handlePopup } from "../common/common.js";
 import { renderStart } from "../home/renderHome.js";
@@ -9,6 +9,7 @@ let globalGame;
 
 export async function renderLobby(parentElement, game) {
     // Fetch and parse the player and game details
+    const ws = getWebSocket();
 
     localStorage.setItem("code", game.code);
     localStorage.setItem("player", JSON.stringify(game.players[game.players.length - 1]));
@@ -104,6 +105,7 @@ export async function renderLobby(parentElement, game) {
 }
 
 async function renderNameCard() {
+    const ws = getWebSocket();
     let code = localStorage.getItem("code");
     ws.send(JSON.stringify({ event: "getGame", data: code }));
 
@@ -149,6 +151,7 @@ async function renderNameCard() {
 }
 
 async function enterName(event) {
+    const ws = getWebSocket();
     if (event.type == "keydown" && event.key === "Enter" || event.type == "click" && event.currentTarget == document.getElementById("joinBtn")) {
         let player = JSON.parse(localStorage.getItem("player"));
         let newName = document.getElementById("name").value;

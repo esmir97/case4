@@ -13,9 +13,14 @@ import { endRound } from "./helpers.js";
 import { renderFinalScore } from "../components/finalScore/renderFinalScore.js";
 
 export let game;
+let wsInstance;
 
-export function establishWebsocket () {
-    const socket = new WebSocket("ws://localhost:8000");
+export async function establishWebsocket () {
+    const response = await fetch("/api/get-ip");
+    console.log(response);
+    const serverIP = await response.text();
+    const trimmedIP = serverIP.trim();
+    const socket = new WebSocket(`ws://${trimmedIP}:8000`);
 
     socket.addEventListener("open", (event) => {
         console.log("Connected.");        
@@ -99,6 +104,15 @@ export function establishWebsocket () {
         console.log("Disconnected");
     });
 
+    wsInstance = socket;
+
     return socket;
 
+}
+
+export function getWebSocket() {
+    if (!wsInstance) {
+        throw new Error("WebSocket is not initialized. Call initializeWebSocket first.");
+    }
+    return wsInstance;
 }

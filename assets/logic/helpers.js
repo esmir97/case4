@@ -1,8 +1,10 @@
 import * as common from "../components/common/common.js";
-import { ws } from "../index.js";
+import { getWebSocket } from "../index.js";
 import { renderRanking } from "../components/ranking/renderRanking.js";
 
 export function renderPlayers(parentElement, player, game) {
+    const ws = getWebSocket();
+
     let playerContainer = document.createElement("div");
         playerContainer.id = "playerContainer";
         parentElement.appendChild(playerContainer);
@@ -74,7 +76,7 @@ export function answerChecked (data) {
     let pointsEarned = data.pointsEarned;
     localStorage.setItem("pointsEarned", pointsEarned);
     localStorage.setItem("answerGiven", answerCheck);
-    console.log(answerCheck);
+
     let nodeListAnswers = document.querySelectorAll(".optionButton");
 
     nodeListAnswers.forEach( (ele) => {

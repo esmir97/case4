@@ -1,5 +1,5 @@
 import { renderStart } from "../home/renderHome.js";
-import { ws } from "../../index.js";
+import { getWebSocket } from "../../index.js";
 
 // Hanterar hur Popups Stängs
 export function handlePopup() {
@@ -18,6 +18,9 @@ export function handlePopup() {
 
 // Rendera Home Popup
 export function homePopup(parentElement) {
+    const ws = getWebSocket();
+
+
     const wrapper = document.querySelector("#wrapper");
     const overlay = document.createElement("div");
     overlay.classList.add("overlay");
@@ -59,6 +62,7 @@ function endGame (data) {
 
 // Renderar Quiz och Finalscore Nav
 export function renderQuizNav (parentElement, data) {
+    const ws = getWebSocket();
     parentElement.innerHTML = ``;
     let game = data.game;
     let playerLocalStorage = JSON.parse( localStorage.getItem("player") );

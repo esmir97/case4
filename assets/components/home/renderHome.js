@@ -1,5 +1,5 @@
 import { renderLobby } from "./../lobby/renderLobby.js";
-import { ws } from "../../index.js";
+import { getWebSocket } from "../../index.js";
 
 export function renderStart(parentElement) {
     if (localStorage.getItem("player")) localStorage.removeItem("player");
@@ -63,6 +63,7 @@ export function renderGenres(parentElement, allGenres) {
 }
 
 async function createNewGame(event) {
+    const ws = getWebSocket();
 
     if (event.type == "click") {
         let genre = event.currentTarget.id;
@@ -109,6 +110,7 @@ async function createNewGame(event) {
 }
 
 async function newGameCard(event) {
+    const ws = getWebSocket();
     event.stopPropagation();
 
     let wrapper = document.querySelector('#wrapper');
@@ -249,6 +251,7 @@ function formatDecade(value) {
 }
 
 async function joinGame(event) {
+    const ws = getWebSocket();
 
     if (event.key === "Enter") {
         let code = document.getElementById("joinCode").value;
