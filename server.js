@@ -77,8 +77,6 @@ function getQuestionsForGame(genre, century) { //Randomises an array with 20 que
         century = century.toString();
         console.log("'Century' value is not a string! :)")
     }
-    console.log("century is:")
-    console.log(century);
     
     if (century != "mixed") {
         if (genre != "Best of decades") genre = genre.toLowerCase();
@@ -91,11 +89,8 @@ function getQuestionsForGame(genre, century) { //Randomises an array with 20 que
         if (genre != "Best of decades") genre = genre.toLowerCase();
         
         let questionGenre = questions[genre];
-        console.log("QUESTIONGENRE");
-        console.log(questionGenre);
+
         for (let centuryKey in questionGenre) {
-            console.log("CENTURY");
-            console.log(centuryKey);
             questionsToChooseFrom.push(...questionGenre[centuryKey])
         }
     }
