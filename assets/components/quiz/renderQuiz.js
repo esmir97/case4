@@ -63,6 +63,7 @@ export function renderQuizCounter (parentElement, data) {
         countdownValue--;
 
         if (countdownValue < 0) {
+            console.log(data);
             renderQuizQuestion(wrapper, data);
             clearInterval(countdownInterval);
             counterCon.remove();
@@ -73,6 +74,7 @@ export function renderQuizCounter (parentElement, data) {
 
 export function renderQuizQuestion (parentElement, data) {
     const ws = getWebSocket();
+    console.log(data);
     let question = data.question;
     let questionIndex = data.questionIndex;
     console.log(question);

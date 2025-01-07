@@ -77,7 +77,8 @@ function getQuestionsForGame(genre, century) { //Randomises an array with 20 que
         century = century.toString();
         console.log("'Century' value is not a string! :)")
     }
-
+    console.log("century is:")
+    console.log(century);
     
     if (century != "mixed") {
         if (genre != "Best of decades") genre = genre.toLowerCase();
@@ -87,9 +88,14 @@ function getQuestionsForGame(genre, century) { //Randomises an array with 20 que
         questionsToChooseFrom = [...requestedQuestions];
         
     } else {
+        if (genre != "Best of decades") genre = genre.toLowerCase();
+        
         let questionGenre = questions[genre];
-
+        console.log("QUESTIONGENRE");
+        console.log(questionGenre);
         for (let centuryKey in questionGenre) {
+            console.log("CENTURY");
+            console.log(centuryKey);
             questionsToChooseFrom.push(...questionGenre[centuryKey])
         }
     }
@@ -274,6 +280,8 @@ function getGame (socket, code) {
 async function createGame (socket, genre, century, name, playerID) {
                       
     let newCode = generateGameCode();
+    console.log("genre is:");
+    console.log(genre);
     let questions = getQuestionsForGame(genre, century);
 
 
@@ -370,8 +378,10 @@ function startGame(code) {
     let foundGame = _state.games.find( (game) => {
         return game.code == code;
     });
-
+    console.log("GAME HERE");
+    console.log(foundGame);
     if (foundGame) {
+        console.log(foundGame.questions[foundGame.questionIndex]);
         broadcast("startedGame", {code: foundGame.code, game: foundGame, question: foundGame.questions[foundGame.questionIndex], questionIndex: foundGame.questionIndex});
     } else {
         return;
